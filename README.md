@@ -36,6 +36,14 @@ C. E. SHANNON, "A Mathematical Theory of Communication," October 1948,  The Bell
 
 Package ‘entropy,’ "Estimation of Entropy, Mutual Information and Related Quantities," February 19, 2015, http://strimmerlab.org/software/entropy/
 
+## What don't we do? (What isn't machine learning?)
+
+### Causal Inference
+Joshua D. Angrist & Jörn-Steffen Pischke, "Mostly Harmless Econometrics An Empiricist's Companion," 2009
+
+Donald B. Rubin, "Basic Concepts of Statistical Inference for Causal Effects in Experiments and Observational Studies," 2004, 
+http://www.stat.columbia.edu/~cook/qr33.pdf
+
 ## Sequences
 
 Christopher Olah, "Understanding LSTM Networks," August 27, 2015, http://colah.github.io/posts/2015-08-Understanding-LSTMs/
