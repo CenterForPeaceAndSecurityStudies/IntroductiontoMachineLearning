@@ -18,6 +18,9 @@ https://cfss.uchicago.edu/index.html
 
 "GitHub and RStudio," https://resources.github.com/articles/github-and-rstudio/
 
+# Day 1
+Course Slides: https://docs.google.com/presentation/d/19i2om_jwK8m3a-jNvgtM-WMT1l1HAGaGuWeb4bgLsTM/edit?usp=sharing
+
 # Big Picture: What is our main job in machine learning? (What exactly is it that we doooo here?)
 ## We explain outcomes as well as possible
 Leo Breiman, "Statistical Modeling: The Two Cultures (with comments and a rejoinder by the author)," Statistical Science, 2001, Vol. 16, No. 3, 199–231, https://projecteuclid.org/download/pdf_1/euclid.ss/1009213726
