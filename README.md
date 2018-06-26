@@ -8,7 +8,6 @@ Math and programming is not something you learn, it's something you get used to.
 # Software and Programming
 Students are not expected to know any particular language or set of software. We will be demonstrating best practices as used in the Machine Learning for Social Science Lab at the Center for Peace and Security Studies, UCSD. In that lab, our software stack costs of Python and R for data preparation and analysis, Spark for database management, Keras/Tensorflow for deep learning, and Github for revision control.
 
-### Reading
 MACS 305001 - Computing for the Social Sciences, Benjamin Soltoff, Lecturer in Computational Social Science,
 https://cfss.uchicago.edu/index.html
 
@@ -22,18 +21,19 @@ https://cfss.uchicago.edu/index.html
 Course Slides: https://docs.google.com/presentation/d/19i2om_jwK8m3a-jNvgtM-WMT1l1HAGaGuWeb4bgLsTM/edit?usp=sharing
 
 # Big Picture: What is our main job in machine learning? (What exactly is it that we doooo here?)
-## We explain outcomes as well as possible
+
+We explain outcomes as well as possible.
+
 Leo Breiman, "Statistical Modeling: The Two Cultures (with comments and a rejoinder by the author)," Statistical Science, 2001, Vol. 16, No. 3, 199–231, https://projecteuclid.org/download/pdf_1/euclid.ss/1009213726
 
-## We explain them as parsimonously as possible as a function of other things.
+We explain them as parsimonously as possible as a function of other things.
+
 Christopher Olah, "Visual Information Theory," October 14, 2015, http://colah.github.io/posts/2015-09-Visual-Information/
 
-### Reading
 # Information Theory
 Christopher Olah, "Visual Information Theory," October 14, 2015, http://colah.github.io/posts/2015-09-Visual-Information/
 C. E. SHANNON, "A Mathematical Theory of Communication," October 1948,  The Bell System Technical Journal, Vol. 27, pp. 379–423, 623–656, July,  http://math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf
 
-### Packages
 Package ‘entropy,’ "Estimation of Entropy, Mutual Information and Related Quantities," February 19, 2015, http://strimmerlab.org/software/entropy/
 
 ## Sequences
