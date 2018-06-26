@@ -5,17 +5,20 @@ This is a 6 hour introduction to machine learning spread across two three hour l
 # Software and Programming
 Students are not expected to know any particular language or set of software. We will be demonstrating best practices as used in the Machine Learning for Social Science Lab at the Center for Peace and Security Studies, UCSD. In that lab, our software stack includes Python and R for data preparation and analysis. Medium to large scale data is managed through the Spark ecosystem. Deep learning, when required, is handled in Keras/Tensorflow. 
 
-# Reading
+https://cfss.uchicago.edu/distrib003_spark.html
 
+## Reading
+MACS 305001 - Computing for the Social Sciences, Benjamin Soltoff, Lecturer in Computational Social Science,
+https://cfss.uchicago.edu/index.html
 
-Statistical Modeling: The Two Cultures
-Leo Breiman
-Statistical Science
-2001, Vol. 16, No. 3, 199–231
-https://projecteuclid.org/download/pdf_1/euclid.ss/1009213726
+"Spark and sparklyr," https://cfss.uchicago.edu/distrib003_spark.html
 
+"R for Data Science", Garrett Grolemund, http://r4ds.had.co.nz/
 
+# What is machine learning, and how is it different from statistics?
 
+## Reading
+Leo Breiman, "Statistical Modeling: The Two Cultures (with comments and a rejoinder by the author)," Statistical Science, 2001, Vol. 16, No. 3, 199–231, https://projecteuclid.org/download/pdf_1/euclid.ss/1009213726
 
 
 
