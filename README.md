@@ -6,7 +6,7 @@ This is a 6 hour introduction to machine learning spread across two three hour l
 Math and programming is not something you learn, it's something you get used to. It is a trade, that takes years of trial and error and concrete projects to acquire. The readings and assignments of this course are with minor exception volentary and intended for self study. They are to help point you in the right direction when you realize you need start brushing up on a particular set of tools in order to tackle a particular problem.
 
 # Software and Programming
-Students are not expected to know any particular language or set of software. We will be demonstrating best practices as used in the Machine Learning for Social Science Lab at the Center for Peace and Security Studies, UCSD. In that lab, our software stack costs of Python and R for data preparation and analysis, Spark for database management, Keras/Tensorflow for deep learning, and Github for revision control.
+Students are not expected to know any particular language or set of software. We will be demonstrating best practices as used in the Machine Learning for Social Science Lab at the Center for Peace and Security Studies, UCSD. In that lab, our software stack costs of Python and R for data preparation and analysis, Spark for database management, Keras/Tensorflow for deep learning, Github for revision control, and Ubuntu for our operating system and commandline tools.
 
 MACS 305001 - Computing for the Social Sciences, Benjamin Soltoff, Lecturer in Computational Social Science,
 https://cfss.uchicago.edu/index.html
