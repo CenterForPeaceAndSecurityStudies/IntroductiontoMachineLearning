@@ -17,6 +17,8 @@ https://cfss.uchicago.edu/index.html
 
 "GitHub and RStudio," https://resources.github.com/articles/github-and-rstudio/
 
+Jeroen Janssens, "Data Science at the Command Line," February 8, 2018, https://www.datascienceatthecommandline.com/
+
 # Day 1
 Course Slides: https://docs.google.com/presentation/d/19i2om_jwK8m3a-jNvgtM-WMT1l1HAGaGuWeb4bgLsTM/edit?usp=sharing
 
