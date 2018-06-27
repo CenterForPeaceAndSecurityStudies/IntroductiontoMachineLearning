@@ -52,6 +52,7 @@ Christopher Olah, "Understanding LSTM Networks," August 27, 2015, http://colah.g
 
 # Day 2
 
+Christian Lopez, "Unsupervised Machine Learning: The hclust, pvclust, cluster, mclust, and more," https://quantdev.ssri.psu.edu/sites/qdev/files/Unsupervised_Machine_Learning_The_mclust_Package_and_others.html
 
 
 
