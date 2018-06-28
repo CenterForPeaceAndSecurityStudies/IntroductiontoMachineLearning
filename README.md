@@ -5,7 +5,9 @@ This is a 6 hour introduction to machine learning spread across two three-hour l
 # Readings Policy
 Math and programming is not something you learn, it's something you get used to. It is a trade, that takes years of trial and error and concrete projects to acquire. The readings and assignments of this course are with minor exception voluntary and intended for self study. They are to help point you in the right direction when you realize you need to start brushing up on a particular set of tools in order to tackle a particular problem.
 
-# Software and Programming
+# Preliminiaries
+
+## Software and Programming
 Students are not expected to know any particular language or set of software. We will be demonstrating best practices as used in the Machine Learning for Social Science Lab at the Center for Peace and Security Studies, UCSD. In that lab, our software stack consists of Python and R for data preparation and analysis, Spark for database management, Keras/Tensorflow for deep learning, Github for revision control, and Ubuntu for our operating system and commandline tools.
 
 MACS 305001 - Computing for the Social Sciences, Benjamin Soltoff, Lecturer in Computational Social Science,
@@ -18,6 +20,12 @@ https://cfss.uchicago.edu/index.html
 "GitHub and RStudio," https://resources.github.com/articles/github-and-rstudio/
 
 Jeroen Janssens, "Data Science at the Command Line," February 8, 2018, https://www.datascienceatthecommandline.com/
+
+## Data Cleaning and Visualization
+
+Kieran Healy, "Data Visualization: A practical introduction", http://socviz.co/index.html?utm_content=buffer09710&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer
+
+
 
 # Day 1
 Course Slides: https://docs.google.com/presentation/d/19i2om_jwK8m3a-jNvgtM-WMT1l1HAGaGuWeb4bgLsTM/edit?usp=sharing
@@ -50,15 +58,37 @@ http://www.stat.columbia.edu/~cook/qr33.pdf
 
 Christopher Olah, "Understanding LSTM Networks," August 27, 2015, http://colah.github.io/posts/2015-08-Understanding-LSTMs/
 
+Patrik Lindenfors, Fredrik Jansson, Yi-ting Wang and Staffan I. Lindberg, Christian Lopez, 05 March 2018, "Investigating Sequences in Ordinal Data: A New Approach With Adapted Evolutionary Models," https://www.cambridge.org/core/journals/political-science-research-and-methods/article/investigating-sequences-in-ordinal-data-a-new-approach-with-adapted-evolutionary-models/F3747D8A1908902BA7F26C5EE28AFAEF
+
 # Day 2
 
-Christian Lopez, "Unsupervised Machine Learning: The hclust, pvclust, cluster, mclust, and more," https://quantdev.ssri.psu.edu/sites/qdev/files/Unsupervised_Machine_Learning_The_mclust_Package_and_others.html
+ "Unsupervised Machine Learning: The hclust, pvclust, cluster, mclust, and more," https://quantdev.ssri.psu.edu/sites/qdev/files/Unsupervised_Machine_Learning_The_mclust_Package_and_others.html
 
 
+#Feature Selection
+
+"bounceR", R Package, https://github.com/STATWORX/bounceR
+
+#Feature Reduction
+
+#Feature Engineering
 
 
 ## Text
 Julia Silge and David Robinson, "Text Mining with R: A Tidy Approach," 2018-04-02, https://www.tidytextmining.com/
+
+"Introducing Monte Carlo Methods with R," https://www.slideshare.net/xianblog/introducing-monte-carlo-methods-with-r
+
+Matthew Gentzkow, Bryan T. Kelly, Matt Taddy, "Text as Data," http://web.stanford.edu/~gentzkow/research/text-as-data.pdf
+
+
+
+Terence Parr and Jeremy Howard, "How to explain gradient boosting," http://explained.ai/gradient-boosting/index.html
+
+
+# Interpretation
+
+
 
 
 
