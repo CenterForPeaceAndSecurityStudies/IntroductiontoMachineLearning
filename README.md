@@ -29,6 +29,8 @@ Kieran Healy, "Data Visualization: A practical introduction", http://socviz.co/i
 Cleaning
 "Introduction to Validate," https://cran.r-project.org/web/packages/validate/vignettes/introduction.html
 
+Thomas Nield, "An introduction to regular expressions," December 13, 2017 , https://www.oreilly.com/ideas/an-introduction-to-regular-expressions
+
 Writing
 Kieran Healy, "The Plain Person’s Guide to Plain Text Social Science," 2018-04-28, http://plain-text.co/
 
