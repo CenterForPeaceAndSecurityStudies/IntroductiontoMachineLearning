@@ -57,6 +57,12 @@ Christian Lopez, "Unsupervised Machine Learning: The hclust, pvclust, cluster, m
 
 
 
+## Text
+Julia Silge and David Robinson, "Text Mining with R: A Tidy Approach," 2018-04-02, https://www.tidytextmining.com/
+
+
+
+
 ## Installation
 
 You can install the released version of IntroductiontoMachineLearning from [CRAN](https://CRAN.R-project.org) with:
