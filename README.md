@@ -21,9 +21,17 @@ https://cfss.uchicago.edu/index.html
 
 Jeroen Janssens, "Data Science at the Command Line," February 8, 2018, https://www.datascienceatthecommandline.com/
 
-## Data Cleaning and Visualization
+## Data Prep 
 
+Visualization
 Kieran Healy, "Data Visualization: A practical introduction", http://socviz.co/index.html?utm_content=buffer09710&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer
+
+Cleaning
+"Introduction to Validate," https://cran.r-project.org/web/packages/validate/vignettes/introduction.html
+
+Writing
+Kieran Healy, "The Plain Person’s Guide to Plain Text Social Science," 2018-04-28, http://plain-text.co/
+
 
 
 
@@ -45,6 +53,8 @@ Christopher Olah, "Visual Information Theory," October 14, 2015, http://colah.gi
 C. E. SHANNON, "A Mathematical Theory of Communication," October 1948,  The Bell System Technical Journal, Vol. 27, pp. 379–423, 623–656, July,  http://math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf
 
 Package ‘entropy,’ "Estimation of Entropy, Mutual Information and Related Quantities," February 19, 2015, http://strimmerlab.org/software/entropy/
+
+Drost, (2018). Philentropy: Information Theory and Distance Quantification with R. Journal of Open Source Software, 3(26), 765, https://doi.org/10.21105/joss.00765
 
 ## What don't we do? (What isn't machine learning?)
 
@@ -90,8 +100,27 @@ Terence Parr and Jeremy Howard, "How to explain gradient boosting," http://expla
 
 
 
+# Causality
 
+"When and How Should One Use Deep Learning for Causal Effect Inference", https://technionmail-my.sharepoint.com/personal/urishalit_technion_ac_il/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Furishalit_technion_ac_il%2FDocuments%2FPresentations%2FIAS2018%2FIAS2018_2_for_public%2Epdf&parent=%2Fpersonal%2Furishalit_technion_ac_il%2FDocuments%2FPresentations%2FIAS2018&slrid=aaa2759e-909e-5000-fd16-3e33cabf926f
 
+Luke Keele, Dylan Small, "Comparing Covariate Prioritization via Matching to Machine Learning Methods for Causal Inference using Five Empirical Applications," May 11, 2018, https://arxiv.org/pdf/1805.03743.pdf
+
+# Applications
+
+Conflict forecasting
+"ViEWS: a political Violence Early-Warning System," http://pcr.uu.se/research/views/
+
+Michael Höhle, "Safe Disposal of Unexploded WWII Bombs," May 25, 2018, http://staff.math.su.se/hoehle/blog/2018/05/25/uxb.html
+
+Infering Demographic Traits
+
+Gaurav Sood and Suriyan Laohaprapanon, "Predicting Race and Ethnicity From the Sequence of Characters in a Name," May 8, 2018,  https://arxiv.org/pdf/1805.02109.pdf  
+"ethnicolr: Predict Race and Ethnicity From Name," https://github.com/appeler/ethnicolr
+
+# Interaction Terms
+
+Jens Hainmueller Jonathan Mummolo Yiqing Xu, "How Much Should We Trust Estimates from Multiplicative Interaction Models? Simple Tools to Improve Empirical Practice," April 20, 2018, http://yiqingxu.org/papers/english/2018_HMX_interaction/main.pdf
 
 ## Installation
 
