@@ -13,27 +13,24 @@ Students are not expected to know any particular language or set of software. We
 Optional Readings
 MACS 305001 - Computing for the Social Sciences, Benjamin Soltoff, Lecturer in Computational Social Science,
 https://cfss.uchicago.edu/index.html
+
 "R for Data Science", Garrett Grolemund, http://r4ds.had.co.nz/
+
 "Spark and sparklyr," https://cfss.uchicago.edu/distrib003_spark.html
+
 "GitHub and RStudio," https://resources.github.com/articles/github-and-rstudio/
+
 Jeroen Janssens, "Data Science at the Command Line," February 8, 2018, https://www.datascienceatthecommandline.com/
 
-## Data Prep 
-
-Visualization
 Kieran Healy, "Data Visualization: A practical introduction", http://socviz.co/index.html?utm_content=buffer09710&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer
 
-Cleaning
 "Introduction to Validate," https://cran.r-project.org/web/packages/validate/vignettes/introduction.html
 
 Thomas Nield, "An introduction to regular expressions," December 13, 2017 , https://www.oreilly.com/ideas/an-introduction-to-regular-expressions
 
 RegExplain, "https://github.com/gadenbuie/regexplain/#readme"
 
-Writing
 Kieran Healy, "The Plain Person’s Guide to Plain Text Social Science," 2018-04-28, http://plain-text.co/
-
-
 
 
 # Day 1
@@ -41,9 +38,9 @@ Course Slides: https://docs.google.com/presentation/d/19i2om_jwK8m3a-jNvgtM-WMT1
 
 ## Big Picture: What is our main job in machine learning? (What exactly is it that we doooo here?)
 
-We explain outcomes as well as possible.
-
+Readings
 Leo Breiman, "Statistical Modeling: The Two Cultures (with comments and a rejoinder by the author)," Statistical Science, 2001, Vol. 16, No. 3, 199–231, https://projecteuclid.org/download/pdf_1/euclid.ss/1009213726
+
 
 We explain them as parsimonously as possible as a function of other things.
 
