@@ -1,6 +1,6 @@
 # Introduction to Machine Learning
 
-This is a 6 hour introduction to machine learning spread across two three-hour lectures. The goal of this short course is very specific: to give you enough of an overview, vocabulary, and intuition, so that you can identify machine learning problems in the wild and begin your own research into relevant literatures and possible approaches. The goal is not to train you to execute a particular machine learning solution. There are far too many approaches available; they may not cover whatever problem you have; and the state of the art will be different in a year or two anyway. Instead, we will learn how to think about and classify problems into broad types, how to define and measure the efficacy of different solutions to that problem, how to avoid some common and subtle mistakes, and how to think about a full machine learning pipeline from start to finish.
+This is a 6 hour introduction to machine learning spread across two three-hour lectures. The goal of this short course is very specific: to give you enough of an overview, vocabulary, and intuition, so that you can identify machine learning problems in the wild and begin your own research into relevant literatures and possible approaches. The goal is not to train you to execute a particular machine learning solution. There are far too many approaches available; they may not cover whatever problem you find; and the state of the art will be different in a year or two anyway. Instead, we will learn how to think about and classify problems into broad types, how to define and measure the efficacy of different solutions to that problem, how to avoid some common and subtle mistakes, and how to think about a full machine learning pipeline from start to finish.
 
 # Readings Policy
 Math and programming is not something you learn, it's something you get used to. It is a trade, that takes years of trial and error and concrete projects to acquire. The readings and assignments of this course are with minor exception voluntary and intended for self study. They are to help point you in the right direction when you realize you need to start brushing up on a particular set of tools in order to tackle a particular problem.
@@ -10,15 +10,12 @@ Math and programming is not something you learn, it's something you get used to.
 ## Software and Programming
 Students are not expected to know any particular language or set of software. We will be demonstrating best practices as used in the Machine Learning for Social Science Lab at the Center for Peace and Security Studies, UCSD. In that lab, our software stack consists of Python and R for data preparation and analysis, Spark for database management, Keras/Tensorflow for deep learning, Github for revision control, and Ubuntu for our operating system and commandline tools.
 
+Optional Readings
 MACS 305001 - Computing for the Social Sciences, Benjamin Soltoff, Lecturer in Computational Social Science,
 https://cfss.uchicago.edu/index.html
-
-"Spark and sparklyr," https://cfss.uchicago.edu/distrib003_spark.html
-
 "R for Data Science", Garrett Grolemund, http://r4ds.had.co.nz/
-
+"Spark and sparklyr," https://cfss.uchicago.edu/distrib003_spark.html
 "GitHub and RStudio," https://resources.github.com/articles/github-and-rstudio/
-
 Jeroen Janssens, "Data Science at the Command Line," February 8, 2018, https://www.datascienceatthecommandline.com/
 
 ## Data Prep 
@@ -30,6 +27,8 @@ Cleaning
 "Introduction to Validate," https://cran.r-project.org/web/packages/validate/vignettes/introduction.html
 
 Thomas Nield, "An introduction to regular expressions," December 13, 2017 , https://www.oreilly.com/ideas/an-introduction-to-regular-expressions
+
+RegExplain, "https://github.com/gadenbuie/regexplain/#readme"
 
 Writing
 Kieran Healy, "The Plain Person’s Guide to Plain Text Social Science," 2018-04-28, http://plain-text.co/
@@ -49,6 +48,18 @@ Leo Breiman, "Statistical Modeling: The Two Cultures (with comments and a rejoin
 We explain them as parsimonously as possible as a function of other things.
 
 Christopher Olah, "Visual Information Theory," October 14, 2015, http://colah.github.io/posts/2015-09-Visual-Information/
+
+## Outcomes
+
+## Distance
+
+## Units of Analysis/Structure
+
+## Features
+
+## Models
+
+
 
 ## Information Theory
 Christopher Olah, "Visual Information Theory," October 14, 2015, http://colah.github.io/posts/2015-09-Visual-Information/
@@ -84,6 +95,16 @@ Patrik Lindenfors, Fredrik Jansson, Yi-ting Wang and Staffan I. Lindberg, Christ
 #Feature Reduction
 
 #Feature Engineering
+
+
+# Out of Sample
+
+Interaction
+
+Depth
+
+Curse of Dimensionality
+
 
 
 ## Text
