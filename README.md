@@ -60,6 +60,7 @@ Christopher Olah, "Visual Information Theory," October 14, 2015, http://colah.gi
 
 ## Information Theory
 Christopher Olah, "Visual Information Theory," October 14, 2015, http://colah.github.io/posts/2015-09-Visual-Information/
+
 C. E. SHANNON, "A Mathematical Theory of Communication," October 1948,  The Bell System Technical Journal, Vol. 27, pp. 379–423, 623–656, July,  http://math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf
 
 Package ‘entropy,’ "Estimation of Entropy, Mutual Information and Related Quantities," February 19, 2015, http://strimmerlab.org/software/entropy/
@@ -142,19 +143,7 @@ Gaurav Sood and Suriyan Laohaprapanon, "Predicting Race and Ethnicity From the S
 
 Jens Hainmueller Jonathan Mummolo Yiqing Xu, "How Much Should We Trust Estimates from Multiplicative Interaction Models? Simple Tools to Improve Empirical Practice," April 20, 2018, http://yiqingxu.org/papers/english/2018_HMX_interaction/main.pdf
 
-## Installation
 
-You can install the released version of IntroductiontoMachineLearning from [CRAN](https://CRAN.R-project.org) with:
+# Extras
 
-``` r
-install.packages("IntroductiontoMachineLearning")
-```
-
-## Example
-
-This is a basic example which shows you how to solve a common problem:
-
-``` r
-## basic example code
-```
-
+Laurent Gatto, "An Introduction to Machine Learning with R," 2017-10-18, https://lgatto.github.io/IntroMachineLearningWithR/index.html
