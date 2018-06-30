@@ -11,6 +11,25 @@ Scott Fortmann-Roe, "Understanding the Bias-Variance Tradeoff," 2012, http://sco
 
 Laurent Gatto, "An Introduction to Machine Learning with R," 2017-10-18, https://lgatto.github.io/IntroMachineLearningWithR/index.html
 
+A course in machine learning: by Hal Daume III, which will be referred to as CIML	(freely available online) is the primary reference.
+http://ciml.info/
+
+Machine Learning: The art and science of algorithms that make sense of data by Peter Flach, referred to as FL
+http://dsd.future-lab.cn/members/2015nlp/Peter_Flach_Machine_Learning._The_Art_and_Scienc(BookZZ.org).pdf
+
+Patter recognition and machine learning by Christopher M. Bishop	, referred to as PRML
+http://users.isr.ist.utl.pt/~wurmd/Livros/school/Bishop%20-%20Pattern%20Recognition%20And%20Machine%20Learning%20-%20Springer%20%202006.pdf
+
+An introduction to statistical learning: with application in R by Gareth James, Daniela Witten, Trevor Hastie, and Robert Tibshirani, refered to as ISL
+https://www-bcf.usc.edu/~gareth/ISL/ISLR%20Seventh%20Printing.pdf
+
+Machine Learning: A Probabilistic Perspective by Kevin Murphy.
+https://www.cs.ubc.ca/~murphyk/MLbook/
+
+Elements of Statistical Learning by Trevor Hastie, Robert Tibshirani and Jerome Friedman (freely available online)
+https://web.stanford.edu/~hastie/ElemStatLearn/
+
+
 # Preliminaries
 
 ## Software and Programming
