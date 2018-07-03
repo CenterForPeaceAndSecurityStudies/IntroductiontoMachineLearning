@@ -2,14 +2,16 @@
 
 This is a 6 hour introduction to machine learning spread across two three-hour lectures. The goal of this short course is very specific: to give you enough of an overview, vocabulary, and intuition, so that you can identify machine learning problems in the wild and begin your own research into relevant literatures and possible approaches. The goal is not to train you to execute a particular machine learning solution. There are far too many approaches available; they may not cover whatever problem you find; and the state of the art will be different in a year or two anyway. Instead, we will learn how to think about and classify problems into broad types, how to define and measure the efficacy of different solutions to that problem, how to avoid some common and subtle mistakes, and how to think about a full machine learning pipeline from start to finish.
 
-# Readings Policy
+## Readings Policy
 Math and programming is not something you learn, it's something you get used to. It is a trade, that takes years of trial and error and concrete projects to acquire. The readings and assignments of this course are with minor exception voluntary and intended for self study. They are to help point you in the right direction when you realize you need to start brushing up on a particular set of tools in order to tackle a particular problem.
 
 Required - Skim in order to improve discussion and understanding during lecture
-Recommended -
-Reference - Deeper Mathematical or historical context
 
-Textbooks
+Recommended - Eventually skim/read during self study
+
+Reference - Deeper mathematical or historical context
+
+### Textbooks
 
 Laurent Gatto, "An Introduction to Machine Learning with R," 2017-10-18, https://lgatto.github.io/IntroMachineLearningWithR/index.html
 
@@ -33,9 +35,8 @@ https://www-bcf.usc.edu/~gareth/ISL/ISLR%20Seventh%20Printing.pdf
 
 (WMLW) "WHY MACHINE LEARNING WORKS," George D. Montanez, May 2017, http://www.cs.cmu.edu/~gmontane/montanez_dissertation.pdf
 
-# Preliminaries
+### Software and Programming
 
-## Software and Programming
 Students are not expected to know any particular language or set of software. We will be demonstrating best practices as used in the Machine Learning for Social Science Lab at the Center for Peace and Security Studies, UCSD. In that lab, our software stack consists of Python and R for data preparation and analysis, Spark for database management, Keras/Tensorflow for deep learning, Github for revision control, and Ubuntu for our operating system and command-line tools.
 
 Optional Readings
