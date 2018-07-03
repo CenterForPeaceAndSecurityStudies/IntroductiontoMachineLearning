@@ -21,7 +21,6 @@ Do not purchase any books. Each of these should be available for free online at 
 
 (CIML)  A course in machine learning, Hal Daume III, ciml.info/
 
-(DL) Deep Learning, Ian Goodfellow and Yoshua Bengio and Aaron Courville, 2016, http://www.deeplearningbook.org/
 
 (ESL) Elements of Statistical Learning, Trevor Hastie, Robert Tibshirani, https://web.stanford.edu/~hastie/ElemStatLearn/
 
@@ -40,6 +39,14 @@ https://www-bcf.usc.edu/~gareth/ISL/ISLR%20Seventh%20Printing.pdf
 http://users.isr.ist.utl.pt/~wurmd/Livros/school/Bishop%20-%20Pattern%20Recognition%20And%20Machine%20Learning%20-%20Springer%20%202006.pdf
 
 (WMLW) "WHY MACHINE LEARNING WORKS," George D. Montanez, May 2017, http://www.cs.cmu.edu/~gmontane/montanez_dissertation.pdf
+
+### General Resources
+
+https://www.reddit.com/r/MachineLearning/
+https://twitter.com/arxiv_org
+https://twitter.com/RexDouglass
+https://www.cambridge.org/core/journals/political-analysis
+
 
 ### Software and Programming
 
@@ -102,8 +109,9 @@ Gaurav Sood and Suriyan Laohaprapanon, "Predicting Race and Ethnicity From the S
 "ethnicolr: Predict Race and Ethnicity From Name," https://github.com/appeler/ethnicolr
 
 
-
 ### Shannon–Weaver Model of Communication
+
+https://en.wikipedia.org/wiki/Shannon%E2%80%93Weaver_model
 
 Christopher Olah, "Visual Information Theory," October 14, 2015, http://colah.github.io/posts/2015-09-Visual-Information/
 
@@ -112,6 +120,8 @@ C. E. SHANNON, "A Mathematical Theory of Communication," October 1948,  The Bell
 PRML 1.6 "Information Theory"
 
 ### Information Sources
+
+https://en.wikipedia.org/wiki/Entropy_(information_theory)
 
 Arian Maleki and Tom Do, "Review of Probability Theory," http://cs229.stanford.edu/section/cs229-prob.pdf
 
@@ -128,8 +138,14 @@ PRML 2.0
 #### Evaluating Reconstructions
 
 https://en.wikipedia.org/wiki/Evaluation_of_binary_classifiers
+https://en.wikipedia.org/wiki/Confusion_matrix
+https://en.wikipedia.org/wiki/Precision_and_recall
+https://en.wikipedia.org/wiki/Sensitivity_and_specificity
+https://en.wikipedia.org/wiki/F1_score
 
 ##### What is mutual information
+
+https://en.wikipedia.org/wiki/Mutual_information
 
 #### Distance and Similarity
 
@@ -151,6 +167,11 @@ WMLW 2.0 "Related Work"
 
 "No Free Lunch Theorems for Optimization," David H. Wolpert and William G. Macready, 1997, https://ti.arc.nasa.gov/m/profile/dhw/papers/78.pdf
 
+### In Sample/Out of Sample
+
+https://en.wikipedia.org/wiki/Training,_test,_and_validation_sets
+https://en.wikipedia.org/wiki/Cross-validation_(statistics)
+
 ## 1 bit information source, 2 bit message
 
 ### Features
@@ -163,6 +184,11 @@ Jens Hainmueller Jonathan Mummolo Yiqing Xu, "How Much Should We Trust Estimates
 
 ### Curse of Dimensionality
 
+#Feature Selection
+"bounceR", R Package, https://github.com/STATWORX/bounceR
+
+P-Hacking
+https://projects.fivethirtyeight.com/p-hacking/
 
 ### Structure
 
@@ -176,21 +202,24 @@ Jens Hainmueller Jonathan Mummolo Yiqing Xu, "How Much Should We Trust Estimates
 
 ## 2 bit information source, 2 bit message
 
+
 ## Sequences
+
+Patrik Lindenfors, Fredrik Jansson, Yi-ting Wang and Staffan I. Lindberg, Christian Lopez, 05 March 2018, "Investigating Sequences in Ordinal Data: A New Approach With Adapted Evolutionary Models," https://www.cambridge.org/core/journals/political-science-research-and-methods/article/investigating-sequences-in-ordinal-data-a-new-approach-with-adapted-evolutionary-models/F3747D8A1908902BA7F26C5EE28AFAEF
 
 
 # Day 2 The Toolbox
 
 ## Introduction
 
-Algorithms
+### Toy problems
+UC Irvine Machine Learning Repository, http://archive.ics.uci.edu/ml/index.php
 
+https://en.wikipedia.org/wiki/List_of_datasets_for_machine_learning_research
 
-#Feature Selection
-"bounceR", R Package, https://github.com/STATWORX/bounceR
+Kaggle Datasets, https://www.kaggle.com/datasets?sortBy=votes&group=all
 
-
-Patrik Lindenfors, Fredrik Jansson, Yi-ting Wang and Staffan I. Lindberg, Christian Lopez, 05 March 2018, "Investigating Sequences in Ordinal Data: A New Approach With Adapted Evolutionary Models," https://www.cambridge.org/core/journals/political-science-research-and-methods/article/investigating-sequences-in-ordinal-data-a-new-approach-with-adapted-evolutionary-models/F3747D8A1908902BA7F26C5EE28AFAEF
+https://projects.fivethirtyeight.com/2018-world-cup-predictions/
 
 ## Clustering
 
@@ -199,6 +228,10 @@ Patrik Lindenfors, Fredrik Jansson, Yi-ting Wang and Staffan I. Lindberg, Christ
 ## Non-parametric models
 
 ### Trees
+https://en.wikipedia.org/wiki/Decision_tree_learning
+
+### Ensembles
+https://en.wikipedia.org/wiki/Random_forest
 
 ## Gradient Boosting
 Terence Parr and Jeremy Howard, "How to explain gradient boosting," http://explained.ai/gradient-boosting/index.html
@@ -206,20 +239,23 @@ Terence Parr and Jeremy Howard, "How to explain gradient boosting," http://expla
 ## Parametric Models
 
 # OLS
+
 # Logit
 
 ## SVM
 
+https://en.wikipedia.org/wiki/Support_vector_machine
+
 ## Neural Networks
-### Sequences
-#### LSTM
+
+https://en.wikipedia.org/wiki/Artificial_neural_network
+
+(DL) Deep Learning, Ian Goodfellow and Yoshua Bengio and Aaron Courville, 2016, http://www.deeplearningbook.org/
+
+### LSTM
 Christopher Olah, "Understanding LSTM Networks," August 27, 2015, http://colah.github.io/posts/2015-08-Understanding-LSTMs/
 
-
-#Feature Reduction
-
-#Feature Engineering
-# Out of Sample
+https://keras.rstudio.com/articles/examples/conv_lstm.html
 
 
 ## Text
@@ -229,10 +265,16 @@ Julia Silge and David Robinson, "Text Mining with R: A Tidy Approach," 2018-04-0
 
 Matthew Gentzkow, Bryan T. Kelly, Matt Taddy, "Text as Data," http://web.stanford.edu/~gentzkow/research/text-as-data.pdf
 
+## Images
+
+https://keras.rstudio.com/articles/examples/cifar10_cnn.html
+
 
 # Interpretation
 
+"Why Should I Trust You?": Explaining the Predictions of Any Classifier, Marco Tulio Ribeiro, Sameer Singh, Carlos Guestrin, https://arxiv.org/abs/1602.04938
 
+lime, Python Package, https://github.com/marcotcr/lime
 
 # Causality
 
