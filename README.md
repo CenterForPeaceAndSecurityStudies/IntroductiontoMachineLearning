@@ -172,6 +172,13 @@ WMLW 2.0 "Related Work"
 https://en.wikipedia.org/wiki/Training,_test,_and_validation_sets
 https://en.wikipedia.org/wiki/Cross-validation_(statistics)
 
+####overfitting
+parametric functions
+single parameter
+why overfitting is possible
+show by gitting to
+mean function
+
 ## 1 bit information source, 2 bit message
 
 ### Features
