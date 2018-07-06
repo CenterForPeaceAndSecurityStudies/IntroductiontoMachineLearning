@@ -29,7 +29,7 @@ Reference - Deeper mathematical or historical context <br/>
 
 ### Textbooks
 
-Do not purchase any books. Each of these should be available for free online at the link given.
+Do not purchase any books - each of these should be available for free on-line at the link given.
 
 (CIML)  [A course in machine learning](ciml.info/), Hal Daume III <br/>
 (ESL) [Elements of Statistical Learning](https://web.stanford.edu/~hastie/ElemStatLearn/), Trevor Hastie and Robert Tibshirani <br/>
@@ -43,11 +43,11 @@ Do not purchase any books. Each of these should be available for free online at 
 
 ### General Resources
 
-There are a number places on-line for constant updates on machine learning
-https://www.reddit.com/r/MachineLearning/<br/>
-https://twitter.com/arxiv_org<br/>
-https://twitter.com/RexDouglass<br/>
-https://www.cambridge.org/core/journals/political-analysis<br/>
+There are a number places on-line for constant updates on machine learning <br/>
+* https://www.reddit.com/r/MachineLearning/
+* https://twitter.com/arxiv_org
+* https://twitter.com/RexDouglass
+* https://www.cambridge.org/core/journals/political-analysis
 
 
 ### Software and Programming
