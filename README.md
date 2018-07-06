@@ -31,15 +31,15 @@ Reference - Deeper mathematical or historical context <br/>
 
 Do not purchase any books - each of these should be available for free on-line at the link given.
 
-(CIML)  [A course in machine learning](ciml.info/), Hal Daume III <br/>
-(ESL) [Elements of Statistical Learning](https://web.stanford.edu/~hastie/ElemStatLearn/), Trevor Hastie and Robert Tibshirani <br/>
-(ISL) [An introduction to statistical learning: with application in R, Gareth James](https://www-bcf.usc.edu/~gareth/ISL/ISLR%20Seventh%20Printing.pdf), Daniela Witten, Trevor Hastie, and Robert Tibshirani <br/>
-(IML) [Introduction to Machine Learning](http://alex.smola.org/drafts/thebook.pdf), Alex Smola and S.V.N. Vishwanathan <br/>
-(IMLR) ["An Introduction to Machine Learning with R"](https://lgatto.github.io/IntroMachineLearningWithR/index.html),Laurent Gatto, 2017-10-18 <br/>
-(ML) [Machine Learning: The art and science of algorithms that make sense of data](http://dsd.future-lab.cn/members/2015nlp/Peter_Flach_Machine_Learning._The_Art_and_Scienc(BookZZ.org).pdf), Flach,  <br/>
-(MLPP) [Machine Learning: A Probabilistic Perspective](https://www.cs.ubc.ca/~murphyk/MLbook/), Kevin Murphy, <br/>
-(PRML) [Patter recognition and machine learning](http://users.isr.ist.utl.pt/~wurmd/Livros/school/Bishop%20-%20Pattern%20Recognition%20And%20Machine%20Learning%20-%20Springer%20%202006.pdf), Christopher M. Bishop <br/>
-(WMLW) ["WHY MACHINE LEARNING WORKS"](http://www.cs.cmu.edu/~gmontane/montanez_dissertation.pdf), George D. Montanez, May 2017, Dissertation <br/>
+* (CIML)  [A course in machine learning](ciml.info/), Hal Daume III
+* (ESL) [Elements of Statistical Learning](https://web.stanford.edu/~hastie/ElemStatLearn/), Trevor Hastie and Robert Tibshirani
+* (ISL) [An introduction to statistical learning: with application in R, Gareth James](https://www-bcf.usc.edu/~gareth/ISL/ISLR%20Seventh%20Printing.pdf), Daniela Witten, Trevor Hastie, and Robert Tibshirani
+* (IML) [Introduction to Machine Learning](http://alex.smola.org/drafts/thebook.pdf), Alex Smola and S.V.N. Vishwanathan
+* (IMLR) ["An Introduction to Machine Learning with R"](https://lgatto.github.io/IntroMachineLearningWithR/index.html),Laurent Gatto, 2017-10-18
+* (ML) [Machine Learning: The art and science of algorithms that make sense of data](http://dsd.future-lab.cn/members/2015nlp/Peter_Flach_Machine_Learning._The_Art_and_Scienc(BookZZ.org).pdf), Flach
+* (MLPP) [Machine Learning: A Probabilistic Perspective](https://www.cs.ubc.ca/~murphyk/MLbook/), Kevin Murphy
+* (PRML) [Patter recognition and machine learning](http://users.isr.ist.utl.pt/~wurmd/Livros/school/Bishop%20-%20Pattern%20Recognition%20And%20Machine%20Learning%20-%20Springer%20%202006.pdf), Christopher M. Bishop
+* (WMLW) ["WHY MACHINE LEARNING WORKS"](http://www.cs.cmu.edu/~gmontane/montanez_dissertation.pdf), George D. Montanez, May 2017, Dissertation
 
 ### General Resources
 
