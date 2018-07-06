@@ -1,6 +1,16 @@
-<header>
-Introduction to Machine Learning
-</header>
+# Introduction to Machine Learning
+
+Rex W. Douglass
+Director Machine Learning for Social Science Lab (MSSL)
+Center for Peace and Security Studies (cPASS)
+Department of Political Science
+University of California San Diego
+rexdouglass@gmail.com
+www.rexdouglass.com
+@rexdouglass
+
+
+## Overview
 
 This is a 6 hour introduction to machine learning spread across two three-hour lectures. The goal of this short course is very specific: to give you enough of an overview, vocabulary, and intuition, so that you can identify machine learning problems in the wild and begin your own research into relevant literatures and possible approaches. The goal is not to train you to execute a particular machine learning solution. There are far too many approaches available; they may not cover whatever problem you find; and the state of the art will be different in a year or two anyway. Instead, we will learn how to think about and classify problems into broad types, how to define and measure the efficacy of different solutions to that problem, how to avoid some common and subtle mistakes, and how to think about a full machine learning pipeline from start to finish.
 
@@ -8,7 +18,9 @@ Day 1 is dedicated to providing intuition into the core ideas and problems in ma
 
 Day 2 is dedicated almost entirely to tools and real world examples. We will grind through as many problems/solutions being used right now in three hours as we can, with links to further reading in the syllabus.
 
-## Readings Policy
+Please bring a two sided coin(s) and scratch paper to class for passing notes for the demonstrations.
+
+### Readings Policy
 Math and programming is not something you learn, it's something you get used to. It is a trade, that takes years of trial and error and concrete projects to acquire. The readings and assignments of this course are with minor exception voluntary and intended for self study. They are to help point you in the right direction when you realize you need to start brushing up on a particular set of tools in order to tackle a particular problem.
 
 Required - Skim in order to improve discussion and understanding during lecture
@@ -75,6 +87,7 @@ RegExplain, "https://github.com/gadenbuie/regexplain/#readme"
 Kieran Healy, "The Plain Person’s Guide to Plain Text Social Science," 2018-04-28, http://plain-text.co/
 
 "Statistical Data Cleaning with Applications in R"
+
 
 # Day 1 The Intuition
 Course Slides: https://docs.google.com/presentation/d/19i2om_jwK8m3a-jNvgtM-WMT1l1HAGaGuWeb4bgLsTM/edit?usp=sharing
