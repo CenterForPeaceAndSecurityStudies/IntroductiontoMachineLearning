@@ -32,9 +32,9 @@ Reference - Deeper mathematical or historical context <br/>
 Do not purchase any books. Each of these should be available for free online at the link given.
 
 (CIML)  [A course in machine learning](ciml.info/), Hal Daume III <br/>
-(ESL) [Elements of Statistical Learning, Trevor Hastie(https://web.stanford.edu/~hastie/ElemStatLearn/), Robert Tibshirani <br/>
-(ISL) [An introduction to statistical learning: with application in R, Gareth James](https://www-bcf.usc.edu/~gareth/ISL/ISLR%20Seventh%20Printing.pdf), Daniela Witten, Trevor Hastie, and Robert Tibshirani br/>
-(IML) Introduction to Machine Learning[http://alex.smola.org/drafts/thebook.pdf], Alex Smola and S.V.N. Vishwanathan <br/>
+(ESL) [Elements of Statistical Learning](https://web.stanford.edu/~hastie/ElemStatLearn/), Trevor Hastie and Robert Tibshirani <br/>
+(ISL) [An introduction to statistical learning: with application in R, Gareth James](https://www-bcf.usc.edu/~gareth/ISL/ISLR%20Seventh%20Printing.pdf), Daniela Witten, Trevor Hastie, and Robert Tibshirani <br/>
+(IML) [Introduction to Machine Learning](http://alex.smola.org/drafts/thebook.pdf), Alex Smola and S.V.N. Vishwanathan <br/>
 (IMLR) ["An Introduction to Machine Learning with R"](https://lgatto.github.io/IntroMachineLearningWithR/index.html),Laurent Gatto, 2017-10-18 <br/>
 (ML) [Machine Learning: The art and science of algorithms that make sense of data](http://dsd.future-lab.cn/members/2015nlp/Peter_Flach_Machine_Learning._The_Art_and_Scienc(BookZZ.org).pdf), Flach,  <br/>
 (MLPP) [Machine Learning: A Probabilistic Perspective](https://www.cs.ubc.ca/~murphyk/MLbook/), Kevin Murphy, <br/>
