@@ -44,10 +44,10 @@ Do not purchase any books - each of these should be available for free on-line a
 ### General Resources
 
 There are a number places on-line for constant updates on machine learning <br/>
-* https://www.reddit.com/r/MachineLearning/
-* https://twitter.com/arxiv_org
-* https://twitter.com/RexDouglass
-* https://www.cambridge.org/core/journals/political-analysis
+* [Reddit Machine Learning Subreddit](https://www.reddit.com/r/MachineLearning/)
+* [arxiv](https://twitter.com/arxiv_org)
+* [My twitter feed](https://twitter.com/RexDouglass)
+* [Political Analysis](https://www.cambridge.org/core/journals/political-analysis)
 
 
 ### Software and Programming
