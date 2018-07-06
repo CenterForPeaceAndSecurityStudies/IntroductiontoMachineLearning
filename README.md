@@ -183,6 +183,7 @@ WMLW 2.0 "Related Work"
 https://en.wikipedia.org/wiki/Training,_test,_and_validation_sets
 https://en.wikipedia.org/wiki/Cross-validation_(statistics)
 
+<<<<<<< HEAD
 "Linear Model Selection by Cross-Validation," Jun Shao, 1993, http://www.libpls.net/publication/MCCV_Shao_1993.pdf
 "Cross-validation failure: small sample sizes lead to large error bars," Gaël Varoquaux, 2017, https://hal.inria.fr/hal-01545002/
 
@@ -192,6 +193,14 @@ Mean
 ## Evaluating Continuous Y
 
 ## Cross Validation
+=======
+####overfitting
+parametric functions
+single parameter
+why overfitting is possible
+show by gitting to
+mean function
+>>>>>>> 3a4dc4c1324c32e118d17224e6dad48bd5ff2c9b
 
 ## 1 bit information source, 2 bit message
 
