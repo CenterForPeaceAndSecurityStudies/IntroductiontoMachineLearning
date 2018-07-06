@@ -12,7 +12,7 @@ www.rexdouglass.com<br/>
 
 ## Overview
 
-This is a 6 hour introduction to machine learning spread across two three-hour lectures. The goal of this short course is very specific: to give you enough of an overview, vocabulary, and intuition, so that you can identify machine learning problems in the wild and begin your own research into relevant literatures and possible approaches. The goal is not to train you to execute a particular machine learning solution. There are far too many approaches available; they may not cover whatever problem you find; and the state of the art will be different in a year or two anyway. Instead, we will learn how to think about and classify problems into broad types, how to define and measure the efficacy of different solutions to that problem, how to avoid some common and subtle mistakes, and how to think about a full machine learning pipeline from start to finish.
+This is a 6 hour introduction to machine learning spread across two three-hour lectures. The goal of this very short course is specific: to give you enough of an overview, vocabulary, and intuition, so that you can identify machine learning problems in the wild and begin your own research into relevant literatures and possible approaches. The goal is not to train you to execute a particular machine learning solution. There are far too many approaches available; they may not cover whatever problem you find; and the state of the art will be different in a year or two anyway. Instead, we will learn how to think about and classify problems into broad types, how to define and measure the efficacy of different solutions to that problem, how to avoid some common and subtle mistakes, and how to think about a full machine learning pipeline from start to finish.
 
 Day 1 is dedicated to providing intuition into the core ideas and problems in machine learning. The goal of the lecture will be to introduce those ideas using as simple of examples as possible. We will spend almost no time on specific tools, code, or real world examples.
 
@@ -21,44 +21,35 @@ Day 2 is dedicated almost entirely to tools and real world examples. We will gri
 Please bring a two sided coin(s) and scratch paper to class for passing notes for the demonstrations.
 
 ### Readings Policy
-Math and programming is not something you learn, it's something you get used to. It is a trade, that takes years of trial and error and concrete projects to acquire. The readings and assignments of this course are with minor exception voluntary and intended for self study. They are to help point you in the right direction when you realize you need to start brushing up on a particular set of tools in order to tackle a particular problem.
+Math and programming are not something you learn, they're something you get used to. It is a trade, that takes years of trial and error and concrete projects to acquire. The readings of this course are, with a few exceptions, voluntary and intended for self study. They are to help point you in the right direction when you realize you need to start brushing up on a particular set of tools in order to tackle a particular problem.
 
-Required - Skim in order to improve discussion and understanding during lecture
-
-Recommended - Eventually skim/read during self study
-
-Reference - Deeper mathematical or historical context
+Required - Skim in order to improve discussion and understanding during lecture <br/>
+Recommended - Eventually skim/read during self study <br/>
+Reference - Deeper mathematical or historical context <br/>
 
 ### Textbooks
 
 Do not purchase any books. Each of these should be available for free online at the link given.
 
-(CIML)  A course in machine learning, Hal Daume III, ciml.info/
-
-(ESL) Elements of Statistical Learning, Trevor Hastie, Robert Tibshirani, https://web.stanford.edu/~hastie/ElemStatLearn/
-
+(CIML)  A course in machine learning, Hal Daume III, ciml.info/ <br/>
+(ESL) Elements of Statistical Learning, Trevor Hastie, Robert Tibshirani, https://web.stanford.edu/~hastie/ElemStatLearn/ <br/>
 (ISL) An introduction to statistical learning: with application in R, Gareth James, Daniela Witten, Trevor Hastie, and Robert Tibshirani,
-https://www-bcf.usc.edu/~gareth/ISL/ISLR%20Seventh%20Printing.pdf
-
-(IML) Introduction to Machine Learning, Alex Smola and S.V.N. Vishwanathan, http://alex.smola.org/drafts/thebook.pdf
-
-(IMLR) Laurent Gatto, "An Introduction to Machine Learning with R," 2017-10-18, https://lgatto.github.io/IntroMachineLearningWithR/index.html
-
-(ML) Machine Learning: The art and science of algorithms that make sense of data, Flach, http://dsd.future-lab.cn/members/2015nlp/Peter_Flach_Machine_Learning._The_Art_and_Scienc(BookZZ.org).pdf
-
-(MLPP) Machine Learning: A Probabilistic Perspective, Kevin Murphy, https://www.cs.ubc.ca/~murphyk/MLbook/
-
+https://www-bcf.usc.edu/~gareth/ISL/ISLR%20Seventh%20Printing.pdf <br/>
+(IML) Introduction to Machine Learning, Alex Smola and S.V.N. Vishwanathan, http://alex.smola.org/drafts/thebook.pdf <br/>
+(IMLR) Laurent Gatto, "An Introduction to Machine Learning with R," 2017-10-18, https://lgatto.github.io/IntroMachineLearningWithR/index.html <br/>
+(ML) Machine Learning: The art and science of algorithms that make sense of data, Flach, http://dsd.future-lab.cn/members/2015nlp/Peter_Flach_Machine_Learning._The_Art_and_Scienc(BookZZ.org).pdf <br/>
+(MLPP) Machine Learning: A Probabilistic Perspective, Kevin Murphy, https://www.cs.ubc.ca/~murphyk/MLbook/ <br/>
 (PRML) Patter recognition and machine learning, Christopher M. Bishop,
-http://users.isr.ist.utl.pt/~wurmd/Livros/school/Bishop%20-%20Pattern%20Recognition%20And%20Machine%20Learning%20-%20Springer%20%202006.pdf
-
-(WMLW) "WHY MACHINE LEARNING WORKS," George D. Montanez, May 2017, http://www.cs.cmu.edu/~gmontane/montanez_dissertation.pdf
+http://users.isr.ist.utl.pt/~wurmd/Livros/school/Bishop%20-%20Pattern%20Recognition%20And%20Machine%20Learning%20-%20Springer%20%202006.pdf <br/>
+(WMLW) "WHY MACHINE LEARNING WORKS," George D. Montanez, May 2017, http://www.cs.cmu.edu/~gmontane/montanez_dissertation.pdf <br/>
 
 ### General Resources
 
-https://www.reddit.com/r/MachineLearning/
-https://twitter.com/arxiv_org
-https://twitter.com/RexDouglass
-https://www.cambridge.org/core/journals/political-analysis
+There are a number places on-line for constant updates on machine learning
+https://www.reddit.com/r/MachineLearning/<br/>
+https://twitter.com/arxiv_org<br/>
+https://twitter.com/RexDouglass<br/>
+https://www.cambridge.org/core/journals/political-analysis<br/>
 
 
 ### Software and Programming
@@ -66,28 +57,17 @@ https://www.cambridge.org/core/journals/political-analysis
 Students are not expected to know any particular language or set of software. We will be demonstrating best practices as used in the Machine Learning for Social Science Lab at the Center for Peace and Security Studies, UCSD. In that lab, our software stack consists of Python and R for data preparation and analysis, Spark for database management, Keras/Tensorflow for deep learning, Github for revision control, and Ubuntu for our operating system and command-line tools.
 
 MACS 305001 - Computing for the Social Sciences, Benjamin Soltoff, Lecturer in Computational Social Science,
-https://cfss.uchicago.edu/index.html
-
-"R for Data Science", Garrett Grolemund, http://r4ds.had.co.nz/
-
-"Spark and sparklyr," https://cfss.uchicago.edu/distrib003_spark.html
-
-"GitHub and RStudio," https://resources.github.com/articles/github-and-rstudio/
-
-Jeroen Janssens, "Data Science at the Command Line," February 8, 2018, https://www.datascienceatthecommandline.com/
-
-Kieran Healy, "Data Visualization: A practical introduction", http://socviz.co/index.html?utm_content=buffer09710&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer
-
-"Introduction to Validate," https://cran.r-project.org/web/packages/validate/vignettes/introduction.html
-
-Thomas Nield, "An introduction to regular expressions," December 13, 2017 , https://www.oreilly.com/ideas/an-introduction-to-regular-expressions
-
-RegExplain, "https://github.com/gadenbuie/regexplain/#readme"
-
-Kieran Healy, "The Plain Person’s Guide to Plain Text Social Science," 2018-04-28, http://plain-text.co/
-
+https://cfss.uchicago.edu/index.html <br/>
+"R for Data Science", Garrett Grolemund, http://r4ds.had.co.nz/ <br/>
+"Spark and sparklyr," https://cfss.uchicago.edu/distrib003_spark.html <br/>
+"GitHub and RStudio," https://resources.github.com/articles/github-and-rstudio/ <br/>
+Jeroen Janssens, "Data Science at the Command Line," February 8, 2018, https://www.datascienceatthecommandline.com/ <br/>
+Kieran Healy, "Data Visualization: A practical introduction", http://socviz.co/index.html?utm_content=buffer09710&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer <br/>
+"Introduction to Validate," https://cran.r-project.org/web/packages/validate/vignettes/introduction.html <br/>
+Thomas Nield, "An introduction to regular expressions," December 13, 2017 , https://www.oreilly.com/ideas/an-introduction-to-regular-expressions <br/>
+RegExplain, "https://github.com/gadenbuie/regexplain/#readme" <br/>
+Kieran Healy, "The Plain Person’s Guide to Plain Text Social Science," 2018-04-28, http://plain-text.co/ <br/>
 "Statistical Data Cleaning with Applications in R"
-
 
 # Day 1 The Intuition
 Course Slides: https://docs.google.com/presentation/d/19i2om_jwK8m3a-jNvgtM-WMT1l1HAGaGuWeb4bgLsTM/edit?usp=sharing
