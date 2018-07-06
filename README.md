@@ -21,7 +21,6 @@ Do not purchase any books. Each of these should be available for free online at 
 
 (CIML)  A course in machine learning, Hal Daume III, ciml.info/
 
-
 (ESL) Elements of Statistical Learning, Trevor Hastie, Robert Tibshirani, https://web.stanford.edu/~hastie/ElemStatLearn/
 
 (ISL) An introduction to statistical learning: with application in R, Gareth James, Daniela Witten, Trevor Hastie, and Robert Tibshirani,
@@ -52,7 +51,6 @@ https://www.cambridge.org/core/journals/political-analysis
 
 Students are not expected to know any particular language or set of software. We will be demonstrating best practices as used in the Machine Learning for Social Science Lab at the Center for Peace and Security Studies, UCSD. In that lab, our software stack consists of Python and R for data preparation and analysis, Spark for database management, Keras/Tensorflow for deep learning, Github for revision control, and Ubuntu for our operating system and command-line tools.
 
-Optional Readings
 MACS 305001 - Computing for the Social Sciences, Benjamin Soltoff, Lecturer in Computational Social Science,
 https://cfss.uchicago.edu/index.html
 
@@ -74,6 +72,7 @@ RegExplain, "https://github.com/gadenbuie/regexplain/#readme"
 
 Kieran Healy, "The Plain Person’s Guide to Plain Text Social Science," 2018-04-28, http://plain-text.co/
 
+"Statistical Data Cleaning with Applications in R"
 
 # Day 1 The Intuition
 Course Slides: https://docs.google.com/presentation/d/19i2om_jwK8m3a-jNvgtM-WMT1l1HAGaGuWeb4bgLsTM/edit?usp=sharing
@@ -99,7 +98,7 @@ Donald B. Rubin, "Basic Concepts of Statistical Inference for Causal Effects in 
 http://www.stat.columbia.edu/~cook/qr33.pdf
 
 
-### Whyyyyyy
+## Why Machine Learning
 
 "ViEWS: a political Violence Early-Warning System," http://pcr.uu.se/research/views/
 
@@ -109,7 +108,7 @@ Gaurav Sood and Suriyan Laohaprapanon, "Predicting Race and Ethnicity From the S
 "ethnicolr: Predict Race and Ethnicity From Name," https://github.com/appeler/ethnicolr
 
 
-### Shannon–Weaver Model of Communication
+## Shannon–Weaver Model of Communication
 
 https://en.wikipedia.org/wiki/Shannon%E2%80%93Weaver_model
 
@@ -121,21 +120,37 @@ PRML 1.6 "Information Theory"
 
 ### Information Sources
 
+### Entropy
 https://en.wikipedia.org/wiki/Entropy_(information_theory)
 
+### Distributions and Probability
 Arian Maleki and Tom Do, "Review of Probability Theory," http://cs229.stanford.edu/section/cs229-prob.pdf
 
 PRML 2.0
 
-### Message Spaces
+### Messages
 
 ### Transmitters
+https://en.wikipedia.org/wiki/Function_(mathematics)
 
 ### Receivers
+https://en.wikipedia.org/wiki/Inverse_function
 
-## 1 bit information sources
+# 0-bit information source
 
-#### Evaluating Reconstructions
+## 0-bit information source, 1-bit message
+Zero information conversations
+
+## 0-bit information source, 2-N bit message
+
+# 1 bit information sources,
+
+## Y vs Yhat
+
+### Mutual information
+https://en.wikipedia.org/wiki/Mutual_information
+
+### Evaluating Reconstructions
 
 https://en.wikipedia.org/wiki/Evaluation_of_binary_classifiers
 https://en.wikipedia.org/wiki/Confusion_matrix
@@ -143,17 +158,13 @@ https://en.wikipedia.org/wiki/Precision_and_recall
 https://en.wikipedia.org/wiki/Sensitivity_and_specificity
 https://en.wikipedia.org/wiki/F1_score
 
-##### What is mutual information
-
-https://en.wikipedia.org/wiki/Mutual_information
-
-#### Distance and Similarity
+### Distance and Similarity
 
 Package ‘entropy,’ "Estimation of Entropy, Mutual Information and Related Quantities," February 19, 2015, http://strimmerlab.org/software/entropy/
 
 Drost, (2018). Philentropy: Information Theory and Distance Quantification with R. Journal of Open Source Software, 3(26), 765, https://doi.org/10.21105/joss.00765
 
-## 1 bit information sources, 1 bit messages
+## 1 bit source, 1 bit messages
 
 ### What makes a good receiver?
 
@@ -172,6 +183,16 @@ WMLW 2.0 "Related Work"
 https://en.wikipedia.org/wiki/Training,_test,_and_validation_sets
 https://en.wikipedia.org/wiki/Cross-validation_(statistics)
 
+"Linear Model Selection by Cross-Validation," Jun Shao, 1993, http://www.libpls.net/publication/MCCV_Shao_1993.pdf
+"Cross-validation failure: small sample sizes lead to large error bars," Gaël Varoquaux, 2017, https://hal.inria.fr/hal-01545002/
+
+## Parametric Receiver Function
+Mean
+
+## Evaluating Continuous Y
+
+## Cross Validation
+
 ## 1 bit information source, 2 bit message
 
 ### Features
@@ -182,31 +203,55 @@ https://en.wikipedia.org/wiki/Cross-validation_(statistics)
 
 Jens Hainmueller Jonathan Mummolo Yiqing Xu, "How Much Should We Trust Estimates from Multiplicative Interaction Models? Simple Tools to Improve Empirical Practice," April 20, 2018, http://yiqingxu.org/papers/english/2018_HMX_interaction/main.pdf
 
-### Curse of Dimensionality
+# Nearest Neighbor
+Integer encoder
+Latent variable model
+https://en.wikipedia.org/wiki/Binary_number#Counting_in_binary
 
-#Feature Selection
-"bounceR", R Package, https://github.com/STATWORX/bounceR
+# Clustering
+https://en.wikipedia.org/wiki/Cluster_analysis
 
-P-Hacking
-https://projects.fivethirtyeight.com/p-hacking/
+# K-means
+https://en.wikipedia.org/wiki/K-means_clustering
 
 ### Structure
 
 #### Temporal
+
+##### Sequences
+Patrik Lindenfors, Fredrik Jansson, Yi-ting Wang and Staffan I. Lindberg, Christian Lopez, 05 March 2018, "Investigating Sequences in Ordinal Data: A New Approach With Adapted Evolutionary Models," https://www.cambridge.org/core/journals/political-science-research-and-methods/article/investigating-sequences-in-ordinal-data-a-new-approach-with-adapted-evolutionary-models/F3747D8A1908902BA7F26C5EE28AFAEF
+
 #### Spatial
 #### Network
 
 ## 2 bit information source, 1 bit message
 
-### Line Noise
+### Bandwidth
+
+### Over determination
+https://en.wikipedia.org/wiki/Overdetermined_system
+
+## 1-bit information source, N-bit message
+
+### Curse of Dimensionality
+
+https://en.wikipedia.org/wiki/Curse_of_dimensionality
+
+####Feature Selection
+https://en.wikipedia.org/wiki/Feature_selection
+
+"bounceR", R Package, https://github.com/STATWORX/bounceR
+
+P-Hacking
+https://projects.fivethirtyeight.com/p-hacking/
+
+## N-bit information source, 1-bit message
 
 ## 2 bit information source, 2 bit message
 
+## N-bit information source, N-bit message
 
-## Sequences
-
-Patrik Lindenfors, Fredrik Jansson, Yi-ting Wang and Staffan I. Lindberg, Christian Lopez, 05 March 2018, "Investigating Sequences in Ordinal Data: A New Approach With Adapted Evolutionary Models," https://www.cambridge.org/core/journals/political-science-research-and-methods/article/investigating-sequences-in-ordinal-data-a-new-approach-with-adapted-evolutionary-models/F3747D8A1908902BA7F26C5EE28AFAEF
-
+## 1-bit information source, 1-bit message, 1-bit of line noise
 
 # Day 2 The Toolbox
 
