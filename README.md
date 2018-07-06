@@ -1,4 +1,7 @@
-# Introduction to Machine Learning
+<header>
+Introduction to Machine Learning
+============
+</header>
 
 This is a 6 hour introduction to machine learning spread across two three-hour lectures. The goal of this short course is very specific: to give you enough of an overview, vocabulary, and intuition, so that you can identify machine learning problems in the wild and begin your own research into relevant literatures and possible approaches. The goal is not to train you to execute a particular machine learning solution. There are far too many approaches available; they may not cover whatever problem you find; and the state of the art will be different in a year or two anyway. Instead, we will learn how to think about and classify problems into broad types, how to define and measure the efficacy of different solutions to that problem, how to avoid some common and subtle mistakes, and how to think about a full machine learning pipeline from start to finish.
 
@@ -107,7 +110,6 @@ Michael Höhle, "Safe Disposal of Unexploded WWII Bombs," May 25, 2018, http://s
 Gaurav Sood and Suriyan Laohaprapanon, "Predicting Race and Ethnicity From the Sequence of Characters in a Name," May 8, 2018,  https://arxiv.org/pdf/1805.02109.pdf  
 "ethnicolr: Predict Race and Ethnicity From Name," https://github.com/appeler/ethnicolr
 
-
 ## Shannon–Weaver Model of Communication
 
 https://en.wikipedia.org/wiki/Shannon%E2%80%93Weaver_model
@@ -178,29 +180,24 @@ WMLW 2.0 "Related Work"
 
 "No Free Lunch Theorems for Optimization," David H. Wolpert and William G. Macready, 1997, https://ti.arc.nasa.gov/m/profile/dhw/papers/78.pdf
 
+##Overfitting
+
+### Parametric Receiver Function
+#### Mean
+#### Logit
+https://en.wikipedia.org/wiki/Logistic_regression
+#### SVM
+https://en.wikipedia.org/wiki/Support_vector_machine
+
 ### In Sample/Out of Sample
 
 https://en.wikipedia.org/wiki/Training,_test,_and_validation_sets
 https://en.wikipedia.org/wiki/Cross-validation_(statistics)
 
-<<<<<<< HEAD
+### Cross Validation
+
 "Linear Model Selection by Cross-Validation," Jun Shao, 1993, http://www.libpls.net/publication/MCCV_Shao_1993.pdf
 "Cross-validation failure: small sample sizes lead to large error bars," Gaël Varoquaux, 2017, https://hal.inria.fr/hal-01545002/
-
-## Parametric Receiver Function
-Mean
-
-## Evaluating Continuous Y
-
-## Cross Validation
-=======
-####overfitting
-parametric functions
-single parameter
-why overfitting is possible
-show by gitting to
-mean function
->>>>>>> 3a4dc4c1324c32e118d17224e6dad48bd5ff2c9b
 
 ## 1 bit information source, 2 bit message
 
@@ -208,20 +205,31 @@ mean function
 
 #### Feature Engineering
 
+https://en.wikipedia.org/wiki/Feature_engineering
+
 ### Interaction
 
-Jens Hainmueller Jonathan Mummolo Yiqing Xu, "How Much Should We Trust Estimates from Multiplicative Interaction Models? Simple Tools to Improve Empirical Practice," April 20, 2018, http://yiqingxu.org/papers/english/2018_HMX_interaction/main.pdf
+https://en.wikipedia.org/wiki/Interaction_(statistics)
 
-# Nearest Neighbor
+Jens Hainmueller Jonathan Mummolo Yiqing Xu, "How Much Should We Trust Estimates from Multiplicative Interaction Models? Simple Tools to Improve Empirical Practice," April 20, 2018, Political Analysis, http://yiqingxu.org/papers/english/2018_HMX_interaction/main.pdf
+
+#### Dictionary Learning
+https://en.wikipedia.org/wiki/Sparse_dictionary_learning
+
+### Partioning
+
+#### Nearest Neighbor
+https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm
+
 Integer encoder
 Latent variable model
-https://en.wikipedia.org/wiki/Binary_number#Counting_in_binary
 
-# Clustering
+#### Clustering
 https://en.wikipedia.org/wiki/Cluster_analysis
 
-# K-means
+#### K-means
 https://en.wikipedia.org/wiki/K-means_clustering
+
 
 ### Structure
 
@@ -259,6 +267,7 @@ https://projects.fivethirtyeight.com/p-hacking/
 ## 2 bit information source, 2 bit message
 
 ## N-bit information source, N-bit message
+https://en.wikipedia.org/wiki/Binary_number#Counting_in_binary
 
 ## 1-bit information source, 1-bit message, 1-bit of line noise
 
@@ -294,9 +303,7 @@ Terence Parr and Jeremy Howard, "How to explain gradient boosting," http://expla
 
 # OLS
 
-# Logit
 
-## SVM
 
 https://en.wikipedia.org/wiki/Support_vector_machine
 
@@ -322,7 +329,6 @@ Matthew Gentzkow, Bryan T. Kelly, Matt Taddy, "Text as Data," http://web.stanfor
 ## Images
 
 https://keras.rstudio.com/articles/examples/cifar10_cnn.html
-
 
 # Interpretation
 
