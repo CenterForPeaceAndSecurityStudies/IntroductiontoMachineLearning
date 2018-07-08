@@ -196,29 +196,17 @@ https://en.wikipedia.org/wiki/Cross-validation_(statistics)
 
 https://en.wikipedia.org/wiki/Feature_engineering
 
-### Interaction
+##### Interaction
 
 https://en.wikipedia.org/wiki/Interaction_(statistics)
 
 Jens Hainmueller Jonathan Mummolo Yiqing Xu, "How Much Should We Trust Estimates from Multiplicative Interaction Models? Simple Tools to Improve Empirical Practice," April 20, 2018, Political Analysis, http://yiqingxu.org/papers/english/2018_HMX_interaction/main.pdf
 
-#### Dictionary Learning
-https://en.wikipedia.org/wiki/Sparse_dictionary_learning
+##### Feature Selection
 
-### Partioning
-
-#### Nearest Neighbor
-https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm
-
-Integer encoder
-Latent variable model
-
-#### Clustering
-https://en.wikipedia.org/wiki/Cluster_analysis
-
-#### K-means
-https://en.wikipedia.org/wiki/K-means_clustering
-
+Model Complexity
+[Akaike information criterion (AIC)](https://en.wikipedia.org/wiki/Akaike_information_criterion)
+[Bayesian information criterion (BIC)](https://en.wikipedia.org/wiki/Bayesian_information_criterion)
 
 ### Structure
 
@@ -273,6 +261,27 @@ Kaggle Datasets, https://www.kaggle.com/datasets?sortBy=votes&group=all
 
 https://projects.fivethirtyeight.com/2018-world-cup-predictions/
 
+
+
+#### Dictionary Learning
+https://en.wikipedia.org/wiki/Sparse_dictionary_learning
+
+### Partioning
+
+#### Nearest Neighbor
+https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm
+
+Integer encoder
+Latent variable model
+
+#### Clustering
+https://en.wikipedia.org/wiki/Cluster_analysis
+
+#### K-means
+https://en.wikipedia.org/wiki/K-means_clustering
+
+
+
 ## Clustering
 
 "Unsupervised Machine Learning: The hclust, pvclust, cluster, mclust, and more," https://quantdev.ssri.psu.edu/sites/qdev/files/Unsupervised_Machine_Learning_The_mclust_Package_and_others.html
@@ -292,9 +301,35 @@ Terence Parr and Jeremy Howard, "How to explain gradient boosting," http://expla
 
 # OLS
 
+https://en.wikipedia.org/wiki/Ordinary_least_squares
 
+### Model Mispecification
+
+Bias
+
+###Extreme Bounds Analysis
+https://en.wikipedia.org/wiki/Extreme_bounds_analysis
+
+["ExtremeBounds: Extreme Bounds Analysis in R"](https://cran.r-project.org/web/packages/ExtremeBounds/vignettes/ExtremeBounds.pdf)
 
 https://en.wikipedia.org/wiki/Support_vector_machine
+
+Overdetermination
+[Feature Selection with the R Package MXM:  Statistically-Equivalent Feature Subsets](https://arxiv.org/pdf/1611.03227.pdf)
+
+### Regularization, e.g. Lasso/Ridge Regression
+https://en.wikipedia.org/wiki/Lasso_(statistics)
+
+["Glmnet Vignette"](https://cran.r-project.org/web/packages/glmnet/vignettes/glmnet_beta.pdf), Trevor Hastie and Junyang Qian, September 13, 2016
+
+Original Lasso Paper
+["Regression shrinkage and selection via the lasso"](http://statweb.stanford.edu/~tibs/lasso/lasso.pdf), Tibshirani, R., 1996,  J. Royal. Statist. Soc B., Vol. 58, No. 1, pages 267-288)
+
+### Confidence Intervals and Forking Paths
+
+["Statistical learning and selective inference"](http://www.pnas.org/content/pnas/112/25/7629.full.pdf) Jonathan Taylora and Robert J. Tibshirani, June 23, 2015
+
+["The garden of forking paths: Why multiple comparisons can be a problem,  when there is no “fishing expedition” or “p-hacking” and the research  was posited ahead of time"](http://www.stat.columbia.edu/~gelman/research/unpublished/p_hacking.pdf), Andrew Gelman and Eric Loken, 14 Nov 2013, Unpublished Manuscript
 
 ## Neural Networks
 
@@ -330,3 +365,9 @@ lime, Python Package, https://github.com/marcotcr/lime
 "When and How Should One Use Deep Learning for Causal Effect Inference", https://technionmail-my.sharepoint.com/personal/urishalit_technion_ac_il/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Furishalit_technion_ac_il%2FDocuments%2FPresentations%2FIAS2018%2FIAS2018_2_for_public%2Epdf&parent=%2Fpersonal%2Furishalit_technion_ac_il%2FDocuments%2FPresentations%2FIAS2018&slrid=aaa2759e-909e-5000-fd16-3e33cabf926f
 
 Luke Keele, Dylan Small, "Comparing Covariate Prioritization via Matching to Machine Learning Methods for Causal Inference using Five Empirical Applications," May 11, 2018, https://arxiv.org/pdf/1805.03743.pdf
+
+## examples
+
+Examining Explanations for Nuclear Proliferation
+Mark S. Bell
+International Studies Quarterly, Volume 60, Issue 3, 1 September 2016, Pages 520–529, https://doi.org/10.1093/isq/sqv007
