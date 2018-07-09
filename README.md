@@ -218,7 +218,7 @@ Patrik Lindenfors, Fredrik Jansson, Yi-ting Wang and Staffan I. Lindberg, Christ
 #### Spatial
 #### Network
 
-## 2 bit information source, 1 bit message
+## 2 bit source, 1 bit message
 
 ### Bandwidth
 
@@ -227,11 +227,11 @@ https://en.wikipedia.org/wiki/Overdetermined_system
 
 ## 1-bit information source, N-bit message
 
-### Curse of Dimensionality
-
-https://en.wikipedia.org/wiki/Curse_of_dimensionality
-
+####Feature Feature
+Functions that depend on combinations of features
 ####Feature Selection
+Functions that depend on subsets of features
+
 https://en.wikipedia.org/wiki/Feature_selection
 
 "bounceR", R Package, https://github.com/STATWORX/bounceR
@@ -239,12 +239,22 @@ https://en.wikipedia.org/wiki/Feature_selection
 P-Hacking
 https://projects.fivethirtyeight.com/p-hacking/
 
+### Curse of Dimensionality
+
+https://en.wikipedia.org/wiki/Curse_of_dimensionality
+
+
+
 ## N-bit information source, 1-bit message
 
 ## 2 bit information source, 2 bit message
 
 ## N-bit information source, N-bit message
 https://en.wikipedia.org/wiki/Binary_number#Counting_in_binary
+
+https://en.wikipedia.org/wiki/MNIST_database
+
+
 
 ## 1-bit information source, 1-bit message, 1-bit of line noise
 
@@ -262,29 +272,27 @@ Kaggle Datasets, https://www.kaggle.com/datasets?sortBy=votes&group=all
 https://projects.fivethirtyeight.com/2018-world-cup-predictions/
 
 
+### Feature Engineering
 
-#### Dictionary Learning
-https://en.wikipedia.org/wiki/Sparse_dictionary_learning
-
-### Partioning
-
-#### Nearest Neighbor
-https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm
-
-Integer encoder
-Latent variable model
-
-#### Clustering
-https://en.wikipedia.org/wiki/Cluster_analysis
-
-#### K-means
-https://en.wikipedia.org/wiki/K-means_clustering
+Cut Points
+Hyperplanes
+Manifolds
 
 
+## OLS
 
-## Clustering
+https://en.wikipedia.org/wiki/Ordinary_least_squares
 
-"Unsupervised Machine Learning: The hclust, pvclust, cluster, mclust, and more," https://quantdev.ssri.psu.edu/sites/qdev/files/Unsupervised_Machine_Learning_The_mclust_Package_and_others.html
+###Extreme Bounds Analysis
+https://en.wikipedia.org/wiki/Extreme_bounds_analysis
+
+["ExtremeBounds: Extreme Bounds Analysis in R"](https://cran.r-project.org/web/packages/ExtremeBounds/vignettes/ExtremeBounds.pdf)
+
+https://en.wikipedia.org/wiki/Support_vector_machine
+
+Overdetermination
+[Feature Selection with the R Package MXM:  Statistically-Equivalent Feature Subsets](https://arxiv.org/pdf/1611.03227.pdf)
+
 
 ## Non-parametric models
 
@@ -297,25 +305,9 @@ https://en.wikipedia.org/wiki/Random_forest
 ## Gradient Boosting
 Terence Parr and Jeremy Howard, "How to explain gradient boosting," http://explained.ai/gradient-boosting/index.html
 
-## Parametric Models
-
-# OLS
-
-https://en.wikipedia.org/wiki/Ordinary_least_squares
-
 ### Model Mispecification
 
 Bias
-
-###Extreme Bounds Analysis
-https://en.wikipedia.org/wiki/Extreme_bounds_analysis
-
-["ExtremeBounds: Extreme Bounds Analysis in R"](https://cran.r-project.org/web/packages/ExtremeBounds/vignettes/ExtremeBounds.pdf)
-
-https://en.wikipedia.org/wiki/Support_vector_machine
-
-Overdetermination
-[Feature Selection with the R Package MXM:  Statistically-Equivalent Feature Subsets](https://arxiv.org/pdf/1611.03227.pdf)
 
 ### Regularization, e.g. Lasso/Ridge Regression
 https://en.wikipedia.org/wiki/Lasso_(statistics)
@@ -332,15 +324,40 @@ Original Lasso Paper
 ["The garden of forking paths: Why multiple comparisons can be a problem,  when there is no “fishing expedition” or “p-hacking” and the research  was posited ahead of time"](http://www.stat.columbia.edu/~gelman/research/unpublished/p_hacking.pdf), Andrew Gelman and Eric Loken, 14 Nov 2013, Unpublished Manuscript
 
 ## Neural Networks
-
 https://en.wikipedia.org/wiki/Artificial_neural_network
 
 (DL) Deep Learning, Ian Goodfellow and Yoshua Bengio and Aaron Courville, 2016, http://www.deeplearningbook.org/
+
+[Neural Networks, Manifolds, and Topology](http://colah.github.io/posts/2014-03-NN-Manifolds-Topology/), Christopher Olah, April 6, 2014
+
+(DL) Ch 17 ["The Manifold Perspective on Representation Learning"](https://www.deeplearningbook.org/version-2015-10-03/contents/manifolds.html)
 
 ### LSTM
 Christopher Olah, "Understanding LSTM Networks," August 27, 2015, http://colah.github.io/posts/2015-08-Understanding-LSTMs/
 
 https://keras.rstudio.com/articles/examples/conv_lstm.html
+
+
+## Unsupervised Learning (Clustering)
+
+"Unsupervised Machine Learning: The hclust, pvclust, cluster, mclust, and more," https://quantdev.ssri.psu.edu/sites/qdev/files/Unsupervised_Machine_Learning_The_mclust_Package_and_others.html
+
+https://en.wikipedia.org/wiki/Cluster_analysis
+
+## Nearest Neighbor
+https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm
+
+#### Clustering
+https://en.wikipedia.org/wiki/Cluster_analysis
+
+#### K-means
+https://en.wikipedia.org/wiki/K-means_clustering
+
+## Dictionary Learning
+https://en.wikipedia.org/wiki/Sparse_dictionary_learning
+
+
+# Special Topics
 
 
 ## Text
