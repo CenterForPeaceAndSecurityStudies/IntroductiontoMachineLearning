@@ -1,4 +1,13 @@
-# Introduction to Machine Learning
+---
+title: "Introduction to Machine Learning"
+output: 
+  html_notebook:
+    toc: true # table of content true
+    toc_depth: 3  # upto three depths of headings (specified by #, ## and ###)
+    number_sections: true  ## if you want number sections at each table header
+    highlight: tango  # specifies the syntax highlighting style
+    toc_float: true
+---
 
 Rex W. Douglass<br/>
 Director Machine Learning for Social Science Lab (MSSL)<br/>
@@ -9,7 +18,7 @@ rexdouglass@gmail.com<br/>
 www.rexdouglass.com<br/>
 @rexdouglass
 
-## Overview
+# Course Overview
 
 This is a 6 hour introduction to machine learning spread across two three-hour lectures. The goal of this very short course is specific: to give you enough of an overview, vocabulary, and intuition, so that you can identify machine learning problems in the wild and begin your own research into relevant literatures and possible approaches. The goal is not to train you to execute a particular machine learning solution. There are far too many approaches available; they may not cover whatever problem you find; and the state of the art will be different in a year or two anyway. Instead, we will learn how to think about and classify problems into broad types, how to define and measure the efficacy of different solutions to that problem, how to avoid some common and subtle mistakes, and how to think about a full machine learning pipeline from start to finish.
 
@@ -19,14 +28,19 @@ Day 2 is dedicated almost entirely to tools and real world examples. We will gri
 
 Please bring a two sided coin(s) and scratch paper to class for passing notes for the demonstrations.
 
-### Readings Policy
+## Course Slides
+
+[Course Slides Day 1](https://docs.google.com/presentation/d/19i2om_jwK8m3a-jNvgtM-WMT1l1HAGaGuWeb4bgLsTM/edit?usp=sharing)
+
+
+## Readings Policy
 Math and programming are not something you learn, they're something you get used to. It is a trade, that takes years of trial and error and concrete projects to acquire. The readings of this course are, with a few exceptions, voluntary and intended for self study. They are to help point you in the right direction when you realize you need to start brushing up on a particular set of tools in order to tackle a particular problem.
 
 Required - Skim in order to improve discussion and understanding during lecture <br/>
 Recommended - Eventually skim/read during self study <br/>
 Reference - Deeper mathematical or historical context <br/>
 
-### Textbooks
+## Textbooks
 
 Do not purchase any books - each of these should be available for free on-line at the link given.
 
@@ -40,7 +54,7 @@ Do not purchase any books - each of these should be available for free on-line a
 * (PRML) [Patter recognition and machine learning](http://users.isr.ist.utl.pt/~wurmd/Livros/school/Bishop%20-%20Pattern%20Recognition%20And%20Machine%20Learning%20-%20Springer%20%202006.pdf), Christopher M. Bishop
 * (WMLW) ["WHY MACHINE LEARNING WORKS"](http://www.cs.cmu.edu/~gmontane/montanez_dissertation.pdf), George D. Montanez, May 2017, Dissertation
 
-### General Resources
+## General Resources
 
 There are a number places on-line for constant updates on machine learning <br/>
 * [Reddit Machine Learning Subreddit](https://www.reddit.com/r/MachineLearning/)
@@ -48,8 +62,12 @@ There are a number places on-line for constant updates on machine learning <br/>
 * [My twitter feed](https://twitter.com/RexDouglass)
 * [Political Analysis](https://www.cambridge.org/core/journals/political-analysis)
 
+## Toy problems
+[UC Irvine Machine Learning Repository](http://archive.ics.uci.edu/ml/index.php)<br/>
+[Kaggle Datasets](https://www.kaggle.com/datasets?sortBy=votes&group=all)<br/>
+[List_of_datasets_for_machine_learning_research](https://en.wikipedia.org/wiki/List_of_datasets_for_machine_learning_research)<br/>
 
-### Software and Programming
+## Software and Programming
 
 Students are not expected to know any particular language or set of software. We will be demonstrating best practices as used in the Machine Learning for Social Science Lab at the Center for Peace and Security Studies, UCSD. In that lab, our software stack consists of Python and R for data preparation and analysis, Spark for database management, Keras/Tensorflow for deep learning, Github for revision control, and Ubuntu for our operating system and command-line tools.
 
@@ -65,201 +83,172 @@ Students are not expected to know any particular language or set of software. We
 * ["The Plain Person’s Guide to Plain Text Social Science"](http://plain-text.co/), Kieran Healy, 2018-04-28
 "Statistical Data Cleaning with Applications in R"
 
-# Day 1 The Intuition
-[Course Slides Date 1](https://docs.google.com/presentation/d/19i2om_jwK8m3a-jNvgtM-WMT1l1HAGaGuWeb4bgLsTM/edit?usp=sharing)
+# Introduction
 
-## Introduction
+## What is machine learning?
 
-### What is machine learning?
-
-(CIML), Chapter 1, http://ciml.info/dl/v0_99/ciml-v0_99-ch01.pdf
+(CIML), [Chapter 1,](http://ciml.info/dl/v0_99/ciml-v0_99-ch01.pdf)
 
 WMLW 1.0 "Introduction"
 
-### What isn't machine learning?
+## What isn't machine learning?
 
-#### Statistics
+### Statistics
 
-Leo Breiman, "Statistical Modeling: The Two Cultures (with comments and a rejoinder by the author)," Statistical Science, 2001, Vol. 16, No. 3, 199–231, https://projecteuclid.org/download/pdf_1/euclid.ss/1009213726
+["Statistical Modeling: The Two Cultures (with comments and a rejoinder by the  author),"](https://projecteuclid.org/download/pdf_1/euclid.ss/1009213726) Leo Breiman, Statistical Science, 2001, Vol. 16, No. 3, 199–231
 
-#### Causal Inference
+### Causal Inference
 Joshua D. Angrist & Jörn-Steffen Pischke, "Mostly Harmless Econometrics An Empiricist's Companion," 2009
 
-Donald B. Rubin, "Basic Concepts of Statistical Inference for Causal Effects in Experiments and Observational Studies," 2004,
-http://www.stat.columbia.edu/~cook/qr33.pdf
+["Basic Concepts of Statistical Inference for Causal Effects in Experiments and Observational Studies,"](http://www.stat.columbia.edu/~cook/qr33.pdf) Donald B. Rubin, 2004
 
 
-## Why Machine Learning
+## Why Machine Learning?
 
-"ViEWS: a political Violence Early-Warning System," http://pcr.uu.se/research/views/
+["ViEWS: a political Violence Early-Warning System,"](http://pcr.uu.se/research/views/)
 
-Michael Höhle, "Safe Disposal of Unexploded WWII Bombs," May 25, 2018, http://staff.math.su.se/hoehle/blog/2018/05/25/uxb.html
+["Safe Disposal of Unexploded WWII Bombs,"](http://staff.math.su.se/hoehle/blog/2018/05/25/uxb.html) Michael Höhle, May 25, 2018, 
 
-Gaurav Sood and Suriyan Laohaprapanon, "Predicting Race and Ethnicity From the Sequence of Characters in a Name," May 8, 2018,  https://arxiv.org/pdf/1805.02109.pdf  
-"ethnicolr: Predict Race and Ethnicity From Name," https://github.com/appeler/ethnicolr
+["Predicting Race and Ethnicity From the Sequence of Characters in a Name,"](https://arxiv.org/pdf/1805.02109.pdf),Gaurav Sood and Suriyan Laohaprapanon, May 8, 2018,  
+["ethnicolr: Predict Race and Ethnicity From Name,"](https://github.com/appeler/ethnicolr)
+
+# Information Theory
 
 ## Shannon–Weaver Model of Communication
 
-https://en.wikipedia.org/wiki/Shannon%E2%80%93Weaver_model
+[Shannon Weaver Model](https://en.wikipedia.org/wiki/Shannon%E2%80%93Weaver_model)
 
-Christopher Olah, "Visual Information Theory," October 14, 2015, http://colah.github.io/posts/2015-09-Visual-Information/
+["Visual Information Theory,"](http://colah.github.io/posts/2015-09-Visual-Information/) Christopher Olah, , October 14, 2015, 
 
-C. E. SHANNON, "A Mathematical Theory of Communication," October 1948,  The Bell System Technical Journal, Vol. 27, pp. 379–423, 623–656, July,  http://math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf
+["A Mathematical Theory of Communication,"](http://math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf), C. E. SHANNON, October 1948,  The Bell System Technical Journal, Vol. 27, pp. 379–423, 623–656, July,  
 
 PRML 1.6 "Information Theory"
 
-### Information Sources
+## Entropy
+[Entropy_(information_theory)](https://en.wikipedia.org/wiki/Entropy_(information_theory))
 
-### Entropy
-https://en.wikipedia.org/wiki/Entropy_(information_theory)
-
-### Distributions and Probability
-Arian Maleki and Tom Do, "Review of Probability Theory," http://cs229.stanford.edu/section/cs229-prob.pdf
+## Distributions and Probability
+[Arian Maleki and Tom Do, "Review of Probability Theory,"](http://cs229.stanford.edu/section/cs229-prob.pdf)
 
 PRML 2.0
 
-### Messages
+## Transmitters
+[Function_(mathematics)](https://en.wikipedia.org/wiki/Function_(mathematics))
 
-### Transmitters
-https://en.wikipedia.org/wiki/Function_(mathematics)
+## Receivers
+[Inverse_function](https://en.wikipedia.org/wiki/Inverse_function)
 
-### Receivers
-https://en.wikipedia.org/wiki/Inverse_function
+# Zero-Bit source
 
-# 0-bit information source
+Zero-Bit information sources are constants that don't vary.
 
-## 0-bit information source, 1-bit message
-Zero information conversations
+Zero-Bit source, Zero-Bit message: No variation and no measurement. <br/>
+Zero-Bit information source, One-Bit message: No variation, but a single measurement with variation between two states. <br/>
+Zero-Bit information source, N-Bit message: No variation, and an arbitrary number of measurements with arbitrary number of states <br/>
 
-## 0-bit information source, 2-N bit message
+# One-Bit sources
 
-# 1 bit information sources,
+One-Bit information sources are variables that can take on two different states, e.g. a coin flip. Call $Y$ the true state at the source, and $\hat{Y}$ the mental model of the state at the destination.
 
-## Y vs Yhat
+## Mutual information
+[Mutual_information](https://en.wikipedia.org/wiki/Mutual_information)
 
-### Mutual information
-https://en.wikipedia.org/wiki/Mutual_information
+## Evaluating Reconstructions
 
-### Evaluating Reconstructions
+[Evaluation_of_binary_classifiers](https://en.wikipedia.org/wiki/Evaluation_of_binary_classifiers)<br/>
+[Confusion_matrix](https://en.wikipedia.org/wiki/Confusion_matrix)<br/>
+[Precision_and_recall](https://en.wikipedia.org/wiki/Precision_and_recall)<br/>
+[Sensitivity_and_specificity](https://en.wikipedia.org/wiki/Sensitivity_and_specificity)<br/>
+[F1_score](https://en.wikipedia.org/wiki/F1_score)<br/>
 
-https://en.wikipedia.org/wiki/Evaluation_of_binary_classifiers
-https://en.wikipedia.org/wiki/Confusion_matrix
-https://en.wikipedia.org/wiki/Precision_and_recall
-https://en.wikipedia.org/wiki/Sensitivity_and_specificity
-https://en.wikipedia.org/wiki/F1_score
+## Distance and Similarity
 
-### Distance and Similarity
+[Package ‘entropy,’ "Estimation of Entropy, Mutual Information and Related Quantities,"](http://strimmerlab.org/software/entropy/), February 19, 2015, 
 
-Package ‘entropy,’ "Estimation of Entropy, Mutual Information and Related Quantities," February 19, 2015, http://strimmerlab.org/software/entropy/
+[Philentropy: Information Theory and Distance Quantification with R.](https://doi.org/10.21105/joss.00765), Drost, (2018), Journal of Open Source Software, 3(26), 765, 
 
-Drost, (2018). Philentropy: Information Theory and Distance Quantification with R. Journal of Open Source Software, 3(26), 765, https://doi.org/10.21105/joss.00765
+# One-Bit source, One-Bit message
 
-## 1 bit source, 1 bit messages
-
-### What makes a good receiver?
+## What makes a good receiver?
 
 PRML 1.5 "Decision Theory"
 
-Scott Fortmann-Roe, "Understanding the Bias-Variance Tradeoff," 2012, http://scott.fortmann-roe.com/docs/BiasVariance.html
+["Understanding the Bias-Variance Tradeoff,"](http://scott.fortmann-roe.com/docs/BiasVariance.html), Scott Fortmann-Roe,  2012, 
 
-### No Free Lunch
+## No Free Lunch
 
 WMLW 2.0 "Related Work"
 
-"No Free Lunch Theorems for Optimization," David H. Wolpert and William G. Macready, 1997, https://ti.arc.nasa.gov/m/profile/dhw/papers/78.pdf
+["No Free Lunch Theorems for Optimization,"](https://ti.arc.nasa.gov/m/profile/dhw/papers/78.pdf) David H. Wolpert and William G. Macready, 1997, 
 
 ##Overfitting
 
-### Parametric Receiver Function
-#### Mean
 #### Logit
-https://en.wikipedia.org/wiki/Logistic_regression
+[Logistic_regression](https://en.wikipedia.org/wiki/Logistic_regression)
 #### SVM
-https://en.wikipedia.org/wiki/Support_vector_machine
+[Support_vector_machine](https://en.wikipedia.org/wiki/Support_vector_machine)
 
-### In Sample/Out of Sample
+### In Sample/Out of Sample / Cross Validation
 
-https://en.wikipedia.org/wiki/Training,_test,_and_validation_sets
-https://en.wikipedia.org/wiki/Cross-validation_(statistics)
+[Training,_test,_and_validation_sets](https://en.wikipedia.org/wiki/Training,_test,_and_validation_sets)
+[Cross-validation_(statistics)](https://en.wikipedia.org/wiki/Cross-validation_(statistics))
 
-### Cross Validation
+["Linear Model Selection by Cross-Validation,"](http://www.libpls.net/publication/MCCV_Shao_1993.pdf), Jun Shao, 1993
+["Cross-validation failure: small sample sizes lead to large error bars,"](https://hal.inria.fr/hal-01545002/), Gaël Varoquaux, 2017
 
-"Linear Model Selection by Cross-Validation," Jun Shao, 1993, http://www.libpls.net/publication/MCCV_Shao_1993.pdf
-"Cross-validation failure: small sample sizes lead to large error bars," Gaël Varoquaux, 2017, https://hal.inria.fr/hal-01545002/
+# One-Bit information source, Two-Bit message
 
-## 1 bit information source, 2 bit message
+## Feature Engineering
 
-### Features
+[Feature_engineering](https://en.wikipedia.org/wiki/Feature_engineering)
 
-#### Feature Engineering
+## Interaction
 
-https://en.wikipedia.org/wiki/Feature_engineering
+[Interaction_(statistics)](https://en.wikipedia.org/wiki/Interaction_(statistics))
 
-##### Interaction
+["How Much Should We Trust Estimates from Multiplicative Interaction Models? Simple Tools to Improve Empirical Practice,"](http://yiqingxu.org/papers/english/2018_HMX_interaction/main.pdf), Jens Hainmueller Jonathan Mummolo Yiqing Xu,, April 20, 2018, Political Analysis, 
 
-https://en.wikipedia.org/wiki/Interaction_(statistics)
-
-Jens Hainmueller Jonathan Mummolo Yiqing Xu, "How Much Should We Trust Estimates from Multiplicative Interaction Models? Simple Tools to Improve Empirical Practice," April 20, 2018, Political Analysis, http://yiqingxu.org/papers/english/2018_HMX_interaction/main.pdf
-
-##### Feature Selection
+## Feature Selection
 
 Model Complexity
 [Akaike information criterion (AIC)](https://en.wikipedia.org/wiki/Akaike_information_criterion)
 [Bayesian information criterion (BIC)](https://en.wikipedia.org/wiki/Bayesian_information_criterion)
 
-### Structure
 
-#### Temporal
-
-##### Sequences
-Patrik Lindenfors, Fredrik Jansson, Yi-ting Wang and Staffan I. Lindberg, Christian Lopez, 05 March 2018, "Investigating Sequences in Ordinal Data: A New Approach With Adapted Evolutionary Models," https://www.cambridge.org/core/journals/political-science-research-and-methods/article/investigating-sequences-in-ordinal-data-a-new-approach-with-adapted-evolutionary-models/F3747D8A1908902BA7F26C5EE28AFAEF
-
-#### Spatial
-#### Network
-
-## 2 bit information source, 1 bit message
+# Two-Bit information source, One-Bit message
 
 ### Bandwidth
 
 ### Over determination
-https://en.wikipedia.org/wiki/Overdetermined_system
+[Overdetermined_system](https://en.wikipedia.org/wiki/Overdetermined_system)
 
-## 1-bit information source, N-bit message
+## One-Bit information source, N-bit message
 
 ### Curse of Dimensionality
 
-https://en.wikipedia.org/wiki/Curse_of_dimensionality
+[Curse_of_dimensionality](https://en.wikipedia.org/wiki/Curse_of_dimensionality)
 
 ####Feature Selection
-https://en.wikipedia.org/wiki/Feature_selection
+[Feature_selection](https://en.wikipedia.org/wiki/Feature_selection)
 
-"bounceR", R Package, https://github.com/STATWORX/bounceR
+["bounceR"](https://github.com/STATWORX/bounceR), R Package 
 
 P-Hacking
 https://projects.fivethirtyeight.com/p-hacking/
 
-## N-bit information source, 1-bit message
+# N-bit source, One-Bit message
 
-## 2 bit information source, 2 bit message
+# Two-Bit  source, Two-Bit message
 
-## N-bit information source, N-bit message
-https://en.wikipedia.org/wiki/Binary_number#Counting_in_binary
+# N-bit source, N-bit message
+[Binary_number#Counting_in_binary](https://en.wikipedia.org/wiki/Binary_number#Counting_in_binary)
 
-## 1-bit information source, 1-bit message, 1-bit of line noise
+# One-Bit source, One-Bit message, One-Bit line noise
 
-# Day 2 The Toolbox
 
-## Introduction
 
-### Toy problems
-UC Irvine Machine Learning Repository, http://archive.ics.uci.edu/ml/index.php
 
-https://en.wikipedia.org/wiki/List_of_datasets_for_machine_learning_research
-
-Kaggle Datasets, https://www.kaggle.com/datasets?sortBy=votes&group=all
-
-https://projects.fivethirtyeight.com/2018-world-cup-predictions/
-
+# Nearest Neighbor
 
 #### Dictionary Learning
 https://en.wikipedia.org/wiki/Sparse_dictionary_learning
@@ -283,22 +272,11 @@ https://en.wikipedia.org/wiki/K-means_clustering
 
 "Unsupervised Machine Learning: The hclust, pvclust, cluster, mclust, and more," https://quantdev.ssri.psu.edu/sites/qdev/files/Unsupervised_Machine_Learning_The_mclust_Package_and_others.html
 
-## Non-parametric models
-
-### Trees
-https://en.wikipedia.org/wiki/Decision_tree_learning
-
-### Ensembles
-https://en.wikipedia.org/wiki/Random_forest
-
-## Gradient Boosting
-Terence Parr and Jeremy Howard, "How to explain gradient boosting," http://explained.ai/gradient-boosting/index.html
-
 # OLS
 
 https://en.wikipedia.org/wiki/Ordinary_least_squares
 
-### Feature Selection / Engineering
+## Feature Selection / Engineering
 
 https://en.wikipedia.org/wiki/Extreme_bounds_analysis
 
@@ -310,31 +288,36 @@ https://en.wikipedia.org/wiki/Support_vector_machine
 
 [Feature Selection with the R Package MXM:  Statistically-Equivalent Feature Subsets](https://arxiv.org/pdf/1611.03227.pdf)
 
-### Regularization, e.g. Lasso/Ridge Regression
+## Regularization, e.g. Lasso/Ridge Regression
 https://en.wikipedia.org/wiki/Lasso_(statistics)
 
 ["Regression shrinkage and selection via the lasso"](http://statweb.stanford.edu/~tibs/lasso/lasso.pdf), Tibshirani, R., 1996,  J. Royal. Statist. Soc B., Vol. 58, No. 1, pages 267-288)
 
 ["Glmnet Vignette"](https://cran.r-project.org/web/packages/glmnet/vignettes/glmnet_beta.pdf), Trevor Hastie and Junyang Qian, September 13, 2016
 
-### Confidence Intervals and Forking Paths
+## Confidence Intervals and Forking Paths
 
 ["Statistical learning and selective inference"](http://www.pnas.org/content/pnas/112/25/7629.full.pdf) Jonathan Taylora and Robert J. Tibshirani, June 23, 2015
 
 ["The garden of forking paths: Why multiple comparisons can be a problem,  when there is no “fishing expedition” or “p-hacking” and the research  was posited ahead of time"](http://www.stat.columbia.edu/~gelman/research/unpublished/p_hacking.pdf), Andrew Gelman and Eric Loken, 14 Nov 2013, Unpublished Manuscript
 
 
-## Decision Trees
+# Decision Trees
 
 https://en.wikipedia.org/wiki/Decision_tree
 
-## Random Forests
+["Tree-Based Models"](https://www.statmethods.net/advstats/cart.html)
+
+# Random Forests
 
 https://en.wikipedia.org/wiki/Random_forest
 
+["RANDOM FORESTS"](https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf) Leo Breiman, January 2001
+
+## Variable Importance
 
 
-## Neural Networks
+# Neural Networks
 
 https://en.wikipedia.org/wiki/Artificial_neural_network
 
@@ -344,18 +327,6 @@ https://en.wikipedia.org/wiki/Artificial_neural_network
 Christopher Olah, "Understanding LSTM Networks," August 27, 2015, http://colah.github.io/posts/2015-08-Understanding-LSTMs/
 
 https://keras.rstudio.com/articles/examples/conv_lstm.html
-
-
-## Text
-Julia Silge and David Robinson, "Text Mining with R: A Tidy Approach," 2018-04-02, https://www.tidytextmining.com/
-
-"Introducing Monte Carlo Methods with R," https://www.slideshare.net/xianblog/introducing-monte-carlo-methods-with-r
-
-Matthew Gentzkow, Bryan T. Kelly, Matt Taddy, "Text as Data," http://web.stanford.edu/~gentzkow/research/text-as-data.pdf
-
-## Images
-
-https://keras.rstudio.com/articles/examples/cifar10_cnn.html
 
 # Interpretation
 
@@ -369,8 +340,31 @@ lime, Python Package, https://github.com/marcotcr/lime
 
 Luke Keele, Dylan Small, "Comparing Covariate Prioritization via Matching to Machine Learning Methods for Causal Inference using Five Empirical Applications," May 11, 2018, https://arxiv.org/pdf/1805.03743.pdf
 
-## examples
+
+# Special Topics
+
+## Time
+["Investigating Sequences in Ordinal Data: A New Approach With Adapted Evolutionary Models,"](https://www.cambridge.org/core/journals/political-science-research-and-methods/article/investigating-sequences-in-ordinal-data-a-new-approach-with-adapted-evolutionary-models/F3747D8A1908902BA7F26C5EE28AFAEF),Patrik Lindenfors, Fredrik Jansson, Yi-ting Wang and Staffan I. Lindberg, Christian Lopez, 05 March 2018,
+
+## Text
+Julia Silge and David Robinson, "Text Mining with R: A Tidy Approach," 2018-04-02, https://www.tidytextmining.com/
+
+"Introducing Monte Carlo Methods with R," https://www.slideshare.net/xianblog/introducing-monte-carlo-methods-with-r
+
+Matthew Gentzkow, Bryan T. Kelly, Matt Taddy, "Text as Data," http://web.stanford.edu/~gentzkow/research/text-as-data.pdf
+
+## Images
+
+https://keras.rstudio.com/articles/examples/cifar10_cnn.html
+
+
+# Examples
 
 Examining Explanations for Nuclear Proliferation
 Mark S. Bell
 International Studies Quarterly, Volume 60, Issue 3, 1 September 2016, Pages 520–529, https://doi.org/10.1093/isq/sqv007
+
+# Extras
+
+## Gradient Boosting
+Terence Parr and Jeremy Howard, "How to explain gradient boosting," http://explained.ai/gradient-boosting/index.html
