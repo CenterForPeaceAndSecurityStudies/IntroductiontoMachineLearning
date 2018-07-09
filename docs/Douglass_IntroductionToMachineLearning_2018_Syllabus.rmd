@@ -138,7 +138,7 @@ PRML 2.0
 
 Zero-Bit information sources are constants that don't vary.
 
-["Design, Inference, and the Strategic Logic of Suicide] Terrorism"(https://pdfs.semanticscholar.org/f192/cf69908c84d92d269ef52c337fa487d6b65e.pdf), SCOTT ASHWORTH, JOSHUA D. CLINTON, ADAM MEIROWITZ, and KRISTOPHER W. RAMSAY, 2008, APSR
+["Design, Inference, and the Strategic Logic of Suicide Terrorism"](https://pdfs.semanticscholar.org/f192/cf69908c84d92d269ef52c337fa487d6b65e.pdf), SCOTT ASHWORTH, JOSHUA D. CLINTON, ADAM MEIROWITZ, and KRISTOPHER W. RAMSAY, 2008, APSR
 
 Zero-Bit source, Zero-Bit message: No variation and no measurement. <br/>
 Zero-Bit information source, One-Bit message: No variation, but a single measurement with variation between two states. <br/>
@@ -194,45 +194,49 @@ WMLW 2.0 "Related Work"
 ["Linear Model Selection by Cross-Validation,"](http://www.libpls.net/publication/MCCV_Shao_1993.pdf), Jun Shao, 1993
 ["Cross-validation failure: small sample sizes lead to large error bars,"](https://hal.inria.fr/hal-01545002/), Gaël Varoquaux, 2017
 
-# One-Bit information source, Two-Bit message
+# One-Bit source, Two-Bit message
+
+## Feature Selection/Importance
+
+[Feature_selection](https://en.wikipedia.org/wiki/Feature_selection)
+
+["Statistical learning and selective inference"](http://www.pnas.org/content/pnas/112/25/7629.full.pdf) Jonathan Taylora and Robert J. Tibshirani, June 23, 2015
+
+["The garden of forking paths: Why multiple comparisons can be a problem,  when there is no “fishing expedition” or “p-hacking” and the research  was posited ahead of time"](http://www.stat.columbia.edu/~gelman/research/unpublished/p_hacking.pdf), Andrew Gelman and Eric Loken, 14 Nov 2013, Unpublished Manuscript
+
+[P-Hacking](https://projects.fivethirtyeight.com/p-hacking/)
+
+[A Machine Learning Alternative to P-values](https://arxiv.org/pdf/1701.04944.pdf),Min Lu and Hemant Ishwaran, February 22, 2017
+
+["bounceR"](https://github.com/STATWORX/bounceR), R Package 
+
+[ELI5](https://github.com/TeamHG-Memex/eli5)
 
 ## Feature Engineering
 
 [Feature_engineering](https://en.wikipedia.org/wiki/Feature_engineering)
 
-## Interaction
-
 [Interaction_(statistics)](https://en.wikipedia.org/wiki/Interaction_(statistics))
 
 ["How Much Should We Trust Estimates from Multiplicative Interaction Models? Simple Tools to Improve Empirical Practice,"](http://yiqingxu.org/papers/english/2018_HMX_interaction/main.pdf), Jens Hainmueller Jonathan Mummolo Yiqing Xu,, April 20, 2018, Political Analysis, 
 
-## Feature Selection
+## Regularization, Model Complexity/Parismony
 
-Model Complexity
 [Akaike information criterion (AIC)](https://en.wikipedia.org/wiki/Akaike_information_criterion)
 [Bayesian information criterion (BIC)](https://en.wikipedia.org/wiki/Bayesian_information_criterion)
 
-
-# Two-Bit information source, One-Bit message
+# Two-Bit source, One-Bit message
 
 ### Bandwidth
 
 ### Over determination
 [Overdetermined_system](https://en.wikipedia.org/wiki/Overdetermined_system)
 
-## One-Bit information source, N-bit message
+## One-Bit source, N-bit message
 
 ### Curse of Dimensionality
 
 [Curse_of_dimensionality](https://en.wikipedia.org/wiki/Curse_of_dimensionality)
-
-####Feature Selection
-[Feature_selection](https://en.wikipedia.org/wiki/Feature_selection)
-
-["bounceR"](https://github.com/STATWORX/bounceR), R Package 
-
-P-Hacking
-https://projects.fivethirtyeight.com/p-hacking/
 
 # N-bit source, One-Bit message
 
@@ -241,7 +245,7 @@ https://projects.fivethirtyeight.com/p-hacking/
 # N-bit source, N-bit message
 [Binary_number#Counting_in_binary](https://en.wikipedia.org/wiki/Binary_number#Counting_in_binary)
 
-# One-Bit source, One-Bit message, One-Bit line noise
+# One-Bit source, One-Bit message, One-Bit noise
 
 
 # Nearest Neighbor
@@ -291,12 +295,6 @@ https://en.wikipedia.org/wiki/Lasso_(statistics)
 
 ["Glmnet Vignette"](https://cran.r-project.org/web/packages/glmnet/vignettes/glmnet_beta.pdf), Trevor Hastie and Junyang Qian, September 13, 2016
 
-## Confidence Intervals and Forking Paths
-
-["Statistical learning and selective inference"](http://www.pnas.org/content/pnas/112/25/7629.full.pdf) Jonathan Taylora and Robert J. Tibshirani, June 23, 2015
-
-["The garden of forking paths: Why multiple comparisons can be a problem,  when there is no “fishing expedition” or “p-hacking” and the research  was posited ahead of time"](http://www.stat.columbia.edu/~gelman/research/unpublished/p_hacking.pdf), Andrew Gelman and Eric Loken, 14 Nov 2013, Unpublished Manuscript
-
 
 # Decision Trees
 
@@ -309,9 +307,6 @@ https://en.wikipedia.org/wiki/Decision_tree
 https://en.wikipedia.org/wiki/Random_forest
 
 ["RANDOM FORESTS"](https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf) Leo Breiman, January 2001
-
-## Variable Importance
-
 
 # Neural Networks
 
