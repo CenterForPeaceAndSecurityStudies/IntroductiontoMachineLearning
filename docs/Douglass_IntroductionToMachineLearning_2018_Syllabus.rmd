@@ -114,7 +114,7 @@ Joshua D. Angrist & Jörn-Steffen Pischke, "Mostly Harmless Econometrics An Empi
 
 [Shannon Weaver Model](https://en.wikipedia.org/wiki/Shannon%E2%80%93Weaver_model)
 
-["Visual Information Theory,"](http://colah.github.io/posts/2015-09-Visual-Information/) Christopher Olah, , October 14, 2015, 
+["Visual Information Theory,"](http://colah.github.io/posts/2015-09-Visual-Information/) Christopher Olah, , October 14, 2015
 
 ["A Mathematical Theory of Communication,"](http://math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf), C. E. SHANNON, October 1948,  The Bell System Technical Journal, Vol. 27, pp. 379–423, 623–656, July,  
 
