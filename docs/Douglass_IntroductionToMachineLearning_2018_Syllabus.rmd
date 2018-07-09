@@ -183,19 +183,19 @@ WMLW 2.0 "Related Work"
 
 ### In Sample/Out of Sample / Cross Validation
 
-[Training,_test,_and_validation_sets](https://en.wikipedia.org/wiki/Training,_test,_and_validation_sets)
-[Cross-validation_(statistics)](https://en.wikipedia.org/wiki/Cross-validation_(statistics))
+[Training,_test,_and_validation_sets](https://en.wikipedia.org/wiki/Training,_test,_and_validation_sets)<br/>
+[Cross-validation_(statistics)](https://en.wikipedia.org/wiki/Cross-validation_(statistics))<br/>
 
-["Linear Model Selection by Cross-Validation,"](http://www.libpls.net/publication/MCCV_Shao_1993.pdf), Jun Shao, 1993
-["Cross-validation failure: small sample sizes lead to large error bars,"](https://hal.inria.fr/hal-01545002/), Gaël Varoquaux, 2017
+["Linear Model Selection by Cross-Validation,"](http://www.libpls.net/publication/MCCV_Shao_1993.pdf), Jun Shao, 1993<br/>
+["Cross-validation failure: small sample sizes lead to large error bars,"](https://hal.inria.fr/hal-01545002/), Gaël Varoquaux, 2017<br/>
 
 ## Probalistic Reconstructions and Hedging Bets
 
-[Proper Scoring Rules](https://en.wikipedia.org/wiki/Scoring_rule#ProperScoringRules)
-[Brier_score](https://en.wikipedia.org/wiki/Brier_score)
-[Receiver operating characteristic](https://en.wikipedia.org/wiki/Receiver_operating_characteristic)
-[An introduction to ROC analysis](http://people.inf.elte.hu/kiss/13dwhdm/roc.pdf), Tom Fawcett, 2006, Pattern Recongnition Letters
-[what-does-auc-stand-for-and-what-is-it](https://stats.stackexchange.com/questions/132777/what-does-auc-stand-for-and-what-is-it)
+[Proper Scoring Rules](https://en.wikipedia.org/wiki/Scoring_rule#ProperScoringRules)<br/>
+[Brier_score](https://en.wikipedia.org/wiki/Brier_score)<br/>
+[Receiver operating characteristic](https://en.wikipedia.org/wiki/Receiver_operating_characteristic)<br/>
+[An introduction to ROC analysis](http://people.inf.elte.hu/kiss/13dwhdm/roc.pdf), Tom Fawcett, 2006, Pattern Recongnition Letters<br/>
+[what-does-auc-stand-for-and-what-is-it](https://stats.stackexchange.com/questions/132777/what-does-auc-stand-for-and-what-is-it)<br/>
 
 # One-Bit source, Two-Bit message
 
@@ -211,25 +211,25 @@ WMLW 2.0 "Related Work"
 
 [Interaction_(statistics)](https://en.wikipedia.org/wiki/Interaction_(statistics))
 
-["How Much Should We Trust Estimates from Multiplicative Interaction Models? Simple Tools to Improve Empirical Practice,"](http://yiqingxu.org/papers/english/2018_HMX_interaction/main.pdf), Jens Hainmueller Jonathan Mummolo Yiqing Xu,, April 20, 2018, Political Analysis, 
+["How Much Should We Trust Estimates from Multiplicative Interaction Models? Simple Tools to Improve Empirical<br/> Practice,"](http://yiqingxu.org/papers/english/2018_HMX_interaction/main.pdf), Jens Hainmueller Jonathan Mummolo Yiqing Xu,, April 20, 2018, Political Analysis<br/>
 
 ## Included Variable Bias
 
-[Feature_selection](https://en.wikipedia.org/wiki/Feature_selection)
-[Confounding](https://en.wikipedia.org/wiki/Confounding)
+[Feature_selection](https://en.wikipedia.org/wiki/Feature_selection)<br/>
+[Confounding](https://en.wikipedia.org/wiki/Confounding)<br/>
 
-["Statistical learning and selective inference"](http://www.pnas.org/content/pnas/112/25/7629.full.pdf) Jonathan Taylora and Robert J. Tibshirani, June 23, 2015
+["Statistical learning and selective inference"](http://www.pnas.org/content/pnas/112/25/7629.full.pdf) Jonathan Taylora and Robert J. Tibshirani, June 23, 2015<br/>
 
-["The garden of forking paths: Why multiple comparisons can be a problem,  when there is no “fishing expedition” or “p-hacking” and the research  was posited ahead of time"](http://www.stat.columbia.edu/~gelman/research/unpublished/p_hacking.pdf), Andrew Gelman and Eric Loken, 14 Nov 2013, Unpublished Manuscript
+["The garden of forking paths: Why multiple comparisons can be a problem,  when there is no “fishing expedition” or “p-hacking” and the research  was posited ahead of time"](http://www.stat.columbia.edu/~gelman/research/unpublished/p_hacking.pdf), Andrew Gelman and Eric Loken, 14 Nov 2013, Unpublished Manuscript<br/>
 
-[P-Hacking](https://projects.fivethirtyeight.com/p-hacking/)
+[P-Hacking](https://projects.fivethirtyeight.com/p-hacking/)<br/>
 
-[A Machine Learning Alternative to P-values](https://arxiv.org/pdf/1701.04944.pdf),Min Lu and Hemant Ishwaran, February 22, 2017
+[A Machine Learning Alternative to P-values](https://arxiv.org/pdf/1701.04944.pdf),Min Lu and Hemant Ishwaran, February 22, 2017<br/>
 
 ## Regularization, Model Complexity/Parismony
 
-[Akaike information criterion (AIC)](https://en.wikipedia.org/wiki/Akaike_information_criterion)
-[Bayesian information criterion (BIC)](https://en.wikipedia.org/wiki/Bayesian_information_criterion)
+[Akaike information criterion (AIC)](https://en.wikipedia.org/wiki/Akaike_information_criterion)<br/>
+[Bayesian information criterion (BIC)](https://en.wikipedia.org/wiki/Bayesian_information_criterion)<br/>
 
 # Two-Bit source, One-Bit message
 
@@ -240,9 +240,8 @@ WMLW 2.0 "Related Work"
 
 ### Curse of Dimensionality
 
-[Curse_of_dimensionality](https://en.wikipedia.org/wiki/Curse_of_dimensionality)
-(http://www.visiondummy.com/2014/04/curse-dimensionality-affect-classification/), Vincent Spruyt
-
+[Curse_of_dimensionality](https://en.wikipedia.org/wiki/Curse_of_dimensionality) <br/>
+[The Curse of Dimensionality in classification](http://www.visiondummy.com/2014/04/curse-dimensionality-affect-classification/), Vincent Spruyt <br/>
 
 # N-bit source, One-Bit message
 
@@ -252,7 +251,6 @@ WMLW 2.0 "Related Work"
 [Binary_number#Counting_in_binary](https://en.wikipedia.org/wiki/Binary_number#Counting_in_binary)
 
 # One-Bit source, One-Bit message, One-Bit noise
-
 
 # Nearest Neighbor
 
