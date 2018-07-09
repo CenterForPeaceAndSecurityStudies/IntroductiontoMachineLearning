@@ -26,7 +26,11 @@ Please bring a two sided coin(s) and scratch paper to class for passing notes fo
 
 ## Course Slides
 
-[Course Slides Day 1](https://docs.google.com/presentation/d/19i2om_jwK8m3a-jNvgtM-WMT1l1HAGaGuWeb4bgLsTM/edit?usp=sharing)
+[Course Slides (1/4)](https://docs.google.com/presentation/d/19i2om_jwK8m3a-jNvgtM-WMT1l1HAGaGuWeb4bgLsTM/edit?usp=sharing)
+
+[Course Slides (2/4)](https://docs.google.com/presentation/d/1Z857fFS692ijppXZzrPVjsVxsllwDKzoFBWOchRjDfU/edit?usp=sharing)
+
+[Course Slides (3/4)](https://docs.google.com/presentation/d/1HRzRTjz31vt_HwOkKE_jNUYhg1a2LrOxS6LM3RI9dE4/edit?usp=sharing)
 
 
 ## Readings Policy
@@ -152,6 +156,7 @@ One-Bit information sources are variables that can take on two different states,
 
 ## Evaluating Reconstructions
 
+[Scoring Rules](https://en.wikipedia.org/wiki/Scoring_rule)
 [Mutual_information](https://en.wikipedia.org/wiki/Mutual_information)
 [Evaluation_of_binary_classifiers](https://en.wikipedia.org/wiki/Evaluation_of_binary_classifiers)<br/>
 [Confusion_matrix](https://en.wikipedia.org/wiki/Confusion_matrix)<br/>
@@ -161,7 +166,6 @@ One-Bit information sources are variables that can take on two different states,
 
 [Package ‘entropy,’ "Estimation of Entropy, Mutual Information and Related Quantities,"](http://strimmerlab.org/software/entropy/), February 19, 2015  <br/>
 [Philentropy: Information Theory and Distance Quantification with R.](https://doi.org/10.21105/joss.00765), Drost, (2018), Journal of Open Source Software, 3(26), 765  <br/>
-
 
 # One-Bit source, One-Bit message
 
@@ -177,20 +181,6 @@ WMLW 2.0 "Related Work"
 
 ["No Free Lunch Theorems for Optimization,"](https://ti.arc.nasa.gov/m/profile/dhw/papers/78.pdf) David H. Wolpert and William G. Macready, 1997, 
 
-## Probalistic Reconstructions and Hedging Bets
-
-### Logit
-[Logistic_regression](https://en.wikipedia.org/wiki/Logistic_regression)
-
-## Evaluating Probalistic Reconstructions
-
-[Receiver operating characteristic](https://en.wikipedia.org/wiki/Receiver_operating_characteristic)
-[An introduction to ROC analysis](http://people.inf.elte.hu/kiss/13dwhdm/roc.pdf), Tom Fawcett, 2006, Pattern Recongnition Letters
-
-[what-does-auc-stand-for-and-what-is-it](https://stats.stackexchange.com/questions/132777/what-does-auc-stand-for-and-what-is-it)
-
-[Brier_score](https://en.wikipedia.org/wiki/Brier_score)
-
 ### In Sample/Out of Sample / Cross Validation
 
 [Training,_test,_and_validation_sets](https://en.wikipedia.org/wiki/Training,_test,_and_validation_sets)
@@ -199,15 +189,31 @@ WMLW 2.0 "Related Work"
 ["Linear Model Selection by Cross-Validation,"](http://www.libpls.net/publication/MCCV_Shao_1993.pdf), Jun Shao, 1993
 ["Cross-validation failure: small sample sizes lead to large error bars,"](https://hal.inria.fr/hal-01545002/), Gaël Varoquaux, 2017
 
+## Probalistic Reconstructions and Hedging Bets
+
+[Proper Scoring Rules](https://en.wikipedia.org/wiki/Scoring_rule#ProperScoringRules)
+[Brier_score](https://en.wikipedia.org/wiki/Brier_score)
+[Receiver operating characteristic](https://en.wikipedia.org/wiki/Receiver_operating_characteristic)
+[An introduction to ROC analysis](http://people.inf.elte.hu/kiss/13dwhdm/roc.pdf), Tom Fawcett, 2006, Pattern Recongnition Letters
+[what-does-auc-stand-for-and-what-is-it](https://stats.stackexchange.com/questions/132777/what-does-auc-stand-for-and-what-is-it)
+
 # One-Bit source, Two-Bit message
 
 ## Dictionary Learning
 
 ## Ommitted Variable Bias
 
-## Included Variable Bias
+[Simpsons Paradox](https://en.wikipedia.org/wiki/Simpson%27s_paradox)
 
-## Feature Selection/Importance
+## Feature Engineering
+
+[Feature_engineering](https://en.wikipedia.org/wiki/Feature_engineering)
+
+[Interaction_(statistics)](https://en.wikipedia.org/wiki/Interaction_(statistics))
+
+["How Much Should We Trust Estimates from Multiplicative Interaction Models? Simple Tools to Improve Empirical Practice,"](http://yiqingxu.org/papers/english/2018_HMX_interaction/main.pdf), Jens Hainmueller Jonathan Mummolo Yiqing Xu,, April 20, 2018, Political Analysis, 
+
+## Included Variable Bias
 
 [Feature_selection](https://en.wikipedia.org/wiki/Feature_selection)
 [Confounding](https://en.wikipedia.org/wiki/Confounding)
@@ -219,14 +225,6 @@ WMLW 2.0 "Related Work"
 [P-Hacking](https://projects.fivethirtyeight.com/p-hacking/)
 
 [A Machine Learning Alternative to P-values](https://arxiv.org/pdf/1701.04944.pdf),Min Lu and Hemant Ishwaran, February 22, 2017
-
-## Feature Engineering
-
-[Feature_engineering](https://en.wikipedia.org/wiki/Feature_engineering)
-
-[Interaction_(statistics)](https://en.wikipedia.org/wiki/Interaction_(statistics))
-
-["How Much Should We Trust Estimates from Multiplicative Interaction Models? Simple Tools to Improve Empirical Practice,"](http://yiqingxu.org/papers/english/2018_HMX_interaction/main.pdf), Jens Hainmueller Jonathan Mummolo Yiqing Xu,, April 20, 2018, Political Analysis, 
 
 ## Regularization, Model Complexity/Parismony
 
@@ -280,9 +278,10 @@ https://en.wikipedia.org/wiki/K-means_clustering
 
 "Unsupervised Machine Learning: The hclust, pvclust, cluster, mclust, and more," https://quantdev.ssri.psu.edu/sites/qdev/files/Unsupervised_Machine_Learning_The_mclust_Package_and_others.html
 
-# OLS
+# Linear Models
 
-https://en.wikipedia.org/wiki/Ordinary_least_squares
+[Ordinary_least_squares](https://en.wikipedia.org/wiki/)
+[Logistic_regression](https://en.wikipedia.org/wiki/Logistic_regression)
 
 ## Feature Selection / Engineering
 
