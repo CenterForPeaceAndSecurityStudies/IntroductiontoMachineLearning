@@ -138,32 +138,30 @@ PRML 2.0
 
 Zero-Bit information sources are constants that don't vary.
 
-["Design, Inference, and the Strategic Logic of Suicide Terrorism"](https://pdfs.semanticscholar.org/f192/cf69908c84d92d269ef52c337fa487d6b65e.pdf), SCOTT ASHWORTH, JOSHUA D. CLINTON, ADAM MEIROWITZ, and KRISTOPHER W. RAMSAY, 2008, APSR
-
 Zero-Bit source, Zero-Bit message: No variation and no measurement. <br/>
 Zero-Bit information source, One-Bit message: No variation, but a single measurement with variation between two states. <br/>
 Zero-Bit information source, N-Bit message: No variation, and an arbitrary number of measurements with arbitrary number of states <br/>
+
+Selecting on the Dependent Variable
+["Design, Inference, and the Strategic Logic of Suicide Terrorism"](https://pdfs.semanticscholar.org/f192/cf69908c84d92d269ef52c337fa487d6b65e.pdf), SCOTT ASHWORTH, JOSHUA D. CLINTON, ADAM MEIROWITZ, and KRISTOPHER W. RAMSAY, 2008, APSR
 
 # One-Bit sources
 
 One-Bit information sources are variables that can take on two different states, e.g. a coin flip. Call $Y$ the true state at the source, and $\hat{Y}$ the mental model of the state at the destination.
 
-## Mutual information
-[Mutual_information](https://en.wikipedia.org/wiki/Mutual_information)
 
 ## Evaluating Reconstructions
 
+[Mutual_information](https://en.wikipedia.org/wiki/Mutual_information)
 [Evaluation_of_binary_classifiers](https://en.wikipedia.org/wiki/Evaluation_of_binary_classifiers)<br/>
 [Confusion_matrix](https://en.wikipedia.org/wiki/Confusion_matrix)<br/>
 [Precision_and_recall](https://en.wikipedia.org/wiki/Precision_and_recall)<br/>
 [Sensitivity_and_specificity](https://en.wikipedia.org/wiki/Sensitivity_and_specificity)<br/>
 [F1_score](https://en.wikipedia.org/wiki/F1_score)<br/>
 
-## Distance and Similarity
+[Package ‘entropy,’ "Estimation of Entropy, Mutual Information and Related Quantities,"](http://strimmerlab.org/software/entropy/), February 19, 2015  <br/>
+[Philentropy: Information Theory and Distance Quantification with R.](https://doi.org/10.21105/joss.00765), Drost, (2018), Journal of Open Source Software, 3(26), 765  <br/>
 
-[Package ‘entropy,’ "Estimation of Entropy, Mutual Information and Related Quantities,"](http://strimmerlab.org/software/entropy/), February 19, 2015, 
-
-[Philentropy: Information Theory and Distance Quantification with R.](https://doi.org/10.21105/joss.00765), Drost, (2018), Journal of Open Source Software, 3(26), 765, 
 
 # One-Bit source, One-Bit message
 
@@ -179,12 +177,13 @@ WMLW 2.0 "Related Work"
 
 ["No Free Lunch Theorems for Optimization,"](https://ti.arc.nasa.gov/m/profile/dhw/papers/78.pdf) David H. Wolpert and William G. Macready, 1997, 
 
-##Overfitting
+## Probalistic Reconstructions and Hedging Bets
 
-#### Logit
+### Logit
 [Logistic_regression](https://en.wikipedia.org/wiki/Logistic_regression)
-#### SVM
-[Support_vector_machine](https://en.wikipedia.org/wiki/Support_vector_machine)
+
+## Evaluating Probalistic Reconstructions
+
 
 ### In Sample/Out of Sample / Cross Validation
 
@@ -199,6 +198,7 @@ WMLW 2.0 "Related Work"
 ## Feature Selection/Importance
 
 [Feature_selection](https://en.wikipedia.org/wiki/Feature_selection)
+[Confounding](https://en.wikipedia.org/wiki/Confounding)
 
 ["Statistical learning and selective inference"](http://www.pnas.org/content/pnas/112/25/7629.full.pdf) Jonathan Taylora and Robert J. Tibshirani, June 23, 2015
 
@@ -208,9 +208,7 @@ WMLW 2.0 "Related Work"
 
 [A Machine Learning Alternative to P-values](https://arxiv.org/pdf/1701.04944.pdf),Min Lu and Hemant Ishwaran, February 22, 2017
 
-["bounceR"](https://github.com/STATWORX/bounceR), R Package 
 
-[ELI5](https://github.com/TeamHG-Memex/eli5)
 
 ## Feature Engineering
 
@@ -288,6 +286,10 @@ https://en.wikipedia.org/wiki/Support_vector_machine
 
 [Feature Selection with the R Package MXM:  Statistically-Equivalent Feature Subsets](https://arxiv.org/pdf/1611.03227.pdf)
 
+["bounceR"](https://github.com/STATWORX/bounceR), R Package 
+
+[ELI5](https://github.com/TeamHG-Memex/eli5)
+
 ## Regularization, e.g. Lasso/Ridge Regression
 https://en.wikipedia.org/wiki/Lasso_(statistics)
 
@@ -359,3 +361,7 @@ International Studies Quarterly, Volume 60, Issue 3, 1 September 2016, Pages 520
 
 ## Gradient Boosting
 Terence Parr and Jeremy Howard, "How to explain gradient boosting," http://explained.ai/gradient-boosting/index.html
+
+#### SVM
+[Support_vector_machine](https://en.wikipedia.org/wiki/Support_vector_machine)
+
