@@ -184,6 +184,12 @@ WMLW 2.0 "Related Work"
 
 ## Evaluating Probalistic Reconstructions
 
+[Receiver operating characteristic](https://en.wikipedia.org/wiki/Receiver_operating_characteristic)
+[An introduction to ROC analysis](http://people.inf.elte.hu/kiss/13dwhdm/roc.pdf), Tom Fawcett, 2006, Pattern Recongnition Letters
+
+[what-does-auc-stand-for-and-what-is-it](https://stats.stackexchange.com/questions/132777/what-does-auc-stand-for-and-what-is-it)
+
+[Brier_score](https://en.wikipedia.org/wiki/Brier_score)
 
 ### In Sample/Out of Sample / Cross Validation
 
@@ -194,6 +200,12 @@ WMLW 2.0 "Related Work"
 ["Cross-validation failure: small sample sizes lead to large error bars,"](https://hal.inria.fr/hal-01545002/), Gaël Varoquaux, 2017
 
 # One-Bit source, Two-Bit message
+
+## Dictionary Learning
+
+## Ommitted Variable Bias
+
+## Included Variable Bias
 
 ## Feature Selection/Importance
 
@@ -207,8 +219,6 @@ WMLW 2.0 "Related Work"
 [P-Hacking](https://projects.fivethirtyeight.com/p-hacking/)
 
 [A Machine Learning Alternative to P-values](https://arxiv.org/pdf/1701.04944.pdf),Min Lu and Hemant Ishwaran, February 22, 2017
-
-
 
 ## Feature Engineering
 
@@ -225,9 +235,7 @@ WMLW 2.0 "Related Work"
 
 # Two-Bit source, One-Bit message
 
-### Bandwidth
-
-### Over determination
+### Bandwidth / Over determination
 [Overdetermined_system](https://en.wikipedia.org/wiki/Overdetermined_system)
 
 ## One-Bit source, N-bit message
@@ -235,6 +243,8 @@ WMLW 2.0 "Related Work"
 ### Curse of Dimensionality
 
 [Curse_of_dimensionality](https://en.wikipedia.org/wiki/Curse_of_dimensionality)
+(http://www.visiondummy.com/2014/04/curse-dimensionality-affect-classification/), Vincent Spruyt
+
 
 # N-bit source, One-Bit message
 
