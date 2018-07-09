@@ -22,10 +22,6 @@ www.rexdouglass.com<br/>
 
 This is a 6 hour introduction to machine learning spread across two three-hour lectures. The goal of this very short course is specific: to give you enough of an overview, vocabulary, and intuition, so that you can identify machine learning problems in the wild and begin your own research into relevant literatures and possible approaches. The goal is not to train you to execute a particular machine learning solution. There are far too many approaches available; they may not cover whatever problem you find; and the state of the art will be different in a year or two anyway. Instead, we will learn how to think about and classify problems into broad types, how to define and measure the efficacy of different solutions to that problem, how to avoid some common and subtle mistakes, and how to think about a full machine learning pipeline from start to finish.
 
-Day 1 is dedicated to providing intuition into the core ideas and problems in machine learning. The goal of the lecture will be to introduce those ideas using as simple of examples as possible. We will spend almost no time on specific tools, code, or real world examples.
-
-Day 2 is dedicated almost entirely to tools and real world examples. We will grind through as many problems/solutions being used right now in three hours as we can, with links to further reading in the syllabus.
-
 Please bring a two sided coin(s) and scratch paper to class for passing notes for the demonstrations.
 
 ## Course Slides
@@ -142,6 +138,8 @@ PRML 2.0
 
 Zero-Bit information sources are constants that don't vary.
 
+["Design, Inference, and the Strategic Logic of Suicide] Terrorism"(https://pdfs.semanticscholar.org/f192/cf69908c84d92d269ef52c337fa487d6b65e.pdf), SCOTT ASHWORTH, JOSHUA D. CLINTON, ADAM MEIROWITZ, and KRISTOPHER W. RAMSAY, 2008, APSR
+
 Zero-Bit source, Zero-Bit message: No variation and no measurement. <br/>
 Zero-Bit information source, One-Bit message: No variation, but a single measurement with variation between two states. <br/>
 Zero-Bit information source, N-Bit message: No variation, and an arbitrary number of measurements with arbitrary number of states <br/>
@@ -244,8 +242,6 @@ https://projects.fivethirtyeight.com/p-hacking/
 [Binary_number#Counting_in_binary](https://en.wikipedia.org/wiki/Binary_number#Counting_in_binary)
 
 # One-Bit source, One-Bit message, One-Bit line noise
-
-
 
 
 # Nearest Neighbor
