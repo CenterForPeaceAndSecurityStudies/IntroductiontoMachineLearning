@@ -2605,6 +2605,79 @@ window.initializeSourceEmbed = function(filename) {
 </script>
 
 
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; position: absolute; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; }
+pre.numberSource a.sourceLine:empty
+  { position: absolute; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: absolute; left: -5em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  { background-color: #f8f8f8; }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ef2929; } /* Alert */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #c4a000; } /* Attribute */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4e9a06; } /* Char */
+code span.cn { color: #000000; } /* Constant */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cf; } /* Float */
+code span.fu { color: #000000; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.ot { color: #8f5902; } /* Other */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.sc { color: #000000; } /* SpecialChar */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.st { color: #4e9a06; } /* String */
+code span.va { color: #000000; } /* Variable */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+div.sourceCode {
+  overflow-x: visible;
+}
+</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
 
 
 <style type="text/css">
@@ -2830,25 +2903,40 @@ div.tocify {
 
 
 <!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<style type="text/css">
+pre code, pre, code {
+  white-space: pre !important;
+  overflow-x: !scroll !important;
+  word-break: keep-all !important;
+  word-wrap: initial !important;
+}
+</style>
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
 <p>Rex W. Douglass<br /> Director Machine Learning for Social Science Lab (MSSL)<br /> Center for Peace and Security Studies (cPASS)<br /> Department of Political Science<br /> University of California San Diego<br /> <a href="mailto:rexdouglass@gmail.com">rexdouglass@gmail.com</a><br /> www.rexdouglass.com<br /> <span class="citation">@rexdouglass</span></p>
 <div id="course-overview" class="section level1">
 <h1><span class="header-section-number">1</span> Course Overview</h1>
-<p>This is a 6 hour introduction to machine learning spread across two three-hour lectures. The goal of this very short course is specific: to give you enough of an overview, vocabulary, and intuition, so that you can identify machine learning problems in the wild and begin your own research into relevant literatures and possible approaches. The goal is not to train you to execute a particular machine learning solution. There are far too many approaches available; they may not cover whatever problem you find; and the state of the art will be different in a year or two anyway. Instead, we will learn how to think about and classify problems into broad types, how to define and measure the efficacy of different solutions to that problem, how to avoid some common and subtle mistakes, and how to think about a full machine learning pipeline from start to finish.</p>
 <p>Please bring a two sided coin(s) and scratch paper to class for passing notes for the demonstrations.</p>
+<p>This is a 6 hour introduction to machine learning spread across two three-hour lectures. The goal of this very short course is narrow: to give you enough of an overview, vocabulary, and intuition, so that you can identify machine learning problems in the wild and begin your own research into relevant literatures and possible approaches. The goal is not to train you to execute a particular machine learning solution. There are far too many approaches available; they may not cover whatever problem you find; and the state of the art will be different in a year or two anyway. Instead, we will learn how to think about and classify problems into broad types, how to define and measure the efficacy of different solutions to that problem, how to avoid some common and subtle mistakes, and how to think about a full machine learning pipeline from start to finish.</p>
 <div id="course-slides" class="section level2">
 <h2><span class="header-section-number">1.1</span> Course Slides</h2>
-<p><a href="https://docs.google.com/presentation/d/19i2om_jwK8m3a-jNvgtM-WMT1l1HAGaGuWeb4bgLsTM/edit?usp=sharing">Course Slides (1/4)</a></p>
-<p><a href="https://docs.google.com/presentation/d/1Z857fFS692ijppXZzrPVjsVxsllwDKzoFBWOchRjDfU/edit?usp=sharing">Course Slides (2/4)</a></p>
-<p><a href="https://docs.google.com/presentation/d/1HRzRTjz31vt_HwOkKE_jNUYhg1a2LrOxS6LM3RI9dE4/edit?usp=sharing">Course Slides (3/4)</a></p>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/19i2om_jwK8m3a-jNvgtM-WMT1l1HAGaGuWeb4bgLsTM/edit?usp=sharing">Course Slides (1A)</a></li>
+<li><a href="https://docs.google.com/presentation/d/1Z857fFS692ijppXZzrPVjsVxsllwDKzoFBWOchRjDfU/edit?usp=sharing">Course Slides (1B)</a></li>
+<li><a href="https://docs.google.com/presentation/d/1HRzRTjz31vt_HwOkKE_jNUYhg1a2LrOxS6LM3RI9dE4/edit?usp=sharing">Course Slides (2A)</a></li>
+<li><a href="https://docs.google.com/presentation/d/1GSKQeoYWTVlIfWQIV9pXyoZW3DVdL2ylmaUU5dN9sGA/edit?usp=sharing">Course Slides (2B)</a></li>
+</ul>
 </div>
 <div id="readings-policy" class="section level2">
 <h2><span class="header-section-number">1.2</span> Readings Policy</h2>
-<p>Math and programming are not something you learn, they’re something you get used to. It is a trade, that takes years of trial and error and concrete projects to acquire. The readings of this course are, with a few exceptions, voluntary and intended for self study. They are to help point you in the right direction when you realize you need to start brushing up on a particular set of tools in order to tackle a particular problem.</p>
+<p>Math and programming are not something you learn, they’re something you get used to. The readings of this course are, with a few exceptions, voluntary and intended for self study. They are to help point you in the right direction when you realize you need to start brushing up on a particular set of tools in order to tackle a particular problem.</p>
 <p>Required - Skim in order to improve discussion and understanding during lecture <br /> Recommended - Eventually skim/read during self study <br /> Reference - Deeper mathematical or historical context <br /></p>
 </div>
 <div id="textbooks" class="section level2">
 <h2><span class="header-section-number">1.3</span> Textbooks</h2>
-<p>Do not purchase any books - each of these should be available for free on-line at the link given.</p>
+<p>Do not purchase any books - each of these should be available for free on-line at the link given. Any individual one would provide a decent background to the field of machine learning. For this course, I’ve picked select chapters when I thought they did a good job reviewing a specific subtopic.</p>
 <ul>
 <li>(CIML) <a href="ciml.info/">A course in machine learning</a>, Hal Daume III</li>
 <li>(ESL) <a href="https://web.stanford.edu/~hastie/ElemStatLearn/">Elements of Statistical Learning</a>, Trevor Hastie and Robert Tibshirani</li>
@@ -2865,11 +2953,18 @@ div.tocify {
 </div>
 <div id="general-resources" class="section level2">
 <h2><span class="header-section-number">1.4</span> General Resources</h2>
+<p>Related Classes *<a href="http://www.columbia.edu/~jwp2128/Teaching/W4721/Spring2017/W4721Spring2017.html">COMS W4721 Machine Learning for Data Science</a></p>
 <p>There are a number places on-line for constant updates on machine learning <br /> * <a href="https://www.reddit.com/r/MachineLearning/">Reddit Machine Learning Subreddit</a> * <a href="https://twitter.com/arxiv_org">arxiv</a> * <a href="https://twitter.com/RexDouglass">My twitter feed</a> * <a href="https://www.cambridge.org/core/journals/political-analysis">Political Analysis</a></p>
+<p>Conferences * <a href="http://www.guide2research.com/topconf/machine-learning">Top Conferences for Machine Learning &amp; Arti. Intelligence</a> * <a href="https://nips.cc/">Neural Information Processing Systems (NIPS)</a></p>
 </div>
 <div id="toy-problems" class="section level2">
 <h2><span class="header-section-number">1.5</span> Toy problems</h2>
-<p><a href="http://archive.ics.uci.edu/ml/index.php">UC Irvine Machine Learning Repository</a><br /> <a href="https://www.kaggle.com/datasets?sortBy=votes&amp;group=all">Kaggle Datasets</a><br /> <a href="https://en.wikipedia.org/wiki/List_of_datasets_for_machine_learning_research">List_of_datasets_for_machine_learning_research</a><br /></p>
+<ul>
+<li><a href="http://archive.ics.uci.edu/ml/index.php">UC Irvine Machine Learning Repository</a><br /></li>
+<li><a href="https://www.kaggle.com/datasets?sortBy=votes&amp;group=all">Kaggle Datasets</a><br /></li>
+<li><a href="https://en.wikipedia.org/wiki/List_of_datasets_for_machine_learning_research">List_of_datasets_for_machine_learning_research</a><br /></li>
+</ul>
+<p><a href="https://rpubs.com/raviolli77/352956">“Breast Cancer”</a>, Raul Eulogio, January 26, 2018</p>
 </div>
 <div id="software-and-programming" class="section level2">
 <h2><span class="header-section-number">1.6</span> Software and Programming</h2>
@@ -2884,270 +2979,643 @@ div.tocify {
 <li>[“Introduction to Validate,” <a href="https://cran.r-project.org/web/packages/validate/vignettes/introduction.html" class="uri">https://cran.r-project.org/web/packages/validate/vignettes/introduction.html</a>)</li>
 <li><a href="https://www.oreilly.com/ideas/an-introduction-to-regular-expressions">“An introduction to regular expressions”</a>, Thomas Nield, December 13, 2017 ,</li>
 <li><a href="%22https://github.com/gadenbuie/regexplain/#readme%22">RegExplain</a></li>
-<li><a href="http://plain-text.co/">“The Plain Person’s Guide to Plain Text Social Science”</a>, Kieran Healy, 2018-04-28 “Statistical Data Cleaning with Applications in R”</li>
+<li><a href="http://plain-text.co/">“The Plain Person’s Guide to Plain Text Social Science”</a>, Kieran Healy, 2018-04-28</li>
+<li>“Statistical Data Cleaning with Applications in R”</li>
+<li><a href="http://scikit-learn.org/stable/">scikit-learn</a></li>
 </ul>
+</div>
+<div id="notes-on-this-guide" class="section level2">
+<h2><span class="header-section-number">1.7</span> Notes on this Guide</h2>
+<p>This guide is written as an <a href="https://bookdown.org/yihui/rmarkdown/notebook.html">R notebook</a> using <a href="https://www.rstudio.com/">R-Studio</a>. It renders output as static HTML that you should be able to view on an regular browser.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShwYWNtYW4pXG5wX2xvYWQoaW5mb3RoZW8pXG5wX2xvYWQodGlkeXZlcnNlKVxucF9sb2FkKGdncGxvdDIpXG5wX2xvYWQoY293cGxvdClcbnBfbG9hZChtbGJlbmNoKVxuXG5gYGAifQ== -->
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">library</span>(pacman)</a>
+<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="kw">p_load</span>(infotheo)</a>
+<a class="sourceLine" id="cb1-3" data-line-number="3"><span class="kw">p_load</span>(tidyverse)</a>
+<a class="sourceLine" id="cb1-4" data-line-number="4"><span class="kw">p_load</span>(ggplot2)</a>
+<a class="sourceLine" id="cb1-5" data-line-number="5"><span class="kw">p_load</span>(cowplot)</a>
+<a class="sourceLine" id="cb1-6" data-line-number="6"><span class="kw">p_load</span>(mlbench)</a></code></pre></div>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
 </div>
 </div>
 <div id="introduction" class="section level1">
 <h1><span class="header-section-number">2</span> Introduction</h1>
 <div id="what-is-machine-learning" class="section level2">
 <h2><span class="header-section-number">2.1</span> What is machine learning?</h2>
-<p>(CIML), <a href="http://ciml.info/dl/v0_99/ciml-v0_99-ch01.pdf">Chapter 1,</a></p>
-<p>WMLW 1.0 “Introduction”</p>
+<ul>
+<li>(CIML), <a href="http://ciml.info/dl/v0_99/ciml-v0_99-ch01.pdf">Chapter 1,</a> <br /></li>
+<li>WMLW 1.0 “Introduction” <br /></li>
+</ul>
+<div id="examples-why-machine-learning" class="section level3">
+<h3><span class="header-section-number">2.1.1</span> Examples: Why Machine Learning?</h3>
+<ul>
+<li><a href="http://pcr.uu.se/research/views/">“ViEWS: a political Violence Early-Warning System,”</a> <br /></li>
+<li><a href="http://staff.math.su.se/hoehle/blog/2018/05/25/uxb.html">“Safe Disposal of Unexploded WWII Bombs,”</a> Michael Höhle, May 25, 2018, <br /></li>
+<li><a href="https://arxiv.org/pdf/1805.02109.pdf">“Predicting Race and Ethnicity From the Sequence of Characters in a Name,”</a>,Gaurav Sood and Suriyan Laohaprapanon, May 8, 2018, <br /></li>
+<li><a href="https://github.com/appeler/ethnicolr">“ethnicolr: Predict Race and Ethnicity From Name,”</a><br /></li>
+</ul>
+</div>
 </div>
 <div id="what-isnt-machine-learning" class="section level2">
 <h2><span class="header-section-number">2.2</span> What isn’t machine learning?</h2>
 <div id="statistics" class="section level3">
 <h3><span class="header-section-number">2.2.1</span> Statistics</h3>
-<p><a href="https://projecteuclid.org/download/pdf_1/euclid.ss/1009213726">“Statistical Modeling: The Two Cultures (with comments and a rejoinder by the author),”</a> Leo Breiman, Statistical Science, 2001, Vol. 16, No. 3, 199–231</p>
+<ul>
+<li><a href="https://projecteuclid.org/download/pdf_1/euclid.ss/1009213726">“Statistical Modeling: The Two Cultures (with comments and a rejoinder by the author),”</a> Leo Breiman, Statistical Science, 2001, Vol. 16, No. 3, 199–231 <br /></li>
+</ul>
 </div>
 <div id="causal-inference" class="section level3">
 <h3><span class="header-section-number">2.2.2</span> Causal Inference</h3>
-<p>Joshua D. Angrist &amp; Jörn-Steffen Pischke, “Mostly Harmless Econometrics An Empiricist’s Companion,” 2009</p>
-<p><a href="http://www.stat.columbia.edu/~cook/qr33.pdf">“Basic Concepts of Statistical Inference for Causal Effects in Experiments and Observational Studies,”</a> Donald B. Rubin, 2004</p>
+<ul>
+<li>Joshua D. Angrist &amp; Jörn-Steffen Pischke, “Mostly Harmless Econometrics An Empiricist’s Companion,” 2009</li>
+<li><a href="http://www.stat.columbia.edu/~cook/qr33.pdf">“Basic Concepts of Statistical Inference for Causal Effects in Experiments and Observational Studies,”</a> Donald B. Rubin, 2004 <br /></li>
+</ul>
 </div>
-</div>
-<div id="why-machine-learning" class="section level2">
-<h2><span class="header-section-number">2.3</span> Why Machine Learning?</h2>
-<p><a href="http://pcr.uu.se/research/views/">“ViEWS: a political Violence Early-Warning System,”</a></p>
-<p><a href="http://staff.math.su.se/hoehle/blog/2018/05/25/uxb.html">“Safe Disposal of Unexploded WWII Bombs,”</a> Michael Höhle, May 25, 2018,</p>
-<p><a href="https://arxiv.org/pdf/1805.02109.pdf">“Predicting Race and Ethnicity From the Sequence of Characters in a Name,”</a>,Gaurav Sood and Suriyan Laohaprapanon, May 8, 2018,<br />
-<a href="https://github.com/appeler/ethnicolr">“ethnicolr: Predict Race and Ethnicity From Name,”</a></p>
 </div>
 </div>
 <div id="information-theory" class="section level1">
 <h1><span class="header-section-number">3</span> Information Theory</h1>
-<div id="shannonweaver-model-of-communication" class="section level2">
-<h2><span class="header-section-number">3.1</span> Shannon–Weaver Model of Communication</h2>
-<p><a href="https://en.wikipedia.org/wiki/Shannon%E2%80%93Weaver_model">Shannon Weaver Model</a></p>
-<p><a href="http://colah.github.io/posts/2015-09-Visual-Information/">“Visual Information Theory,”</a> Christopher Olah, , October 14, 2015,</p>
-<p><a href="http://math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf">“A Mathematical Theory of Communication,”</a>, C. E. SHANNON, October 1948, The Bell System Technical Journal, Vol. 27, pp. 379–423, 623–656, July,</p>
-<p>PRML 1.6 “Information Theory”</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Information_theory">Information_theory</a></li>
+<li><a href="http://colah.github.io/posts/2015-09-Visual-Information/">“Visual Information Theory,”</a> Christopher Olah, , October 14, 2015, <br /></li>
+<li><a href="https://en.wikipedia.org/wiki/Shannon%E2%80%93Weaver_model">Shannon Weaver Model</a><br /></li>
+<li><a href="http://math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf">“A Mathematical Theory of Communication,”</a>, C. E. SHANNON, October 1948, The Bell System * Technical Journal, Vol. 27, pp. 379–423, 623–656, July, <br /></li>
+<li>PRML 1.6 “Information Theory” <br /></li>
+</ul>
+</div>
+<div id="information-sources-y" class="section level1">
+<h1><span class="header-section-number">4</span> Information Sources <span class="math inline">\(Y\)</span></h1>
+<div id="random-variables-and-distributions" class="section level2">
+<h2><span class="header-section-number">4.1</span> Random Variables and Distributions</h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Random_variable">Random_variable</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Binomial_distribution">Binomial_distribution</a></li>
+<li><a href="http://cs229.stanford.edu/section/cs229-prob.pdf">“Review of Probability Theory”</a>, Arian Maleki and Tom Do <br /></li>
+<li>PRML 2.0 <br /></li>
+</ul>
 </div>
 <div id="entropy" class="section level2">
-<h2><span class="header-section-number">3.2</span> Entropy</h2>
-<p><a href="https://en.wikipedia.org/wiki/Entropy_(information_theory)">Entropy_(information_theory)</a></p>
+<h2><span class="header-section-number">4.2</span> Entropy</h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Entropy_(information_theory)">Entropy (information_theory)</a><br /></li>
+<li><a href="http://strimmerlab.org/software/entropy/">Package ‘entropy,’ “Estimation of Entropy, Mutual Information and Related Quantities,”</a>, February 19, 2015 <br /></li>
+<li><a href="https://cran.r-project.org/web/packages/infotheo/index.html">infotheo</a>, Patrick E. Meyer, 2014-07-26, R Package <br /></li>
+<li><a href="https://doi.org/10.21105/joss.00765">Philentropy: Information Theory and Distance Quantification with R.</a>, Drost, (2018), Journal of Open Source Software, 3(26), 765 <br /></li>
+</ul>
 </div>
-<div id="distributions-and-probability" class="section level2">
-<h2><span class="header-section-number">3.3</span> Distributions and Probability</h2>
-<p><a href="http://cs229.stanford.edu/section/cs229-prob.pdf">Arian Maleki and Tom Do, “Review of Probability Theory,”</a></p>
-<p>PRML 2.0</p>
+<div id="binary-source-1bit" class="section level2">
+<h2><span class="header-section-number">4.3</span> Binary Source (<span class="math inline">\(&lt;=1bit\)</span>)</h2>
+<div id="two-headed-coin" class="section level4">
+<h4><span class="header-section-number">4.3.0.1</span> Two Headed Coin</h4>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG5OIDwtIDIwICNGbGlwIGEgY29pbiAxMCB0aW1lc1xuc2FtcGxlX3NwYWNlIDwtIGMoMSwwKSAjSGVhZHMgYW5kIFRhaWxzXG5cbnAgPC0gMSAjVHdvIGhlYWRlZCBjb2luXG5ZX2NvaW5fdHdvaGVhZGVkIDwtIHNhbXBsZShzYW1wbGVfc3BhY2UsIHNpemUgPSBOLCAgcmVwbGFjZSA9IFRSVUUsICBwcm9iID0gYyhwLCAxIC0gcCkpICBcbnByaW50KHRhYmxlKFlfY29pbl90d29oZWFkZWQpKVxuYGBgIn0= -->
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"></a>
+<a class="sourceLine" id="cb2-2" data-line-number="2">N &lt;-<span class="st"> </span><span class="dv">20</span> <span class="co">#Flip a coin 10 times</span></a>
+<a class="sourceLine" id="cb2-3" data-line-number="3">sample_space &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">0</span>) <span class="co">#Heads and Tails</span></a>
+<a class="sourceLine" id="cb2-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb2-5" data-line-number="5">p &lt;-<span class="st"> </span><span class="dv">1</span> <span class="co">#Two headed coin</span></a>
+<a class="sourceLine" id="cb2-6" data-line-number="6">Y_coin_twoheaded &lt;-<span class="st"> </span><span class="kw">sample</span>(sample_space, <span class="dt">size =</span> N,  <span class="dt">replace =</span> <span class="ot">TRUE</span>,  <span class="dt">prob =</span> <span class="kw">c</span>(p, <span class="dv">1</span> <span class="op">-</span><span class="st"> </span>p))  </a>
+<a class="sourceLine" id="cb2-7" data-line-number="7"><span class="kw">print</span>(<span class="kw">table</span>(Y_coin_twoheaded))</a></code></pre></div>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWV9jb2luX3R3b2hlYWRlZFxuIDEgXG4yMCBcbiJ9 -->
+<pre><code>Y_coin_twoheaded
+ 1 
+20 </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShpbmZvdGhlbylcbnByaW50KG5hdHN0b2JpdHMoZW50cm9weShZX2NvaW5fdHdvaGVhZGVkLCBtZXRob2Q9XCJlbXBcIikpKVxuYGBgIn0= -->
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw">library</span>(infotheo)</a>
+<a class="sourceLine" id="cb4-2" data-line-number="2"><span class="kw">print</span>(<span class="kw">natstobits</span>(<span class="kw">entropy</span>(Y_coin_twoheaded, <span class="dt">method=</span><span class="st">&quot;emp&quot;</span>)))</a></code></pre></div>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDBcbiJ9 -->
+<pre><code>[1] 0</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>A fair coin has equal likelihood of both heads and tails. Estimated entropy is close to the true value of 1 bit.</p>
 </div>
-<div id="transmitters" class="section level2">
-<h2><span class="header-section-number">3.4</span> Transmitters</h2>
-<p><a href="https://en.wikipedia.org/wiki/Function_(mathematics)">Function_(mathematics)</a></p>
+<div id="fair-coin" class="section level4">
+<h4><span class="header-section-number">4.3.0.2</span> Fair Coin</h4>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucCA8LSAwLjUgI0ZhaXIgQ29pblxuWV9jb2luX2ZhaXIgPC0gc2FtcGxlKHNhbXBsZV9zcGFjZSwgc2l6ZSA9IE4sICByZXBsYWNlID0gVFJVRSwgIHByb2IgPSBjKHAsIDEgLSBwKSkgIFxucHJpbnQodGFibGUoWV9jb2luX2ZhaXIpKVxuYGBgIn0= -->
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1">p &lt;-<span class="st"> </span><span class="fl">0.5</span> <span class="co">#Fair Coin</span></a>
+<a class="sourceLine" id="cb6-2" data-line-number="2">Y_coin_fair &lt;-<span class="st"> </span><span class="kw">sample</span>(sample_space, <span class="dt">size =</span> N,  <span class="dt">replace =</span> <span class="ot">TRUE</span>,  <span class="dt">prob =</span> <span class="kw">c</span>(p, <span class="dv">1</span> <span class="op">-</span><span class="st"> </span>p))  </a>
+<a class="sourceLine" id="cb6-3" data-line-number="3"><span class="kw">print</span>(<span class="kw">table</span>(Y_coin_fair))</a></code></pre></div>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWV9jb2luX2ZhaXJcbiAwICAxIFxuMTAgMTAgXG4ifQ== -->
+<pre><code>Y_coin_fair
+ 0  1 
+10 10 </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucHJpbnQobmF0c3RvYml0cyhlbnRyb3B5KFlfY29pbl9mYWlyLCBtZXRob2Q9XCJlbXBcIikpKVxuYGBgIn0= -->
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="kw">print</span>(<span class="kw">natstobits</span>(<span class="kw">entropy</span>(Y_coin_fair, <span class="dt">method=</span><span class="st">&quot;emp&quot;</span>)))</a></code></pre></div>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDFcbiJ9 -->
+<pre><code>[1] 1</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
 </div>
-<div id="receivers" class="section level2">
-<h2><span class="header-section-number">3.5</span> Receivers</h2>
-<p><a href="https://en.wikipedia.org/wiki/Inverse_function">Inverse_function</a></p>
+<div id="unfair-coin-p0.8" class="section level4">
+<h4><span class="header-section-number">4.3.0.3</span> Unfair Coin (p=0.8)</h4>
+<p>An unfair coin is weighted to be more likely to land heads or tails. Estimated entropy is less than a full bit. There is less surprise than from a full fair coin flip.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucCA8LSAwLjkgI1VuZmFpciBDb2luXG5ZX2NvaW5fdW5mYWlyIDwtIHNhbXBsZShzYW1wbGVfc3BhY2UsIHNpemUgPSBOLCAgcmVwbGFjZSA9IFRSVUUsICBwcm9iID0gYyhwLCAxIC0gcCkpICBcbnByaW50KHRhYmxlKFlfY29pbl91bmZhaXIpKVxuYGBgIn0= -->
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" data-line-number="1">p &lt;-<span class="st"> </span><span class="fl">0.9</span> <span class="co">#Unfair Coin</span></a>
+<a class="sourceLine" id="cb10-2" data-line-number="2">Y_coin_unfair &lt;-<span class="st"> </span><span class="kw">sample</span>(sample_space, <span class="dt">size =</span> N,  <span class="dt">replace =</span> <span class="ot">TRUE</span>,  <span class="dt">prob =</span> <span class="kw">c</span>(p, <span class="dv">1</span> <span class="op">-</span><span class="st"> </span>p))  </a>
+<a class="sourceLine" id="cb10-3" data-line-number="3"><span class="kw">print</span>(<span class="kw">table</span>(Y_coin_unfair))</a></code></pre></div>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWV9jb2luX3VuZmFpclxuIDAgIDEgXG4gMSAxOSBcbiJ9 -->
+<pre><code>Y_coin_unfair
+ 0  1 
+ 1 19 </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucHJpbnQobmF0c3RvYml0cyhlbnRyb3B5KFlfY29pbl91bmZhaXIsIG1ldGhvZD1cImVtcFwiKSkpXG5gYGAifQ== -->
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" data-line-number="1"><span class="kw">print</span>(<span class="kw">natstobits</span>(<span class="kw">entropy</span>(Y_coin_unfair, <span class="dt">method=</span><span class="st">&quot;emp&quot;</span>)))</a></code></pre></div>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDAuMjg2Mzk2OVxuIn0= -->
+<pre><code>[1] 0.2863969</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="uci-breast-cancer-dataset" class="section level4">
+<h4><span class="header-section-number">4.3.0.4</span> UCI Breast Cancer Dataset</h4>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGF0YShCcmVhc3RDYW5jZXIpXG5zdW1tYXJ5KEJyZWFzdENhbmNlciRDbGFzcylcbmBgYCJ9 -->
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" data-line-number="1"><span class="kw">data</span>(BreastCancer)</a>
+<a class="sourceLine" id="cb14-2" data-line-number="2"><span class="kw">summary</span>(BreastCancer<span class="op">$</span>Class)</a></code></pre></div>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgYmVuaWduIG1hbGlnbmFudCBcbiAgICAgIDQ1OCAgICAgICAyNDEgXG4ifQ== -->
+<pre><code>   benign malignant 
+      458       241 </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucHJpbnQobmF0c3RvYml0cyhlbnRyb3B5KEJyZWFzdENhbmNlciRDbGFzcywgbWV0aG9kPVwiZW1wXCIpKSlcbmBgYCJ9 -->
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" data-line-number="1"><span class="kw">print</span>(<span class="kw">natstobits</span>(<span class="kw">entropy</span>(BreastCancer<span class="op">$</span>Class, <span class="dt">method=</span><span class="st">&quot;emp&quot;</span>)))</a></code></pre></div>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDAuOTI5MzE3OVxuIn0= -->
+<pre><code>[1] 0.9293179</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Iris Dataset</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGF0YShpcmlzKVxuc3VtbWFyeShpcmlzJFNwZWNpZXMpXG5wcmludChuYXRzdG9iaXRzKGVudHJvcHkoaXJpcyRTcGVjaWVzLCBtZXRob2Q9XCJlbXBcIikpKVxuYGBgIn0= -->
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" data-line-number="1"><span class="kw">data</span>(iris)</a>
+<a class="sourceLine" id="cb18-2" data-line-number="2"><span class="kw">summary</span>(iris<span class="op">$</span>Species)</a>
+<a class="sourceLine" id="cb18-3" data-line-number="3"><span class="kw">print</span>(<span class="kw">natstobits</span>(<span class="kw">entropy</span>(iris<span class="op">$</span>Species, <span class="dt">method=</span><span class="st">&quot;emp&quot;</span>)))</a></code></pre></div>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI2NyaW0gcGVyIGNhcGl0YSBjcmltZSByYXRlIGJ5IHRvd25cbiN6biBwcm9wb3J0aW9uIG9mIHJlc2lkZW50aWFsIGxhbmQgem9uZWQgZm9yIGxvdHMgb3ZlciAyNSwwMDAgc3EuZnRcbiNpbmR1cyBwcm9wb3J0aW9uIG9mIG5vbi1yZXRhaWwgYnVzaW5lc3MgYWNyZXMgcGVyIHRvd25cbiNjaGFzIENoYXJsZXMgUml2ZXIgZHVtbXkgdmFyaWFibGUgKD0gMSBpZiB0cmFjdCBib3VuZHMgcml2ZXI7IDAgb3RoZXJ3aXNlKVxuI25veCBuaXRyaWMgb3hpZGVzIGNvbmNlbnRyYXRpb24gKHBhcnRzIHBlciAxMCBtaWxsaW9uKVxuI3JtIGF2ZXJhZ2UgbnVtYmVyIG9mIHJvb21zIHBlciBkd2VsbGluZ1xuI2FnZSBwcm9wb3J0aW9uIG9mIG93bmVyLW9jY3VwaWVkIHVuaXRzIGJ1aWx0IHByaW9yIHRvIDE5NDBcbiNkaXMgd2VpZ2h0ZWQgZGlzdGFuY2VzIHRvIGZpdmUgQm9zdG9uIGVtcGxveW1lbnQgY2VudHJlc1xuI3JhZCBpbmRleCBvZiBhY2Nlc3NpYmlsaXR5IHRvIHJhZGlhbCBoaWdod2F5c1xuI3RheCBmdWxsLXZhbHVlIHByb3BlcnR5LXRheCByYXRlIHBlciBVU0QgMTAsMDAwXG4jcHRyYXRpbyBwdXBpbC10ZWFjaGVyIHJhdGlvIGJ5IHRvd25cbiNiIDEwMDAoQiDiiJIgMC42MykyIHdoZXJlIEIgaXMgdGhlIHByb3BvcnRpb24gb2YgYmxhY2tzIGJ5IHRvd25cbiNsc3RhdCBwZXJjZW50YWdlIG9mIGxvd2VyIHN0YXR1cyBvZiB0aGUgcG9wdWxhdGlvblxuI21lZHYgbWVkaWFuIHZhbHVlIG9mIG93bmVyLW9jY3VwaWVkIGhvbWVzIGluIFVTRCAxMDAw4oCZc1xuZGF0YShCb3N0b25Ib3VzaW5nKVxuQm9zdG9uSG91c2luZyRtZWR2XG5oaXN0KEJvc3RvbkhvdXNpbmckbWVkdilcbnN1bW1hcnkoQm9zdG9uSG91c2luZyRtZWR2KVxucHJpbnQobmF0c3RvYml0cyhlbnRyb3B5KGRpc2NyZXRpemUoQm9zdG9uSG91c2luZyRtZWR2KSwgbWV0aG9kPVwiZW1wXCIpKSlcbmBgYCJ9 -->
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb19-1" data-line-number="1"><span class="co">#crim per capita crime rate by town</span></a>
+<a class="sourceLine" id="cb19-2" data-line-number="2"><span class="co">#zn proportion of residential land zoned for lots over 25,000 sq.ft</span></a>
+<a class="sourceLine" id="cb19-3" data-line-number="3"><span class="co">#indus proportion of non-retail business acres per town</span></a>
+<a class="sourceLine" id="cb19-4" data-line-number="4"><span class="co">#chas Charles River dummy variable (= 1 if tract bounds river; 0 otherwise)</span></a>
+<a class="sourceLine" id="cb19-5" data-line-number="5"><span class="co">#nox nitric oxides concentration (parts per 10 million)</span></a>
+<a class="sourceLine" id="cb19-6" data-line-number="6"><span class="co">#rm average number of rooms per dwelling</span></a>
+<a class="sourceLine" id="cb19-7" data-line-number="7"><span class="co">#age proportion of owner-occupied units built prior to 1940</span></a>
+<a class="sourceLine" id="cb19-8" data-line-number="8"><span class="co">#dis weighted distances to five Boston employment centres</span></a>
+<a class="sourceLine" id="cb19-9" data-line-number="9"><span class="co">#rad index of accessibility to radial highways</span></a>
+<a class="sourceLine" id="cb19-10" data-line-number="10"><span class="co">#tax full-value property-tax rate per USD 10,000</span></a>
+<a class="sourceLine" id="cb19-11" data-line-number="11"><span class="co">#ptratio pupil-teacher ratio by town</span></a>
+<a class="sourceLine" id="cb19-12" data-line-number="12"><span class="co">#b 1000(B − 0.63)2 where B is the proportion of blacks by town</span></a>
+<a class="sourceLine" id="cb19-13" data-line-number="13"><span class="co">#lstat percentage of lower status of the population</span></a>
+<a class="sourceLine" id="cb19-14" data-line-number="14"><span class="co">#medv median value of owner-occupied homes in USD 1000’s</span></a>
+<a class="sourceLine" id="cb19-15" data-line-number="15"><span class="kw">data</span>(BostonHousing)</a>
+<a class="sourceLine" id="cb19-16" data-line-number="16">BostonHousing<span class="op">$</span>medv</a>
+<a class="sourceLine" id="cb19-17" data-line-number="17"><span class="kw">hist</span>(BostonHousing<span class="op">$</span>medv)</a>
+<a class="sourceLine" id="cb19-18" data-line-number="18"><span class="kw">summary</span>(BostonHousing<span class="op">$</span>medv)</a>
+<a class="sourceLine" id="cb19-19" data-line-number="19"><span class="kw">print</span>(<span class="kw">natstobits</span>(<span class="kw">entropy</span>(<span class="kw">discretize</span>(BostonHousing<span class="op">$</span>medv), <span class="dt">method=</span><span class="st">&quot;emp&quot;</span>)))</a></code></pre></div>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+</div>
+<div id="section" class="section level2">
+<h2><span class="header-section-number">4.4</span> </h2>
+</div>
+<div id="transmitters-xfy" class="section level2">
+<h2><span class="header-section-number">4.5</span> Transmitters <span class="math inline">\(X=f(Y)\)</span></h2>
+<p><a href="https://en.wikipedia.org/wiki/Function_(mathematics)">Function_(mathematics)</a><br /></p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG5uPTEwMFxuWV91bmlmPXJ1bmlmKG49bilcbmJldGFfMT0uNVxuWD0oWV91bmlmKS9iZXRhXzEgI2Vwc2lsb25fZ2F1c3NpYW5cbnAxIDwtIGRhdGEuZnJhbWUoWCxZX3VuaWYpICU+JSBnZ3Bsb3QoYWVzKHg9WV91bmlmLHk9WCkpICsgZ2VvbV9wb2ludCgpXG5cbmVwc2lsb25fZ2F1c3NpYW49cm5vcm0obj1uLCBtZWFuID0gMCwgc2QgPSAxKVxuYmV0YV8xPS41XG5YPShZX3VuaWYpL2JldGFfMSArIChZX3VuaWZeMikvYmV0YV8xICNlcHNpbG9uX2dhdXNzaWFuXG5wMiA8LSBkYXRhLmZyYW1lKFgsWV91bmlmKSAlPiUgZ2dwbG90KGFlcyh4PVlfdW5pZix5PVgpKSArIGdlb21fcG9pbnQoKVxuXG5YPSBZX3VuaWYgPiAuNVxucDMgPC0gZGF0YS5mcmFtZShYLFlfdW5pZikgJT4lIGdncGxvdChhZXMoeD1ZX3VuaWYseT1YKSkgKyBnZW9tX3BvaW50KClcblxuWD0gY29zKFlfdW5pZilcbnA0IDwtIGRhdGEuZnJhbWUoWCxZX3VuaWYpICU+JSBnZ3Bsb3QoYWVzKHg9WV91bmlmLHk9WCkpICsgZ2VvbV9wb2ludCgpXG5cbnBsb3RfZ3JpZChwMSxwMixwMyxwNCwgbGFiZWxzID0gYyhcIkFcIiwgXCJCXCIsIFwiQ1wiLCBcIkRcIiksIG5jb2wgPSAyKVxuXG5gYGAifQ== -->
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb20-1" data-line-number="1"></a>
+<a class="sourceLine" id="cb20-2" data-line-number="2">n=<span class="dv">100</span></a>
+<a class="sourceLine" id="cb20-3" data-line-number="3">Y_unif=<span class="kw">runif</span>(<span class="dt">n=</span>n)</a>
+<a class="sourceLine" id="cb20-4" data-line-number="4">beta_<span class="dv">1</span>=.<span class="dv">5</span></a>
+<a class="sourceLine" id="cb20-5" data-line-number="5">X=(Y_unif)<span class="op">/</span>beta_<span class="dv">1</span> <span class="co">#epsilon_gaussian</span></a>
+<a class="sourceLine" id="cb20-6" data-line-number="6">p1 &lt;-<span class="st"> </span><span class="kw">data.frame</span>(X,Y_unif) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x=</span>Y_unif,<span class="dt">y=</span>X)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>()</a>
+<a class="sourceLine" id="cb20-7" data-line-number="7"></a>
+<a class="sourceLine" id="cb20-8" data-line-number="8">epsilon_gaussian=<span class="kw">rnorm</span>(<span class="dt">n=</span>n, <span class="dt">mean =</span> <span class="dv">0</span>, <span class="dt">sd =</span> <span class="dv">1</span>)</a>
+<a class="sourceLine" id="cb20-9" data-line-number="9">beta_<span class="dv">1</span>=.<span class="dv">5</span></a>
+<a class="sourceLine" id="cb20-10" data-line-number="10">X=(Y_unif)<span class="op">/</span>beta_<span class="dv">1</span> <span class="op">+</span><span class="st"> </span>(Y_unif<span class="op">^</span><span class="dv">2</span>)<span class="op">/</span>beta_<span class="dv">1</span> <span class="co">#epsilon_gaussian</span></a>
+<a class="sourceLine" id="cb20-11" data-line-number="11">p2 &lt;-<span class="st"> </span><span class="kw">data.frame</span>(X,Y_unif) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x=</span>Y_unif,<span class="dt">y=</span>X)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>()</a>
+<a class="sourceLine" id="cb20-12" data-line-number="12"></a>
+<a class="sourceLine" id="cb20-13" data-line-number="13">X=<span class="st"> </span>Y_unif <span class="op">&gt;</span><span class="st"> </span><span class="fl">.5</span></a>
+<a class="sourceLine" id="cb20-14" data-line-number="14">p3 &lt;-<span class="st"> </span><span class="kw">data.frame</span>(X,Y_unif) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x=</span>Y_unif,<span class="dt">y=</span>X)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>()</a>
+<a class="sourceLine" id="cb20-15" data-line-number="15"></a>
+<a class="sourceLine" id="cb20-16" data-line-number="16">X=<span class="st"> </span><span class="kw">cos</span>(Y_unif)</a>
+<a class="sourceLine" id="cb20-17" data-line-number="17">p4 &lt;-<span class="st"> </span><span class="kw">data.frame</span>(X,Y_unif) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x=</span>Y_unif,<span class="dt">y=</span>X)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>()</a>
+<a class="sourceLine" id="cb20-18" data-line-number="18"></a>
+<a class="sourceLine" id="cb20-19" data-line-number="19"><span class="kw">plot_grid</span>(p1,p2,p3,p4, <span class="dt">labels =</span> <span class="kw">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>, <span class="st">&quot;C&quot;</span>, <span class="st">&quot;D&quot;</span>), <span class="dt">ncol =</span> <span class="dv">2</span>)</a></code></pre></div>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p><a href="https://en.wikipedia.org/wiki/Linear_separability">Linear_separability</a></p>
+</div>
+<div id="messages-x" class="section level2">
+<h2><span class="header-section-number">4.6</span> Messages <span class="math inline">\(X\)</span></h2>
+</div>
+<div id="receivers-hatyhatfx" class="section level2">
+<h2><span class="header-section-number">4.7</span> Receivers <span class="math inline">\(\hat{Y}=\hat{f}(X)\)</span></h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Inverse_function">Inverse_function</a><br /></li>
+</ul>
 </div>
 </div>
 <div id="zero-bit-source" class="section level1">
-<h1><span class="header-section-number">4</span> Zero-Bit source</h1>
-<p>Zero-Bit information sources are constants that don’t vary.</p>
-<p>Zero-Bit source, Zero-Bit message: No variation and no measurement. <br /> Zero-Bit information source, One-Bit message: No variation, but a single measurement with variation between two states. <br /> Zero-Bit information source, N-Bit message: No variation, and an arbitrary number of measurements with arbitrary number of states <br /></p>
-<p>Selecting on the Dependent Variable <a href="https://pdfs.semanticscholar.org/f192/cf69908c84d92d269ef52c337fa487d6b65e.pdf">“Design, Inference, and the Strategic Logic of Suicide Terrorism”</a>, SCOTT ASHWORTH, JOSHUA D. CLINTON, ADAM MEIROWITZ, and KRISTOPHER W. RAMSAY, 2008, APSR</p>
+<h1><span class="header-section-number">5</span> Zero-Bit source</h1>
+<ul>
+<li><p>Zero-Bit information sources are constants that don’t vary.</p></li>
+<li>Zero-Bit source, Zero-Bit message: No variation and no measurement. <br /></li>
+<li>Zero-Bit information source, One-Bit message: No variation, but a single measurement with variation between two states. <br /></li>
+<li><p>Zero-Bit information source, N-Bit message: No variation, and an arbitrary number of measurements with arbitrary number of states <br /></p></li>
+<li>Selecting on the Dependent Variable</li>
+<li><p><a href="https://pdfs.semanticscholar.org/f192/cf69908c84d92d269ef52c337fa487d6b65e.pdf">“Design, Inference, and the Strategic Logic of Suicide Terrorism”</a>, SCOTT ASHWORTH, JOSHUA D. CLINTON, ADAM MEIROWITZ, and KRISTOPHER W. RAMSAY, 2008, APSR</p></li>
+</ul>
 </div>
 <div id="one-bit-sources" class="section level1">
-<h1><span class="header-section-number">5</span> One-Bit sources</h1>
+<h1><span class="header-section-number">6</span> One-Bit sources</h1>
 <p>One-Bit information sources are variables that can take on two different states, e.g. a coin flip. Call <span class="math inline">\(Y\)</span> the true state at the source, and <span class="math inline">\(\hat{Y}\)</span> the mental model of the state at the destination.</p>
-<div id="evaluating-reconstructions" class="section level2">
-<h2><span class="header-section-number">5.1</span> Evaluating Reconstructions</h2>
-<p><a href="https://en.wikipedia.org/wiki/Scoring_rule">Scoring Rules</a> <a href="https://en.wikipedia.org/wiki/Mutual_information">Mutual_information</a> <a href="https://en.wikipedia.org/wiki/Evaluation_of_binary_classifiers">Evaluation_of_binary_classifiers</a><br /> <a href="https://en.wikipedia.org/wiki/Confusion_matrix">Confusion_matrix</a><br /> <a href="https://en.wikipedia.org/wiki/Precision_and_recall">Precision_and_recall</a><br /> <a href="https://en.wikipedia.org/wiki/Sensitivity_and_specificity">Sensitivity_and_specificity</a><br /> <a href="https://en.wikipedia.org/wiki/F1_score">F1_score</a><br /></p>
-<p><a href="http://strimmerlab.org/software/entropy/">Package ‘entropy,’ “Estimation of Entropy, Mutual Information and Related Quantities,”</a>, February 19, 2015 <br /> <a href="https://doi.org/10.21105/joss.00765">Philentropy: Information Theory and Distance Quantification with R.</a>, Drost, (2018), Journal of Open Source Software, 3(26), 765 <br /></p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Binary_classification">Binary_classification</a></li>
+</ul>
+<p>How should we compare the true reality <span class="math inline">\(Y\)</span> to our mental model of it <span class="math inline">\(\hat{Y}\)</span>?</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Scoring_rule">Scoring Rules</a><br /></li>
+<li><a href="https://en.wikipedia.org/wiki/Evaluation_of_binary_classifiers">Evaluation_of_binary_classifiers</a><br /></li>
+<li><a href="https://en.wikipedia.org/wiki/Confusion_matrix">Confusion_matrix</a><br /></li>
+</ul>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuWV9oYXQ9WV9jb2luX2ZhaXJcbnRhYmxlKFlfY29pbl91bmZhaXIsWV9oYXQpXG5gYGAifQ== -->
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb21-1" data-line-number="1">Y_hat=Y_coin_fair</a>
+<a class="sourceLine" id="cb21-2" data-line-number="2"><span class="kw">table</span>(Y_coin_unfair,Y_hat)</a></code></pre></div>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucF9sb2FkKE1ldHJpY3MpXG5hY2N1cmFjeShZX2NvaW5fdW5mYWlyLCBZX2hhdClcbmBgYCJ9 -->
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb22-1" data-line-number="1"><span class="kw">p_load</span>(Metrics)</a>
+<a class="sourceLine" id="cb22-2" data-line-number="2"><span class="kw">accuracy</span>(Y_coin_unfair, Y_hat)</a></code></pre></div>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Precision_and_recall">Precision_and_recall</a><br /></li>
+</ul>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucHJlY2lzaW9uKFlfY29pbl91bmZhaXIsIFlfaGF0KVxuYGBgIn0= -->
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb23-1" data-line-number="1"><span class="kw">precision</span>(Y_coin_unfair, Y_hat)</a></code></pre></div>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/F1_score">F1_score</a><br /></li>
+</ul>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZjEoWV9jb2luX3VuZmFpciwgWV9oYXQpXG5gYGAifQ== -->
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb24-1" data-line-number="1"><span class="kw">f1</span>(Y_coin_unfair, Y_hat)</a></code></pre></div>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Mutual_information">Mutual_information</a><br /></li>
+</ul>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucHJpbnQobmF0c3RvYml0cyhtdXRpbmZvcm1hdGlvbihZX2NvaW5fdW5mYWlyLCBZX2hhdCwgbWV0aG9kPVwiZW1wXCIpKSlcbmBgYCJ9 -->
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb25-1" data-line-number="1"><span class="kw">print</span>(<span class="kw">natstobits</span>(<span class="kw">mutinformation</span>(Y_coin_unfair, Y_hat, <span class="dt">method=</span><span class="st">&quot;emp&quot;</span>)))</a></code></pre></div>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Sensitivity_and_specificity">Sensitivity_and_specificity</a><br /></li>
+<li><a href="http://infolab.stanford.edu/~ullman/mmds/ch3.pdf">“Finding Similar Items”</a>, Jure Leskovec, Anand Rajaraman, Jeff Ullman, Chapter 3, <a href="http://www.mmds.org/">Mining of Massive Datasets</a>, 2014<br /></li>
+</ul>
+<div id="imbalanced-data" class="section level3">
+<h3><span class="header-section-number">6.0.1</span> Imbalanced Data</h3>
+<ul>
+<li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4285355/">“Facing Imbalanced Data Recommendations for the Use of Performance Metrics”</a>, László A. Jeni,1 Jeffrey F. Cohn,1,2 and Fernando De La Torre, Int Conf Affect Comput Intell Interact Workshops. 2013; 2013: 245–251.</li>
+</ul>
 </div>
+<div id="probalistic-scoring-functions" class="section level2">
+<h2><span class="header-section-number">6.1</span> Probalistic Scoring Functions</h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Scoring_rule#ProperScoringRules">Proper Scoring Rules</a><br /></li>
+<li><a href="https://en.wikipedia.org/wiki/Brier_score">Brier_score</a><br /></li>
+<li><a href="https://en.wikipedia.org/wiki/Receiver_operating_characteristic">Receiver operating characteristic</a><br /></li>
+<li><a href="http://people.inf.elte.hu/kiss/13dwhdm/roc.pdf">An introduction to ROC analysis</a>, Tom Fawcett, 2006, Pattern Recongnition Letters<br /></li>
+<li><a href="https://stats.stackexchange.com/questions/132777/what-does-auc-stand-for-and-what-is-it">what-does-auc-stand-for-and-what-is-it</a><br /></li>
+</ul>
+</div>
+</div>
+<div id="bit-sources" class="section level1">
+<h1><span class="header-section-number">7</span> 2-Bit sources</h1>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Multiclass_classification">Multiclass_classification</a> <br /></li>
+<li><a href="https://en.wikipedia.org/wiki/Cross_entropy">Cross Entropy</a> <br /></li>
+<li>Tom Fawcett (2006) “An introduction to ROC analysis”. Pattern Recognition Letters 27, 861–874. DOI: 10.1016/j.patrec.2005.10.010. <br /></li>
+<li>David J. Hand and Robert J. Till (2001). A Simple Generalisation of the Area Under the ROC Curve for Multiple Class Classification Problems. Machine Learning 45(2), p. 171–186. DOI: 10.1023/A:1010920819831. <br /></li>
+<li><a href="https://web.expasy.org/pROC/">“pROC: Display and Analyze ROC Curves”</a>, 2018-05-06 <br /></li>
+<li><a href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-12-77">pROC: an open-source package for R and S+ to analyze and compare ROC curves</a>, Xavier * * Robin, Natacha Turck, Alexandre Hainard, Natalia Tiberti, Frédérique Lisacek, Jean-Charles Sanchez and Markus Müller (2011). BMC Bioinformatics, 12, p. 77 <br /></li>
+</ul>
+</div>
+<div id="n-bit-sources" class="section level1">
+<h1><span class="header-section-number">8</span> N-Bit sources</h1>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Mean_squared_error">Mean_squared_error</a></li>
+</ul>
 </div>
 <div id="one-bit-source-one-bit-message" class="section level1">
-<h1><span class="header-section-number">6</span> One-Bit source, One-Bit message</h1>
+<h1><span class="header-section-number">9</span> One-Bit source, One-Bit message</h1>
 <div id="what-makes-a-good-receiver" class="section level2">
-<h2><span class="header-section-number">6.1</span> What makes a good receiver?</h2>
-<p>PRML 1.5 “Decision Theory”</p>
-<p><a href="http://scott.fortmann-roe.com/docs/BiasVariance.html">“Understanding the Bias-Variance Tradeoff,”</a>, Scott Fortmann-Roe, 2012,</p>
+<h2><span class="header-section-number">9.1</span> What makes a good receiver?</h2>
+<ul>
+<li>PRML 1.5 “Decision Theory” <br /></li>
+<li>ESL 2.4 Statistical Decision Theory</li>
+<li><a href="http://scott.fortmann-roe.com/docs/BiasVariance.html">“Understanding the Bias-Variance Tradeoff,”</a>, Scott Fortmann-Roe, 2012, <br /></li>
+</ul>
 </div>
 <div id="no-free-lunch" class="section level2">
-<h2><span class="header-section-number">6.2</span> No Free Lunch</h2>
-<p>WMLW 2.0 “Related Work”</p>
-<p><a href="https://ti.arc.nasa.gov/m/profile/dhw/papers/78.pdf">“No Free Lunch Theorems for Optimization,”</a> David H. Wolpert and William G. Macready, 1997,</p>
-<div id="in-sampleout-of-sample-cross-validation" class="section level3">
-<h3><span class="header-section-number">6.2.1</span> In Sample/Out of Sample / Cross Validation</h3>
-<p><a href="https://en.wikipedia.org/wiki/Training,_test,_and_validation_sets">Training,_test,_and_validation_sets</a><br /> <a href="https://en.wikipedia.org/wiki/Cross-validation_(statistics)">Cross-validation_(statistics)</a><br /></p>
-<p><a href="http://www.libpls.net/publication/MCCV_Shao_1993.pdf">“Linear Model Selection by Cross-Validation,”</a>, Jun Shao, 1993<br /> <a href="https://hal.inria.fr/hal-01545002/">“Cross-validation failure: small sample sizes lead to large error bars,”</a>, Gaël Varoquaux, 2017<br /></p>
+<h2><span class="header-section-number">9.2</span> No Free Lunch</h2>
+<ul>
+<li>WMLW 2.0 “Related Work”</li>
+<li><a href="https://ti.arc.nasa.gov/m/profile/dhw/papers/78.pdf">“No Free Lunch Theorems for Optimization,”</a> David H. Wolpert and William G. Macready, 1997, <br /></li>
+</ul>
 </div>
+<div id="parametric-functions" class="section level2">
+<h2><span class="header-section-number">9.3</span> Parametric Functions</h2>
 </div>
-<div id="probalistic-reconstructions-and-hedging-bets" class="section level2">
-<h2><span class="header-section-number">6.3</span> Probalistic Reconstructions and Hedging Bets</h2>
-<p><a href="https://en.wikipedia.org/wiki/Scoring_rule#ProperScoringRules">Proper Scoring Rules</a><br /> <a href="https://en.wikipedia.org/wiki/Brier_score">Brier_score</a><br /> <a href="https://en.wikipedia.org/wiki/Receiver_operating_characteristic">Receiver operating characteristic</a><br /> <a href="http://people.inf.elte.hu/kiss/13dwhdm/roc.pdf">An introduction to ROC analysis</a>, Tom Fawcett, 2006, Pattern Recongnition Letters<br /> <a href="https://stats.stackexchange.com/questions/132777/what-does-auc-stand-for-and-what-is-it">what-does-auc-stand-for-and-what-is-it</a><br /></p>
+<div id="overfitting" class="section level2">
+<h2><span class="header-section-number">9.4</span> Overfitting</h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Overfitting">Overfitting</a><br /></li>
+</ul>
+</div>
+<div id="in-sampleout-of-sample-cross-validation" class="section level2">
+<h2><span class="header-section-number">9.5</span> In Sample/Out of Sample / Cross Validation</h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Training,_test,_and_validation_sets">Training,_test,_and_validation_sets</a><br /></li>
+<li><a href="https://en.wikipedia.org/wiki/Cross-validation_(statistics)">Cross-validation_(statistics)</a><br /></li>
+<li><a href="http://www.libpls.net/publication/MCCV_Shao_1993.pdf">“Linear Model Selection by Cross-Validation,”</a>, Jun Shao, 1993<br /></li>
+<li><a href="https://hal.inria.fr/hal-01545002/">“Cross-validation failure: small sample sizes lead to large error bars,”</a>, Gaël Varoquaux, 2017<br /></li>
+</ul>
 </div>
 </div>
 <div id="one-bit-source-two-bit-message" class="section level1">
-<h1><span class="header-section-number">7</span> One-Bit source, Two-Bit message</h1>
-<div id="dictionary-learning" class="section level2">
-<h2><span class="header-section-number">7.1</span> Dictionary Learning</h2>
-</div>
+<h1><span class="header-section-number">10</span> One-Bit source, Two-Bit message</h1>
 <div id="ommitted-variable-bias" class="section level2">
-<h2><span class="header-section-number">7.2</span> Ommitted Variable Bias</h2>
-<p><a href="https://en.wikipedia.org/wiki/Simpson%27s_paradox">Simpsons Paradox</a></p>
+<h2><span class="header-section-number">10.1</span> Ommitted Variable Bias</h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Simpson%27s_paradox">Simpsons Paradox</a><br /></li>
+</ul>
+<div id="feature-selection-included-variable-bias" class="section level3">
+<h3><span class="header-section-number">10.1.1</span> Feature Selection / Included Variable Bias</h3>
+<ul>
+<li><a href="http://www.columbia.edu/~gjw10/achen04.pdf">Let’s Put Garbage—Can Regressions and Garbage—Can Probits Where They Belong</a>, Christopher H. Achen, Conflict Management and Peace Science, 2005</li>
+<li><a href="http://www.saramitchell.org/clarke05.pdf">“The Phantom Menace: Omitted Variable Bias in Econometric Research”</a>, Kevin A. Clarke, 2005, Conflict Management and Peace Science</li>
+<li><a href="https://en.wikipedia.org/wiki/Feature_selection">Feature_selection</a><br /></li>
+<li><a href="https://en.wikipedia.org/wiki/Confounding">Confounding</a><br /></li>
+<li><a href="http://www.pnas.org/content/pnas/112/25/7629.full.pdf">“Statistical learning and selective inference”</a> Jonathan Taylora and Robert J. Tibshirani, June 23, 2015<br /></li>
+<li><a href="http://www.stat.columbia.edu/~gelman/research/unpublished/p_hacking.pdf">“The garden of forking paths: Why multiple comparisons can be a problem, when there is no “fishing expedition” or “p-hacking” and the research was posited ahead of time”</a>, Andrew Gelman and Eric Loken, 14 Nov 2013, Unpublished Manuscript<br /></li>
+<li><a href="https://projects.fivethirtyeight.com/p-hacking/">P-Hacking</a><br /></li>
+<li><a href="https://arxiv.org/pdf/1701.04944.pdf">A Machine Learning Alternative to P-values</a>,Min Lu and Hemant Ishwaran, February 22, 2017<br /></li>
+<li><a href="https://arxiv.org/pdf/1611.03227.pdf">Feature Selection with the R Package MXM: Statistically-Equivalent Feature Subsets</a> <br /></li>
+<li><p><a href="https://github.com/STATWORX/bounceR">“bounceR”</a>, R Package <br /></p></li>
+<li><a href="https://en.wikipedia.org/wiki/Extreme_bounds_analysis" class="uri">https://en.wikipedia.org/wiki/Extreme_bounds_analysis</a></li>
+<li><a href="http://www.ecostat.unical.it/Aiello/Didattica/economia_Crescita/CRESCITA/CRESCITA_Sala-i-Martin-AER-1997.pdf">‘I JUST RAN Two MILLION REGRESSIONS’</a>, Xavier Sala-i-Martin, 1997, American Economic Review <br /></li>
+<li><p><a href="https://cran.r-project.org/web/packages/ExtremeBounds/vignettes/ExtremeBounds.pdf">“ExtremeBounds: Extreme Bounds Analysis in R”</a> <br /></p></li>
+</ul>
+</div>
+</div>
+<div id="model-complexityparismony" class="section level2">
+<h2><span class="header-section-number">10.2</span> Model Complexity/Parismony</h2>
+<ul>
+<li>AIC (Akaike 1973)</li>
+<li><a href="https://en.wikipedia.org/wiki/Akaike_information_criterion">Akaike information criterion (AIC)</a><br /></li>
+<li>BIC (Schwarz 1978)</li>
+<li><a href="https://en.wikipedia.org/wiki/Bayesian_information_criterion">Bayesian information criterion (BIC)</a><br /></li>
+</ul>
+</div>
+<div id="regularization-e.g.lassoridge-regression" class="section level2">
+<h2><span class="header-section-number">10.3</span> Regularization, e.g. Lasso/Ridge Regression</h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Lasso_(statistics)" class="uri">https://en.wikipedia.org/wiki/Lasso_(statistics)</a></li>
+<li><a href="http://statweb.stanford.edu/~tibs/lasso/lasso.pdf">“Regression shrinkage and selection via the lasso”</a>, Tibshirani, R., 1996, J. Royal. Statist. Soc B., Vol. 58, No. 1, pages 267-288)</li>
+<li><a href="https://cran.r-project.org/web/packages/glmnet/vignettes/glmnet_beta.pdf">“Glmnet Vignette”</a>, Trevor Hastie and Junyang Qian, September 13, 2016</li>
+</ul>
 </div>
 <div id="feature-engineering" class="section level2">
-<h2><span class="header-section-number">7.3</span> Feature Engineering</h2>
-<p><a href="https://en.wikipedia.org/wiki/Feature_engineering">Feature_engineering</a></p>
-<p><a href="https://en.wikipedia.org/wiki/Interaction_(statistics)">Interaction_(statistics)</a></p>
-<p><a href="http://yiqingxu.org/papers/english/2018_HMX_interaction/main.pdf">“How Much Should We Trust Estimates from Multiplicative Interaction Models? Simple Tools to Improve Empirical<br /> Practice,”</a>, Jens Hainmueller Jonathan Mummolo Yiqing Xu,, April 20, 2018, Political Analysis<br /></p>
-</div>
-<div id="included-variable-bias" class="section level2">
-<h2><span class="header-section-number">7.4</span> Included Variable Bias</h2>
-<p><a href="https://en.wikipedia.org/wiki/Feature_selection">Feature_selection</a><br /> <a href="https://en.wikipedia.org/wiki/Confounding">Confounding</a><br /></p>
-<p><a href="http://www.pnas.org/content/pnas/112/25/7629.full.pdf">“Statistical learning and selective inference”</a> Jonathan Taylora and Robert J. Tibshirani, June 23, 2015<br /></p>
-<p><a href="http://www.stat.columbia.edu/~gelman/research/unpublished/p_hacking.pdf">“The garden of forking paths: Why multiple comparisons can be a problem, when there is no “fishing expedition” or “p-hacking” and the research was posited ahead of time”</a>, Andrew Gelman and Eric Loken, 14 Nov 2013, Unpublished Manuscript<br /></p>
-<p><a href="https://projects.fivethirtyeight.com/p-hacking/">P-Hacking</a><br /></p>
-<p><a href="https://arxiv.org/pdf/1701.04944.pdf">A Machine Learning Alternative to P-values</a>,Min Lu and Hemant Ishwaran, February 22, 2017<br /></p>
-</div>
-<div id="regularization-model-complexityparismony" class="section level2">
-<h2><span class="header-section-number">7.5</span> Regularization, Model Complexity/Parismony</h2>
-<p><a href="https://en.wikipedia.org/wiki/Akaike_information_criterion">Akaike information criterion (AIC)</a><br /> <a href="https://en.wikipedia.org/wiki/Bayesian_information_criterion">Bayesian information criterion (BIC)</a><br /></p>
+<h2><span class="header-section-number">10.4</span> Feature Engineering</h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Feature_engineering">Feature_engineering</a><br /></li>
+<li><a href="https://en.wikipedia.org/wiki/Interaction_(statistics)">Interaction_(statistics)</a><br /></li>
+<li><a href="http://yiqingxu.org/papers/english/2018_HMX_interaction/main.pdf">“How Much Should We Trust Estimates from Multiplicative Interaction Models? Simple Tools to Improve Empirical Practice,”</a>, Jens Hainmueller Jonathan Mummolo Yiqing Xu,, April 20, 2018, Political Analysis<br /></li>
+<li><a href="https://en.wikipedia.org/wiki/Support_vector_machine" class="uri">https://en.wikipedia.org/wiki/Support_vector_machine</a> <br /></li>
+<li><a href="https://github.com/TeamHG-Memex/eli5">ELI5</a> <br /></li>
+</ul>
 </div>
 </div>
 <div id="two-bit-source-one-bit-message" class="section level1">
-<h1><span class="header-section-number">8</span> Two-Bit source, One-Bit message</h1>
+<h1><span class="header-section-number">11</span> Two-Bit source, One-Bit message</h1>
 <div id="bandwidth-over-determination" class="section level3">
-<h3><span class="header-section-number">8.0.1</span> Bandwidth / Over determination</h3>
-<p><a href="https://en.wikipedia.org/wiki/Overdetermined_system">Overdetermined_system</a></p>
+<h3><span class="header-section-number">11.0.1</span> Bandwidth / Over determination</h3>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Overdetermined_system">Overdetermined_system</a><br /></li>
+</ul>
 </div>
 <div id="one-bit-source-n-bit-message" class="section level2">
-<h2><span class="header-section-number">8.1</span> One-Bit source, N-bit message</h2>
+<h2><span class="header-section-number">11.1</span> One-Bit source, N-bit message</h2>
 <div id="curse-of-dimensionality" class="section level3">
-<h3><span class="header-section-number">8.1.1</span> Curse of Dimensionality</h3>
-<p><a href="https://en.wikipedia.org/wiki/Curse_of_dimensionality">Curse_of_dimensionality</a> <br /> <a href="http://www.visiondummy.com/2014/04/curse-dimensionality-affect-classification/">The Curse of Dimensionality in classification</a>, Vincent Spruyt <br /></p>
+<h3><span class="header-section-number">11.1.1</span> Curse of Dimensionality</h3>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Curse_of_dimensionality">Curse_of_dimensionality</a> <br /></li>
+<li><a href="http://www.visiondummy.com/2014/04/curse-dimensionality-affect-classification/">The Curse of Dimensionality in classification</a>, Vincent Spruyt <br /></li>
+</ul>
 </div>
 </div>
 </div>
 <div id="n-bit-source-one-bit-message" class="section level1">
-<h1><span class="header-section-number">9</span> N-bit source, One-Bit message</h1>
+<h1><span class="header-section-number">12</span> N-bit source, One-Bit message</h1>
 </div>
 <div id="two-bit-source-two-bit-message" class="section level1">
-<h1><span class="header-section-number">10</span> Two-Bit source, Two-Bit message</h1>
+<h1><span class="header-section-number">13</span> Two-Bit source, Two-Bit message</h1>
 </div>
 <div id="n-bit-source-n-bit-message" class="section level1">
-<h1><span class="header-section-number">11</span> N-bit source, N-bit message</h1>
-<p><a href="https://en.wikipedia.org/wiki/Binary_number#Counting_in_binary">Binary_number#Counting_in_binary</a></p>
+<h1><span class="header-section-number">14</span> N-bit source, N-bit message</h1>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Binary_number#Counting_in_binary">Binary_number#Counting_in_binary</a> <br /></li>
+</ul>
 </div>
 <div id="one-bit-source-one-bit-message-one-bit-noise" class="section level1">
-<h1><span class="header-section-number">12</span> One-Bit source, One-Bit message, One-Bit noise</h1>
+<h1><span class="header-section-number">15</span> One-Bit source, One-Bit message, One-Bit noise</h1>
 </div>
 <div id="nearest-neighbor" class="section level1">
-<h1><span class="header-section-number">13</span> Nearest Neighbor</h1>
-<div id="dictionary-learning-1" class="section level4">
-<h4><span class="header-section-number">13.0.0.1</span> Dictionary Learning</h4>
-<p><a href="https://en.wikipedia.org/wiki/Sparse_dictionary_learning" class="uri">https://en.wikipedia.org/wiki/Sparse_dictionary_learning</a></p>
-</div>
-<div id="partioning" class="section level3">
-<h3><span class="header-section-number">13.0.1</span> Partioning</h3>
-<div id="nearest-neighbor-1" class="section level4">
-<h4><span class="header-section-number">13.0.1.1</span> Nearest Neighbor</h4>
-<p><a href="https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm" class="uri">https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm</a></p>
+<h1><span class="header-section-number">16</span> Nearest Neighbor</h1>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm">K-nearest_neighbors_algorithm</a> <br /></li>
+</ul>
 <p>Integer encoder Latent variable model</p>
-</div>
 <div id="clustering" class="section level4">
-<h4><span class="header-section-number">13.0.1.2</span> Clustering</h4>
-<p><a href="https://en.wikipedia.org/wiki/Cluster_analysis" class="uri">https://en.wikipedia.org/wiki/Cluster_analysis</a></p>
+<h4><span class="header-section-number">16.0.0.1</span> Clustering</h4>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Cluster_analysis" class="uri">https://en.wikipedia.org/wiki/Cluster_analysis</a> <br /></li>
+</ul>
 </div>
 <div id="k-means" class="section level4">
-<h4><span class="header-section-number">13.0.1.3</span> K-means</h4>
-<p><a href="https://en.wikipedia.org/wiki/K-means_clustering" class="uri">https://en.wikipedia.org/wiki/K-means_clustering</a></p>
-</div>
+<h4><span class="header-section-number">16.0.0.2</span> K-means</h4>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/K-means_clustering" class="uri">https://en.wikipedia.org/wiki/K-means_clustering</a> <br /></li>
+</ul>
 </div>
 <div id="clustering-1" class="section level2">
-<h2><span class="header-section-number">13.1</span> Clustering</h2>
-<p>“Unsupervised Machine Learning: The hclust, pvclust, cluster, mclust, and more,” <a href="https://quantdev.ssri.psu.edu/sites/qdev/files/Unsupervised_Machine_Learning_The_mclust_Package_and_others.html" class="uri">https://quantdev.ssri.psu.edu/sites/qdev/files/Unsupervised_Machine_Learning_The_mclust_Package_and_others.html</a></p>
+<h2><span class="header-section-number">16.1</span> Clustering</h2>
+<ul>
+<li>“Unsupervised Machine Learning: The hclust, pvclust, cluster, mclust, and more,” <a href="https://quantdev.ssri.psu.edu/sites/qdev/files/Unsupervised_Machine_Learning_The_mclust_Package_and_others.html" class="uri">https://quantdev.ssri.psu.edu/sites/qdev/files/Unsupervised_Machine_Learning_The_mclust_Package_and_others.html</a> <br /></li>
+</ul>
 </div>
 </div>
 <div id="linear-models" class="section level1">
-<h1><span class="header-section-number">14</span> Linear Models</h1>
-<p><a href="https://en.wikipedia.org/wiki/">Ordinary_least_squares</a> <a href="https://en.wikipedia.org/wiki/Logistic_regression">Logistic_regression</a></p>
-<div id="feature-selection-engineering" class="section level2">
-<h2><span class="header-section-number">14.1</span> Feature Selection / Engineering</h2>
-<p><a href="https://en.wikipedia.org/wiki/Extreme_bounds_analysis" class="uri">https://en.wikipedia.org/wiki/Extreme_bounds_analysis</a></p>
-<p><a href="http://www.ecostat.unical.it/Aiello/Didattica/economia_Crescita/CRESCITA/CRESCITA_Sala-i-Martin-AER-1997.pdf">‘I JUST RAN Two MILLION REGRESSIONS’</a>, Xavier Sala-i-Martin, 1997, American Economic Review</p>
-<p><a href="https://cran.r-project.org/web/packages/ExtremeBounds/vignettes/ExtremeBounds.pdf">“ExtremeBounds: Extreme Bounds Analysis in R”</a></p>
-<p><a href="https://en.wikipedia.org/wiki/Support_vector_machine" class="uri">https://en.wikipedia.org/wiki/Support_vector_machine</a></p>
-<p><a href="https://arxiv.org/pdf/1611.03227.pdf">Feature Selection with the R Package MXM: Statistically-Equivalent Feature Subsets</a></p>
-<p><a href="https://github.com/STATWORX/bounceR">“bounceR”</a>, R Package</p>
-<p><a href="https://github.com/TeamHG-Memex/eli5">ELI5</a></p>
-</div>
-<div id="regularization-e.g.lassoridge-regression" class="section level2">
-<h2><span class="header-section-number">14.2</span> Regularization, e.g. Lasso/Ridge Regression</h2>
-<p><a href="https://en.wikipedia.org/wiki/Lasso_(statistics)" class="uri">https://en.wikipedia.org/wiki/Lasso_(statistics)</a></p>
-<p><a href="http://statweb.stanford.edu/~tibs/lasso/lasso.pdf">“Regression shrinkage and selection via the lasso”</a>, Tibshirani, R., 1996, J. Royal. Statist. Soc B., Vol. 58, No. 1, pages 267-288)</p>
-<p><a href="https://cran.r-project.org/web/packages/glmnet/vignettes/glmnet_beta.pdf">“Glmnet Vignette”</a>, Trevor Hastie and Junyang Qian, September 13, 2016</p>
-</div>
+<h1><span class="header-section-number">17</span> Linear Models</h1>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/">Ordinary_least_squares</a> <br /></li>
+<li><a href="https://en.wikipedia.org/wiki/Logistic_regression">Logistic_regression</a> <br /></li>
+</ul>
 </div>
 <div id="decision-trees" class="section level1">
-<h1><span class="header-section-number">15</span> Decision Trees</h1>
-<p><a href="https://en.wikipedia.org/wiki/Decision_tree" class="uri">https://en.wikipedia.org/wiki/Decision_tree</a></p>
-<p><a href="https://www.statmethods.net/advstats/cart.html">“Tree-Based Models”</a></p>
+<h1><span class="header-section-number">18</span> Decision Trees</h1>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Decision_tree" class="uri">https://en.wikipedia.org/wiki/Decision_tree</a> <br /></li>
+<li><p><a href="https://www.statmethods.net/advstats/cart.html">“Tree-Based Models”</a> <br /></p></li>
+<li><p><a href="https://link.springer.com/content/pdf/10.1007/BF00116251.pdf">“Induction of Decision Trees.”</a>, Quinlan, Ross. 1986., Machine Learning 1(1):81–106.</p></li>
+</ul>
 </div>
 <div id="random-forests" class="section level1">
-<h1><span class="header-section-number">16</span> Random Forests</h1>
-<p><a href="https://en.wikipedia.org/wiki/Random_forest" class="uri">https://en.wikipedia.org/wiki/Random_forest</a></p>
-<p><a href="https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf">“RANDOM FORESTS”</a> Leo Breiman, January 2001</p>
+<h1><span class="header-section-number">19</span> Random Forests</h1>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Random_forest" class="uri">https://en.wikipedia.org/wiki/Random_forest</a> <br /></li>
+<li><p><a href="https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf">“RANDOM FORESTS”</a> Leo Breiman, January 2001</p></li>
+<li><p><a href="http://zmjones.com/static/papers/rfss_manuscript.pdf">“Exploratory Data Analysis using Random Forests”</a></p></li>
+</ul>
 </div>
 <div id="neural-networks" class="section level1">
-<h1><span class="header-section-number">17</span> Neural Networks</h1>
-<p><a href="https://en.wikipedia.org/wiki/Artificial_neural_network" class="uri">https://en.wikipedia.org/wiki/Artificial_neural_network</a></p>
-<ol start="550" style="list-style-type: upper-roman">
-<li>Deep Learning, Ian Goodfellow and Yoshua Bengio and Aaron Courville, 2016, <a href="http://www.deeplearningbook.org/" class="uri">http://www.deeplearningbook.org/</a></li>
-</ol>
+<h1><span class="header-section-number">20</span> Neural Networks</h1>
+<div id="demos" class="section level2">
+<h2><span class="header-section-number">20.1</span> Demos</h2>
+<ul>
+<li><a href="http://playground.tensorflow.org/#activation=tanh&amp;batchSize=10&amp;dataset=circle&amp;regDataset=reg-plane&amp;learningRate=0.03&amp;regularizationRate=0&amp;noise=0&amp;networkShape=4,2&amp;seed=0.47077&amp;showTestData=false&amp;discretize=false&amp;percTrainData=50&amp;x=true&amp;y=true&amp;xTimesY=false&amp;xSquared=false&amp;ySquared=false&amp;cosX=false&amp;sinX=false&amp;cosY=false&amp;sinY=false&amp;collectStats=false&amp;problem=classification&amp;initZero=false&amp;hideText=false">Tensorflow Playground</a></li>
+<li><a href="https://cs.stanford.edu/people/karpathy/convnetjs/">ConvNetJS Deep Learning in your browser</a></li>
+<li><p><a href="https://transcranial.github.io/keras-js/#/">KerasJS</a></p></li>
+<li><a href="https://en.wikipedia.org/wiki/Artificial_neural_network" class="uri">https://en.wikipedia.org/wiki/Artificial_neural_network</a> <br /></li>
+<li><ol start="550" style="list-style-type: upper-roman">
+<li>Deep Learning, Ian Goodfellow and Yoshua Bengio and Aaron Courville, 2016, <a href="http://www.deeplearningbook.org/" class="uri">http://www.deeplearningbook.org/</a> <br /></li>
+</ol></li>
+</ul>
 <div id="lstm" class="section level3">
-<h3><span class="header-section-number">17.0.1</span> LSTM</h3>
-<p>Christopher Olah, “Understanding LSTM Networks,” August 27, 2015, <a href="http://colah.github.io/posts/2015-08-Understanding-LSTMs/" class="uri">http://colah.github.io/posts/2015-08-Understanding-LSTMs/</a></p>
-<p><a href="https://keras.rstudio.com/articles/examples/conv_lstm.html" class="uri">https://keras.rstudio.com/articles/examples/conv_lstm.html</a></p>
+<h3><span class="header-section-number">20.1.1</span> LSTM</h3>
+<ul>
+<li>Christopher Olah, “Understanding LSTM Networks,” August 27, 2015, <a href="http://colah.github.io/posts/2015-08-Understanding-LSTMs/" class="uri">http://colah.github.io/posts/2015-08-Understanding-LSTMs/</a> <br /> <a href="https://keras.rstudio.com/articles/examples/conv_lstm.html" class="uri">https://keras.rstudio.com/articles/examples/conv_lstm.html</a></li>
+</ul>
+</div>
 </div>
 </div>
 <div id="interpretation" class="section level1">
-<h1><span class="header-section-number">18</span> Interpretation</h1>
-<p>“Why Should I Trust You?”: Explaining the Predictions of Any Classifier, Marco Tulio Ribeiro, Sameer Singh, Carlos Guestrin, <a href="https://arxiv.org/abs/1602.04938" class="uri">https://arxiv.org/abs/1602.04938</a></p>
-<p>lime, Python Package, <a href="https://github.com/marcotcr/lime" class="uri">https://github.com/marcotcr/lime</a></p>
+<h1><span class="header-section-number">21</span> Interpretation</h1>
+<ul>
+<li>“Why Should I Trust You?”: Explaining the Predictions of Any Classifier, Marco Tulio Ribeiro, Sameer Singh, Carlos Guestrin, <a href="https://arxiv.org/abs/1602.04938" class="uri">https://arxiv.org/abs/1602.04938</a> lime, Python Package, <a href="https://github.com/marcotcr/lime" class="uri">https://github.com/marcotcr/lime</a></li>
+</ul>
 </div>
 <div id="causality" class="section level1">
-<h1><span class="header-section-number">19</span> Causality</h1>
-<p>“When and How Should One Use Deep Learning for Causal Effect Inference”, <a href="https://technionmail-my.sharepoint.com/personal/urishalit_technion_ac_il/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Furishalit_technion_ac_il%2FDocuments%2FPresentations%2FIAS2018%2FIAS2018_2_for_public%2Epdf&amp;parent=%2Fpersonal%2Furishalit_technion_ac_il%2FDocuments%2FPresentations%2FIAS2018&amp;slrid=aaa2759e-909e-5000-fd16-3e33cabf926f">https://technionmail-my.sharepoint.com/personal/urishalit_technion_ac_il/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Furishalit_technion_ac_il%2FDocuments%2FPresentations%2FIAS2018%2FIAS2018_2_for_public%2Epdf&amp;parent=%2Fpersonal%2Furishalit_technion_ac_il%2FDocuments%2FPresentations%2FIAS2018&amp;slrid=aaa2759e-909e-5000-fd16-3e33cabf926f</a></p>
-<p>Luke Keele, Dylan Small, “Comparing Covariate Prioritization via Matching to Machine Learning Methods for Causal Inference using Five Empirical Applications,” May 11, 2018, <a href="https://arxiv.org/pdf/1805.03743.pdf" class="uri">https://arxiv.org/pdf/1805.03743.pdf</a></p>
+<h1><span class="header-section-number">22</span> Causality</h1>
+<ul>
+<li><p><a href="https://technionmail-my.sharepoint.com/personal/urishalit_technion_ac_il/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Furishalit_technion_ac_il%2FDocuments%2FPresentations%2FIAS2018%2FIAS2018_2_for_public%2Epdf&amp;parent=%2Fpersonal%2Furishalit_technion_ac_il%2FDocuments%2FPresentations%2FIAS2018&amp;slrid=aaa2759e-909e-5000-fd16-3e33cabf926f">“When and How Should One Use Deep Learning for Causal Effect Inference”</a></p></li>
+<li><p><a href="https://arxiv.org/pdf/1805.03743.pdf">“Comparing Covariate Prioritization via Matching to Machine Learning Methods for Causal Inference using Five Empirical Applications,”</a>,Luke Keele, Dylan Small, May 11, 2018,</p></li>
+</ul>
 </div>
 <div id="special-topics" class="section level1">
-<h1><span class="header-section-number">20</span> Special Topics</h1>
+<h1><span class="header-section-number">23</span> Special Topics</h1>
 <div id="time" class="section level2">
-<h2><span class="header-section-number">20.1</span> Time</h2>
-<p><a href="https://www.cambridge.org/core/journals/political-science-research-and-methods/article/investigating-sequences-in-ordinal-data-a-new-approach-with-adapted-evolutionary-models/F3747D8A1908902BA7F26C5EE28AFAEF">“Investigating Sequences in Ordinal Data: A New Approach With Adapted Evolutionary Models,”</a>,Patrik Lindenfors, Fredrik Jansson, Yi-ting Wang and Staffan I. Lindberg, Christian Lopez, 05 March 2018,</p>
+<h2><span class="header-section-number">23.1</span> Time</h2>
+<ul>
+<li><a href="https://www.cambridge.org/core/journals/political-science-research-and-methods/article/investigating-sequences-in-ordinal-data-a-new-approach-with-adapted-evolutionary-models/F3747D8A1908902BA7F26C5EE28AFAEF">“Investigating Sequences in Ordinal Data: A New Approach With Adapted Evolutionary Models,”</a>,Patrik Lindenfors, Fredrik Jansson, Yi-ting Wang and Staffan I. Lindberg, Christian Lopez, 05 March 2018,</li>
+</ul>
 </div>
 <div id="text" class="section level2">
-<h2><span class="header-section-number">20.2</span> Text</h2>
-<p>Julia Silge and David Robinson, “Text Mining with R: A Tidy Approach,” 2018-04-02, <a href="https://www.tidytextmining.com/" class="uri">https://www.tidytextmining.com/</a></p>
-<p>“Introducing Monte Carlo Methods with R,” <a href="https://www.slideshare.net/xianblog/introducing-monte-carlo-methods-with-r" class="uri">https://www.slideshare.net/xianblog/introducing-monte-carlo-methods-with-r</a></p>
-<p>Matthew Gentzkow, Bryan T. Kelly, Matt Taddy, “Text as Data,” <a href="http://web.stanford.edu/~gentzkow/research/text-as-data.pdf" class="uri">http://web.stanford.edu/~gentzkow/research/text-as-data.pdf</a></p>
+<h2><span class="header-section-number">23.2</span> Text</h2>
+<ul>
+<li><a href="https://www.tidytextmining.com/">“Text Mining with R: A Tidy Approach,”</a>, Julia Silge and David Robinson, 2018-04-02, <br /></li>
+<li><a href="https://www.slideshare.net/xianblog/introducing-monte-carlo-methods-with-r">“Introducing Monte Carlo Methods with R,”</a> <br /></li>
+<li><a href="http://web.stanford.edu/~gentzkow/research/text-as-data.pdf">“Text as Data,”</a>, Matthew Gentzkow, Bryan T. Kelly, Matt Taddy <br /></li>
+</ul>
 </div>
 <div id="images" class="section level2">
-<h2><span class="header-section-number">20.3</span> Images</h2>
-<p><a href="https://keras.rstudio.com/articles/examples/cifar10_cnn.html" class="uri">https://keras.rstudio.com/articles/examples/cifar10_cnn.html</a></p>
+<h2><span class="header-section-number">23.3</span> Images</h2>
+<ul>
+<li><a href="https://keras.rstudio.com/articles/examples/cifar10_cnn.html" class="uri">https://keras.rstudio.com/articles/examples/cifar10_cnn.html</a></li>
+</ul>
 </div>
 </div>
 <div id="examples" class="section level1">
-<h1><span class="header-section-number">21</span> Examples</h1>
-<p>Examining Explanations for Nuclear Proliferation Mark S. Bell International Studies Quarterly, Volume 60, Issue 3, 1 September 2016, Pages 520–529, <a href="https://doi.org/10.1093/isq/sqv007" class="uri">https://doi.org/10.1093/isq/sqv007</a></p>
+<h1><span class="header-section-number">24</span> Examples</h1>
+<ul>
+<li><a href="https://doi.org/10.1093/isq/sqv007">“Examining Explanations for Nuclear Proliferation”</a>, Mark S. Bell, International Studies Quarterly, Volume 60, Issue 3, 1 September 2016, Pages 520–529</li>
+<li>Weidmann, Nils B. and Sebastian Schutte. Using Night Lights for the Prediction of Local Wealth. Journal of Peace Research 54(2).</li>
+</ul>
 </div>
 <div id="extras" class="section level1">
-<h1><span class="header-section-number">22</span> Extras</h1>
+<h1><span class="header-section-number">25</span> Extras</h1>
 <div id="gradient-boosting" class="section level2">
-<h2><span class="header-section-number">22.1</span> Gradient Boosting</h2>
-<p>Terence Parr and Jeremy Howard, “How to explain gradient boosting,” <a href="http://explained.ai/gradient-boosting/index.html" class="uri">http://explained.ai/gradient-boosting/index.html</a></p>
+<h2><span class="header-section-number">25.1</span> Gradient Boosting</h2>
+<ul>
+<li>Terence Parr and Jeremy Howard, “How to explain gradient boosting,” <a href="http://explained.ai/gradient-boosting/index.html" class="uri">http://explained.ai/gradient-boosting/index.html</a></li>
+</ul>
 <div id="svm" class="section level4">
-<h4><span class="header-section-number">22.1.0.1</span> SVM</h4>
-<p><a href="https://en.wikipedia.org/wiki/Support_vector_machine">Support_vector_machine</a></p>
+<h4><span class="header-section-number">25.1.0.1</span> SVM</h4>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Support_vector_machine">Support_vector_machine</a></li>
+</ul>
+</div>
+<div id="how-the-sausage-is-made" class="section level4">
+<h4><span class="header-section-number">25.1.0.2</span> How the Sausage is Made</h4>
+<ul>
+<li><p><a href="https://www.dropbox.com/s/ao7c090p8bg1hk3/Lipton%20and%20Steinhardt%20-%20Troubling%20Trends%20in%20Machine%20Learning%20Scholarship.pdf?dl=0">“Troubling Trends in Machine Learning Scholarship”</a>, Zachary C. Lipton∗&amp; Jacob Steinhardt, July 9, 2018</p></li>
+<li><p><a href="https://link.springer.com/content/pdf/10.1007/BF00058655.pdf">“Bagging Predictors.”</a>,Breiman, Leo. 1996. , Machine Learning 24:123–140.</p></li>
+</ul>
 <!-- rnb-text-end -->
 </div>
 </div>
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiSW50cm9kdWN0aW9uIHRvIE1hY2hpbmUgTGVhcm5pbmciCm91dHB1dDogCiAgaHRtbF9ub3RlYm9vazoKICAgIHRvYzogdHJ1ZSAjIHRhYmxlIG9mIGNvbnRlbnQgdHJ1ZQogICAgdG9jX2RlcHRoOiAzICAjIHVwdG8gdGhyZWUgZGVwdGhzIG9mIGhlYWRpbmdzIChzcGVjaWZpZWQgYnkgIywgIyMgYW5kICMjIykKICAgIG51bWJlcl9zZWN0aW9uczogdHJ1ZSAgIyMgaWYgeW91IHdhbnQgbnVtYmVyIHNlY3Rpb25zIGF0IGVhY2ggdGFibGUgaGVhZGVyCiAgICBoaWdobGlnaHQ6IHRhbmdvICAjIHNwZWNpZmllcyB0aGUgc3ludGF4IGhpZ2hsaWdodGluZyBzdHlsZQogICAgdG9jX2Zsb2F0OiB0cnVlCi0tLQoKUmV4IFcuIERvdWdsYXNzPGJyLz4KRGlyZWN0b3IgTWFjaGluZSBMZWFybmluZyBmb3IgU29jaWFsIFNjaWVuY2UgTGFiIChNU1NMKTxici8+CkNlbnRlciBmb3IgUGVhY2UgYW5kIFNlY3VyaXR5IFN0dWRpZXMgKGNQQVNTKTxici8+CkRlcGFydG1lbnQgb2YgUG9saXRpY2FsIFNjaWVuY2U8YnIvPgpVbml2ZXJzaXR5IG9mIENhbGlmb3JuaWEgU2FuIERpZWdvPGJyLz4KcmV4ZG91Z2xhc3NAZ21haWwuY29tPGJyLz4Kd3d3LnJleGRvdWdsYXNzLmNvbTxici8+CkByZXhkb3VnbGFzcyAKCiMgQ291cnNlIE92ZXJ2aWV3CgpUaGlzIGlzIGEgNiBob3VyIGludHJvZHVjdGlvbiB0byBtYWNoaW5lIGxlYXJuaW5nIHNwcmVhZCBhY3Jvc3MgdHdvIHRocmVlLWhvdXIgbGVjdHVyZXMuIFRoZSBnb2FsIG9mIHRoaXMgdmVyeSBzaG9ydCBjb3Vyc2UgaXMgc3BlY2lmaWM6IHRvIGdpdmUgeW91IGVub3VnaCBvZiBhbiBvdmVydmlldywgdm9jYWJ1bGFyeSwgYW5kIGludHVpdGlvbiwgc28gdGhhdCB5b3UgY2FuIGlkZW50aWZ5IG1hY2hpbmUgbGVhcm5pbmcgcHJvYmxlbXMgaW4gdGhlIHdpbGQgYW5kIGJlZ2luIHlvdXIgb3duIHJlc2VhcmNoIGludG8gcmVsZXZhbnQgbGl0ZXJhdHVyZXMgYW5kIHBvc3NpYmxlIGFwcHJvYWNoZXMuIFRoZSBnb2FsIGlzIG5vdCB0byB0cmFpbiB5b3UgdG8gZXhlY3V0ZSBhIHBhcnRpY3VsYXIgbWFjaGluZSBsZWFybmluZyBzb2x1dGlvbi4gVGhlcmUgYXJlIGZhciB0b28gbWFueSBhcHByb2FjaGVzIGF2YWlsYWJsZTsgdGhleSBtYXkgbm90IGNvdmVyIHdoYXRldmVyIHByb2JsZW0geW91IGZpbmQ7IGFuZCB0aGUgc3RhdGUgb2YgdGhlIGFydCB3aWxsIGJlIGRpZmZlcmVudCBpbiBhIHllYXIgb3IgdHdvIGFueXdheS4gSW5zdGVhZCwgd2Ugd2lsbCBsZWFybiBob3cgdG8gdGhpbmsgYWJvdXQgYW5kIGNsYXNzaWZ5IHByb2JsZW1zIGludG8gYnJvYWQgdHlwZXMsIGhvdyB0byBkZWZpbmUgYW5kIG1lYXN1cmUgdGhlIGVmZmljYWN5IG9mIGRpZmZlcmVudCBzb2x1dGlvbnMgdG8gdGhhdCBwcm9ibGVtLCBob3cgdG8gYXZvaWQgc29tZSBjb21tb24gYW5kIHN1YnRsZSBtaXN0YWtlcywgYW5kIGhvdyB0byB0aGluayBhYm91dCBhIGZ1bGwgbWFjaGluZSBsZWFybmluZyBwaXBlbGluZSBmcm9tIHN0YXJ0IHRvIGZpbmlzaC4KClBsZWFzZSBicmluZyBhIHR3byBzaWRlZCBjb2luKHMpIGFuZCBzY3JhdGNoIHBhcGVyIHRvIGNsYXNzIGZvciBwYXNzaW5nIG5vdGVzIGZvciB0aGUgZGVtb25zdHJhdGlvbnMuCgojIyBDb3Vyc2UgU2xpZGVzCgpbQ291cnNlIFNsaWRlcyAoMS80KV0oaHR0cHM6Ly9kb2NzLmdvb2dsZS5jb20vcHJlc2VudGF0aW9uL2QvMTlpMm9tX2p3SzhtM2Etak52Z3RNLVdNVDFsMUhBR2FHdVdlYjRiZ0xzVE0vZWRpdD91c3A9c2hhcmluZykKCltDb3Vyc2UgU2xpZGVzICgyLzQpXShodHRwczovL2RvY3MuZ29vZ2xlLmNvbS9wcmVzZW50YXRpb24vZC8xWjg1N2ZGUzY5MmlqcHBYWnpyUFZqc1Z4c2xsd0RLem9GQldPY2hSakRmVS9lZGl0P3VzcD1zaGFyaW5nKQoKW0NvdXJzZSBTbGlkZXMgKDMvNCldKGh0dHBzOi8vZG9jcy5nb29nbGUuY29tL3ByZXNlbnRhdGlvbi9kLzFIUnpSVGp6MzF2dF9Id09rS0Vfak5VWWhnMWEyTHJPeFM2TE0zUkk5ZEU0L2VkaXQ/dXNwPXNoYXJpbmcpCgoKIyMgUmVhZGluZ3MgUG9saWN5Ck1hdGggYW5kIHByb2dyYW1taW5nIGFyZSBub3Qgc29tZXRoaW5nIHlvdSBsZWFybiwgdGhleSdyZSBzb21ldGhpbmcgeW91IGdldCB1c2VkIHRvLiBJdCBpcyBhIHRyYWRlLCB0aGF0IHRha2VzIHllYXJzIG9mIHRyaWFsIGFuZCBlcnJvciBhbmQgY29uY3JldGUgcHJvamVjdHMgdG8gYWNxdWlyZS4gVGhlIHJlYWRpbmdzIG9mIHRoaXMgY291cnNlIGFyZSwgd2l0aCBhIGZldyBleGNlcHRpb25zLCB2b2x1bnRhcnkgYW5kIGludGVuZGVkIGZvciBzZWxmIHN0dWR5LiBUaGV5IGFyZSB0byBoZWxwIHBvaW50IHlvdSBpbiB0aGUgcmlnaHQgZGlyZWN0aW9uIHdoZW4geW91IHJlYWxpemUgeW91IG5lZWQgdG8gc3RhcnQgYnJ1c2hpbmcgdXAgb24gYSBwYXJ0aWN1bGFyIHNldCBvZiB0b29scyBpbiBvcmRlciB0byB0YWNrbGUgYSBwYXJ0aWN1bGFyIHByb2JsZW0uCgpSZXF1aXJlZCAtIFNraW0gaW4gb3JkZXIgdG8gaW1wcm92ZSBkaXNjdXNzaW9uIGFuZCB1bmRlcnN0YW5kaW5nIGR1cmluZyBsZWN0dXJlIDxici8+ClJlY29tbWVuZGVkIC0gRXZlbnR1YWxseSBza2ltL3JlYWQgZHVyaW5nIHNlbGYgc3R1ZHkgPGJyLz4KUmVmZXJlbmNlIC0gRGVlcGVyIG1hdGhlbWF0aWNhbCBvciBoaXN0b3JpY2FsIGNvbnRleHQgPGJyLz4KCiMjIFRleHRib29rcwoKRG8gbm90IHB1cmNoYXNlIGFueSBib29rcyAtIGVhY2ggb2YgdGhlc2Ugc2hvdWxkIGJlIGF2YWlsYWJsZSBmb3IgZnJlZSBvbi1saW5lIGF0IHRoZSBsaW5rIGdpdmVuLgoKKiAoQ0lNTCkgIFtBIGNvdXJzZSBpbiBtYWNoaW5lIGxlYXJuaW5nXShjaW1sLmluZm8vKSwgSGFsIERhdW1lIElJSQoqIChFU0wpIFtFbGVtZW50cyBvZiBTdGF0aXN0aWNhbCBMZWFybmluZ10oaHR0cHM6Ly93ZWIuc3RhbmZvcmQuZWR1L35oYXN0aWUvRWxlbVN0YXRMZWFybi8pLCBUcmV2b3IgSGFzdGllIGFuZCBSb2JlcnQgVGlic2hpcmFuaQoqIChJU0wpIFtBbiBpbnRyb2R1Y3Rpb24gdG8gc3RhdGlzdGljYWwgbGVhcm5pbmc6IHdpdGggYXBwbGljYXRpb24gaW4gUiwgR2FyZXRoIEphbWVzXShodHRwczovL3d3dy1iY2YudXNjLmVkdS9+Z2FyZXRoL0lTTC9JU0xSJTIwU2V2ZW50aCUyMFByaW50aW5nLnBkZiksIERhbmllbGEgV2l0dGVuLCBUcmV2b3IgSGFzdGllLCBhbmQgUm9iZXJ0IFRpYnNoaXJhbmkKKiAoSU1MKSBbSW50cm9kdWN0aW9uIHRvIE1hY2hpbmUgTGVhcm5pbmddKGh0dHA6Ly9hbGV4LnNtb2xhLm9yZy9kcmFmdHMvdGhlYm9vay5wZGYpLCBBbGV4IFNtb2xhIGFuZCBTLlYuTi4gVmlzaHdhbmF0aGFuCiogKElNTFIpIFsiQW4gSW50cm9kdWN0aW9uIHRvIE1hY2hpbmUgTGVhcm5pbmcgd2l0aCBSIl0oaHR0cHM6Ly9sZ2F0dG8uZ2l0aHViLmlvL0ludHJvTWFjaGluZUxlYXJuaW5nV2l0aFIvaW5kZXguaHRtbCksTGF1cmVudCBHYXR0bywgMjAxNy0xMC0xOAoqIChNTCkgW01hY2hpbmUgTGVhcm5pbmc6IFRoZSBhcnQgYW5kIHNjaWVuY2Ugb2YgYWxnb3JpdGhtcyB0aGF0IG1ha2Ugc2Vuc2Ugb2YgZGF0YV0oaHR0cDovL2RzZC5mdXR1cmUtbGFiLmNuL21lbWJlcnMvMjAxNW5scC9QZXRlcl9GbGFjaF9NYWNoaW5lX0xlYXJuaW5nLl9UaGVfQXJ0X2FuZF9TY2llbmMoQm9va1paLm9yZykucGRmKSwgRmxhY2gKKiAoTUxQUCkgW01hY2hpbmUgTGVhcm5pbmc6IEEgUHJvYmFiaWxpc3RpYyBQZXJzcGVjdGl2ZV0oaHR0cHM6Ly93d3cuY3MudWJjLmNhL35tdXJwaHlrL01MYm9vay8pLCBLZXZpbiBNdXJwaHkKKiAoUFJNTCkgW1BhdHRlciByZWNvZ25pdGlvbiBhbmQgbWFjaGluZSBsZWFybmluZ10oaHR0cDovL3VzZXJzLmlzci5pc3QudXRsLnB0L353dXJtZC9MaXZyb3Mvc2Nob29sL0Jpc2hvcCUyMC0lMjBQYXR0ZXJuJTIwUmVjb2duaXRpb24lMjBBbmQlMjBNYWNoaW5lJTIwTGVhcm5pbmclMjAtJTIwU3ByaW5nZXIlMjAlMjAyMDA2LnBkZiksIENocmlzdG9waGVyIE0uIEJpc2hvcAoqIChXTUxXKSBbIldIWSBNQUNISU5FIExFQVJOSU5HIFdPUktTIl0oaHR0cDovL3d3dy5jcy5jbXUuZWR1L35nbW9udGFuZS9tb250YW5lel9kaXNzZXJ0YXRpb24ucGRmKSwgR2VvcmdlIEQuIE1vbnRhbmV6LCBNYXkgMjAxNywgRGlzc2VydGF0aW9uCgojIyBHZW5lcmFsIFJlc291cmNlcwoKVGhlcmUgYXJlIGEgbnVtYmVyIHBsYWNlcyBvbi1saW5lIGZvciBjb25zdGFudCB1cGRhdGVzIG9uIG1hY2hpbmUgbGVhcm5pbmcgPGJyLz4KKiBbUmVkZGl0IE1hY2hpbmUgTGVhcm5pbmcgU3VicmVkZGl0XShodHRwczovL3d3dy5yZWRkaXQuY29tL3IvTWFjaGluZUxlYXJuaW5nLykKKiBbYXJ4aXZdKGh0dHBzOi8vdHdpdHRlci5jb20vYXJ4aXZfb3JnKQoqIFtNeSB0d2l0dGVyIGZlZWRdKGh0dHBzOi8vdHdpdHRlci5jb20vUmV4RG91Z2xhc3MpCiogW1BvbGl0aWNhbCBBbmFseXNpc10oaHR0cHM6Ly93d3cuY2FtYnJpZGdlLm9yZy9jb3JlL2pvdXJuYWxzL3BvbGl0aWNhbC1hbmFseXNpcykKCiMjIFRveSBwcm9ibGVtcwpbVUMgSXJ2aW5lIE1hY2hpbmUgTGVhcm5pbmcgUmVwb3NpdG9yeV0oaHR0cDovL2FyY2hpdmUuaWNzLnVjaS5lZHUvbWwvaW5kZXgucGhwKTxici8+CltLYWdnbGUgRGF0YXNldHNdKGh0dHBzOi8vd3d3LmthZ2dsZS5jb20vZGF0YXNldHM/c29ydEJ5PXZvdGVzJmdyb3VwPWFsbCk8YnIvPgpbTGlzdF9vZl9kYXRhc2V0c19mb3JfbWFjaGluZV9sZWFybmluZ19yZXNlYXJjaF0oaHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvTGlzdF9vZl9kYXRhc2V0c19mb3JfbWFjaGluZV9sZWFybmluZ19yZXNlYXJjaCk8YnIvPgoKIyMgU29mdHdhcmUgYW5kIFByb2dyYW1taW5nCgpTdHVkZW50cyBhcmUgbm90IGV4cGVjdGVkIHRvIGtub3cgYW55IHBhcnRpY3VsYXIgbGFuZ3VhZ2Ugb3Igc2V0IG9mIHNvZnR3YXJlLiBXZSB3aWxsIGJlIGRlbW9uc3RyYXRpbmcgYmVzdCBwcmFjdGljZXMgYXMgdXNlZCBpbiB0aGUgTWFjaGluZSBMZWFybmluZyBmb3IgU29jaWFsIFNjaWVuY2UgTGFiIGF0IHRoZSBDZW50ZXIgZm9yIFBlYWNlIGFuZCBTZWN1cml0eSBTdHVkaWVzLCBVQ1NELiBJbiB0aGF0IGxhYiwgb3VyIHNvZnR3YXJlIHN0YWNrIGNvbnNpc3RzIG9mIFB5dGhvbiBhbmQgUiBmb3IgZGF0YSBwcmVwYXJhdGlvbiBhbmQgYW5hbHlzaXMsIFNwYXJrIGZvciBkYXRhYmFzZSBtYW5hZ2VtZW50LCBLZXJhcy9UZW5zb3JmbG93IGZvciBkZWVwIGxlYXJuaW5nLCBHaXRodWIgZm9yIHJldmlzaW9uIGNvbnRyb2wsIGFuZCBVYnVudHUgZm9yIG91ciBvcGVyYXRpbmcgc3lzdGVtIGFuZCBjb21tYW5kLWxpbmUgdG9vbHMuCgoqIFtNQUNTIDMwNTAwMSAtIENvbXB1dGluZyBmb3IgdGhlIFNvY2lhbCBTY2llbmNlc10oaHR0cHM6Ly9jZnNzLnVjaGljYWdvLmVkdS9pbmRleC5odG1sKSxCZW5qYW1pbiBTb2x0b2ZmCiogWyJSIGZvciBEYXRhIFNjaWVuY2UiXShodHRwOi8vcjRkcy5oYWQuY28ubnovKSwgR2FycmV0dCBHcm9sZW11bmQKKiBbIlNwYXJrIGFuZCBzcGFya2x5ciwiXShodHRwczovL2Nmc3MudWNoaWNhZ28uZWR1L2Rpc3RyaWIwMDNfc3BhcmsuaHRtbCkKKiBbIkdpdEh1YiBhbmQgUlN0dWRpbywiXShodHRwczovL3Jlc291cmNlcy5naXRodWIuY29tL2FydGljbGVzL2dpdGh1Yi1hbmQtcnN0dWRpby8pCiogWyJEYXRhIFNjaWVuY2UgYXQgdGhlIENvbW1hbmQgTGluZSwiXShodHRwczovL3d3dy5kYXRhc2NpZW5jZWF0dGhlY29tbWFuZGxpbmUuY29tLyksIEplcm9lbiBKYW5zc2VucywgRmVicnVhcnkgOCwgMjAxOAoqIFsiRGF0YSBWaXN1YWxpemF0aW9uOiBBIHByYWN0aWNhbCBpbnRyb2R1Y3Rpb24iXShodHRwOi8vc29jdml6LmNvL2luZGV4Lmh0bWw/dXRtX2NvbnRlbnQ9YnVmZmVyMDk3MTAmdXRtX21lZGl1bT1zb2NpYWwmdXRtX3NvdXJjZT10d2l0dGVyLmNvbSZ1dG1fY2FtcGFpZ249YnVmZmVyKSxLaWVyYW4gSGVhbHkKKiBbIkludHJvZHVjdGlvbiB0byBWYWxpZGF0ZSwiIGh0dHBzOi8vY3Jhbi5yLXByb2plY3Qub3JnL3dlYi9wYWNrYWdlcy92YWxpZGF0ZS92aWduZXR0ZXMvaW50cm9kdWN0aW9uLmh0bWwpCiogWyJBbiBpbnRyb2R1Y3Rpb24gdG8gcmVndWxhciBleHByZXNzaW9ucyJdKGh0dHBzOi8vd3d3Lm9yZWlsbHkuY29tL2lkZWFzL2FuLWludHJvZHVjdGlvbi10by1yZWd1bGFyLWV4cHJlc3Npb25zKSwgVGhvbWFzIE5pZWxkLCBEZWNlbWJlciAxMywgMjAxNyAsCiogW1JlZ0V4cGxhaW5dKCJodHRwczovL2dpdGh1Yi5jb20vZ2FkZW5idWllL3JlZ2V4cGxhaW4vI3JlYWRtZSIpCiogWyJUaGUgUGxhaW4gUGVyc29u4oCZcyBHdWlkZSB0byBQbGFpbiBUZXh0IFNvY2lhbCBTY2llbmNlIl0oaHR0cDovL3BsYWluLXRleHQuY28vKSwgS2llcmFuIEhlYWx5LCAyMDE4LTA0LTI4CiJTdGF0aXN0aWNhbCBEYXRhIENsZWFuaW5nIHdpdGggQXBwbGljYXRpb25zIGluIFIiCgojIEludHJvZHVjdGlvbgoKIyMgV2hhdCBpcyBtYWNoaW5lIGxlYXJuaW5nPwoKKENJTUwpLCBbQ2hhcHRlciAxLF0oaHR0cDovL2NpbWwuaW5mby9kbC92MF85OS9jaW1sLXYwXzk5LWNoMDEucGRmKQoKV01MVyAxLjAgIkludHJvZHVjdGlvbiIKCiMjIFdoYXQgaXNuJ3QgbWFjaGluZSBsZWFybmluZz8KCiMjIyBTdGF0aXN0aWNzCgpbIlN0YXRpc3RpY2FsIE1vZGVsaW5nOiBUaGUgVHdvIEN1bHR1cmVzICh3aXRoIGNvbW1lbnRzIGFuZCBhIHJlam9pbmRlciBieSB0aGUgIGF1dGhvciksIl0oaHR0cHM6Ly9wcm9qZWN0ZXVjbGlkLm9yZy9kb3dubG9hZC9wZGZfMS9ldWNsaWQuc3MvMTAwOTIxMzcyNikgTGVvIEJyZWltYW4sIFN0YXRpc3RpY2FsIFNjaWVuY2UsIDIwMDEsIFZvbC4gMTYsIE5vLiAzLCAxOTnigJMyMzEKCiMjIyBDYXVzYWwgSW5mZXJlbmNlCkpvc2h1YSBELiBBbmdyaXN0ICYgSsO2cm4tU3RlZmZlbiBQaXNjaGtlLCAiTW9zdGx5IEhhcm1sZXNzIEVjb25vbWV0cmljcyBBbiBFbXBpcmljaXN0J3MgQ29tcGFuaW9uLCIgMjAwOQoKWyJCYXNpYyBDb25jZXB0cyBvZiBTdGF0aXN0aWNhbCBJbmZlcmVuY2UgZm9yIENhdXNhbCBFZmZlY3RzIGluIEV4cGVyaW1lbnRzIGFuZCBPYnNlcnZhdGlvbmFsIFN0dWRpZXMsIl0oaHR0cDovL3d3dy5zdGF0LmNvbHVtYmlhLmVkdS9+Y29vay9xcjMzLnBkZikgRG9uYWxkIEIuIFJ1YmluLCAyMDA0CgoKIyMgV2h5IE1hY2hpbmUgTGVhcm5pbmc/CgpbIlZpRVdTOiBhIHBvbGl0aWNhbCBWaW9sZW5jZSBFYXJseS1XYXJuaW5nIFN5c3RlbSwiXShodHRwOi8vcGNyLnV1LnNlL3Jlc2VhcmNoL3ZpZXdzLykKClsiU2FmZSBEaXNwb3NhbCBvZiBVbmV4cGxvZGVkIFdXSUkgQm9tYnMsIl0oaHR0cDovL3N0YWZmLm1hdGguc3Uuc2UvaG9laGxlL2Jsb2cvMjAxOC8wNS8yNS91eGIuaHRtbCkgTWljaGFlbCBIw7ZobGUsIE1heSAyNSwgMjAxOCwgCgpbIlByZWRpY3RpbmcgUmFjZSBhbmQgRXRobmljaXR5IEZyb20gdGhlIFNlcXVlbmNlIG9mIENoYXJhY3RlcnMgaW4gYSBOYW1lLCJdKGh0dHBzOi8vYXJ4aXYub3JnL3BkZi8xODA1LjAyMTA5LnBkZiksR2F1cmF2IFNvb2QgYW5kIFN1cml5YW4gTGFvaGFwcmFwYW5vbiwgTWF5IDgsIDIwMTgsICAKWyJldGhuaWNvbHI6IFByZWRpY3QgUmFjZSBhbmQgRXRobmljaXR5IEZyb20gTmFtZSwiXShodHRwczovL2dpdGh1Yi5jb20vYXBwZWxlci9ldGhuaWNvbHIpCgojIEluZm9ybWF0aW9uIFRoZW9yeQoKIyMgU2hhbm5vbuKAk1dlYXZlciBNb2RlbCBvZiBDb21tdW5pY2F0aW9uCgpbU2hhbm5vbiBXZWF2ZXIgTW9kZWxdKGh0dHBzOi8vZW4ud2lraXBlZGlhLm9yZy93aWtpL1NoYW5ub24lRTIlODAlOTNXZWF2ZXJfbW9kZWwpCgpbIlZpc3VhbCBJbmZvcm1hdGlvbiBUaGVvcnksIl0oaHR0cDovL2NvbGFoLmdpdGh1Yi5pby9wb3N0cy8yMDE1LTA5LVZpc3VhbC1JbmZvcm1hdGlvbi8pIENocmlzdG9waGVyIE9sYWgsICwgT2N0b2JlciAxNCwgMjAxNSwgCgpbIkEgTWF0aGVtYXRpY2FsIFRoZW9yeSBvZiBDb21tdW5pY2F0aW9uLCJdKGh0dHA6Ly9tYXRoLmhhcnZhcmQuZWR1L35jdG0vaG9tZS90ZXh0L290aGVycy9zaGFubm9uL2VudHJvcHkvZW50cm9weS5wZGYpLCBDLiBFLiBTSEFOTk9OLCBPY3RvYmVyIDE5NDgsICBUaGUgQmVsbCBTeXN0ZW0gVGVjaG5pY2FsIEpvdXJuYWwsIFZvbC4gMjcsIHBwLiAzNznigJM0MjMsIDYyM+KAkzY1NiwgSnVseSwgIAoKUFJNTCAxLjYgIkluZm9ybWF0aW9uIFRoZW9yeSIKCiMjIEVudHJvcHkKW0VudHJvcHlfKGluZm9ybWF0aW9uX3RoZW9yeSldKGh0dHBzOi8vZW4ud2lraXBlZGlhLm9yZy93aWtpL0VudHJvcHlfKGluZm9ybWF0aW9uX3RoZW9yeSkpCgojIyBEaXN0cmlidXRpb25zIGFuZCBQcm9iYWJpbGl0eQpbQXJpYW4gTWFsZWtpIGFuZCBUb20gRG8sICJSZXZpZXcgb2YgUHJvYmFiaWxpdHkgVGhlb3J5LCJdKGh0dHA6Ly9jczIyOS5zdGFuZm9yZC5lZHUvc2VjdGlvbi9jczIyOS1wcm9iLnBkZikKClBSTUwgMi4wCgojIyBUcmFuc21pdHRlcnMKW0Z1bmN0aW9uXyhtYXRoZW1hdGljcyldKGh0dHBzOi8vZW4ud2lraXBlZGlhLm9yZy93aWtpL0Z1bmN0aW9uXyhtYXRoZW1hdGljcykpCgojIyBSZWNlaXZlcnMKW0ludmVyc2VfZnVuY3Rpb25dKGh0dHBzOi8vZW4ud2lraXBlZGlhLm9yZy93aWtpL0ludmVyc2VfZnVuY3Rpb24pCgojIFplcm8tQml0IHNvdXJjZQoKWmVyby1CaXQgaW5mb3JtYXRpb24gc291cmNlcyBhcmUgY29uc3RhbnRzIHRoYXQgZG9uJ3QgdmFyeS4KClplcm8tQml0IHNvdXJjZSwgWmVyby1CaXQgbWVzc2FnZTogTm8gdmFyaWF0aW9uIGFuZCBubyBtZWFzdXJlbWVudC4gPGJyLz4KWmVyby1CaXQgaW5mb3JtYXRpb24gc291cmNlLCBPbmUtQml0IG1lc3NhZ2U6IE5vIHZhcmlhdGlvbiwgYnV0IGEgc2luZ2xlIG1lYXN1cmVtZW50IHdpdGggdmFyaWF0aW9uIGJldHdlZW4gdHdvIHN0YXRlcy4gPGJyLz4KWmVyby1CaXQgaW5mb3JtYXRpb24gc291cmNlLCBOLUJpdCBtZXNzYWdlOiBObyB2YXJpYXRpb24sIGFuZCBhbiBhcmJpdHJhcnkgbnVtYmVyIG9mIG1lYXN1cmVtZW50cyB3aXRoIGFyYml0cmFyeSBudW1iZXIgb2Ygc3RhdGVzIDxici8+CgpTZWxlY3Rpbmcgb24gdGhlIERlcGVuZGVudCBWYXJpYWJsZQpbIkRlc2lnbiwgSW5mZXJlbmNlLCBhbmQgdGhlIFN0cmF0ZWdpYyBMb2dpYyBvZiBTdWljaWRlIFRlcnJvcmlzbSJdKGh0dHBzOi8vcGRmcy5zZW1hbnRpY3NjaG9sYXIub3JnL2YxOTIvY2Y2OTkwOGM4NGQ5MmQyNjllZjUyYzMzN2ZhNDg3ZDZiNjVlLnBkZiksIFNDT1RUIEFTSFdPUlRILCBKT1NIVUEgRC4gQ0xJTlRPTiwgQURBTSBNRUlST1dJVFosIGFuZCBLUklTVE9QSEVSIFcuIFJBTVNBWSwgMjAwOCwgQVBTUgoKIyBPbmUtQml0IHNvdXJjZXMKCk9uZS1CaXQgaW5mb3JtYXRpb24gc291cmNlcyBhcmUgdmFyaWFibGVzIHRoYXQgY2FuIHRha2Ugb24gdHdvIGRpZmZlcmVudCBzdGF0ZXMsIGUuZy4gYSBjb2luIGZsaXAuIENhbGwgJFkkIHRoZSB0cnVlIHN0YXRlIGF0IHRoZSBzb3VyY2UsIGFuZCAkXGhhdHtZfSQgdGhlIG1lbnRhbCBtb2RlbCBvZiB0aGUgc3RhdGUgYXQgdGhlIGRlc3RpbmF0aW9uLgoKCiMjIEV2YWx1YXRpbmcgUmVjb25zdHJ1Y3Rpb25zCgpbU2NvcmluZyBSdWxlc10oaHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvU2NvcmluZ19ydWxlKQpbTXV0dWFsX2luZm9ybWF0aW9uXShodHRwczovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9NdXR1YWxfaW5mb3JtYXRpb24pCltFdmFsdWF0aW9uX29mX2JpbmFyeV9jbGFzc2lmaWVyc10oaHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvRXZhbHVhdGlvbl9vZl9iaW5hcnlfY2xhc3NpZmllcnMpPGJyLz4KW0NvbmZ1c2lvbl9tYXRyaXhdKGh0dHBzOi8vZW4ud2lraXBlZGlhLm9yZy93aWtpL0NvbmZ1c2lvbl9tYXRyaXgpPGJyLz4KW1ByZWNpc2lvbl9hbmRfcmVjYWxsXShodHRwczovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9QcmVjaXNpb25fYW5kX3JlY2FsbCk8YnIvPgpbU2Vuc2l0aXZpdHlfYW5kX3NwZWNpZmljaXR5XShodHRwczovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9TZW5zaXRpdml0eV9hbmRfc3BlY2lmaWNpdHkpPGJyLz4KW0YxX3Njb3JlXShodHRwczovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9GMV9zY29yZSk8YnIvPgoKW1BhY2thZ2Ug4oCYZW50cm9weSzigJkgIkVzdGltYXRpb24gb2YgRW50cm9weSwgTXV0dWFsIEluZm9ybWF0aW9uIGFuZCBSZWxhdGVkIFF1YW50aXRpZXMsIl0oaHR0cDovL3N0cmltbWVybGFiLm9yZy9zb2Z0d2FyZS9lbnRyb3B5LyksIEZlYnJ1YXJ5IDE5LCAyMDE1ICA8YnIvPgpbUGhpbGVudHJvcHk6IEluZm9ybWF0aW9uIFRoZW9yeSBhbmQgRGlzdGFuY2UgUXVhbnRpZmljYXRpb24gd2l0aCBSLl0oaHR0cHM6Ly9kb2kub3JnLzEwLjIxMTA1L2pvc3MuMDA3NjUpLCBEcm9zdCwgKDIwMTgpLCBKb3VybmFsIG9mIE9wZW4gU291cmNlIFNvZnR3YXJlLCAzKDI2KSwgNzY1ICA8YnIvPgoKIyBPbmUtQml0IHNvdXJjZSwgT25lLUJpdCBtZXNzYWdlCgojIyBXaGF0IG1ha2VzIGEgZ29vZCByZWNlaXZlcj8KClBSTUwgMS41ICJEZWNpc2lvbiBUaGVvcnkiCgpbIlVuZGVyc3RhbmRpbmcgdGhlIEJpYXMtVmFyaWFuY2UgVHJhZGVvZmYsIl0oaHR0cDovL3Njb3R0LmZvcnRtYW5uLXJvZS5jb20vZG9jcy9CaWFzVmFyaWFuY2UuaHRtbCksIFNjb3R0IEZvcnRtYW5uLVJvZSwgIDIwMTIsIAoKIyMgTm8gRnJlZSBMdW5jaAoKV01MVyAyLjAgIlJlbGF0ZWQgV29yayIKClsiTm8gRnJlZSBMdW5jaCBUaGVvcmVtcyBmb3IgT3B0aW1pemF0aW9uLCJdKGh0dHBzOi8vdGkuYXJjLm5hc2EuZ292L20vcHJvZmlsZS9kaHcvcGFwZXJzLzc4LnBkZikgRGF2aWQgSC4gV29scGVydCBhbmQgV2lsbGlhbSBHLiBNYWNyZWFkeSwgMTk5NywgCgojIyMgSW4gU2FtcGxlL091dCBvZiBTYW1wbGUgLyBDcm9zcyBWYWxpZGF0aW9uCgpbVHJhaW5pbmcsX3Rlc3QsX2FuZF92YWxpZGF0aW9uX3NldHNdKGh0dHBzOi8vZW4ud2lraXBlZGlhLm9yZy93aWtpL1RyYWluaW5nLF90ZXN0LF9hbmRfdmFsaWRhdGlvbl9zZXRzKTxici8+CltDcm9zcy12YWxpZGF0aW9uXyhzdGF0aXN0aWNzKV0oaHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQ3Jvc3MtdmFsaWRhdGlvbl8oc3RhdGlzdGljcykpPGJyLz4KClsiTGluZWFyIE1vZGVsIFNlbGVjdGlvbiBieSBDcm9zcy1WYWxpZGF0aW9uLCJdKGh0dHA6Ly93d3cubGlicGxzLm5ldC9wdWJsaWNhdGlvbi9NQ0NWX1NoYW9fMTk5My5wZGYpLCBKdW4gU2hhbywgMTk5Mzxici8+ClsiQ3Jvc3MtdmFsaWRhdGlvbiBmYWlsdXJlOiBzbWFsbCBzYW1wbGUgc2l6ZXMgbGVhZCB0byBsYXJnZSBlcnJvciBiYXJzLCJdKGh0dHBzOi8vaGFsLmlucmlhLmZyL2hhbC0wMTU0NTAwMi8pLCBHYcOrbCBWYXJvcXVhdXgsIDIwMTc8YnIvPgoKIyMgUHJvYmFsaXN0aWMgUmVjb25zdHJ1Y3Rpb25zIGFuZCBIZWRnaW5nIEJldHMKCltQcm9wZXIgU2NvcmluZyBSdWxlc10oaHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvU2NvcmluZ19ydWxlI1Byb3BlclNjb3JpbmdSdWxlcyk8YnIvPgpbQnJpZXJfc2NvcmVdKGh0dHBzOi8vZW4ud2lraXBlZGlhLm9yZy93aWtpL0JyaWVyX3Njb3JlKTxici8+CltSZWNlaXZlciBvcGVyYXRpbmcgY2hhcmFjdGVyaXN0aWNdKGh0dHBzOi8vZW4ud2lraXBlZGlhLm9yZy93aWtpL1JlY2VpdmVyX29wZXJhdGluZ19jaGFyYWN0ZXJpc3RpYyk8YnIvPgpbQW4gaW50cm9kdWN0aW9uIHRvIFJPQyBhbmFseXNpc10oaHR0cDovL3Blb3BsZS5pbmYuZWx0ZS5odS9raXNzLzEzZHdoZG0vcm9jLnBkZiksIFRvbSBGYXdjZXR0LCAyMDA2LCBQYXR0ZXJuIFJlY29uZ25pdGlvbiBMZXR0ZXJzPGJyLz4KW3doYXQtZG9lcy1hdWMtc3RhbmQtZm9yLWFuZC13aGF0LWlzLWl0XShodHRwczovL3N0YXRzLnN0YWNrZXhjaGFuZ2UuY29tL3F1ZXN0aW9ucy8xMzI3Nzcvd2hhdC1kb2VzLWF1Yy1zdGFuZC1mb3ItYW5kLXdoYXQtaXMtaXQpPGJyLz4KCiMgT25lLUJpdCBzb3VyY2UsIFR3by1CaXQgbWVzc2FnZQoKIyMgRGljdGlvbmFyeSBMZWFybmluZwoKIyMgT21taXR0ZWQgVmFyaWFibGUgQmlhcwoKW1NpbXBzb25zIFBhcmFkb3hdKGh0dHBzOi8vZW4ud2lraXBlZGlhLm9yZy93aWtpL1NpbXBzb24lMjdzX3BhcmFkb3gpCgojIyBGZWF0dXJlIEVuZ2luZWVyaW5nCgpbRmVhdHVyZV9lbmdpbmVlcmluZ10oaHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvRmVhdHVyZV9lbmdpbmVlcmluZykKCltJbnRlcmFjdGlvbl8oc3RhdGlzdGljcyldKGh0dHBzOi8vZW4ud2lraXBlZGlhLm9yZy93aWtpL0ludGVyYWN0aW9uXyhzdGF0aXN0aWNzKSkKClsiSG93IE11Y2ggU2hvdWxkIFdlIFRydXN0IEVzdGltYXRlcyBmcm9tIE11bHRpcGxpY2F0aXZlIEludGVyYWN0aW9uIE1vZGVscz8gU2ltcGxlIFRvb2xzIHRvIEltcHJvdmUgRW1waXJpY2FsPGJyLz4gUHJhY3RpY2UsIl0oaHR0cDovL3lpcWluZ3h1Lm9yZy9wYXBlcnMvZW5nbGlzaC8yMDE4X0hNWF9pbnRlcmFjdGlvbi9tYWluLnBkZiksIEplbnMgSGFpbm11ZWxsZXIgSm9uYXRoYW4gTXVtbW9sbyBZaXFpbmcgWHUsLCBBcHJpbCAyMCwgMjAxOCwgUG9saXRpY2FsIEFuYWx5c2lzPGJyLz4KCiMjIEluY2x1ZGVkIFZhcmlhYmxlIEJpYXMKCltGZWF0dXJlX3NlbGVjdGlvbl0oaHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvRmVhdHVyZV9zZWxlY3Rpb24pPGJyLz4KW0NvbmZvdW5kaW5nXShodHRwczovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9Db25mb3VuZGluZyk8YnIvPgoKWyJTdGF0aXN0aWNhbCBsZWFybmluZyBhbmQgc2VsZWN0aXZlIGluZmVyZW5jZSJdKGh0dHA6Ly93d3cucG5hcy5vcmcvY29udGVudC9wbmFzLzExMi8yNS83NjI5LmZ1bGwucGRmKSBKb25hdGhhbiBUYXlsb3JhIGFuZCBSb2JlcnQgSi4gVGlic2hpcmFuaSwgSnVuZSAyMywgMjAxNTxici8+CgpbIlRoZSBnYXJkZW4gb2YgZm9ya2luZyBwYXRoczogV2h5IG11bHRpcGxlIGNvbXBhcmlzb25zIGNhbiBiZSBhIHByb2JsZW0sICB3aGVuIHRoZXJlIGlzIG5vIOKAnGZpc2hpbmcgZXhwZWRpdGlvbuKAnSBvciDigJxwLWhhY2tpbmfigJ0gYW5kIHRoZSByZXNlYXJjaCAgd2FzIHBvc2l0ZWQgYWhlYWQgb2YgdGltZSJdKGh0dHA6Ly93d3cuc3RhdC5jb2x1bWJpYS5lZHUvfmdlbG1hbi9yZXNlYXJjaC91bnB1Ymxpc2hlZC9wX2hhY2tpbmcucGRmKSwgQW5kcmV3IEdlbG1hbiBhbmQgRXJpYyBMb2tlbiwgMTQgTm92IDIwMTMsIFVucHVibGlzaGVkIE1hbnVzY3JpcHQ8YnIvPgoKW1AtSGFja2luZ10oaHR0cHM6Ly9wcm9qZWN0cy5maXZldGhpcnR5ZWlnaHQuY29tL3AtaGFja2luZy8pPGJyLz4KCltBIE1hY2hpbmUgTGVhcm5pbmcgQWx0ZXJuYXRpdmUgdG8gUC12YWx1ZXNdKGh0dHBzOi8vYXJ4aXYub3JnL3BkZi8xNzAxLjA0OTQ0LnBkZiksTWluIEx1IGFuZCBIZW1hbnQgSXNod2FyYW4sIEZlYnJ1YXJ5IDIyLCAyMDE3PGJyLz4KCiMjIFJlZ3VsYXJpemF0aW9uLCBNb2RlbCBDb21wbGV4aXR5L1BhcmlzbW9ueQoKW0FrYWlrZSBpbmZvcm1hdGlvbiBjcml0ZXJpb24gKEFJQyldKGh0dHBzOi8vZW4ud2lraXBlZGlhLm9yZy93aWtpL0FrYWlrZV9pbmZvcm1hdGlvbl9jcml0ZXJpb24pPGJyLz4KW0JheWVzaWFuIGluZm9ybWF0aW9uIGNyaXRlcmlvbiAoQklDKV0oaHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQmF5ZXNpYW5faW5mb3JtYXRpb25fY3JpdGVyaW9uKTxici8+CgojIFR3by1CaXQgc291cmNlLCBPbmUtQml0IG1lc3NhZ2UKCiMjIyBCYW5kd2lkdGggLyBPdmVyIGRldGVybWluYXRpb24KW092ZXJkZXRlcm1pbmVkX3N5c3RlbV0oaHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvT3ZlcmRldGVybWluZWRfc3lzdGVtKQoKIyMgT25lLUJpdCBzb3VyY2UsIE4tYml0IG1lc3NhZ2UKCiMjIyBDdXJzZSBvZiBEaW1lbnNpb25hbGl0eQoKW0N1cnNlX29mX2RpbWVuc2lvbmFsaXR5XShodHRwczovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9DdXJzZV9vZl9kaW1lbnNpb25hbGl0eSkgPGJyLz4KW1RoZSBDdXJzZSBvZiBEaW1lbnNpb25hbGl0eSBpbiBjbGFzc2lmaWNhdGlvbl0oaHR0cDovL3d3dy52aXNpb25kdW1teS5jb20vMjAxNC8wNC9jdXJzZS1kaW1lbnNpb25hbGl0eS1hZmZlY3QtY2xhc3NpZmljYXRpb24vKSwgVmluY2VudCBTcHJ1eXQgPGJyLz4KCiMgTi1iaXQgc291cmNlLCBPbmUtQml0IG1lc3NhZ2UKCiMgVHdvLUJpdCAgc291cmNlLCBUd28tQml0IG1lc3NhZ2UKCiMgTi1iaXQgc291cmNlLCBOLWJpdCBtZXNzYWdlCltCaW5hcnlfbnVtYmVyI0NvdW50aW5nX2luX2JpbmFyeV0oaHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQmluYXJ5X251bWJlciNDb3VudGluZ19pbl9iaW5hcnkpCgojIE9uZS1CaXQgc291cmNlLCBPbmUtQml0IG1lc3NhZ2UsIE9uZS1CaXQgbm9pc2UKCiMgTmVhcmVzdCBOZWlnaGJvcgoKIyMjIyBEaWN0aW9uYXJ5IExlYXJuaW5nCmh0dHBzOi8vZW4ud2lraXBlZGlhLm9yZy93aWtpL1NwYXJzZV9kaWN0aW9uYXJ5X2xlYXJuaW5nCgojIyMgUGFydGlvbmluZwoKIyMjIyBOZWFyZXN0IE5laWdoYm9yCmh0dHBzOi8vZW4ud2lraXBlZGlhLm9yZy93aWtpL0stbmVhcmVzdF9uZWlnaGJvcnNfYWxnb3JpdGhtCgpJbnRlZ2VyIGVuY29kZXIKTGF0ZW50IHZhcmlhYmxlIG1vZGVsCgojIyMjIENsdXN0ZXJpbmcKaHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQ2x1c3Rlcl9hbmFseXNpcwoKIyMjIyBLLW1lYW5zCmh0dHBzOi8vZW4ud2lraXBlZGlhLm9yZy93aWtpL0stbWVhbnNfY2x1c3RlcmluZwoKCiMjIENsdXN0ZXJpbmcKCiJVbnN1cGVydmlzZWQgTWFjaGluZSBMZWFybmluZzogVGhlIGhjbHVzdCwgcHZjbHVzdCwgY2x1c3RlciwgbWNsdXN0LCBhbmQgbW9yZSwiIGh0dHBzOi8vcXVhbnRkZXYuc3NyaS5wc3UuZWR1L3NpdGVzL3FkZXYvZmlsZXMvVW5zdXBlcnZpc2VkX01hY2hpbmVfTGVhcm5pbmdfVGhlX21jbHVzdF9QYWNrYWdlX2FuZF9vdGhlcnMuaHRtbAoKIyBMaW5lYXIgTW9kZWxzCgpbT3JkaW5hcnlfbGVhc3Rfc3F1YXJlc10oaHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvKQpbTG9naXN0aWNfcmVncmVzc2lvbl0oaHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvTG9naXN0aWNfcmVncmVzc2lvbikKCiMjIEZlYXR1cmUgU2VsZWN0aW9uIC8gRW5naW5lZXJpbmcKCmh0dHBzOi8vZW4ud2lraXBlZGlhLm9yZy93aWtpL0V4dHJlbWVfYm91bmRzX2FuYWx5c2lzCgpbJ0kgSlVTVCBSQU4gVHdvIE1JTExJT04gUkVHUkVTU0lPTlMnXShodHRwOi8vd3d3LmVjb3N0YXQudW5pY2FsLml0L0FpZWxsby9EaWRhdHRpY2EvZWNvbm9taWFfQ3Jlc2NpdGEvQ1JFU0NJVEEvQ1JFU0NJVEFfU2FsYS1pLU1hcnRpbi1BRVItMTk5Ny5wZGYpLCBYYXZpZXIgU2FsYS1pLU1hcnRpbiwgMTk5NywgQW1lcmljYW4gRWNvbm9taWMgUmV2aWV3CgpbIkV4dHJlbWVCb3VuZHM6IEV4dHJlbWUgQm91bmRzIEFuYWx5c2lzIGluIFIiXShodHRwczovL2NyYW4uci1wcm9qZWN0Lm9yZy93ZWIvcGFja2FnZXMvRXh0cmVtZUJvdW5kcy92aWduZXR0ZXMvRXh0cmVtZUJvdW5kcy5wZGYpCgpodHRwczovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9TdXBwb3J0X3ZlY3Rvcl9tYWNoaW5lCgpbRmVhdHVyZSBTZWxlY3Rpb24gd2l0aCB0aGUgUiBQYWNrYWdlIE1YTTogIFN0YXRpc3RpY2FsbHktRXF1aXZhbGVudCBGZWF0dXJlIFN1YnNldHNdKGh0dHBzOi8vYXJ4aXYub3JnL3BkZi8xNjExLjAzMjI3LnBkZikKClsiYm91bmNlUiJdKGh0dHBzOi8vZ2l0aHViLmNvbS9TVEFUV09SWC9ib3VuY2VSKSwgUiBQYWNrYWdlIAoKW0VMSTVdKGh0dHBzOi8vZ2l0aHViLmNvbS9UZWFtSEctTWVtZXgvZWxpNSkKCiMjIFJlZ3VsYXJpemF0aW9uLCBlLmcuIExhc3NvL1JpZGdlIFJlZ3Jlc3Npb24KaHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvTGFzc29fKHN0YXRpc3RpY3MpCgpbIlJlZ3Jlc3Npb24gc2hyaW5rYWdlIGFuZCBzZWxlY3Rpb24gdmlhIHRoZSBsYXNzbyJdKGh0dHA6Ly9zdGF0d2ViLnN0YW5mb3JkLmVkdS9+dGlicy9sYXNzby9sYXNzby5wZGYpLCBUaWJzaGlyYW5pLCBSLiwgMTk5NiwgIEouIFJveWFsLiBTdGF0aXN0LiBTb2MgQi4sIFZvbC4gNTgsIE5vLiAxLCBwYWdlcyAyNjctMjg4KQoKWyJHbG1uZXQgVmlnbmV0dGUiXShodHRwczovL2NyYW4uci1wcm9qZWN0Lm9yZy93ZWIvcGFja2FnZXMvZ2xtbmV0L3ZpZ25ldHRlcy9nbG1uZXRfYmV0YS5wZGYpLCBUcmV2b3IgSGFzdGllIGFuZCBKdW55YW5nIFFpYW4sIFNlcHRlbWJlciAxMywgMjAxNgoKCiMgRGVjaXNpb24gVHJlZXMKCmh0dHBzOi8vZW4ud2lraXBlZGlhLm9yZy93aWtpL0RlY2lzaW9uX3RyZWUKClsiVHJlZS1CYXNlZCBNb2RlbHMiXShodHRwczovL3d3dy5zdGF0bWV0aG9kcy5uZXQvYWR2c3RhdHMvY2FydC5odG1sKQoKIyBSYW5kb20gRm9yZXN0cwoKaHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvUmFuZG9tX2ZvcmVzdAoKWyJSQU5ET00gRk9SRVNUUyJdKGh0dHBzOi8vd3d3LnN0YXQuYmVya2VsZXkuZWR1L35icmVpbWFuL3JhbmRvbWZvcmVzdDIwMDEucGRmKSBMZW8gQnJlaW1hbiwgSmFudWFyeSAyMDAxCgojIE5ldXJhbCBOZXR3b3JrcwoKaHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQXJ0aWZpY2lhbF9uZXVyYWxfbmV0d29yawoKKERMKSBEZWVwIExlYXJuaW5nLCBJYW4gR29vZGZlbGxvdyBhbmQgWW9zaHVhIEJlbmdpbyBhbmQgQWFyb24gQ291cnZpbGxlLCAyMDE2LCBodHRwOi8vd3d3LmRlZXBsZWFybmluZ2Jvb2sub3JnLwoKIyMjIExTVE0KQ2hyaXN0b3BoZXIgT2xhaCwgIlVuZGVyc3RhbmRpbmcgTFNUTSBOZXR3b3JrcywiIEF1Z3VzdCAyNywgMjAxNSwgaHR0cDovL2NvbGFoLmdpdGh1Yi5pby9wb3N0cy8yMDE1LTA4LVVuZGVyc3RhbmRpbmctTFNUTXMvCgpodHRwczovL2tlcmFzLnJzdHVkaW8uY29tL2FydGljbGVzL2V4YW1wbGVzL2NvbnZfbHN0bS5odG1sCgojIEludGVycHJldGF0aW9uCgoiV2h5IFNob3VsZCBJIFRydXN0IFlvdT8iOiBFeHBsYWluaW5nIHRoZSBQcmVkaWN0aW9ucyBvZiBBbnkgQ2xhc3NpZmllciwgTWFyY28gVHVsaW8gUmliZWlybywgU2FtZWVyIFNpbmdoLCBDYXJsb3MgR3Vlc3RyaW4sIGh0dHBzOi8vYXJ4aXYub3JnL2Ficy8xNjAyLjA0OTM4CgpsaW1lLCBQeXRob24gUGFja2FnZSwgaHR0cHM6Ly9naXRodWIuY29tL21hcmNvdGNyL2xpbWUKCiMgQ2F1c2FsaXR5CgoiV2hlbiBhbmQgSG93IFNob3VsZCBPbmUgVXNlIERlZXAgTGVhcm5pbmcgZm9yIENhdXNhbCBFZmZlY3QgSW5mZXJlbmNlIiwgaHR0cHM6Ly90ZWNobmlvbm1haWwtbXkuc2hhcmVwb2ludC5jb20vcGVyc29uYWwvdXJpc2hhbGl0X3RlY2huaW9uX2FjX2lsL19sYXlvdXRzLzE1L29uZWRyaXZlLmFzcHg/aWQ9JTJGcGVyc29uYWwlMkZ1cmlzaGFsaXRfdGVjaG5pb25fYWNfaWwlMkZEb2N1bWVudHMlMkZQcmVzZW50YXRpb25zJTJGSUFTMjAxOCUyRklBUzIwMThfMl9mb3JfcHVibGljJTJFcGRmJnBhcmVudD0lMkZwZXJzb25hbCUyRnVyaXNoYWxpdF90ZWNobmlvbl9hY19pbCUyRkRvY3VtZW50cyUyRlByZXNlbnRhdGlvbnMlMkZJQVMyMDE4JnNscmlkPWFhYTI3NTllLTkwOWUtNTAwMC1mZDE2LTNlMzNjYWJmOTI2ZgoKTHVrZSBLZWVsZSwgRHlsYW4gU21hbGwsICJDb21wYXJpbmcgQ292YXJpYXRlIFByaW9yaXRpemF0aW9uIHZpYSBNYXRjaGluZyB0byBNYWNoaW5lIExlYXJuaW5nIE1ldGhvZHMgZm9yIENhdXNhbCBJbmZlcmVuY2UgdXNpbmcgRml2ZSBFbXBpcmljYWwgQXBwbGljYXRpb25zLCIgTWF5IDExLCAyMDE4LCBodHRwczovL2FyeGl2Lm9yZy9wZGYvMTgwNS4wMzc0My5wZGYKCgojIFNwZWNpYWwgVG9waWNzCgojIyBUaW1lClsiSW52ZXN0aWdhdGluZyBTZXF1ZW5jZXMgaW4gT3JkaW5hbCBEYXRhOiBBIE5ldyBBcHByb2FjaCBXaXRoIEFkYXB0ZWQgRXZvbHV0aW9uYXJ5IE1vZGVscywiXShodHRwczovL3d3dy5jYW1icmlkZ2Uub3JnL2NvcmUvam91cm5hbHMvcG9saXRpY2FsLXNjaWVuY2UtcmVzZWFyY2gtYW5kLW1ldGhvZHMvYXJ0aWNsZS9pbnZlc3RpZ2F0aW5nLXNlcXVlbmNlcy1pbi1vcmRpbmFsLWRhdGEtYS1uZXctYXBwcm9hY2gtd2l0aC1hZGFwdGVkLWV2b2x1dGlvbmFyeS1tb2RlbHMvRjM3NDdEOEExOTA4OTAyQkE3RjI2QzVFRTI4QUZBRUYpLFBhdHJpayBMaW5kZW5mb3JzLCBGcmVkcmlrIEphbnNzb24sIFlpLXRpbmcgV2FuZyBhbmQgU3RhZmZhbiBJLiBMaW5kYmVyZywgQ2hyaXN0aWFuIExvcGV6LCAwNSBNYXJjaCAyMDE4LAoKIyMgVGV4dApKdWxpYSBTaWxnZSBhbmQgRGF2aWQgUm9iaW5zb24sICJUZXh0IE1pbmluZyB3aXRoIFI6IEEgVGlkeSBBcHByb2FjaCwiIDIwMTgtMDQtMDIsIGh0dHBzOi8vd3d3LnRpZHl0ZXh0bWluaW5nLmNvbS8KCiJJbnRyb2R1Y2luZyBNb250ZSBDYXJsbyBNZXRob2RzIHdpdGggUiwiIGh0dHBzOi8vd3d3LnNsaWRlc2hhcmUubmV0L3hpYW5ibG9nL2ludHJvZHVjaW5nLW1vbnRlLWNhcmxvLW1ldGhvZHMtd2l0aC1yCgpNYXR0aGV3IEdlbnR6a293LCBCcnlhbiBULiBLZWxseSwgTWF0dCBUYWRkeSwgIlRleHQgYXMgRGF0YSwiIGh0dHA6Ly93ZWIuc3RhbmZvcmQuZWR1L35nZW50emtvdy9yZXNlYXJjaC90ZXh0LWFzLWRhdGEucGRmCgojIyBJbWFnZXMKCmh0dHBzOi8va2VyYXMucnN0dWRpby5jb20vYXJ0aWNsZXMvZXhhbXBsZXMvY2lmYXIxMF9jbm4uaHRtbAoKCiMgRXhhbXBsZXMKCkV4YW1pbmluZyBFeHBsYW5hdGlvbnMgZm9yIE51Y2xlYXIgUHJvbGlmZXJhdGlvbgpNYXJrIFMuIEJlbGwKSW50ZXJuYXRpb25hbCBTdHVkaWVzIFF1YXJ0ZXJseSwgVm9sdW1lIDYwLCBJc3N1ZSAzLCAxIFNlcHRlbWJlciAyMDE2LCBQYWdlcyA1MjDigJM1MjksIGh0dHBzOi8vZG9pLm9yZy8xMC4xMDkzL2lzcS9zcXYwMDcKCiMgRXh0cmFzCgojIyBHcmFkaWVudCBCb29zdGluZwpUZXJlbmNlIFBhcnIgYW5kIEplcmVteSBIb3dhcmQsICJIb3cgdG8gZXhwbGFpbiBncmFkaWVudCBib29zdGluZywiIGh0dHA6Ly9leHBsYWluZWQuYWkvZ3JhZGllbnQtYm9vc3RpbmcvaW5kZXguaHRtbAoKIyMjIyBTVk0KW1N1cHBvcnRfdmVjdG9yX21hY2hpbmVdKGh0dHBzOi8vZW4ud2lraXBlZGlhLm9yZy93aWtpL1N1cHBvcnRfdmVjdG9yX21hY2hpbmUpCgo=</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiSW50cm9kdWN0aW9uIHRvIE1hY2hpbmUgTGVhcm5pbmciCm91dHB1dDogCiAgaHRtbF9ub3RlYm9vazoKICAgIHRvYzogdHJ1ZSAjIHRhYmxlIG9mIGNvbnRlbnQgdHJ1ZQogICAgdG9jX2RlcHRoOiAzICAjIHVwdG8gdGhyZWUgZGVwdGhzIG9mIGhlYWRpbmdzIChzcGVjaWZpZWQgYnkgIywgIyMgYW5kICMjIykKICAgIG51bWJlcl9zZWN0aW9uczogdHJ1ZSAgIyMgaWYgeW91IHdhbnQgbnVtYmVyIHNlY3Rpb25zIGF0IGVhY2ggdGFibGUgaGVhZGVyCiAgICBoaWdobGlnaHQ6IHRhbmdvICAjIHNwZWNpZmllcyB0aGUgc3ludGF4IGhpZ2hsaWdodGluZyBzdHlsZQogICAgdG9jX2Zsb2F0OiB0cnVlCi0tLQoKCmBgYHtjc3N9CnByZSBjb2RlLCBwcmUsIGNvZGUgewogIHdoaXRlLXNwYWNlOiBwcmUgIWltcG9ydGFudDsKICBvdmVyZmxvdy14OiAhc2Nyb2xsICFpbXBvcnRhbnQ7CiAgd29yZC1icmVhazoga2VlcC1hbGwgIWltcG9ydGFudDsKICB3b3JkLXdyYXA6IGluaXRpYWwgIWltcG9ydGFudDsKfQpgYGAKClJleCBXLiBEb3VnbGFzczxici8+CkRpcmVjdG9yIE1hY2hpbmUgTGVhcm5pbmcgZm9yIFNvY2lhbCBTY2llbmNlIExhYiAoTVNTTCk8YnIvPgpDZW50ZXIgZm9yIFBlYWNlIGFuZCBTZWN1cml0eSBTdHVkaWVzIChjUEFTUyk8YnIvPgpEZXBhcnRtZW50IG9mIFBvbGl0aWNhbCBTY2llbmNlPGJyLz4KVW5pdmVyc2l0eSBvZiBDYWxpZm9ybmlhIFNhbiBEaWVnbzxici8+CnJleGRvdWdsYXNzQGdtYWlsLmNvbTxici8+Cnd3dy5yZXhkb3VnbGFzcy5jb208YnIvPgpAcmV4ZG91Z2xhc3MgCgojIENvdXJzZSBPdmVydmlldwoKUGxlYXNlIGJyaW5nIGEgdHdvIHNpZGVkIGNvaW4ocykgYW5kIHNjcmF0Y2ggcGFwZXIgdG8gY2xhc3MgZm9yIHBhc3Npbmcgbm90ZXMgZm9yIHRoZSBkZW1vbnN0cmF0aW9ucy4KClRoaXMgaXMgYSA2IGhvdXIgaW50cm9kdWN0aW9uIHRvIG1hY2hpbmUgbGVhcm5pbmcgc3ByZWFkIGFjcm9zcyB0d28gdGhyZWUtaG91ciBsZWN0dXJlcy4gVGhlIGdvYWwgb2YgdGhpcyB2ZXJ5IHNob3J0IGNvdXJzZSBpcyBuYXJyb3c6IHRvIGdpdmUgeW91IGVub3VnaCBvZiBhbiBvdmVydmlldywgdm9jYWJ1bGFyeSwgYW5kIGludHVpdGlvbiwgc28gdGhhdCB5b3UgY2FuIGlkZW50aWZ5IG1hY2hpbmUgbGVhcm5pbmcgcHJvYmxlbXMgaW4gdGhlIHdpbGQgYW5kIGJlZ2luIHlvdXIgb3duIHJlc2VhcmNoIGludG8gcmVsZXZhbnQgbGl0ZXJhdHVyZXMgYW5kIHBvc3NpYmxlIGFwcHJvYWNoZXMuIFRoZSBnb2FsIGlzIG5vdCB0byB0cmFpbiB5b3UgdG8gZXhlY3V0ZSBhIHBhcnRpY3VsYXIgbWFjaGluZSBsZWFybmluZyBzb2x1dGlvbi4gVGhlcmUgYXJlIGZhciB0b28gbWFueSBhcHByb2FjaGVzIGF2YWlsYWJsZTsgdGhleSBtYXkgbm90IGNvdmVyIHdoYXRldmVyIHByb2JsZW0geW91IGZpbmQ7IGFuZCB0aGUgc3RhdGUgb2YgdGhlIGFydCB3aWxsIGJlIGRpZmZlcmVudCBpbiBhIHllYXIgb3IgdHdvIGFueXdheS4gSW5zdGVhZCwgd2Ugd2lsbCBsZWFybiBob3cgdG8gdGhpbmsgYWJvdXQgYW5kIGNsYXNzaWZ5IHByb2JsZW1zIGludG8gYnJvYWQgdHlwZXMsIGhvdyB0byBkZWZpbmUgYW5kIG1lYXN1cmUgdGhlIGVmZmljYWN5IG9mIGRpZmZlcmVudCBzb2x1dGlvbnMgdG8gdGhhdCBwcm9ibGVtLCBob3cgdG8gYXZvaWQgc29tZSBjb21tb24gYW5kIHN1YnRsZSBtaXN0YWtlcywgYW5kIGhvdyB0byB0aGluayBhYm91dCBhIGZ1bGwgbWFjaGluZSBsZWFybmluZyBwaXBlbGluZSBmcm9tIHN0YXJ0IHRvIGZpbmlzaC4KCgojIyBDb3Vyc2UgU2xpZGVzCiogW0NvdXJzZSBTbGlkZXMgKDFBKV0oaHR0cHM6Ly9kb2NzLmdvb2dsZS5jb20vcHJlc2VudGF0aW9uL2QvMTlpMm9tX2p3SzhtM2Etak52Z3RNLVdNVDFsMUhBR2FHdVdlYjRiZ0xzVE0vZWRpdD91c3A9c2hhcmluZykKKiBbQ291cnNlIFNsaWRlcyAoMUIpXShodHRwczovL2RvY3MuZ29vZ2xlLmNvbS9wcmVzZW50YXRpb24vZC8xWjg1N2ZGUzY5MmlqcHBYWnpyUFZqc1Z4c2xsd0RLem9GQldPY2hSakRmVS9lZGl0P3VzcD1zaGFyaW5nKQoqIFtDb3Vyc2UgU2xpZGVzICgyQSldKGh0dHBzOi8vZG9jcy5nb29nbGUuY29tL3ByZXNlbnRhdGlvbi9kLzFIUnpSVGp6MzF2dF9Id09rS0Vfak5VWWhnMWEyTHJPeFM2TE0zUkk5ZEU0L2VkaXQ/dXNwPXNoYXJpbmcpCiogW0NvdXJzZSBTbGlkZXMgKDJCKV0oaHR0cHM6Ly9kb2NzLmdvb2dsZS5jb20vcHJlc2VudGF0aW9uL2QvMUdTS1Flb1lXVFZsSWZXUUlWOXBYeW9aVzNEVmRMMnlsbWFVVTVkTjlzR0EvZWRpdD91c3A9c2hhcmluZykKCiMjIFJlYWRpbmdzIFBvbGljeQpNYXRoIGFuZCBwcm9ncmFtbWluZyBhcmUgbm90IHNvbWV0aGluZyB5b3UgbGVhcm4sIHRoZXkncmUgc29tZXRoaW5nIHlvdSBnZXQgdXNlZCB0by4gVGhlIHJlYWRpbmdzIG9mIHRoaXMgY291cnNlIGFyZSwgd2l0aCBhIGZldyBleGNlcHRpb25zLCB2b2x1bnRhcnkgYW5kIGludGVuZGVkIGZvciBzZWxmIHN0dWR5LiBUaGV5IGFyZSB0byBoZWxwIHBvaW50IHlvdSBpbiB0aGUgcmlnaHQgZGlyZWN0aW9uIHdoZW4geW91IHJlYWxpemUgeW91IG5lZWQgdG8gc3RhcnQgYnJ1c2hpbmcgdXAgb24gYSBwYXJ0aWN1bGFyIHNldCBvZiB0b29scyBpbiBvcmRlciB0byB0YWNrbGUgYSBwYXJ0aWN1bGFyIHByb2JsZW0uCgpSZXF1aXJlZCAtIFNraW0gaW4gb3JkZXIgdG8gaW1wcm92ZSBkaXNjdXNzaW9uIGFuZCB1bmRlcnN0YW5kaW5nIGR1cmluZyBsZWN0dXJlIDxici8+ClJlY29tbWVuZGVkIC0gRXZlbnR1YWxseSBza2ltL3JlYWQgZHVyaW5nIHNlbGYgc3R1ZHkgPGJyLz4KUmVmZXJlbmNlIC0gRGVlcGVyIG1hdGhlbWF0aWNhbCBvciBoaXN0b3JpY2FsIGNvbnRleHQgPGJyLz4KCiMjIFRleHRib29rcwoKRG8gbm90IHB1cmNoYXNlIGFueSBib29rcyAtIGVhY2ggb2YgdGhlc2Ugc2hvdWxkIGJlIGF2YWlsYWJsZSBmb3IgZnJlZSBvbi1saW5lIGF0IHRoZSBsaW5rIGdpdmVuLiBBbnkgaW5kaXZpZHVhbCBvbmUgd291bGQgcHJvdmlkZSBhIGRlY2VudCBiYWNrZ3JvdW5kIHRvIHRoZSBmaWVsZCBvZiBtYWNoaW5lIGxlYXJuaW5nLiBGb3IgdGhpcyBjb3Vyc2UsIEkndmUgcGlja2VkIHNlbGVjdCBjaGFwdGVycyB3aGVuIEkgdGhvdWdodCB0aGV5IGRpZCBhIGdvb2Qgam9iIHJldmlld2luZyBhIHNwZWNpZmljIHN1YnRvcGljLgoKKiAoQ0lNTCkgIFtBIGNvdXJzZSBpbiBtYWNoaW5lIGxlYXJuaW5nXShjaW1sLmluZm8vKSwgSGFsIERhdW1lIElJSQoqIChFU0wpIFtFbGVtZW50cyBvZiBTdGF0aXN0aWNhbCBMZWFybmluZ10oaHR0cHM6Ly93ZWIuc3RhbmZvcmQuZWR1L35oYXN0aWUvRWxlbVN0YXRMZWFybi8pLCBUcmV2b3IgSGFzdGllIGFuZCBSb2JlcnQgVGlic2hpcmFuaQoqIChJU0wpIFtBbiBpbnRyb2R1Y3Rpb24gdG8gc3RhdGlzdGljYWwgbGVhcm5pbmc6IHdpdGggYXBwbGljYXRpb24gaW4gUiwgR2FyZXRoIEphbWVzXShodHRwczovL3d3dy1iY2YudXNjLmVkdS9+Z2FyZXRoL0lTTC9JU0xSJTIwU2V2ZW50aCUyMFByaW50aW5nLnBkZiksIERhbmllbGEgV2l0dGVuLCBUcmV2b3IgSGFzdGllLCBhbmQgUm9iZXJ0IFRpYnNoaXJhbmkKKiAoSU1MKSBbSW50cm9kdWN0aW9uIHRvIE1hY2hpbmUgTGVhcm5pbmddKGh0dHA6Ly9hbGV4LnNtb2xhLm9yZy9kcmFmdHMvdGhlYm9vay5wZGYpLCBBbGV4IFNtb2xhIGFuZCBTLlYuTi4gVmlzaHdhbmF0aGFuCiogKElNTFIpIFsiQW4gSW50cm9kdWN0aW9uIHRvIE1hY2hpbmUgTGVhcm5pbmcgd2l0aCBSIl0oaHR0cHM6Ly9sZ2F0dG8uZ2l0aHViLmlvL0ludHJvTWFjaGluZUxlYXJuaW5nV2l0aFIvaW5kZXguaHRtbCksTGF1cmVudCBHYXR0bywgMjAxNy0xMC0xOAoqIChNTCkgW01hY2hpbmUgTGVhcm5pbmc6IFRoZSBhcnQgYW5kIHNjaWVuY2Ugb2YgYWxnb3JpdGhtcyB0aGF0IG1ha2Ugc2Vuc2Ugb2YgZGF0YV0oaHR0cDovL2RzZC5mdXR1cmUtbGFiLmNuL21lbWJlcnMvMjAxNW5scC9QZXRlcl9GbGFjaF9NYWNoaW5lX0xlYXJuaW5nLl9UaGVfQXJ0X2FuZF9TY2llbmMoQm9va1paLm9yZykucGRmKSwgRmxhY2gKKiAoTUxQUCkgW01hY2hpbmUgTGVhcm5pbmc6IEEgUHJvYmFiaWxpc3RpYyBQZXJzcGVjdGl2ZV0oaHR0cHM6Ly93d3cuY3MudWJjLmNhL35tdXJwaHlrL01MYm9vay8pLCBLZXZpbiBNdXJwaHkKKiAoUFJNTCkgW1BhdHRlciByZWNvZ25pdGlvbiBhbmQgbWFjaGluZSBsZWFybmluZ10oaHR0cDovL3VzZXJzLmlzci5pc3QudXRsLnB0L353dXJtZC9MaXZyb3Mvc2Nob29sL0Jpc2hvcCUyMC0lMjBQYXR0ZXJuJTIwUmVjb2duaXRpb24lMjBBbmQlMjBNYWNoaW5lJTIwTGVhcm5pbmclMjAtJTIwU3ByaW5nZXIlMjAlMjAyMDA2LnBkZiksIENocmlzdG9waGVyIE0uIEJpc2hvcAoqIChXTUxXKSBbIldIWSBNQUNISU5FIExFQVJOSU5HIFdPUktTIl0oaHR0cDovL3d3dy5jcy5jbXUuZWR1L35nbW9udGFuZS9tb250YW5lel9kaXNzZXJ0YXRpb24ucGRmKSwgR2VvcmdlIEQuIE1vbnRhbmV6LCBNYXkgMjAxNywgRGlzc2VydGF0aW9uCgojIyBHZW5lcmFsIFJlc291cmNlcwoKUmVsYXRlZCBDbGFzc2VzCipbQ09NUyBXNDcyMSBNYWNoaW5lIExlYXJuaW5nIGZvciBEYXRhIFNjaWVuY2VdKGh0dHA6Ly93d3cuY29sdW1iaWEuZWR1L35qd3AyMTI4L1RlYWNoaW5nL1c0NzIxL1NwcmluZzIwMTcvVzQ3MjFTcHJpbmcyMDE3Lmh0bWwpCgpUaGVyZSBhcmUgYSBudW1iZXIgcGxhY2VzIG9uLWxpbmUgZm9yIGNvbnN0YW50IHVwZGF0ZXMgb24gbWFjaGluZSBsZWFybmluZyA8YnIvPgoqIFtSZWRkaXQgTWFjaGluZSBMZWFybmluZyBTdWJyZWRkaXRdKGh0dHBzOi8vd3d3LnJlZGRpdC5jb20vci9NYWNoaW5lTGVhcm5pbmcvKQoqIFthcnhpdl0oaHR0cHM6Ly90d2l0dGVyLmNvbS9hcnhpdl9vcmcpCiogW015IHR3aXR0ZXIgZmVlZF0oaHR0cHM6Ly90d2l0dGVyLmNvbS9SZXhEb3VnbGFzcykKKiBbUG9saXRpY2FsIEFuYWx5c2lzXShodHRwczovL3d3dy5jYW1icmlkZ2Uub3JnL2NvcmUvam91cm5hbHMvcG9saXRpY2FsLWFuYWx5c2lzKQoKQ29uZmVyZW5jZXMKKiBbVG9wIENvbmZlcmVuY2VzIGZvciBNYWNoaW5lIExlYXJuaW5nICYgQXJ0aS4gSW50ZWxsaWdlbmNlXShodHRwOi8vd3d3Lmd1aWRlMnJlc2VhcmNoLmNvbS90b3Bjb25mL21hY2hpbmUtbGVhcm5pbmcpCiogW05ldXJhbCBJbmZvcm1hdGlvbiBQcm9jZXNzaW5nIFN5c3RlbXMgKE5JUFMpXShodHRwczovL25pcHMuY2MvKQoKIyMgVG95IHByb2JsZW1zCiogW1VDIElydmluZSBNYWNoaW5lIExlYXJuaW5nIFJlcG9zaXRvcnldKGh0dHA6Ly9hcmNoaXZlLmljcy51Y2kuZWR1L21sL2luZGV4LnBocCk8YnIvPgoqIFtLYWdnbGUgRGF0YXNldHNdKGh0dHBzOi8vd3d3LmthZ2dsZS5jb20vZGF0YXNldHM/c29ydEJ5PXZvdGVzJmdyb3VwPWFsbCk8YnIvPgoqIFtMaXN0X29mX2RhdGFzZXRzX2Zvcl9tYWNoaW5lX2xlYXJuaW5nX3Jlc2VhcmNoXShodHRwczovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9MaXN0X29mX2RhdGFzZXRzX2Zvcl9tYWNoaW5lX2xlYXJuaW5nX3Jlc2VhcmNoKTxici8+CgpbIkJyZWFzdCBDYW5jZXIiXShodHRwczovL3JwdWJzLmNvbS9yYXZpb2xsaTc3LzM1Mjk1NiksIFJhdWwgRXVsb2dpbywgSmFudWFyeSAyNiwgMjAxOAoKCiMjIFNvZnR3YXJlIGFuZCBQcm9ncmFtbWluZwoKU3R1ZGVudHMgYXJlIG5vdCBleHBlY3RlZCB0byBrbm93IGFueSBwYXJ0aWN1bGFyIGxhbmd1YWdlIG9yIHNldCBvZiBzb2Z0d2FyZS4gV2Ugd2lsbCBiZSBkZW1vbnN0cmF0aW5nIGJlc3QgcHJhY3RpY2VzIGFzIHVzZWQgaW4gdGhlIE1hY2hpbmUgTGVhcm5pbmcgZm9yIFNvY2lhbCBTY2llbmNlIExhYiBhdCB0aGUgQ2VudGVyIGZvciBQZWFjZSBhbmQgU2VjdXJpdHkgU3R1ZGllcywgVUNTRC4gSW4gdGhhdCBsYWIsIG91ciBzb2Z0d2FyZSBzdGFjayBjb25zaXN0cyBvZiBQeXRob24gYW5kIFIgZm9yIGRhdGEgcHJlcGFyYXRpb24gYW5kIGFuYWx5c2lzLCBTcGFyayBmb3IgZGF0YWJhc2UgbWFuYWdlbWVudCwgS2VyYXMvVGVuc29yZmxvdyBmb3IgZGVlcCBsZWFybmluZywgR2l0aHViIGZvciByZXZpc2lvbiBjb250cm9sLCBhbmQgVWJ1bnR1IGZvciBvdXIgb3BlcmF0aW5nIHN5c3RlbSBhbmQgY29tbWFuZC1saW5lIHRvb2xzLgoKKiBbTUFDUyAzMDUwMDEgLSBDb21wdXRpbmcgZm9yIHRoZSBTb2NpYWwgU2NpZW5jZXNdKGh0dHBzOi8vY2Zzcy51Y2hpY2Fnby5lZHUvaW5kZXguaHRtbCksQmVuamFtaW4gU29sdG9mZgoqIFsiUiBmb3IgRGF0YSBTY2llbmNlIl0oaHR0cDovL3I0ZHMuaGFkLmNvLm56LyksIEdhcnJldHQgR3JvbGVtdW5kCiogWyJTcGFyayBhbmQgc3BhcmtseXIsIl0oaHR0cHM6Ly9jZnNzLnVjaGljYWdvLmVkdS9kaXN0cmliMDAzX3NwYXJrLmh0bWwpCiogWyJHaXRIdWIgYW5kIFJTdHVkaW8sIl0oaHR0cHM6Ly9yZXNvdXJjZXMuZ2l0aHViLmNvbS9hcnRpY2xlcy9naXRodWItYW5kLXJzdHVkaW8vKQoqIFsiRGF0YSBTY2llbmNlIGF0IHRoZSBDb21tYW5kIExpbmUsIl0oaHR0cHM6Ly93d3cuZGF0YXNjaWVuY2VhdHRoZWNvbW1hbmRsaW5lLmNvbS8pLCBKZXJvZW4gSmFuc3NlbnMsIEZlYnJ1YXJ5IDgsIDIwMTgKKiBbIkRhdGEgVmlzdWFsaXphdGlvbjogQSBwcmFjdGljYWwgaW50cm9kdWN0aW9uIl0oaHR0cDovL3NvY3Zpei5jby9pbmRleC5odG1sP3V0bV9jb250ZW50PWJ1ZmZlcjA5NzEwJnV0bV9tZWRpdW09c29jaWFsJnV0bV9zb3VyY2U9dHdpdHRlci5jb20mdXRtX2NhbXBhaWduPWJ1ZmZlciksS2llcmFuIEhlYWx5CiogWyJJbnRyb2R1Y3Rpb24gdG8gVmFsaWRhdGUsIiBodHRwczovL2NyYW4uci1wcm9qZWN0Lm9yZy93ZWIvcGFja2FnZXMvdmFsaWRhdGUvdmlnbmV0dGVzL2ludHJvZHVjdGlvbi5odG1sKQoqIFsiQW4gaW50cm9kdWN0aW9uIHRvIHJlZ3VsYXIgZXhwcmVzc2lvbnMiXShodHRwczovL3d3dy5vcmVpbGx5LmNvbS9pZGVhcy9hbi1pbnRyb2R1Y3Rpb24tdG8tcmVndWxhci1leHByZXNzaW9ucyksIFRob21hcyBOaWVsZCwgRGVjZW1iZXIgMTMsIDIwMTcgLAoqIFtSZWdFeHBsYWluXSgiaHR0cHM6Ly9naXRodWIuY29tL2dhZGVuYnVpZS9yZWdleHBsYWluLyNyZWFkbWUiKQoqIFsiVGhlIFBsYWluIFBlcnNvbuKAmXMgR3VpZGUgdG8gUGxhaW4gVGV4dCBTb2NpYWwgU2NpZW5jZSJdKGh0dHA6Ly9wbGFpbi10ZXh0LmNvLyksIEtpZXJhbiBIZWFseSwgMjAxOC0wNC0yOAoqICJTdGF0aXN0aWNhbCBEYXRhIENsZWFuaW5nIHdpdGggQXBwbGljYXRpb25zIGluIFIiCiogW3NjaWtpdC1sZWFybl0oaHR0cDovL3NjaWtpdC1sZWFybi5vcmcvc3RhYmxlLykKCiMjIE5vdGVzIG9uIHRoaXMgR3VpZGUKClRoaXMgZ3VpZGUgaXMgd3JpdHRlbiBhcyBhbiBbUiBub3RlYm9va10oaHR0cHM6Ly9ib29rZG93bi5vcmcveWlodWkvcm1hcmtkb3duL25vdGVib29rLmh0bWwpIHVzaW5nIFtSLVN0dWRpb10oaHR0cHM6Ly93d3cucnN0dWRpby5jb20vKS4gSXQgcmVuZGVycyBvdXRwdXQgYXMgc3RhdGljIEhUTUwgdGhhdCB5b3Ugc2hvdWxkIGJlIGFibGUgdG8gdmlldyBvbiBhbiByZWd1bGFyIGJyb3dzZXIuCgpgYGB7cn0KbGlicmFyeShwYWNtYW4pCnBfbG9hZChpbmZvdGhlbykKcF9sb2FkKHRpZHl2ZXJzZSkKcF9sb2FkKGdncGxvdDIpCnBfbG9hZChjb3dwbG90KQpwX2xvYWQobWxiZW5jaCkKCmBgYAoKIyBJbnRyb2R1Y3Rpb24KCiMjIFdoYXQgaXMgbWFjaGluZSBsZWFybmluZz8KKiAoQ0lNTCksIFtDaGFwdGVyIDEsXShodHRwOi8vY2ltbC5pbmZvL2RsL3YwXzk5L2NpbWwtdjBfOTktY2gwMS5wZGYpIDxici8+CiogV01MVyAxLjAgIkludHJvZHVjdGlvbiIgPGJyLz4KCiMjIyBFeGFtcGxlczogV2h5IE1hY2hpbmUgTGVhcm5pbmc/CiogWyJWaUVXUzogYSBwb2xpdGljYWwgVmlvbGVuY2UgRWFybHktV2FybmluZyBTeXN0ZW0sIl0oaHR0cDovL3Bjci51dS5zZS9yZXNlYXJjaC92aWV3cy8pIDxici8+CiogWyJTYWZlIERpc3Bvc2FsIG9mIFVuZXhwbG9kZWQgV1dJSSBCb21icywiXShodHRwOi8vc3RhZmYubWF0aC5zdS5zZS9ob2VobGUvYmxvZy8yMDE4LzA1LzI1L3V4Yi5odG1sKSBNaWNoYWVsIEjDtmhsZSwgTWF5IDI1LCAyMDE4LCA8YnIvPgoqIFsiUHJlZGljdGluZyBSYWNlIGFuZCBFdGhuaWNpdHkgRnJvbSB0aGUgU2VxdWVuY2Ugb2YgQ2hhcmFjdGVycyBpbiBhIE5hbWUsIl0oaHR0cHM6Ly9hcnhpdi5vcmcvcGRmLzE4MDUuMDIxMDkucGRmKSxHYXVyYXYgU29vZCBhbmQgU3VyaXlhbiBMYW9oYXByYXBhbm9uLCBNYXkgOCwgMjAxOCwgIDxici8+CiogWyJldGhuaWNvbHI6IFByZWRpY3QgUmFjZSBhbmQgRXRobmljaXR5IEZyb20gTmFtZSwiXShodHRwczovL2dpdGh1Yi5jb20vYXBwZWxlci9ldGhuaWNvbHIpPGJyLz4KCiMjIFdoYXQgaXNuJ3QgbWFjaGluZSBsZWFybmluZz8KCiMjIyBTdGF0aXN0aWNzCiogWyJTdGF0aXN0aWNhbCBNb2RlbGluZzogVGhlIFR3byBDdWx0dXJlcyAod2l0aCBjb21tZW50cyBhbmQgYSByZWpvaW5kZXIgYnkgdGhlICBhdXRob3IpLCJdKGh0dHBzOi8vcHJvamVjdGV1Y2xpZC5vcmcvZG93bmxvYWQvcGRmXzEvZXVjbGlkLnNzLzEwMDkyMTM3MjYpIExlbyBCcmVpbWFuLCBTdGF0aXN0aWNhbCBTY2llbmNlLCAyMDAxLCBWb2wuIDE2LCBOby4gMywgMTk54oCTMjMxIDxici8+CgojIyMgQ2F1c2FsIEluZmVyZW5jZQoqIEpvc2h1YSBELiBBbmdyaXN0ICYgSsO2cm4tU3RlZmZlbiBQaXNjaGtlLCAiTW9zdGx5IEhhcm1sZXNzIEVjb25vbWV0cmljcyBBbiBFbXBpcmljaXN0J3MgQ29tcGFuaW9uLCIgMjAwOQoqIFsiQmFzaWMgQ29uY2VwdHMgb2YgU3RhdGlzdGljYWwgSW5mZXJlbmNlIGZvciBDYXVzYWwgRWZmZWN0cyBpbiBFeHBlcmltZW50cyBhbmQgT2JzZXJ2YXRpb25hbCBTdHVkaWVzLCJdKGh0dHA6Ly93d3cuc3RhdC5jb2x1bWJpYS5lZHUvfmNvb2svcXIzMy5wZGYpIERvbmFsZCBCLiBSdWJpbiwgMjAwNCA8YnIvPgoKIyBJbmZvcm1hdGlvbiBUaGVvcnkKKiBbSW5mb3JtYXRpb25fdGhlb3J5XShodHRwczovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9JbmZvcm1hdGlvbl90aGVvcnkpCiogWyJWaXN1YWwgSW5mb3JtYXRpb24gVGhlb3J5LCJdKGh0dHA6Ly9jb2xhaC5naXRodWIuaW8vcG9zdHMvMjAxNS0wOS1WaXN1YWwtSW5mb3JtYXRpb24vKSBDaHJpc3RvcGhlciBPbGFoLCAsIE9jdG9iZXIgMTQsIDIwMTUsIDxici8+CiogW1NoYW5ub24gV2VhdmVyIE1vZGVsXShodHRwczovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9TaGFubm9uJUUyJTgwJTkzV2VhdmVyX21vZGVsKTxici8+CiogWyJBIE1hdGhlbWF0aWNhbCBUaGVvcnkgb2YgQ29tbXVuaWNhdGlvbiwiXShodHRwOi8vbWF0aC5oYXJ2YXJkLmVkdS9+Y3RtL2hvbWUvdGV4dC9vdGhlcnMvc2hhbm5vbi9lbnRyb3B5L2VudHJvcHkucGRmKSwgQy4gRS4gU0hBTk5PTiwgT2N0b2JlciAxOTQ4LCAgVGhlIEJlbGwgU3lzdGVtICogVGVjaG5pY2FsIEpvdXJuYWwsIFZvbC4gMjcsIHBwLiAzNznigJM0MjMsIDYyM+KAkzY1NiwgSnVseSwgPGJyLz4KKiBQUk1MIDEuNiAiSW5mb3JtYXRpb24gVGhlb3J5IiA8YnIvPgoKIyBJbmZvcm1hdGlvbiBTb3VyY2VzICRZJAoKIyMgUmFuZG9tIFZhcmlhYmxlcyBhbmQgRGlzdHJpYnV0aW9ucwoqIFtSYW5kb21fdmFyaWFibGVdKGh0dHBzOi8vZW4ud2lraXBlZGlhLm9yZy93aWtpL1JhbmRvbV92YXJpYWJsZSkKKiBbQmlub21pYWxfZGlzdHJpYnV0aW9uXShodHRwczovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9CaW5vbWlhbF9kaXN0cmlidXRpb24pCiogWyJSZXZpZXcgb2YgUHJvYmFiaWxpdHkgVGhlb3J5Il0oaHR0cDovL2NzMjI5LnN0YW5mb3JkLmVkdS9zZWN0aW9uL2NzMjI5LXByb2IucGRmKSwgQXJpYW4gTWFsZWtpIGFuZCBUb20gRG8gPGJyLz4KKiBQUk1MIDIuMCA8YnIvPgoKIyMgRW50cm9weQoqIFtFbnRyb3B5IChpbmZvcm1hdGlvbl90aGVvcnkpXShodHRwczovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9FbnRyb3B5XyhpbmZvcm1hdGlvbl90aGVvcnkpKTxici8+CiogW1BhY2thZ2Ug4oCYZW50cm9weSzigJkgIkVzdGltYXRpb24gb2YgRW50cm9weSwgTXV0dWFsIEluZm9ybWF0aW9uIGFuZCBSZWxhdGVkIFF1YW50aXRpZXMsIl0oaHR0cDovL3N0cmltbWVybGFiLm9yZy9zb2Z0d2FyZS9lbnRyb3B5LyksIEZlYnJ1YXJ5IDE5LCAyMDE1ICA8YnIvPgoqIFtpbmZvdGhlb10oaHR0cHM6Ly9jcmFuLnItcHJvamVjdC5vcmcvd2ViL3BhY2thZ2VzL2luZm90aGVvL2luZGV4Lmh0bWwpLCBQYXRyaWNrIEUuIE1leWVyLCAyMDE0LTA3LTI2LCBSIFBhY2thZ2UgPGJyLz4KKiBbUGhpbGVudHJvcHk6IEluZm9ybWF0aW9uIFRoZW9yeSBhbmQgRGlzdGFuY2UgUXVhbnRpZmljYXRpb24gd2l0aCBSLl0oaHR0cHM6Ly9kb2kub3JnLzEwLjIxMTA1L2pvc3MuMDA3NjUpLCBEcm9zdCwgKDIwMTgpLCBKb3VybmFsIG9mIE9wZW4gU291cmNlIFNvZnR3YXJlLCAzKDI2KSwgNzY1ICA8YnIvPgoKIyMgQmluYXJ5IFNvdXJjZSAoJDw9MWJpdCQpCgojIyMjIFR3byBIZWFkZWQgQ29pbgpgYGB7cn0KTiA8LSAyMCAjRmxpcCBhIGNvaW4gMTAgdGltZXMKc2FtcGxlX3NwYWNlIDwtIGMoMSwwKSAjSGVhZHMgYW5kIFRhaWxzCgpwIDwtIDEgI1R3byBoZWFkZWQgY29pbgpZX2NvaW5fdHdvaGVhZGVkIDwtIHNhbXBsZShzYW1wbGVfc3BhY2UsIHNpemUgPSBOLCAgcmVwbGFjZSA9IFRSVUUsICBwcm9iID0gYyhwLCAxIC0gcCkpICAKcHJpbnQodGFibGUoWV9jb2luX3R3b2hlYWRlZCkpCgpsaWJyYXJ5KGluZm90aGVvKQpwcmludChuYXRzdG9iaXRzKGVudHJvcHkoWV9jb2luX3R3b2hlYWRlZCwgbWV0aG9kPSJlbXAiKSkpCgpgYGAKCkEgZmFpciBjb2luIGhhcyBlcXVhbCBsaWtlbGlob29kIG9mIGJvdGggaGVhZHMgYW5kIHRhaWxzLiBFc3RpbWF0ZWQgZW50cm9weSBpcyBjbG9zZSB0byB0aGUgdHJ1ZSB2YWx1ZSBvZiAxIGJpdC4KCiMjIyMgRmFpciBDb2luIAoKYGBge3J9CnAgPC0gMC41ICNGYWlyIENvaW4KWV9jb2luX2ZhaXIgPC0gc2FtcGxlKHNhbXBsZV9zcGFjZSwgc2l6ZSA9IE4sICByZXBsYWNlID0gVFJVRSwgIHByb2IgPSBjKHAsIDEgLSBwKSkgIApwcmludCh0YWJsZShZX2NvaW5fZmFpcikpCnByaW50KG5hdHN0b2JpdHMoZW50cm9weShZX2NvaW5fZmFpciwgbWV0aG9kPSJlbXAiKSkpCmBgYAoKIyMjIyBVbmZhaXIgQ29pbiAocD0wLjgpCkFuIHVuZmFpciBjb2luIGlzIHdlaWdodGVkIHRvIGJlIG1vcmUgbGlrZWx5IHRvIGxhbmQgaGVhZHMgb3IgdGFpbHMuIEVzdGltYXRlZCBlbnRyb3B5IGlzIGxlc3MgdGhhbiBhIGZ1bGwgYml0LiBUaGVyZSBpcyBsZXNzIHN1cnByaXNlIHRoYW4gZnJvbSBhIGZ1bGwgZmFpciBjb2luIGZsaXAuCgpgYGB7cn0KcCA8LSAwLjggI1VuZmFpciBDb2luCllfY29pbl91bmZhaXIgPC0gc2FtcGxlKHNhbXBsZV9zcGFjZSwgc2l6ZSA9IE4sICByZXBsYWNlID0gVFJVRSwgIHByb2IgPSBjKHAsIDEgLSBwKSkgIApwcmludCh0YWJsZShZX2NvaW5fdW5mYWlyKSkKcHJpbnQobmF0c3RvYml0cyhlbnRyb3B5KFlfY29pbl91bmZhaXIsIG1ldGhvZD0iZW1wIikpKQpgYGAKCiMjIyMgVUNJIEJyZWFzdCBDYW5jZXIgRGF0YXNldAoKYGBge3J9CmRhdGEoQnJlYXN0Q2FuY2VyKQpzdW1tYXJ5KEJyZWFzdENhbmNlciRDbGFzcykKYGBgCgpgYGB7cn0KcHJpbnQobmF0c3RvYml0cyhlbnRyb3B5KEJyZWFzdENhbmNlciRDbGFzcywgbWV0aG9kPSJlbXAiKSkpCmBgYAoKSXJpcyBEYXRhc2V0CgpgYGB7cn0KZGF0YShpcmlzKQpzdW1tYXJ5KGlyaXMkU3BlY2llcykKcHJpbnQobmF0c3RvYml0cyhlbnRyb3B5KGlyaXMkU3BlY2llcywgbWV0aG9kPSJlbXAiKSkpCmBgYAoKYGBge3J9CiNjcmltIHBlciBjYXBpdGEgY3JpbWUgcmF0ZSBieSB0b3duCiN6biBwcm9wb3J0aW9uIG9mIHJlc2lkZW50aWFsIGxhbmQgem9uZWQgZm9yIGxvdHMgb3ZlciAyNSwwMDAgc3EuZnQKI2luZHVzIHByb3BvcnRpb24gb2Ygbm9uLXJldGFpbCBidXNpbmVzcyBhY3JlcyBwZXIgdG93bgojY2hhcyBDaGFybGVzIFJpdmVyIGR1bW15IHZhcmlhYmxlICg9IDEgaWYgdHJhY3QgYm91bmRzIHJpdmVyOyAwIG90aGVyd2lzZSkKI25veCBuaXRyaWMgb3hpZGVzIGNvbmNlbnRyYXRpb24gKHBhcnRzIHBlciAxMCBtaWxsaW9uKQojcm0gYXZlcmFnZSBudW1iZXIgb2Ygcm9vbXMgcGVyIGR3ZWxsaW5nCiNhZ2UgcHJvcG9ydGlvbiBvZiBvd25lci1vY2N1cGllZCB1bml0cyBidWlsdCBwcmlvciB0byAxOTQwCiNkaXMgd2VpZ2h0ZWQgZGlzdGFuY2VzIHRvIGZpdmUgQm9zdG9uIGVtcGxveW1lbnQgY2VudHJlcwojcmFkIGluZGV4IG9mIGFjY2Vzc2liaWxpdHkgdG8gcmFkaWFsIGhpZ2h3YXlzCiN0YXggZnVsbC12YWx1ZSBwcm9wZXJ0eS10YXggcmF0ZSBwZXIgVVNEIDEwLDAwMAojcHRyYXRpbyBwdXBpbC10ZWFjaGVyIHJhdGlvIGJ5IHRvd24KI2IgMTAwMChCIOKIkiAwLjYzKTIgd2hlcmUgQiBpcyB0aGUgcHJvcG9ydGlvbiBvZiBibGFja3MgYnkgdG93bgojbHN0YXQgcGVyY2VudGFnZSBvZiBsb3dlciBzdGF0dXMgb2YgdGhlIHBvcHVsYXRpb24KI21lZHYgbWVkaWFuIHZhbHVlIG9mIG93bmVyLW9jY3VwaWVkIGhvbWVzIGluIFVTRCAxMDAw4oCZcwpkYXRhKEJvc3RvbkhvdXNpbmcpCkJvc3RvbkhvdXNpbmckbWVkdgpoaXN0KEJvc3RvbkhvdXNpbmckbWVkdikKc3VtbWFyeShCb3N0b25Ib3VzaW5nJG1lZHYpCnByaW50KG5hdHN0b2JpdHMoZW50cm9weShkaXNjcmV0aXplKEJvc3RvbkhvdXNpbmckbWVkdiksIG1ldGhvZD0iZW1wIikpKQpgYGAKCiMjCgoKIyMgVHJhbnNtaXR0ZXJzICRYPWYoWSkkCltGdW5jdGlvbl8obWF0aGVtYXRpY3MpXShodHRwczovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9GdW5jdGlvbl8obWF0aGVtYXRpY3MpKTxici8+CgpgYGB7cn0KCm49MTAwCllfdW5pZj1ydW5pZihuPW4pCmJldGFfMT0uNQpYPShZX3VuaWYpL2JldGFfMSAjZXBzaWxvbl9nYXVzc2lhbgpwMSA8LSBkYXRhLmZyYW1lKFgsWV91bmlmKSAlPiUgZ2dwbG90KGFlcyh4PVlfdW5pZix5PVgpKSArIGdlb21fcG9pbnQoKQoKZXBzaWxvbl9nYXVzc2lhbj1ybm9ybShuPW4sIG1lYW4gPSAwLCBzZCA9IDEpCmJldGFfMT0uNQpYPShZX3VuaWYpL2JldGFfMSArIChZX3VuaWZeMikvYmV0YV8xICNlcHNpbG9uX2dhdXNzaWFuCnAyIDwtIGRhdGEuZnJhbWUoWCxZX3VuaWYpICU+JSBnZ3Bsb3QoYWVzKHg9WV91bmlmLHk9WCkpICsgZ2VvbV9wb2ludCgpCgpYPSBZX3VuaWYgPiAuNQpwMyA8LSBkYXRhLmZyYW1lKFgsWV91bmlmKSAlPiUgZ2dwbG90KGFlcyh4PVlfdW5pZix5PVgpKSArIGdlb21fcG9pbnQoKQoKWD0gY29zKFlfdW5pZikKcDQgPC0gZGF0YS5mcmFtZShYLFlfdW5pZikgJT4lIGdncGxvdChhZXMoeD1ZX3VuaWYseT1YKSkgKyBnZW9tX3BvaW50KCkKCnBsb3RfZ3JpZChwMSxwMixwMyxwNCwgbGFiZWxzID0gYygiQSIsICJCIiwgIkMiLCAiRCIpLCBuY29sID0gMikKCmBgYAoKCltMaW5lYXJfc2VwYXJhYmlsaXR5XShodHRwczovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9MaW5lYXJfc2VwYXJhYmlsaXR5KQoKIyMgTWVzc2FnZXMgJFgkCgojIyBSZWNlaXZlcnMgJFxoYXR7WX09XGhhdHtmfShYKSQKKiBbSW52ZXJzZV9mdW5jdGlvbl0oaHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvSW52ZXJzZV9mdW5jdGlvbik8YnIvPgoKIyBaZXJvLUJpdCBzb3VyY2UKCiogWmVyby1CaXQgaW5mb3JtYXRpb24gc291cmNlcyBhcmUgY29uc3RhbnRzIHRoYXQgZG9uJ3QgdmFyeS4KCiogWmVyby1CaXQgc291cmNlLCBaZXJvLUJpdCBtZXNzYWdlOiBObyB2YXJpYXRpb24gYW5kIG5vIG1lYXN1cmVtZW50LiA8YnIvPgoqIFplcm8tQml0IGluZm9ybWF0aW9uIHNvdXJjZSwgT25lLUJpdCBtZXNzYWdlOiBObyB2YXJpYXRpb24sIGJ1dCBhIHNpbmdsZSBtZWFzdXJlbWVudCB3aXRoIHZhcmlhdGlvbiBiZXR3ZWVuIHR3byBzdGF0ZXMuIDxici8+CiogWmVyby1CaXQgaW5mb3JtYXRpb24gc291cmNlLCBOLUJpdCBtZXNzYWdlOiBObyB2YXJpYXRpb24sIGFuZCBhbiBhcmJpdHJhcnkgbnVtYmVyIG9mIG1lYXN1cmVtZW50cyB3aXRoIGFyYml0cmFyeSBudW1iZXIgb2Ygc3RhdGVzIDxici8+CgoqIFNlbGVjdGluZyBvbiB0aGUgRGVwZW5kZW50IFZhcmlhYmxlCiogWyJEZXNpZ24sIEluZmVyZW5jZSwgYW5kIHRoZSBTdHJhdGVnaWMgTG9naWMgb2YgU3VpY2lkZSBUZXJyb3Jpc20iXShodHRwczovL3BkZnMuc2VtYW50aWNzY2hvbGFyLm9yZy9mMTkyL2NmNjk5MDhjODRkOTJkMjY5ZWY1MmMzMzdmYTQ4N2Q2YjY1ZS5wZGYpLCBTQ09UVCBBU0hXT1JUSCwgSk9TSFVBIEQuIENMSU5UT04sIEFEQU0gTUVJUk9XSVRaLCBhbmQgS1JJU1RPUEhFUiBXLiBSQU1TQVksIDIwMDgsIEFQU1IKCgojIE9uZS1CaXQgc291cmNlcwoKT25lLUJpdCBpbmZvcm1hdGlvbiBzb3VyY2VzIGFyZSB2YXJpYWJsZXMgdGhhdCBjYW4gdGFrZSBvbiB0d28gZGlmZmVyZW50IHN0YXRlcywgZS5nLiBhIGNvaW4gZmxpcC4gQ2FsbCAkWSQgdGhlIHRydWUgc3RhdGUgYXQgdGhlIHNvdXJjZSwgYW5kICRcaGF0e1l9JCB0aGUgbWVudGFsIG1vZGVsIG9mIHRoZSBzdGF0ZSBhdCB0aGUgZGVzdGluYXRpb24uCgoqIFtCaW5hcnlfY2xhc3NpZmljYXRpb25dKGh0dHBzOi8vZW4ud2lraXBlZGlhLm9yZy93aWtpL0JpbmFyeV9jbGFzc2lmaWNhdGlvbikKCgpIb3cgc2hvdWxkIHdlIGNvbXBhcmUgdGhlIHRydWUgcmVhbGl0eSAkWSQgdG8gb3VyIG1lbnRhbCBtb2RlbCBvZiBpdCAkXGhhdHtZfSQ/CgoqIFtTY29yaW5nIFJ1bGVzXShodHRwczovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9TY29yaW5nX3J1bGUpPGJyLz4KKiBbRXZhbHVhdGlvbl9vZl9iaW5hcnlfY2xhc3NpZmllcnNdKGh0dHBzOi8vZW4ud2lraXBlZGlhLm9yZy93aWtpL0V2YWx1YXRpb25fb2ZfYmluYXJ5X2NsYXNzaWZpZXJzKTxici8+CiogW0NvbmZ1c2lvbl9tYXRyaXhdKGh0dHBzOi8vZW4ud2lraXBlZGlhLm9yZy93aWtpL0NvbmZ1c2lvbl9tYXRyaXgpPGJyLz4KCmBgYHtyfQpZX2hhdD1ZX2NvaW5fZmFpcgp0YWJsZShZX2NvaW5fdW5mYWlyLFlfaGF0KQpgYGAKCmBgYHtyfQpwX2xvYWQoTWV0cmljcykKYWNjdXJhY3koWV9jb2luX3VuZmFpciwgWV9oYXQpCmBgYAoKKiBbUHJlY2lzaW9uX2FuZF9yZWNhbGxdKGh0dHBzOi8vZW4ud2lraXBlZGlhLm9yZy93aWtpL1ByZWNpc2lvbl9hbmRfcmVjYWxsKTxici8+CmBgYHtyfQpwcmVjaXNpb24oWV9jb2luX3VuZmFpciwgWV9oYXQpCmBgYAoKKiBbRjFfc2NvcmVdKGh0dHBzOi8vZW4ud2lraXBlZGlhLm9yZy93aWtpL0YxX3Njb3JlKTxici8+CmBgYHtyfQpmMShZX2NvaW5fdW5mYWlyLCBZX2hhdCkKYGBgCgoqIFtNdXR1YWxfaW5mb3JtYXRpb25dKGh0dHBzOi8vZW4ud2lraXBlZGlhLm9yZy93aWtpL011dHVhbF9pbmZvcm1hdGlvbik8YnIvPgpgYGB7cn0KcHJpbnQobmF0c3RvYml0cyhtdXRpbmZvcm1hdGlvbihZX2NvaW5fdW5mYWlyLCBZX2hhdCwgbWV0aG9kPSJlbXAiKSkpCmBgYAoKKiBbU2Vuc2l0aXZpdHlfYW5kX3NwZWNpZmljaXR5XShodHRwczovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9TZW5zaXRpdml0eV9hbmRfc3BlY2lmaWNpdHkpPGJyLz4KKiBbIkZpbmRpbmcgU2ltaWxhciBJdGVtcyJdKGh0dHA6Ly9pbmZvbGFiLnN0YW5mb3JkLmVkdS9+dWxsbWFuL21tZHMvY2gzLnBkZiksIEp1cmUgTGVza292ZWMsIEFuYW5kIFJhamFyYW1hbiwgSmVmZiBVbGxtYW4sIENoYXB0ZXIgMywgW01pbmluZyBvZiBNYXNzaXZlIERhdGFzZXRzXShodHRwOi8vd3d3Lm1tZHMub3JnLyksIDIwMTQ8YnIvPgoKIyMjIEltYmFsYW5jZWQgRGF0YQoKKiBbIkZhY2luZyBJbWJhbGFuY2VkIERhdGEgUmVjb21tZW5kYXRpb25zIGZvciB0aGUgVXNlIG9mIFBlcmZvcm1hbmNlIE1ldHJpY3MiXShodHRwczovL3d3dy5uY2JpLm5sbS5uaWguZ292L3BtYy9hcnRpY2xlcy9QTUM0Mjg1MzU1LyksIEzDoXN6bMOzIEEuIEplbmksMSBKZWZmcmV5IEYuIENvaG4sMSwyIGFuZCBGZXJuYW5kbyBEZSBMYSBUb3JyZSwgSW50IENvbmYgQWZmZWN0IENvbXB1dCBJbnRlbGwgSW50ZXJhY3QgV29ya3Nob3BzLiAyMDEzOyAyMDEzOiAyNDXigJMyNTEuCgojIyBQcm9iYWxpc3RpYyBTY29yaW5nIEZ1bmN0aW9ucwoqIFtQcm9wZXIgU2NvcmluZyBSdWxlc10oaHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvU2NvcmluZ19ydWxlI1Byb3BlclNjb3JpbmdSdWxlcyk8YnIvPgoqIFtCcmllcl9zY29yZV0oaHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQnJpZXJfc2NvcmUpPGJyLz4KKiBbUmVjZWl2ZXIgb3BlcmF0aW5nIGNoYXJhY3RlcmlzdGljXShodHRwczovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9SZWNlaXZlcl9vcGVyYXRpbmdfY2hhcmFjdGVyaXN0aWMpPGJyLz4KKiBbQW4gaW50cm9kdWN0aW9uIHRvIFJPQyBhbmFseXNpc10oaHR0cDovL3Blb3BsZS5pbmYuZWx0ZS5odS9raXNzLzEzZHdoZG0vcm9jLnBkZiksIFRvbSBGYXdjZXR0LCAyMDA2LCBQYXR0ZXJuIFJlY29uZ25pdGlvbiBMZXR0ZXJzPGJyLz4KKiBbd2hhdC1kb2VzLWF1Yy1zdGFuZC1mb3ItYW5kLXdoYXQtaXMtaXRdKGh0dHBzOi8vc3RhdHMuc3RhY2tleGNoYW5nZS5jb20vcXVlc3Rpb25zLzEzMjc3Ny93aGF0LWRvZXMtYXVjLXN0YW5kLWZvci1hbmQtd2hhdC1pcy1pdCk8YnIvPgoKIyAyLUJpdCBzb3VyY2VzCiogW011bHRpY2xhc3NfY2xhc3NpZmljYXRpb25dKGh0dHBzOi8vZW4ud2lraXBlZGlhLm9yZy93aWtpL011bHRpY2xhc3NfY2xhc3NpZmljYXRpb24pIDxici8+CiogW0Nyb3NzIEVudHJvcHldKGh0dHBzOi8vZW4ud2lraXBlZGlhLm9yZy93aWtpL0Nyb3NzX2VudHJvcHkpIDxici8+CiogVG9tIEZhd2NldHQgKDIwMDYpIOKAnEFuIGludHJvZHVjdGlvbiB0byBST0MgYW5hbHlzaXPigJ0uIFBhdHRlcm4gUmVjb2duaXRpb24gTGV0dGVycyAyNywgODYx4oCTODc0LiBET0k6IDEwLjEwMTYvai5wYXRyZWMuMjAwNS4xMC4wMTAuIDxici8+CiogRGF2aWQgSi4gSGFuZCBhbmQgUm9iZXJ0IEouIFRpbGwgKDIwMDEpLiBBIFNpbXBsZSBHZW5lcmFsaXNhdGlvbiBvZiB0aGUgQXJlYSBVbmRlciB0aGUgUk9DIEN1cnZlIGZvciBNdWx0aXBsZSBDbGFzcyBDbGFzc2lmaWNhdGlvbiBQcm9ibGVtcy4gTWFjaGluZSBMZWFybmluZyA0NSgyKSwgcC4gMTcx4oCTMTg2LiBET0k6IDEwLjEwMjMvQToxMDEwOTIwODE5ODMxLiA8YnIvPgoqIFsicFJPQzogRGlzcGxheSBhbmQgQW5hbHl6ZSBST0MgQ3VydmVzIl0oaHR0cHM6Ly93ZWIuZXhwYXN5Lm9yZy9wUk9DLyksIDIwMTgtMDUtMDYgPGJyLz4KKiBbcFJPQzogYW4gb3Blbi1zb3VyY2UgcGFja2FnZSBmb3IgUiBhbmQgUysgdG8gYW5hbHl6ZSBhbmQgY29tcGFyZSBST0MgY3VydmVzXShodHRwczovL2JtY2Jpb2luZm9ybWF0aWNzLmJpb21lZGNlbnRyYWwuY29tL2FydGljbGVzLzEwLjExODYvMTQ3MS0yMTA1LTEyLTc3KSwgWGF2aWVyICogKiBSb2JpbiwgTmF0YWNoYSBUdXJjaywgQWxleGFuZHJlIEhhaW5hcmQsIE5hdGFsaWEgVGliZXJ0aSwgRnLDqWTDqXJpcXVlIExpc2FjZWssIEplYW4tQ2hhcmxlcyBTYW5jaGV6IGFuZCBNYXJrdXMgTcO8bGxlciAoMjAxMSkuIEJNQyBCaW9pbmZvcm1hdGljcywgMTIsIHAuIDc3IDxici8+CgojIE4tQml0IHNvdXJjZXMKKiBbTWVhbl9zcXVhcmVkX2Vycm9yXShodHRwczovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9NZWFuX3NxdWFyZWRfZXJyb3IpCgojIE9uZS1CaXQgc291cmNlLCBPbmUtQml0IG1lc3NhZ2UKCiMjIFdoYXQgbWFrZXMgYSBnb29kIHJlY2VpdmVyPwoqIFBSTUwgMS41ICJEZWNpc2lvbiBUaGVvcnkiIDxici8+CiogRVNMIDIuNCBTdGF0aXN0aWNhbCBEZWNpc2lvbiBUaGVvcnkKKiBbIlVuZGVyc3RhbmRpbmcgdGhlIEJpYXMtVmFyaWFuY2UgVHJhZGVvZmYsIl0oaHR0cDovL3Njb3R0LmZvcnRtYW5uLXJvZS5jb20vZG9jcy9CaWFzVmFyaWFuY2UuaHRtbCksIFNjb3R0IEZvcnRtYW5uLVJvZSwgIDIwMTIsIDxici8+CgojIyBObyBGcmVlIEx1bmNoCgoqIFdNTFcgMi4wICJSZWxhdGVkIFdvcmsiCiogWyJObyBGcmVlIEx1bmNoIFRoZW9yZW1zIGZvciBPcHRpbWl6YXRpb24sIl0oaHR0cHM6Ly90aS5hcmMubmFzYS5nb3YvbS9wcm9maWxlL2Rody9wYXBlcnMvNzgucGRmKSBEYXZpZCBILiBXb2xwZXJ0IGFuZCBXaWxsaWFtIEcuIE1hY3JlYWR5LCAxOTk3LCA8YnIvPgoKIyMgUGFyYW1ldHJpYyBGdW5jdGlvbnMgCgojIyBPdmVyZml0dGluZwoqIFtPdmVyZml0dGluZ10oaHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvT3ZlcmZpdHRpbmcpPGJyLz4KCiMjIEluIFNhbXBsZS9PdXQgb2YgU2FtcGxlIC8gQ3Jvc3MgVmFsaWRhdGlvbgoqIFtUcmFpbmluZyxfdGVzdCxfYW5kX3ZhbGlkYXRpb25fc2V0c10oaHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvVHJhaW5pbmcsX3Rlc3QsX2FuZF92YWxpZGF0aW9uX3NldHMpPGJyLz4KKiBbQ3Jvc3MtdmFsaWRhdGlvbl8oc3RhdGlzdGljcyldKGh0dHBzOi8vZW4ud2lraXBlZGlhLm9yZy93aWtpL0Nyb3NzLXZhbGlkYXRpb25fKHN0YXRpc3RpY3MpKTxici8+CiogWyJMaW5lYXIgTW9kZWwgU2VsZWN0aW9uIGJ5IENyb3NzLVZhbGlkYXRpb24sIl0oaHR0cDovL3d3dy5saWJwbHMubmV0L3B1YmxpY2F0aW9uL01DQ1ZfU2hhb18xOTkzLnBkZiksIEp1biBTaGFvLCAxOTkzPGJyLz4KKiBbIkNyb3NzLXZhbGlkYXRpb24gZmFpbHVyZTogc21hbGwgc2FtcGxlIHNpemVzIGxlYWQgdG8gbGFyZ2UgZXJyb3IgYmFycywiXShodHRwczovL2hhbC5pbnJpYS5mci9oYWwtMDE1NDUwMDIvKSwgR2HDq2wgVmFyb3F1YXV4LCAyMDE3PGJyLz4KCiMgT25lLUJpdCBzb3VyY2UsIFR3by1CaXQgbWVzc2FnZQojIyBPbW1pdHRlZCBWYXJpYWJsZSBCaWFzCiogW1NpbXBzb25zIFBhcmFkb3hdKGh0dHBzOi8vZW4ud2lraXBlZGlhLm9yZy93aWtpL1NpbXBzb24lMjdzX3BhcmFkb3gpPGJyLz4KCiMjIyBGZWF0dXJlIFNlbGVjdGlvbiAvIEluY2x1ZGVkIFZhcmlhYmxlIEJpYXMKKiBbTGV04oCZcyBQdXQgR2FyYmFnZeKAlENhbiBSZWdyZXNzaW9ucyBhbmQgR2FyYmFnZeKAlENhbiBQcm9iaXRzIFdoZXJlIFRoZXkgQmVsb25nXShodHRwOi8vd3d3LmNvbHVtYmlhLmVkdS9+Z2p3MTAvYWNoZW4wNC5wZGYpLCBDaHJpc3RvcGhlciBILiBBY2hlbiwgQ29uZmxpY3QgTWFuYWdlbWVudCBhbmQgUGVhY2UgU2NpZW5jZSwgMjAwNQoqIFsiVGhlIFBoYW50b20gTWVuYWNlOiBPbWl0dGVkIFZhcmlhYmxlIEJpYXMgaW4gRWNvbm9tZXRyaWMgUmVzZWFyY2giXShodHRwOi8vd3d3LnNhcmFtaXRjaGVsbC5vcmcvY2xhcmtlMDUucGRmKSwgS2V2aW4gQS4gQ2xhcmtlLCAyMDA1LCBDb25mbGljdCBNYW5hZ2VtZW50IGFuZCBQZWFjZSBTY2llbmNlCiogW0ZlYXR1cmVfc2VsZWN0aW9uXShodHRwczovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9GZWF0dXJlX3NlbGVjdGlvbik8YnIvPgoqIFtDb25mb3VuZGluZ10oaHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQ29uZm91bmRpbmcpPGJyLz4KKiBbIlN0YXRpc3RpY2FsIGxlYXJuaW5nIGFuZCBzZWxlY3RpdmUgaW5mZXJlbmNlIl0oaHR0cDovL3d3dy5wbmFzLm9yZy9jb250ZW50L3BuYXMvMTEyLzI1Lzc2MjkuZnVsbC5wZGYpIEpvbmF0aGFuIFRheWxvcmEgYW5kIFJvYmVydCBKLiBUaWJzaGlyYW5pLCBKdW5lIDIzLCAyMDE1PGJyLz4KKiBbIlRoZSBnYXJkZW4gb2YgZm9ya2luZyBwYXRoczogV2h5IG11bHRpcGxlIGNvbXBhcmlzb25zIGNhbiBiZSBhIHByb2JsZW0sICB3aGVuIHRoZXJlIGlzIG5vIOKAnGZpc2hpbmcgZXhwZWRpdGlvbuKAnSBvciDigJxwLWhhY2tpbmfigJ0gYW5kIHRoZSByZXNlYXJjaCAgd2FzIHBvc2l0ZWQgYWhlYWQgb2YgdGltZSJdKGh0dHA6Ly93d3cuc3RhdC5jb2x1bWJpYS5lZHUvfmdlbG1hbi9yZXNlYXJjaC91bnB1Ymxpc2hlZC9wX2hhY2tpbmcucGRmKSwgQW5kcmV3IEdlbG1hbiBhbmQgRXJpYyBMb2tlbiwgMTQgTm92IDIwMTMsIFVucHVibGlzaGVkIE1hbnVzY3JpcHQ8YnIvPgoqIFtQLUhhY2tpbmddKGh0dHBzOi8vcHJvamVjdHMuZml2ZXRoaXJ0eWVpZ2h0LmNvbS9wLWhhY2tpbmcvKTxici8+CiogW0EgTWFjaGluZSBMZWFybmluZyBBbHRlcm5hdGl2ZSB0byBQLXZhbHVlc10oaHR0cHM6Ly9hcnhpdi5vcmcvcGRmLzE3MDEuMDQ5NDQucGRmKSxNaW4gTHUgYW5kIEhlbWFudCBJc2h3YXJhbiwgRmVicnVhcnkgMjIsIDIwMTc8YnIvPgoqIFtGZWF0dXJlIFNlbGVjdGlvbiB3aXRoIHRoZSBSIFBhY2thZ2UgTVhNOiAgU3RhdGlzdGljYWxseS1FcXVpdmFsZW50IEZlYXR1cmUgU3Vic2V0c10oaHR0cHM6Ly9hcnhpdi5vcmcvcGRmLzE2MTEuMDMyMjcucGRmKSA8YnIvPgoqIFsiYm91bmNlUiJdKGh0dHBzOi8vZ2l0aHViLmNvbS9TVEFUV09SWC9ib3VuY2VSKSwgUiBQYWNrYWdlICA8YnIvPgoKKiBodHRwczovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9FeHRyZW1lX2JvdW5kc19hbmFseXNpcwoqIFsnSSBKVVNUIFJBTiBUd28gTUlMTElPTiBSRUdSRVNTSU9OUyddKGh0dHA6Ly93d3cuZWNvc3RhdC51bmljYWwuaXQvQWllbGxvL0RpZGF0dGljYS9lY29ub21pYV9DcmVzY2l0YS9DUkVTQ0lUQS9DUkVTQ0lUQV9TYWxhLWktTWFydGluLUFFUi0xOTk3LnBkZiksIFhhdmllciBTYWxhLWktTWFydGluLCAxOTk3LCBBbWVyaWNhbiBFY29ub21pYyBSZXZpZXcgPGJyLz4KKiBbIkV4dHJlbWVCb3VuZHM6IEV4dHJlbWUgQm91bmRzIEFuYWx5c2lzIGluIFIiXShodHRwczovL2NyYW4uci1wcm9qZWN0Lm9yZy93ZWIvcGFja2FnZXMvRXh0cmVtZUJvdW5kcy92aWduZXR0ZXMvRXh0cmVtZUJvdW5kcy5wZGYpIDxici8+CgojIyBNb2RlbCBDb21wbGV4aXR5L1BhcmlzbW9ueQoqIEFJQyAoQWthaWtlIDE5NzMpCiogW0FrYWlrZSBpbmZvcm1hdGlvbiBjcml0ZXJpb24gKEFJQyldKGh0dHBzOi8vZW4ud2lraXBlZGlhLm9yZy93aWtpL0FrYWlrZV9pbmZvcm1hdGlvbl9jcml0ZXJpb24pPGJyLz4KKiBCSUMgKFNjaHdhcnogMTk3OCkKKiBbQmF5ZXNpYW4gaW5mb3JtYXRpb24gY3JpdGVyaW9uIChCSUMpXShodHRwczovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9CYXllc2lhbl9pbmZvcm1hdGlvbl9jcml0ZXJpb24pPGJyLz4KCiMjIFJlZ3VsYXJpemF0aW9uLCBlLmcuIExhc3NvL1JpZGdlIFJlZ3Jlc3Npb24KKiBodHRwczovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9MYXNzb18oc3RhdGlzdGljcykKKiBbIlJlZ3Jlc3Npb24gc2hyaW5rYWdlIGFuZCBzZWxlY3Rpb24gdmlhIHRoZSBsYXNzbyJdKGh0dHA6Ly9zdGF0d2ViLnN0YW5mb3JkLmVkdS9+dGlicy9sYXNzby9sYXNzby5wZGYpLCBUaWJzaGlyYW5pLCBSLiwgMTk5NiwgIEouIFJveWFsLiBTdGF0aXN0LiBTb2MgQi4sIFZvbC4gNTgsIE5vLiAxLCBwYWdlcyAyNjctMjg4KQoqIFsiR2xtbmV0IFZpZ25ldHRlIl0oaHR0cHM6Ly9jcmFuLnItcHJvamVjdC5vcmcvd2ViL3BhY2thZ2VzL2dsbW5ldC92aWduZXR0ZXMvZ2xtbmV0X2JldGEucGRmKSwgVHJldm9yIEhhc3RpZSBhbmQgSnVueWFuZyBRaWFuLCBTZXB0ZW1iZXIgMTMsIDIwMTYKCgojIyBGZWF0dXJlIEVuZ2luZWVyaW5nCiogW0ZlYXR1cmVfZW5naW5lZXJpbmddKGh0dHBzOi8vZW4ud2lraXBlZGlhLm9yZy93aWtpL0ZlYXR1cmVfZW5naW5lZXJpbmcpPGJyLz4KKiBbSW50ZXJhY3Rpb25fKHN0YXRpc3RpY3MpXShodHRwczovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9JbnRlcmFjdGlvbl8oc3RhdGlzdGljcykpPGJyLz4KKiBbIkhvdyBNdWNoIFNob3VsZCBXZSBUcnVzdCBFc3RpbWF0ZXMgZnJvbSBNdWx0aXBsaWNhdGl2ZSBJbnRlcmFjdGlvbiBNb2RlbHM/IFNpbXBsZSBUb29scyB0byBJbXByb3ZlIEVtcGlyaWNhbCBQcmFjdGljZSwiXShodHRwOi8veWlxaW5neHUub3JnL3BhcGVycy9lbmdsaXNoLzIwMThfSE1YX2ludGVyYWN0aW9uL21haW4ucGRmKSwgSmVucyBIYWlubXVlbGxlciBKb25hdGhhbiBNdW1tb2xvIFlpcWluZyBYdSwsIEFwcmlsIDIwLCAyMDE4LCBQb2xpdGljYWwgQW5hbHlzaXM8YnIvPgoqIGh0dHBzOi8vZW4ud2lraXBlZGlhLm9yZy93aWtpL1N1cHBvcnRfdmVjdG9yX21hY2hpbmUgPGJyLz4KKiBbRUxJNV0oaHR0cHM6Ly9naXRodWIuY29tL1RlYW1IRy1NZW1leC9lbGk1KSA8YnIvPgoKIyBUd28tQml0IHNvdXJjZSwgT25lLUJpdCBtZXNzYWdlCgojIyMgQmFuZHdpZHRoIC8gT3ZlciBkZXRlcm1pbmF0aW9uCiogW092ZXJkZXRlcm1pbmVkX3N5c3RlbV0oaHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvT3ZlcmRldGVybWluZWRfc3lzdGVtKTxici8+CgojIyBPbmUtQml0IHNvdXJjZSwgTi1iaXQgbWVzc2FnZQoKIyMjIEN1cnNlIG9mIERpbWVuc2lvbmFsaXR5CgoqIFtDdXJzZV9vZl9kaW1lbnNpb25hbGl0eV0oaHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQ3Vyc2Vfb2ZfZGltZW5zaW9uYWxpdHkpIDxici8+CiogW1RoZSBDdXJzZSBvZiBEaW1lbnNpb25hbGl0eSBpbiBjbGFzc2lmaWNhdGlvbl0oaHR0cDovL3d3dy52aXNpb25kdW1teS5jb20vMjAxNC8wNC9jdXJzZS1kaW1lbnNpb25hbGl0eS1hZmZlY3QtY2xhc3NpZmljYXRpb24vKSwgVmluY2VudCBTcHJ1eXQgPGJyLz4KCiMgTi1iaXQgc291cmNlLCBPbmUtQml0IG1lc3NhZ2UKCiMgVHdvLUJpdCAgc291cmNlLCBUd28tQml0IG1lc3NhZ2UKCiMgTi1iaXQgc291cmNlLCBOLWJpdCBtZXNzYWdlCiogW0JpbmFyeV9udW1iZXIjQ291bnRpbmdfaW5fYmluYXJ5XShodHRwczovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9CaW5hcnlfbnVtYmVyI0NvdW50aW5nX2luX2JpbmFyeSkgPGJyLz4KCiMgT25lLUJpdCBzb3VyY2UsIE9uZS1CaXQgbWVzc2FnZSwgT25lLUJpdCBub2lzZQoKIyBOZWFyZXN0IE5laWdoYm9yCiogW0stbmVhcmVzdF9uZWlnaGJvcnNfYWxnb3JpdGhtXShodHRwczovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9LLW5lYXJlc3RfbmVpZ2hib3JzX2FsZ29yaXRobSkgPGJyLz4KCkludGVnZXIgZW5jb2RlcgpMYXRlbnQgdmFyaWFibGUgbW9kZWwKCiMjIyMgQ2x1c3RlcmluZwoqIGh0dHBzOi8vZW4ud2lraXBlZGlhLm9yZy93aWtpL0NsdXN0ZXJfYW5hbHlzaXMgPGJyLz4KCiMjIyMgSy1tZWFucwoqIGh0dHBzOi8vZW4ud2lraXBlZGlhLm9yZy93aWtpL0stbWVhbnNfY2x1c3RlcmluZyA8YnIvPgoKIyMgQ2x1c3RlcmluZwoKKiAiVW5zdXBlcnZpc2VkIE1hY2hpbmUgTGVhcm5pbmc6IFRoZSBoY2x1c3QsIHB2Y2x1c3QsIGNsdXN0ZXIsIG1jbHVzdCwgYW5kIG1vcmUsIiBodHRwczovL3F1YW50ZGV2LnNzcmkucHN1LmVkdS9zaXRlcy9xZGV2L2ZpbGVzL1Vuc3VwZXJ2aXNlZF9NYWNoaW5lX0xlYXJuaW5nX1RoZV9tY2x1c3RfUGFja2FnZV9hbmRfb3RoZXJzLmh0bWwgPGJyLz4KCiMgTGluZWFyIE1vZGVscwoqIFtPcmRpbmFyeV9sZWFzdF9zcXVhcmVzXShodHRwczovL2VuLndpa2lwZWRpYS5vcmcvd2lraS8pIDxici8+CiogW0xvZ2lzdGljX3JlZ3Jlc3Npb25dKGh0dHBzOi8vZW4ud2lraXBlZGlhLm9yZy93aWtpL0xvZ2lzdGljX3JlZ3Jlc3Npb24pIDxici8+CgoKIyBEZWNpc2lvbiBUcmVlcwoqIGh0dHBzOi8vZW4ud2lraXBlZGlhLm9yZy93aWtpL0RlY2lzaW9uX3RyZWUgPGJyLz4KKiBbIlRyZWUtQmFzZWQgTW9kZWxzIl0oaHR0cHM6Ly93d3cuc3RhdG1ldGhvZHMubmV0L2FkdnN0YXRzL2NhcnQuaHRtbCkgPGJyLz4KCiogW+KAnEluZHVjdGlvbiBvZiBEZWNpc2lvbiBUcmVlcy7igJ1dKGh0dHBzOi8vbGluay5zcHJpbmdlci5jb20vY29udGVudC9wZGYvMTAuMTAwNy9CRjAwMTE2MjUxLnBkZiksIFF1aW5sYW4sIFJvc3MuIDE5ODYuLCBNYWNoaW5lIExlYXJuaW5nIDEoMSk6ODHigJMxMDYuCgojIFJhbmRvbSBGb3Jlc3RzCgoqIGh0dHBzOi8vZW4ud2lraXBlZGlhLm9yZy93aWtpL1JhbmRvbV9mb3Jlc3QgPGJyLz4KKiBbIlJBTkRPTSBGT1JFU1RTIl0oaHR0cHM6Ly93d3cuc3RhdC5iZXJrZWxleS5lZHUvfmJyZWltYW4vcmFuZG9tZm9yZXN0MjAwMS5wZGYpIExlbyBCcmVpbWFuLCBKYW51YXJ5IDIwMDEKCiogWyJFeHBsb3JhdG9yeSBEYXRhIEFuYWx5c2lzIHVzaW5nIFJhbmRvbSBGb3Jlc3RzIl0oaHR0cDovL3ptam9uZXMuY29tL3N0YXRpYy9wYXBlcnMvcmZzc19tYW51c2NyaXB0LnBkZikKCiMgTmV1cmFsIE5ldHdvcmtzCgojIyBEZW1vcwoKKiBbVGVuc29yZmxvdyBQbGF5Z3JvdW5kXShodHRwOi8vcGxheWdyb3VuZC50ZW5zb3JmbG93Lm9yZy8jYWN0aXZhdGlvbj10YW5oJmJhdGNoU2l6ZT0xMCZkYXRhc2V0PWNpcmNsZSZyZWdEYXRhc2V0PXJlZy1wbGFuZSZsZWFybmluZ1JhdGU9MC4wMyZyZWd1bGFyaXphdGlvblJhdGU9MCZub2lzZT0wJm5ldHdvcmtTaGFwZT00LDImc2VlZD0wLjQ3MDc3JnNob3dUZXN0RGF0YT1mYWxzZSZkaXNjcmV0aXplPWZhbHNlJnBlcmNUcmFpbkRhdGE9NTAmeD10cnVlJnk9dHJ1ZSZ4VGltZXNZPWZhbHNlJnhTcXVhcmVkPWZhbHNlJnlTcXVhcmVkPWZhbHNlJmNvc1g9ZmFsc2Umc2luWD1mYWxzZSZjb3NZPWZhbHNlJnNpblk9ZmFsc2UmY29sbGVjdFN0YXRzPWZhbHNlJnByb2JsZW09Y2xhc3NpZmljYXRpb24maW5pdFplcm89ZmFsc2UmaGlkZVRleHQ9ZmFsc2UpCiogW0NvbnZOZXRKUyBEZWVwIExlYXJuaW5nIGluIHlvdXIgYnJvd3Nlcl0oaHR0cHM6Ly9jcy5zdGFuZm9yZC5lZHUvcGVvcGxlL2thcnBhdGh5L2NvbnZuZXRqcy8pCiogW0tlcmFzSlNdKGh0dHBzOi8vdHJhbnNjcmFuaWFsLmdpdGh1Yi5pby9rZXJhcy1qcy8jLykKCiogaHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQXJ0aWZpY2lhbF9uZXVyYWxfbmV0d29yayA8YnIvPgoqIChETCkgRGVlcCBMZWFybmluZywgSWFuIEdvb2RmZWxsb3cgYW5kIFlvc2h1YSBCZW5naW8gYW5kIEFhcm9uIENvdXJ2aWxsZSwgMjAxNiwgaHR0cDovL3d3dy5kZWVwbGVhcm5pbmdib29rLm9yZy8gPGJyLz4KCiMjIyBMU1RNCiogQ2hyaXN0b3BoZXIgT2xhaCwgIlVuZGVyc3RhbmRpbmcgTFNUTSBOZXR3b3JrcywiIEF1Z3VzdCAyNywgMjAxNSwgaHR0cDovL2NvbGFoLmdpdGh1Yi5pby9wb3N0cy8yMDE1LTA4LVVuZGVyc3RhbmRpbmctTFNUTXMvIDxici8+Cmh0dHBzOi8va2VyYXMucnN0dWRpby5jb20vYXJ0aWNsZXMvZXhhbXBsZXMvY29udl9sc3RtLmh0bWwKCiMgSW50ZXJwcmV0YXRpb24KKiAiV2h5IFNob3VsZCBJIFRydXN0IFlvdT8iOiBFeHBsYWluaW5nIHRoZSBQcmVkaWN0aW9ucyBvZiBBbnkgQ2xhc3NpZmllciwgTWFyY28gVHVsaW8gUmliZWlybywgU2FtZWVyIFNpbmdoLCBDYXJsb3MgR3Vlc3RyaW4sIGh0dHBzOi8vYXJ4aXYub3JnL2Ficy8xNjAyLjA0OTM4CmxpbWUsIFB5dGhvbiBQYWNrYWdlLCBodHRwczovL2dpdGh1Yi5jb20vbWFyY290Y3IvbGltZQoKIyBDYXVzYWxpdHkKKiBbIldoZW4gYW5kIEhvdyBTaG91bGQgT25lIFVzZSBEZWVwIExlYXJuaW5nIGZvciBDYXVzYWwgRWZmZWN0IEluZmVyZW5jZSJdKGh0dHBzOi8vdGVjaG5pb25tYWlsLW15LnNoYXJlcG9pbnQuY29tL3BlcnNvbmFsL3VyaXNoYWxpdF90ZWNobmlvbl9hY19pbC9fbGF5b3V0cy8xNS9vbmVkcml2ZS5hc3B4P2lkPSUyRnBlcnNvbmFsJTJGdXJpc2hhbGl0X3RlY2huaW9uX2FjX2lsJTJGRG9jdW1lbnRzJTJGUHJlc2VudGF0aW9ucyUyRklBUzIwMTglMkZJQVMyMDE4XzJfZm9yX3B1YmxpYyUyRXBkZiZwYXJlbnQ9JTJGcGVyc29uYWwlMkZ1cmlzaGFsaXRfdGVjaG5pb25fYWNfaWwlMkZEb2N1bWVudHMlMkZQcmVzZW50YXRpb25zJTJGSUFTMjAxOCZzbHJpZD1hYWEyNzU5ZS05MDllLTUwMDAtZmQxNi0zZTMzY2FiZjkyNmYpCgoqIFsiQ29tcGFyaW5nIENvdmFyaWF0ZSBQcmlvcml0aXphdGlvbiB2aWEgTWF0Y2hpbmcgdG8gTWFjaGluZSBMZWFybmluZyBNZXRob2RzIGZvciBDYXVzYWwgSW5mZXJlbmNlIHVzaW5nIEZpdmUgRW1waXJpY2FsIEFwcGxpY2F0aW9ucywiXShodHRwczovL2FyeGl2Lm9yZy9wZGYvMTgwNS4wMzc0My5wZGYpLEx1a2UgS2VlbGUsIER5bGFuIFNtYWxsLCBNYXkgMTEsIDIwMTgsIAoKCiMgU3BlY2lhbCBUb3BpY3MKCiMjIFRpbWUKKiBbIkludmVzdGlnYXRpbmcgU2VxdWVuY2VzIGluIE9yZGluYWwgRGF0YTogQSBOZXcgQXBwcm9hY2ggV2l0aCBBZGFwdGVkIEV2b2x1dGlvbmFyeSBNb2RlbHMsIl0oaHR0cHM6Ly93d3cuY2FtYnJpZGdlLm9yZy9jb3JlL2pvdXJuYWxzL3BvbGl0aWNhbC1zY2llbmNlLXJlc2VhcmNoLWFuZC1tZXRob2RzL2FydGljbGUvaW52ZXN0aWdhdGluZy1zZXF1ZW5jZXMtaW4tb3JkaW5hbC1kYXRhLWEtbmV3LWFwcHJvYWNoLXdpdGgtYWRhcHRlZC1ldm9sdXRpb25hcnktbW9kZWxzL0YzNzQ3RDhBMTkwODkwMkJBN0YyNkM1RUUyOEFGQUVGKSxQYXRyaWsgTGluZGVuZm9ycywgRnJlZHJpayBKYW5zc29uLCBZaS10aW5nIFdhbmcgYW5kIFN0YWZmYW4gSS4gTGluZGJlcmcsIENocmlzdGlhbiBMb3BleiwgMDUgTWFyY2ggMjAxOCwKCiMjIFRleHQKKiBbIlRleHQgTWluaW5nIHdpdGggUjogQSBUaWR5IEFwcHJvYWNoLCJdKGh0dHBzOi8vd3d3LnRpZHl0ZXh0bWluaW5nLmNvbS8pLCBKdWxpYSBTaWxnZSBhbmQgRGF2aWQgUm9iaW5zb24sIDIwMTgtMDQtMDIsICAgPGJyLz4KKiBbIkludHJvZHVjaW5nIE1vbnRlIENhcmxvIE1ldGhvZHMgd2l0aCBSLCJdKGh0dHBzOi8vd3d3LnNsaWRlc2hhcmUubmV0L3hpYW5ibG9nL2ludHJvZHVjaW5nLW1vbnRlLWNhcmxvLW1ldGhvZHMtd2l0aC1yKSA8YnIvPgoqIFsiVGV4dCBhcyBEYXRhLCJdKGh0dHA6Ly93ZWIuc3RhbmZvcmQuZWR1L35nZW50emtvdy9yZXNlYXJjaC90ZXh0LWFzLWRhdGEucGRmKSwgTWF0dGhldyBHZW50emtvdywgQnJ5YW4gVC4gS2VsbHksIE1hdHQgVGFkZHkgPGJyLz4KCiMjIEltYWdlcwoqIGh0dHBzOi8va2VyYXMucnN0dWRpby5jb20vYXJ0aWNsZXMvZXhhbXBsZXMvY2lmYXIxMF9jbm4uaHRtbAoKCiMgRXhhbXBsZXMKKiBbIkV4YW1pbmluZyBFeHBsYW5hdGlvbnMgZm9yIE51Y2xlYXIgUHJvbGlmZXJhdGlvbiJdKGh0dHBzOi8vZG9pLm9yZy8xMC4xMDkzL2lzcS9zcXYwMDcpLCBNYXJrIFMuIEJlbGwsIEludGVybmF0aW9uYWwgU3R1ZGllcyBRdWFydGVybHksIFZvbHVtZSA2MCwgSXNzdWUgMywgMSBTZXB0ZW1iZXIgMjAxNiwgUGFnZXMgNTIw4oCTNTI5CiogV2VpZG1hbm4sIE5pbHMgQi4gYW5kIFNlYmFzdGlhbiBTY2h1dHRlLiBVc2luZyBOaWdodCBMaWdodHMgZm9yIHRoZSBQcmVkaWN0aW9uIG9mIExvY2FsIFdlYWx0aC4gSm91cm5hbApvZiBQZWFjZSBSZXNlYXJjaCA1NCgyKS4KCiMgRXh0cmFzCgojIyBHcmFkaWVudCBCb29zdGluZwoqIFRlcmVuY2UgUGFyciBhbmQgSmVyZW15IEhvd2FyZCwgIkhvdyB0byBleHBsYWluIGdyYWRpZW50IGJvb3N0aW5nLCIgaHR0cDovL2V4cGxhaW5lZC5haS9ncmFkaWVudC1ib29zdGluZy9pbmRleC5odG1sCgojIyMjIFNWTQoqIFtTdXBwb3J0X3ZlY3Rvcl9tYWNoaW5lXShodHRwczovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9TdXBwb3J0X3ZlY3Rvcl9tYWNoaW5lKQoKCiMjIyMgSG93IHRoZSBTYXVzYWdlIGlzIE1hZGUKCiogWyJUcm91YmxpbmcgIFRyZW5kcyAgaW4gIE1hY2hpbmUgIExlYXJuaW5nICBTY2hvbGFyc2hpcCJdKGh0dHBzOi8vd3d3LmRyb3Bib3guY29tL3MvYW83YzA5MHA4YmcxaGszL0xpcHRvbiUyMGFuZCUyMFN0ZWluaGFyZHQlMjAtJTIwVHJvdWJsaW5nJTIwVHJlbmRzJTIwaW4lMjBNYWNoaW5lJTIwTGVhcm5pbmclMjBTY2hvbGFyc2hpcC5wZGY/ZGw9MCksIFphY2hhcnkgIEMuICBMaXB0b27iiJcmICBKYWNvYiAgU3RlaW5oYXJkdCwgSnVseSAgOSwgIDIwMTgKCiogW+KAnEJhZ2dpbmcgUHJlZGljdG9ycy7igJ1dKGh0dHBzOi8vbGluay5zcHJpbmdlci5jb20vY29udGVudC9wZGYvMTAuMTAwNy9CRjAwMDU4NjU1LnBkZiksQnJlaW1hbiwgTGVvLiAxOTk2LiAsIE1hY2hpbmUgTGVhcm5pbmcgMjQ6MTIz4oCTMTQwLgoKCgoK</div>
 
 
 </div>
