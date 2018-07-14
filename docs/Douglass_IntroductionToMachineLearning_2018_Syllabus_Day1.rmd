@@ -125,7 +125,8 @@ set.seed(123)
 
 ## What is machine learning?
 * (CIML), [Chapter 1,](http://ciml.info/dl/v0_99/ciml-v0_99-ch01.pdf) <br/>
-* WMLW 1.0 "Introduction" <br/>
+* (WMLW 1.0) "Introduction" <br/>
+* (ISL) "Chapter 2 Statistical Learning""
 
 ## What isn't machine learning?
 
