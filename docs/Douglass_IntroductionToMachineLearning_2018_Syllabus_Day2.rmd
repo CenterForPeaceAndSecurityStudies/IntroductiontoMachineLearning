@@ -1,5 +1,5 @@
 ---
-title: "Introduction to Machine Learning (Syllabus/Code for Day 1)"
+title: "Introduction to Machine Learning (Syllabus/Code for Day 2): Solutions for Learning in Supervised and Unsupervised Settings"
 output: 
   html_notebook:
     toc: true # table of content true
@@ -25,3 +25,140 @@ code.r{
 
 ```
 
+# Supervised Learning
+* IMLR ["Chapter 5 Supervised Learning"](https://lgatto.github.io/IntroMachineLearningWithR/supervised-learning.html)
+
+# Nearest Neighbor
+* [K-nearest_neighbors_algorithm](https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm) <br/>
+
+# Parametric Models
+* (ISLR) "Chapter 3 Linear Regression"
+* [Ordinary_least_squares](https://en.wikipedia.org/wiki/) <br/>
+* (ISLR) "Chapter 4.3 Logistic Regression"
+* [Logistic_regression](https://en.wikipedia.org/wiki/Logistic_regression) <br/>
+
+## Interaction Terms
+* [Interaction_(statistics)](https://en.wikipedia.org/wiki/Interaction_(statistics))<br/>
+* ["How Much Should We Trust Estimates from Multiplicative Interaction Models? Simple Tools to Improve Empirical Practice,"](http://yiqingxu.org/papers/english/2018_HMX_interaction/main.pdf), Jens Hainmueller Jonathan Mummolo Yiqing Xu,, April 20, 2018, Political Analysis<br/>
+
+## Nonlinear Models
+* (ISLR) "Chapter 7 Moving Beyond Linearity"
+[Linear_separability](https://en.wikipedia.org/wiki/Linear_separability)
+
+## Neural Networks
+* ["Neural Networks, Manifolds, and Topology"](http://colah.github.io/posts/2014-03-NN-Manifolds-Topology/), Christopher Olah
+* (DL) Deep Learning, Ian Goodfellow and Yoshua Bengio and Aaron Courville, 2016, http://www.deeplearningbook.org/ <br/>
+* (PRML) "Chapter 5 Neural Networks"
+* [Tensorflow Playground](http://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=circle&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=0&networkShape=4,2&seed=0.47077&showTestData=false&discretize=false&percTrainData=50&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=false&cosY=false&sinY=false&collectStats=false&problem=classification&initZero=false&hideText=false)
+* [ConvNetJS Deep Learning in your browser](https://cs.stanford.edu/people/karpathy/convnetjs/)
+* [KerasJS](https://transcranial.github.io/keras-js/#/)
+* ["Understanding LSTM Networks,"](http://colah.github.io/posts/2015-08-Understanding-LSTMs/), Christopher Olah,  August 27, 2015,  <br/>
+* [The Building Blocks of Interpretability](https://distill.pub/2018/building-blocks/), Chris Olah, Arvind Satyanarayan, Ian Johnson, Shan Carter, Ludwig Schubert, Katherine Ye, Alexander Mordvintsev, 2018, Distill
+* [Feature Visualization How neural networks build up their understanding of images](https://distill.pub/2017/feature-visualization/), Chris Olah, Alexander Mordvintsev, Ludwig Schubert, Nov. 7, 2017, Distill
+
+
+# Trees
+* https://en.wikipedia.org/wiki/Decision_tree <br/>
+* ["Tree-Based Models"](https://www.statmethods.net/advstats/cart.html) <br/>
+(ISLR) "8 Tree-Based Methods"
+(IntroMachineLearningWithR) "5.5 Random forest"
+* [“Induction of Decision Trees.”](https://link.springer.com/content/pdf/10.1007/BF00116251.pdf), Quinlan, Ross. 1986., Machine Learning 1(1):81–106.
+
+# Bootstrapping Observations
+
+* [Bootstrap_aggregating](https://en.wikipedia.org/wiki/Bootstrap_aggregating)
+* [Cross-validation_(statistics)](https://en.wikipedia.org/wiki/Cross-validation_(statistics))<br/>
+* ["Linear Model Selection by Cross-Validation,"](http://www.libpls.net/publication/MCCV_Shao_1993.pdf), Jun Shao, 1993<br/>
+* ["Cross-validation failure: small sample sizes lead to large error bars,"](https://hal.inria.fr/hal-01545002/), Gaël Varoquaux, 2017<br/>
+* (ESL) "7 Model Assessment and Selection"
+* (ISLR) "Chapter 5 Resampling Methods"
+
+# Feature Selection
+* (ESL) "3 Linear Methods for Regression, 3.3 Subset Methods"
+* [Stepwise_regression](https://en.wikipedia.org/wiki/Stepwise_regression)
+
+## Model Complexity/Parismony
+* AIC (Akaike 1973)
+* [Akaike information criterion (AIC)](https://en.wikipedia.org/wiki/Akaike_information_criterion)<br/>
+* BIC (Schwarz 1978)
+* [Bayesian information criterion (BIC)](https://en.wikipedia.org/wiki/Bayesian_information_criterion)<br/>
+
+## Feature Importance
+* [A Machine Learning Alternative to P-values](https://arxiv.org/pdf/1701.04944.pdf),Min Lu and Hemant Ishwaran, February 22, 2017<br/>
+* [ELI5](https://github.com/TeamHG-Memex/eli5) <br/>
+* "Why Should I Trust You?": Explaining the Predictions of Any Classifier, Marco Tulio Ribeiro, Sameer Singh, Carlos Guestrin, https://arxiv.org/abs/1602.04938
+lime, Python Package, https://github.com/marcotcr/lime
+* [Feature Selection with the R Package MXM:  Statistically-Equivalent Feature Subsets](https://arxiv.org/pdf/1611.03227.pdf) <br/>
+* ["bounceR"](https://github.com/STATWORX/bounceR), R Package  <br/>
+
+* ['I JUST RAN Two MILLION REGRESSIONS'](http://www.ecostat.unical.it/Aiello/Didattica/economia_Crescita/CRESCITA/CRESCITA_Sala-i-Martin-AER-1997.pdf), Xavier Sala-i-Martin, 1997, American Economic Review <br/>
+* [Extreme_bounds_analysis](https://en.wikipedia.org/wiki/Extreme_bounds_analysis)
+* ["ExtremeBounds: Extreme Bounds Analysis in R"](https://cran.r-project.org/web/packages/ExtremeBounds/vignettes/ExtremeBounds.pdf) <br/>
+
+## Bagging/Subspace Mtethods
+* [Random subspace method](https://en.wikipedia.org/wiki/Random_subspace_method)
+* [“Bagging Predictors.”](https://link.springer.com/content/pdf/10.1007/BF00058655.pdf),Breiman, Leo. 1996. , Machine Learning 24:123–140.
+
+# Regularization, e.g. Lasso/Ridge Regression
+* https://en.wikipedia.org/wiki/Lasso_(statistics)
+* ["Regression shrinkage and selection via the lasso"](http://statweb.stanford.edu/~tibs/lasso/lasso.pdf), Tibshirani, R., 1996,  J. Royal. Statist. Soc B., Vol. 58, No. 1, pages 267-288)
+* ["Glmnet Vignette"](https://cran.r-project.org/web/packages/glmnet/vignettes/glmnet_beta.pdf), Trevor Hastie and Junyang Qian, September 13, 2016
+* (ISLR) "6 Linear Model Selection and Regularization"
+* (ESL) "3 Linear Methods for Regression, 3.4 Shrinkage Methods"
+
+## Combining Ideas = Random Forests
+* https://en.wikipedia.org/wiki/Random_forest <br/>
+* ["RANDOM FORESTS"](https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf) Leo Breiman, January 2001
+* ["Exploratory Data Analysis using Random Forests"](http://zmjones.com/static/papers/rfss_manuscript.pdf)
+
+
+# Unsupervised Learning
+
+* (ISLR) "Chapter 10 Unsupervised Learning"
+* IMLR ["Chapter 4 Unsupervised Learning"](https://lgatto.github.io/IntroMachineLearningWithR/unsupervised-learning.html)
+
+## Dimensionality Reduction
+[Principal_component_analysis](https://en.wikipedia.org/wiki/Principal_component_analysis)
+[Multiple correspondence analysis](https://en.wikipedia.org/wiki/Multiple_correspondence_analysis)
+
+## Clustering
+* [Cluster analysis](https://en.wikipedia.org/wiki/Cluster_analysis <br/>)
+* [K-means_clustering](https://en.wikipedia.org/wiki/K-means_clustering)
+* ["Unsupervised Machine Learning: The hclust, pvclust, cluster, mclust, and more,"](https://quantdev.ssri.psu.edu/sites/qdev/files/Unsupervised_Machine_Learning_The_mclust_Package_and_others.html) <br/>
+
+# Special Topics
+
+## Time
+* ["Investigating Sequences in Ordinal Data: A New Approach With Adapted Evolutionary Models,"](https://www.cambridge.org/core/journals/political-science-research-and-methods/article/investigating-sequences-in-ordinal-data-a-new-approach-with-adapted-evolutionary-models/F3747D8A1908902BA7F26C5EE28AFAEF),Patrik Lindenfors, Fredrik Jansson, Yi-ting Wang and Staffan I. Lindberg, Christian Lopez, 05 March 2018,
+
+## Text
+* ["Text Mining with R: A Tidy Approach,"](https://www.tidytextmining.com/), Julia Silge and David Robinson, 2018-04-02,   <br/>
+* ["Introducing Monte Carlo Methods with R,"](https://www.slideshare.net/xianblog/introducing-monte-carlo-methods-with-r) <br/>
+* ["Text as Data,"](http://web.stanford.edu/~gentzkow/research/text-as-data.pdf), Matthew Gentzkow, Bryan T. Kelly, Matt Taddy <br/>
+
+## Images
+* https://keras.rstudio.com/articles/examples/cifar10_cnn.html
+
+# Examples
+* ["Examining Explanations for Nuclear Proliferation"](https://doi.org/10.1093/isq/sqv007), Mark S. Bell, International Studies Quarterly, Volume 60, Issue 3, 1 September 2016, Pages 520–529
+
+# Extras
+
+## Gradient Boosting
+* Terence Parr and Jeremy Howard, "How to explain gradient boosting," http://explained.ai/gradient-boosting/index.html
+* [XGBoost eXtreme Gradient Boosting](https://github.com/dmlc/xgboost)
+
+## SVM
+* [Support_vector_machine](https://en.wikipedia.org/wiki/Support_vector_machine)
+
+#### How the Sausage is Made
+* ["Troubling  Trends  in  Machine  Learning  Scholarship"](https://www.dropbox.com/s/ao7c090p8bg1hk3/Lipton%20and%20Steinhardt%20-%20Troubling%20Trends%20in%20Machine%20Learning%20Scholarship.pdf?dl=0), Zachary  C.  Lipton∗&  Jacob  Steinhardt, July  9,  2018
+
+
+## Applications
+* ["ViEWS: a political Violence Early-Warning System,"](http://pcr.uu.se/research/views/) <br/>
+* ["Safe Disposal of Unexploded WWII Bombs,"](http://staff.math.su.se/hoehle/blog/2018/05/25/uxb.html) Michael Höhle, May 25, 2018, <br/>
+* ["Predicting Race and Ethnicity From the Sequence of Characters in a Name,"](https://arxiv.org/pdf/1805.02109.pdf),Gaurav Sood and Suriyan Laohaprapanon, May 8, 2018,  <br/>
+* ["ethnicolr: Predict Race and Ethnicity From Name,"](https://github.com/appeler/ethnicolr)<br/>
+* Weidmann, Nils B. and Sebastian Schutte. Using Night Lights for the Prediction of Local Wealth. Journal
+of Peace Research 54(2).
