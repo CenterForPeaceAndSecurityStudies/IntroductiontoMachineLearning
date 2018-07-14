@@ -11,12 +11,18 @@ output:
 
 
 ```{css}
+
 pre code, pre, code {
   white-space: pre !important;
   overflow-x: !scroll !important;
   word-break: keep-all !important;
   word-wrap: initial !important;
 }
+
+code.r{
+  overflow-x: !scroll !important;
+}
+
 ```
 
 Rex W. Douglass<br/>
@@ -44,10 +50,6 @@ This is a 6 hour introduction to machine learning spread across two three-hour l
 ## Readings Policy
 Math and programming are not something you learn, they're something you get used to. The readings of this course are, with a few exceptions, voluntary and intended for self study. They are to help point you in the right direction when you realize you need to start brushing up on a particular set of tools in order to tackle a particular problem.
 
-Required - Skim in order to improve discussion and understanding during lecture <br/>
-Recommended - Eventually skim/read during self study <br/>
-Reference - Deeper mathematical or historical context <br/>
-
 ## Textbooks
 
 Do not purchase any books - each of these should be available for free on-line at the link given. Any individual one would provide a decent background to the field of machine learning. For this course, I've picked select chapters when I thought they did a good job reviewing a specific subtopic.
@@ -56,7 +58,7 @@ Do not purchase any books - each of these should be available for free on-line a
 * (ESL) [Elements of Statistical Learning](https://web.stanford.edu/~hastie/ElemStatLearn/), Trevor Hastie and Robert Tibshirani
 * (ISL) [An introduction to statistical learning: with application in R, Gareth James](https://www-bcf.usc.edu/~gareth/ISL/ISLR%20Seventh%20Printing.pdf), Daniela Witten, Trevor Hastie, and Robert Tibshirani
 * (IML) [Introduction to Machine Learning](http://alex.smola.org/drafts/thebook.pdf), Alex Smola and S.V.N. Vishwanathan
-* (IMLR) ["An Introduction to Machine Learning with R"](https://lgatto.github.io/IntroMachineLearningWithR/index.html),Laurent Gatto, 2017-10-18
+* (IntroMachineLearningWithR) ["An Introduction to Machine Learning with R"](https://lgatto.github.io/IntroMachineLearningWithR/index.html),Laurent Gatto, 2017-10-18
 * (ML) [Machine Learning: The art and science of algorithms that make sense of data](http://dsd.future-lab.cn/members/2015nlp/Peter_Flach_Machine_Learning._The_Art_and_Scienc(BookZZ.org).pdf), Flach
 * (MLPP) [Machine Learning: A Probabilistic Perspective](https://www.cs.ubc.ca/~murphyk/MLbook/), Kevin Murphy
 * (PRML) [Patter recognition and machine learning](http://users.isr.ist.utl.pt/~wurmd/Livros/school/Bishop%20-%20Pattern%20Recognition%20And%20Machine%20Learning%20-%20Springer%20%202006.pdf), Christopher M. Bishop
@@ -85,6 +87,7 @@ Conferences
 ["Breast Cancer"](https://rpubs.com/raviolli77/352956), Raul Eulogio, January 26, 2018
 
 
+
 ## Software and Programming
 
 Students are not expected to know any particular language or set of software. We will be demonstrating best practices as used in the Machine Learning for Social Science Lab at the Center for Peace and Security Studies, UCSD. In that lab, our software stack consists of Python and R for data preparation and analysis, Spark for database management, Keras/Tensorflow for deep learning, Github for revision control, and Ubuntu for our operating system and command-line tools.
@@ -104,7 +107,7 @@ Students are not expected to know any particular language or set of software. We
 
 ## Notes on this Guide
 
-This guide is written as an [R notebook](https://bookdown.org/yihui/rmarkdown/notebook.html) using [R-Studio](https://www.rstudio.com/). It renders output as static HTML that you should be able to view on an regular browser.
+This guide is written as an [R notebook](https://bookdown.org/yihui/rmarkdown/notebook.html) using [R-Studio](https://www.rstudio.com/). It renders output as static HTML that you should be able to view on a regular web browser.
 
 ```{r}
 library(pacman)
@@ -114,6 +117,8 @@ p_load(ggplot2)
 p_load(cowplot)
 p_load(mlbench)
 
+set.seed(123)
+
 ```
 
 # Introduction
@@ -122,7 +127,7 @@ p_load(mlbench)
 * (CIML), [Chapter 1,](http://ciml.info/dl/v0_99/ciml-v0_99-ch01.pdf) <br/>
 * WMLW 1.0 "Introduction" <br/>
 
-### Examples: Why Machine Learning?
+## Why Machine Learning?
 * ["ViEWS: a political Violence Early-Warning System,"](http://pcr.uu.se/research/views/) <br/>
 * ["Safe Disposal of Unexploded WWII Bombs,"](http://staff.math.su.se/hoehle/blog/2018/05/25/uxb.html) Michael Höhle, May 25, 2018, <br/>
 * ["Predicting Race and Ethnicity From the Sequence of Characters in a Name,"](https://arxiv.org/pdf/1805.02109.pdf),Gaurav Sood and Suriyan Laohaprapanon, May 8, 2018,  <br/>
@@ -138,11 +143,12 @@ p_load(mlbench)
 * ["Basic Concepts of Statistical Inference for Causal Effects in Experiments and Observational Studies,"](http://www.stat.columbia.edu/~cook/qr33.pdf) Donald B. Rubin, 2004 <br/>
 
 # Information Theory
+
 * [Information_theory](https://en.wikipedia.org/wiki/Information_theory)
 * ["Visual Information Theory,"](http://colah.github.io/posts/2015-09-Visual-Information/) Christopher Olah, , October 14, 2015, <br/>
 * [Shannon Weaver Model](https://en.wikipedia.org/wiki/Shannon%E2%80%93Weaver_model)<br/>
-* ["A Mathematical Theory of Communication,"](http://math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf), C. E. SHANNON, October 1948,  The Bell System * Technical Journal, Vol. 27, pp. 379–423, 623–656, July, <br/>
 * PRML 1.6 "Information Theory" <br/>
+* ["A Mathematical Theory of Communication,"](http://math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf), C. E. SHANNON, October 1948,  The Bell System * Technical Journal, Vol. 27, pp. 379–423, 623–656, July, <br/>
 
 # Information Sources $Y$
 
@@ -154,29 +160,38 @@ p_load(mlbench)
 
 ## Entropy
 * [Entropy (information_theory)](https://en.wikipedia.org/wiki/Entropy_(information_theory))<br/>
+
 * [Package ‘entropy,’ "Estimation of Entropy, Mutual Information and Related Quantities,"](http://strimmerlab.org/software/entropy/), February 19, 2015  <br/>
 * [infotheo](https://cran.r-project.org/web/packages/infotheo/index.html), Patrick E. Meyer, 2014-07-26, R Package <br/>
 * [Philentropy: Information Theory and Distance Quantification with R.](https://doi.org/10.21105/joss.00765), Drost, (2018), Journal of Open Source Software, 3(26), 765  <br/>
 
+## Zero-Bit source
+
+* Zero-Bit information sources are constants that don't vary.
+* Zero-Bit source, Zero-Bit message: No variation and no measurement. <br/>
+* Zero-Bit information source, One-Bit message: No variation, but a single measurement with variation between two states. <br/>
+* Zero-Bit information source, N-Bit message: No variation, and an arbitrary number of measurements with arbitrary number of states <br/>
+
+* ["Design, Inference, and the Strategic Logic of Suicide Terrorism"](https://pdfs.semanticscholar.org/f192/cf69908c84d92d269ef52c337fa487d6b65e.pdf), SCOTT ASHWORTH, JOSHUA D. CLINTON, ADAM MEIROWITZ, and KRISTOPHER W. RAMSAY, 2008, APSR
+
+
 ## Binary Source ($<=1bit$)
 
-#### Two Headed Coin
+One-Bit information sources are variables that can take on two different states, e.g. a coin flip. Call $Y$ the true state at the source, and $\hat{Y}$ the mental model of the state at the destination.
+
+(IntroMachineLearningWithR) "Chapter 3 Example datasets"
+* [Binary_classification](https://en.wikipedia.org/wiki/Binary_classification)
+
+
 ```{r}
-N <- 20 #Flip a coin 10 times
-sample_space <- c(1,0) #Heads and Tails
-
-p <- 1 #Two headed coin
-Y_coin_twoheaded <- sample(sample_space, size = N,  replace = TRUE,  prob = c(p, 1 - p))  
-print(table(Y_coin_twoheaded))
-
 library(infotheo)
-print(natstobits(entropy(Y_coin_twoheaded, method="emp")))
-
+N <- 699 #Flip a coin N times (Matched to Breast Cancer Dataset Below)
+sample_space <- c(1,0) #Heads and Tails
 ```
 
-A fair coin has equal likelihood of both heads and tails. Estimated entropy is close to the true value of 1 bit.
+### Fair Coin 
 
-#### Fair Coin 
+A fair coin has equal likelihood of both heads and tails. Estimated entropy is close to the true value of 1 bit.
 
 ```{r}
 p <- 0.5 #Fair Coin
@@ -185,7 +200,7 @@ print(table(Y_coin_fair))
 print(natstobits(entropy(Y_coin_fair, method="emp")))
 ```
 
-#### Unfair Coin (p=0.8)
+### Unfair Coin (p=0.8)
 An unfair coin is weighted to be more likely to land heads or tails. Estimated entropy is less than a full bit. There is less surprise than from a full fair coin flip.
 
 ```{r}
@@ -195,10 +210,20 @@ print(table(Y_coin_unfair))
 print(natstobits(entropy(Y_coin_unfair, method="emp")))
 ```
 
-#### UCI Breast Cancer Dataset
+### Two Headed Coin
+A two headed coin will only ever land one way.
+```{r}
+p <- 1 #Two headed coin
+Y_coin_twoheaded <- sample(sample_space, size = N,  replace = TRUE,  prob = c(p, 1 - p))  
+print(table(Y_coin_twoheaded))
+print(natstobits(entropy(Y_coin_twoheaded, method="emp")))
+```
+
+### [UCI Breast Cancer Dataset](https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+(Diagnostic))
 
 ```{r}
 data(BreastCancer)
+glimpse(BreastCancer)
 summary(BreastCancer$Class)
 ```
 
@@ -206,15 +231,22 @@ summary(BreastCancer$Class)
 print(natstobits(entropy(BreastCancer$Class, method="emp")))
 ```
 
-Iris Dataset
+## Multi-class Sources
+
+### [Iris Dataset](https://archive.ics.uci.edu/ml/datasets/iris)
 
 ```{r}
 data(iris)
+glimpse(iris)
 summary(iris$Species)
 print(natstobits(entropy(iris$Species, method="emp")))
 ```
 
-```{r}
+## Real Valued Sources
+
+### [Boston Housing Data](https://www.cs.toronto.edu/~delve/data/boston/bostonDetail.html)
+
+```{r, echo=F}
 #crim per capita crime rate by town
 #zn proportion of residential land zoned for lots over 25,000 sq.ft
 #indus proportion of non-retail business acres per town
@@ -229,17 +261,130 @@ print(natstobits(entropy(iris$Species, method="emp")))
 #b 1000(B − 0.63)2 where B is the proportion of blacks by town
 #lstat percentage of lower status of the population
 #medv median value of owner-occupied homes in USD 1000’s
+```
+
+```{r}
 data(BostonHousing)
-BostonHousing$medv
-hist(BostonHousing$medv)
+glimpse(BostonHousing)
 summary(BostonHousing$medv)
 print(natstobits(entropy(discretize(BostonHousing$medv), method="emp")))
 ```
 
-##
+# Comparing $Y$ and $\hat{Y}$
+
+(IntroMachineLearningWithR) 5.4 Classification performance
+
+## Binary
+
+How should we compare the true reality $Y$ to our mental model of it $\hat{Y}$?
+
+* [Scoring Rules](https://en.wikipedia.org/wiki/Scoring_rule)<br/>
+* [Evaluation_of_binary_classifiers](https://en.wikipedia.org/wiki/Evaluation_of_binary_classifiers)<br/>
+* [Confusion_matrix](https://en.wikipedia.org/wiki/Confusion_matrix)<br/>
+
+### Confusion Matrix
+
+```{r}
+table(BreastCancer$Class, BreastCancer$Class)
+table(BreastCancer$Class, Y_coin_fair)
+table(BreastCancer$Class, Y_coin_unfair)
+table(BreastCancer$Class, Y_coin_twoheaded)
+```
+### Accuracy
+```{r}
+p_load(Metrics)
+BreastCancer$Class_binary <- as.numeric(BreastCancer$Class=="malignant")
+accuracy(BreastCancer$Class_binary, BreastCancer$Class_binary)
+accuracy(BreastCancer$Class_binary, Y_coin_fair)
+accuracy(BreastCancer$Class_binary, Y_coin_unfair)
+accuracy(BreastCancer$Class_binary, Y_coin_twoheaded)
+```
+
+### Precision
+
+* [Precision_and_recall](https://en.wikipedia.org/wiki/Precision_and_recall)<br/>
+```{r}
+precision(BreastCancer$Class_binary,
+         BreastCancer$Class_binary)
+precision(BreastCancer$Class_binary, Y_coin_fair)
+precision(BreastCancer$Class_binary, Y_coin_unfair)
+precision(BreastCancer$Class_binary, Y_coin_twoheaded)
+```
+
+### Recall
+
+```{r}
+recall(BreastCancer$Class_binary,
+         BreastCancer$Class_binary)
+recall(BreastCancer$Class_binary, Y_coin_fair)
+recall(BreastCancer$Class_binary, Y_coin_unfair)
+recall(BreastCancer$Class_binary, Y_coin_twoheaded) 
+```
+
+### F1
+* [F1_score](https://en.wikipedia.org/wiki/F1_score)<br/>
+```{r}
+#Note Metrics::f1 doesn't give the correct values
+library(MLmetrics)
+F1_Score(BreastCancer$Class_binary,
+         BreastCancer$Class_binary)
+F1_Score(BreastCancer$Class_binary, Y_coin_fair)
+F1_Score(BreastCancer$Class_binary, Y_coin_unfair)
+#F1_Score(BreastCancer$Class_binary, Y_coin_twoheaded) 
+#Not happy about all 1 prediction
+print( (0.3447783*1)/(0.3447783+1)*2 ) #Calculate by hand
+```
 
 
-## Transmitters $X=f(Y)$
+* [Sensitivity_and_specificity](https://en.wikipedia.org/wiki/Sensitivity_and_specificity)<br/>
+* ["Finding Similar Items"](http://infolab.stanford.edu/~ullman/mmds/ch3.pdf), Jure Leskovec, Anand Rajaraman, Jeff Ullman, Chapter 3, [Mining of Massive Datasets](http://www.mmds.org/), 2014<br/>
+
+## Probalistic Predictions
+* [Proper Scoring Rules](https://en.wikipedia.org/wiki/Scoring_rule#ProperScoringRules)<br/>
+
+### Log Loss
+
+[Log Loss](http://wiki.fast.ai/index.php/Log_Loss)
+
+```{r}
+recall(BreastCancer$Class_binary,
+         BreastCancer$Class_binary)
+recall(BreastCancer$Class_binary, Y_coin_fair)
+recall(BreastCancer$Class_binary, Y_coin_unfair)
+recall(BreastCancer$Class_binary, Y_coin_twoheaded) 
+```
+
+### Area Under the Curve
+* [Receiver operating characteristic](https://en.wikipedia.org/wiki/Receiver_operating_characteristic)<br/>
+* [An introduction to ROC analysis](http://people.inf.elte.hu/kiss/13dwhdm/roc.pdf), Tom Fawcett, 2006, Pattern Recongnition Letters<br/>
+* [what-does-auc-stand-for-and-what-is-it](https://stats.stackexchange.com/questions/132777/what-does-auc-stand-for-and-what-is-it)<br/>
+
+### Others
+* [Brier_score](https://en.wikipedia.org/wiki/Brier_score)<br/>
+
+### Imbalanced Data
+
+* ["Facing Imbalanced Data Recommendations for the Use of Performance Metrics"](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4285355/), László A. Jeni,1 Jeffrey F. Cohn,1,2 and Fernando De La Torre, Int Conf Affect Comput Intell Interact Workshops. 2013; 2013: 245–251.
+
+## Multiclass
+
+# 2-Bit sources
+* [Multiclass_classification](https://en.wikipedia.org/wiki/Multiclass_classification) <br/>
+* [Cross Entropy](https://en.wikipedia.org/wiki/Cross_entropy) <br/>
+* Tom Fawcett (2006) “An introduction to ROC analysis”. Pattern Recognition Letters 27, 861–874. DOI: 10.1016/j.patrec.2005.10.010. <br/>
+* David J. Hand and Robert J. Till (2001). A Simple Generalisation of the Area Under the ROC Curve for Multiple Class Classification Problems. Machine Learning 45(2), p. 171–186. DOI: 10.1023/A:1010920819831. <br/>
+* ["pROC: Display and Analyze ROC Curves"](https://web.expasy.org/pROC/), 2018-05-06 <br/>
+* [pROC: an open-source package for R and S+ to analyze and compare ROC curves](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-12-77), Xavier * * Robin, Natacha Turck, Alexandre Hainard, Natalia Tiberti, Frédérique Lisacek, Jean-Charles Sanchez and Markus Müller (2011). BMC Bioinformatics, 12, p. 77 <br/>
+
+
+## Real
+
+# N-Bit sources
+* [Mean_squared_error](https://en.wikipedia.org/wiki/Mean_squared_error)
+
+
+
+# Transmitters $X=f(Y)$
 [Function_(mathematics)](https://en.wikipedia.org/wiki/Function_(mathematics))<br/>
 
 ```{r}
@@ -268,85 +413,13 @@ plot_grid(p1,p2,p3,p4, labels = c("A", "B", "C", "D"), ncol = 2)
 
 [Linear_separability](https://en.wikipedia.org/wiki/Linear_separability)
 
-## Messages $X$
+# Messages $X$
 
-## Receivers $\hat{Y}=\hat{f}(X)$
+# Receivers $\hat{Y}=\hat{f}(X)$
 * [Inverse_function](https://en.wikipedia.org/wiki/Inverse_function)<br/>
 
-# Zero-Bit source
-
-* Zero-Bit information sources are constants that don't vary.
-
-* Zero-Bit source, Zero-Bit message: No variation and no measurement. <br/>
-* Zero-Bit information source, One-Bit message: No variation, but a single measurement with variation between two states. <br/>
-* Zero-Bit information source, N-Bit message: No variation, and an arbitrary number of measurements with arbitrary number of states <br/>
-
-* Selecting on the Dependent Variable
-* ["Design, Inference, and the Strategic Logic of Suicide Terrorism"](https://pdfs.semanticscholar.org/f192/cf69908c84d92d269ef52c337fa487d6b65e.pdf), SCOTT ASHWORTH, JOSHUA D. CLINTON, ADAM MEIROWITZ, and KRISTOPHER W. RAMSAY, 2008, APSR
 
 
-# One-Bit sources
-
-One-Bit information sources are variables that can take on two different states, e.g. a coin flip. Call $Y$ the true state at the source, and $\hat{Y}$ the mental model of the state at the destination.
-
-* [Binary_classification](https://en.wikipedia.org/wiki/Binary_classification)
-
-
-How should we compare the true reality $Y$ to our mental model of it $\hat{Y}$?
-
-* [Scoring Rules](https://en.wikipedia.org/wiki/Scoring_rule)<br/>
-* [Evaluation_of_binary_classifiers](https://en.wikipedia.org/wiki/Evaluation_of_binary_classifiers)<br/>
-* [Confusion_matrix](https://en.wikipedia.org/wiki/Confusion_matrix)<br/>
-
-```{r}
-Y_hat=Y_coin_fair
-table(Y_coin_unfair,Y_hat)
-```
-
-```{r}
-p_load(Metrics)
-accuracy(Y_coin_unfair, Y_hat)
-```
-
-* [Precision_and_recall](https://en.wikipedia.org/wiki/Precision_and_recall)<br/>
-```{r}
-precision(Y_coin_unfair, Y_hat)
-```
-
-* [F1_score](https://en.wikipedia.org/wiki/F1_score)<br/>
-```{r}
-f1(Y_coin_unfair, Y_hat)
-```
-
-* [Mutual_information](https://en.wikipedia.org/wiki/Mutual_information)<br/>
-```{r}
-print(natstobits(mutinformation(Y_coin_unfair, Y_hat, method="emp")))
-```
-
-* [Sensitivity_and_specificity](https://en.wikipedia.org/wiki/Sensitivity_and_specificity)<br/>
-* ["Finding Similar Items"](http://infolab.stanford.edu/~ullman/mmds/ch3.pdf), Jure Leskovec, Anand Rajaraman, Jeff Ullman, Chapter 3, [Mining of Massive Datasets](http://www.mmds.org/), 2014<br/>
-
-### Imbalanced Data
-
-* ["Facing Imbalanced Data Recommendations for the Use of Performance Metrics"](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4285355/), László A. Jeni,1 Jeffrey F. Cohn,1,2 and Fernando De La Torre, Int Conf Affect Comput Intell Interact Workshops. 2013; 2013: 245–251.
-
-## Probalistic Scoring Functions
-* [Proper Scoring Rules](https://en.wikipedia.org/wiki/Scoring_rule#ProperScoringRules)<br/>
-* [Brier_score](https://en.wikipedia.org/wiki/Brier_score)<br/>
-* [Receiver operating characteristic](https://en.wikipedia.org/wiki/Receiver_operating_characteristic)<br/>
-* [An introduction to ROC analysis](http://people.inf.elte.hu/kiss/13dwhdm/roc.pdf), Tom Fawcett, 2006, Pattern Recongnition Letters<br/>
-* [what-does-auc-stand-for-and-what-is-it](https://stats.stackexchange.com/questions/132777/what-does-auc-stand-for-and-what-is-it)<br/>
-
-# 2-Bit sources
-* [Multiclass_classification](https://en.wikipedia.org/wiki/Multiclass_classification) <br/>
-* [Cross Entropy](https://en.wikipedia.org/wiki/Cross_entropy) <br/>
-* Tom Fawcett (2006) “An introduction to ROC analysis”. Pattern Recognition Letters 27, 861–874. DOI: 10.1016/j.patrec.2005.10.010. <br/>
-* David J. Hand and Robert J. Till (2001). A Simple Generalisation of the Area Under the ROC Curve for Multiple Class Classification Problems. Machine Learning 45(2), p. 171–186. DOI: 10.1023/A:1010920819831. <br/>
-* ["pROC: Display and Analyze ROC Curves"](https://web.expasy.org/pROC/), 2018-05-06 <br/>
-* [pROC: an open-source package for R and S+ to analyze and compare ROC curves](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-12-77), Xavier * * Robin, Natacha Turck, Alexandre Hainard, Natalia Tiberti, Frédérique Lisacek, Jean-Charles Sanchez and Markus Müller (2011). BMC Bioinformatics, 12, p. 77 <br/>
-
-# N-Bit sources
-* [Mean_squared_error](https://en.wikipedia.org/wiki/Mean_squared_error)
 
 # One-Bit source, One-Bit message
 
@@ -371,6 +444,8 @@ print(natstobits(mutinformation(Y_coin_unfair, Y_hat, method="emp")))
 * ["Linear Model Selection by Cross-Validation,"](http://www.libpls.net/publication/MCCV_Shao_1993.pdf), Jun Shao, 1993<br/>
 * ["Cross-validation failure: small sample sizes lead to large error bars,"](https://hal.inria.fr/hal-01545002/), Gaël Varoquaux, 2017<br/>
 
+(ESL) "7 Model Assessment and Selection"
+
 # One-Bit source, Two-Bit message
 ## Ommitted Variable Bias
 * [Simpsons Paradox](https://en.wikipedia.org/wiki/Simpson%27s_paradox)<br/>
@@ -378,6 +453,8 @@ print(natstobits(mutinformation(Y_coin_unfair, Y_hat, method="emp")))
 ### Feature Selection / Included Variable Bias
 * [Let’s Put Garbage—Can Regressions and Garbage—Can Probits Where They Belong](http://www.columbia.edu/~gjw10/achen04.pdf), Christopher H. Achen, Conflict Management and Peace Science, 2005
 * ["The Phantom Menace: Omitted Variable Bias in Econometric Research"](http://www.saramitchell.org/clarke05.pdf), Kevin A. Clarke, 2005, Conflict Management and Peace Science
+* ["Achieving Statistical Significance with Covariates and without Transparency"](https://drive.google.com/file/d/0B13GrSdju4CpcjBKMGU5ZmRjN2c/view), Gabriel Lenz, Alexander Sahn, November 27, 2017
+
 * [Feature_selection](https://en.wikipedia.org/wiki/Feature_selection)<br/>
 * [Confounding](https://en.wikipedia.org/wiki/Confounding)<br/>
 * ["Statistical learning and selective inference"](http://www.pnas.org/content/pnas/112/25/7629.full.pdf) Jonathan Taylora and Robert J. Tibshirani, June 23, 2015<br/>
@@ -401,6 +478,8 @@ print(natstobits(mutinformation(Y_coin_unfair, Y_hat, method="emp")))
 * https://en.wikipedia.org/wiki/Lasso_(statistics)
 * ["Regression shrinkage and selection via the lasso"](http://statweb.stanford.edu/~tibs/lasso/lasso.pdf), Tibshirani, R., 1996,  J. Royal. Statist. Soc B., Vol. 58, No. 1, pages 267-288)
 * ["Glmnet Vignette"](https://cran.r-project.org/web/packages/glmnet/vignettes/glmnet_beta.pdf), Trevor Hastie and Junyang Qian, September 13, 2016
+
+(ISLR) "6 Linear Model Selection and Regularization"
 
 
 ## Feature Engineering
@@ -455,6 +534,11 @@ Latent variable model
 # Decision Trees
 * https://en.wikipedia.org/wiki/Decision_tree <br/>
 * ["Tree-Based Models"](https://www.statmethods.net/advstats/cart.html) <br/>
+
+(ISLR) "8 Tree-Based Methods"
+(IntroMachineLearningWithR) "5.5 Random forest"
+
+
 
 * [“Induction of Decision Trees.”](https://link.springer.com/content/pdf/10.1007/BF00116251.pdf), Quinlan, Ross. 1986., Machine Learning 1(1):81–106.
 
