@@ -1,0 +1,27 @@
+---
+title: "Introduction to Machine Learning (Syllabus/Code for Day 1)"
+output: 
+  html_notebook:
+    toc: true # table of content true
+    toc_depth: 3  # upto three depths of headings (specified by #, ## and ###)
+    number_sections: true  ## if you want number sections at each table header
+    highlight: tango  # specifies the syntax highlighting style
+    toc_float: true
+---
+
+
+```{css}
+
+pre code, pre, code {
+  white-space: pre !important;
+  overflow-x: !scroll !important;
+  word-break: keep-all !important;
+  word-wrap: initial !important;
+}
+
+code.r{
+  overflow-x: !scroll !important;
+}
+
+```
+

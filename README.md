@@ -1,12 +1,17 @@
 # Introduction to Machine Learning
 
-[Course Syllabus](https://CenterForPeaceAndSecurityStudies.github.io/IntroductiontoMachineLearning/Douglass_IntroductionToMachineLearning_2018_Syllabus.nb.html)
+[Course Syllabus and Code Day 1](https://CenterForPeaceAndSecurityStudies.github.io/IntroductiontoMachineLearning/Douglass_IntroductionToMachineLearning_2018_Syllabus_Day1.nb.html)
 
-[Course Slides (1/4)](https://docs.google.com/presentation/d/19i2om_jwK8m3a-jNvgtM-WMT1l1HAGaGuWeb4bgLsTM/edit?usp=sharing)
+[Course Syllabus and Code Day 2](https://CenterForPeaceAndSecurityStudies.github.io/IntroductiontoMachineLearning/Douglass_IntroductionToMachineLearning_2018_Syllabus_Day2.nb.html)
 
-[Course Slides (2/4)](https://docs.google.com/presentation/d/1Z857fFS692ijppXZzrPVjsVxsllwDKzoFBWOchRjDfU/edit?usp=sharing)
+[Course Slides (Day 1 Part A)](https://docs.google.com/presentation/d/19i2om_jwK8m3a-jNvgtM-WMT1l1HAGaGuWeb4bgLsTM/edit?usp=sharing)
 
-[Course Slides (3/4)](https://docs.google.com/presentation/d/1HRzRTjz31vt_HwOkKE_jNUYhg1a2LrOxS6LM3RI9dE4/edit?usp=sharing)
+[Course Slides (Day 1 Part B)](https://docs.google.com/presentation/d/1Z857fFS692ijppXZzrPVjsVxsllwDKzoFBWOchRjDfU/edit?usp=sharing)
+
+[Course Slides (Day 2 Part A)](https://docs.google.com/presentation/d/1HRzRTjz31vt_HwOkKE_jNUYhg1a2LrOxS6LM3RI9dE4/edit?usp=sharing)
+
+[Course Slides (Day 2 Part B)](https://docs.google.com/presentation/d/1HRzRTjz31vt_HwOkKE_jNUYhg1a2LrOxS6LM3RI9dE4/edit?usp=sharing)
+
 
 
 Rex W. Douglass<br/>

@@ -1,5 +1,5 @@
 ---
-title: "Introduction to Machine Learning"
+title: "Introduction to Machine Learning (Syllabus/Code for Day 1)"
 output: 
   html_notebook:
     toc: true # table of content true
@@ -347,17 +347,22 @@ print( (0.3447783*1)/(0.3447783+1)*2 ) #Calculate by hand
 [Log Loss](http://wiki.fast.ai/index.php/Log_Loss)
 
 ```{r}
-recall(BreastCancer$Class_binary,
+MLmetrics::LogLoss(BreastCancer$Class_binary,
          BreastCancer$Class_binary)
-recall(BreastCancer$Class_binary, Y_coin_fair)
-recall(BreastCancer$Class_binary, Y_coin_unfair)
-recall(BreastCancer$Class_binary, Y_coin_twoheaded) 
+MLmetrics::LogLoss(BreastCancer$Class_binary, Y_coin_fair)
+MLmetrics::LogLoss(BreastCancer$Class_binary, Y_coin_unfair)
+MLmetrics::LogLoss(BreastCancer$Class_binary, Y_coin_twoheaded) 
 ```
 
 ### Area Under the Curve
 * [Receiver operating characteristic](https://en.wikipedia.org/wiki/Receiver_operating_characteristic)<br/>
 * [An introduction to ROC analysis](http://people.inf.elte.hu/kiss/13dwhdm/roc.pdf), Tom Fawcett, 2006, Pattern Recongnition Letters<br/>
 * [what-does-auc-stand-for-and-what-is-it](https://stats.stackexchange.com/questions/132777/what-does-auc-stand-for-and-what-is-it)<br/>
+* [roc-and-precision-recall-with-imbalanced-datasets](https://classeval.wordpress.com/simulation-analysis/roc-and-precision-recall-with-imbalanced-datasets/)
+
+###
+
+["Introduction to the precision-recall plot"](https://classeval.wordpress.com/introduction/introduction-to-the-precision-recall-plot/), 
 
 ### Others
 * [Brier_score](https://en.wikipedia.org/wiki/Brier_score)<br/>
@@ -368,7 +373,6 @@ recall(BreastCancer$Class_binary, Y_coin_twoheaded)
 
 ## Multiclass
 
-# 2-Bit sources
 * [Multiclass_classification](https://en.wikipedia.org/wiki/Multiclass_classification) <br/>
 * [Cross Entropy](https://en.wikipedia.org/wiki/Cross_entropy) <br/>
 * Tom Fawcett (2006) “An introduction to ROC analysis”. Pattern Recognition Letters 27, 861–874. DOI: 10.1016/j.patrec.2005.10.010. <br/>
@@ -377,12 +381,16 @@ recall(BreastCancer$Class_binary, Y_coin_twoheaded)
 * [pROC: an open-source package for R and S+ to analyze and compare ROC curves](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-12-77), Xavier * * Robin, Natacha Turck, Alexandre Hainard, Natalia Tiberti, Frédérique Lisacek, Jean-Charles Sanchez and Markus Müller (2011). BMC Bioinformatics, 12, p. 77 <br/>
 
 
-## Real
+## Real Valued
 
-# N-Bit sources
 * [Mean_squared_error](https://en.wikipedia.org/wiki/Mean_squared_error)
+* [Huber Loss](https://en.wikipedia.org/wiki/Huber_loss)
 
-
+```{r}
+y_hat=mean(BostonHousing$medv)
+MAE(BostonHousing$medv, y_hat)
+MSE(BostonHousing$medv, y_hat)
+```
 
 # Transmitters $X=f(Y)$
 [Function_(mathematics)](https://en.wikipedia.org/wiki/Function_(mathematics))<br/>
@@ -418,9 +426,6 @@ plot_grid(p1,p2,p3,p4, labels = c("A", "B", "C", "D"), ncol = 2)
 # Receivers $\hat{Y}=\hat{f}(X)$
 * [Inverse_function](https://en.wikipedia.org/wiki/Inverse_function)<br/>
 
-
-
-
 # One-Bit source, One-Bit message
 
 ## What makes a good receiver?
@@ -443,8 +448,11 @@ plot_grid(p1,p2,p3,p4, labels = c("A", "B", "C", "D"), ncol = 2)
 * [Cross-validation_(statistics)](https://en.wikipedia.org/wiki/Cross-validation_(statistics))<br/>
 * ["Linear Model Selection by Cross-Validation,"](http://www.libpls.net/publication/MCCV_Shao_1993.pdf), Jun Shao, 1993<br/>
 * ["Cross-validation failure: small sample sizes lead to large error bars,"](https://hal.inria.fr/hal-01545002/), Gaël Varoquaux, 2017<br/>
+* (ESL) "7 Model Assessment and Selection"
 
-(ESL) "7 Model Assessment and Selection"
+## Bootstrap Aggregating / Bagging
+
+[Bootstrap_aggregating](https://en.wikipedia.org/wiki/Bootstrap_aggregating)
 
 # One-Bit source, Two-Bit message
 ## Ommitted Variable Bias
@@ -454,6 +462,10 @@ plot_grid(p1,p2,p3,p4, labels = c("A", "B", "C", "D"), ncol = 2)
 * [Let’s Put Garbage—Can Regressions and Garbage—Can Probits Where They Belong](http://www.columbia.edu/~gjw10/achen04.pdf), Christopher H. Achen, Conflict Management and Peace Science, 2005
 * ["The Phantom Menace: Omitted Variable Bias in Econometric Research"](http://www.saramitchell.org/clarke05.pdf), Kevin A. Clarke, 2005, Conflict Management and Peace Science
 * ["Achieving Statistical Significance with Covariates and without Transparency"](https://drive.google.com/file/d/0B13GrSdju4CpcjBKMGU5ZmRjN2c/view), Gabriel Lenz, Alexander Sahn, November 27, 2017
+
+* [SCANNING DEAD SALMON IN FMRI MACHINE HIGHLIGHTS RISK OF RED HERRINGS](https://www.wired.com/2009/09/fmrisalmon/)
+* [“Do We Really Know the WTO Cures Cancer?”](http://www.stephenchaudoin.com/CHH_Cancer_2014_09_18.pdf) Stephen Chaudoin, Jude Hays and Raymond Hicks, British Journal of Political Science.
+
 
 * [Feature_selection](https://en.wikipedia.org/wiki/Feature_selection)<br/>
 * [Confounding](https://en.wikipedia.org/wiki/Confounding)<br/>
@@ -478,9 +490,7 @@ plot_grid(p1,p2,p3,p4, labels = c("A", "B", "C", "D"), ncol = 2)
 * https://en.wikipedia.org/wiki/Lasso_(statistics)
 * ["Regression shrinkage and selection via the lasso"](http://statweb.stanford.edu/~tibs/lasso/lasso.pdf), Tibshirani, R., 1996,  J. Royal. Statist. Soc B., Vol. 58, No. 1, pages 267-288)
 * ["Glmnet Vignette"](https://cran.r-project.org/web/packages/glmnet/vignettes/glmnet_beta.pdf), Trevor Hastie and Junyang Qian, September 13, 2016
-
-(ISLR) "6 Linear Model Selection and Regularization"
-
+* (ISLR) "6 Linear Model Selection and Regularization"
 
 ## Feature Engineering
 * [Feature_engineering](https://en.wikipedia.org/wiki/Feature_engineering)<br/>
@@ -500,6 +510,8 @@ plot_grid(p1,p2,p3,p4, labels = c("A", "B", "C", "D"), ncol = 2)
 
 * [Curse_of_dimensionality](https://en.wikipedia.org/wiki/Curse_of_dimensionality) <br/>
 * [The Curse of Dimensionality in classification](http://www.visiondummy.com/2014/04/curse-dimensionality-affect-classification/), Vincent Spruyt <br/>
+
+* [Random subspace method](https://en.wikipedia.org/wiki/Random_subspace_method)
 
 # N-bit source, One-Bit message
 
