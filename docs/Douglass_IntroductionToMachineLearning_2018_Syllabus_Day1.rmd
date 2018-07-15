@@ -70,18 +70,18 @@ Related Classes
 *[COMS W4721 Machine Learning for Data Science](http://www.columbia.edu/~jwp2128/Teaching/W4721/Spring2017/W4721Spring2017.html)
 
 There are a number places on-line for constant updates on machine learning <br/>
-* [Reddit Machine Learning Subreddit](https://www.reddit.com/r/MachineLearning/)
-* [arxiv](https://twitter.com/arxiv_org)
-* [Arxiv Sanity Preserver](http://www.arxiv-sanity.com/)
-* [My twitter feed](https://twitter.com/RexDouglass)
-* [Political Analysis](https://www.cambridge.org/core/journals/political-analysis)
-* [openreview](https://openreview.net/)
-* [Distill](https://distill.pub/)
+* [Reddit Machine Learning Subreddit](https://www.reddit.com/r/MachineLearning/)<br/>
+* [arxiv](https://twitter.com/arxiv_org)<br/>
+* [Arxiv Sanity Preserver](http://www.arxiv-sanity.com/)<br/>
+* [My twitter feed](https://twitter.com/RexDouglass)<br/>
+* [Political Analysis](https://www.cambridge.org/core/journals/political-analysis)<br/>
+* [openreview](https://openreview.net/)<br/>
+* [Distill](https://distill.pub/)<br/>
 
-Conferences
-* [Top Conferences for Machine Learning & Arti. Intelligence](http://www.guide2research.com/topconf/machine-learning)
-* [Neural Information Processing Systems (NIPS)](https://nips.cc/)
-* [International Conference on Machine Learning](https://icml.cc/)
+Conferences <br/>
+* [Top Conferences for Machine Learning & Arti. Intelligence](http://www.guide2research.com/topconf/machine-learning) <br/>
+* [Neural Information Processing Systems (NIPS)](https://nips.cc/) <br/>
+* [International Conference on Machine Learning](https://icml.cc/) <br/>
 
 ## Data Archives
 * [UC Irvine Machine Learning Repository](http://archive.ics.uci.edu/ml/index.php)<br/>
@@ -104,18 +104,21 @@ Students are not expected to know any particular language or set of software. We
 * ["The Plain Person’s Guide to Plain Text Social Science"](http://plain-text.co/), Kieran Healy, 2018-04-28
 * "Statistical Data Cleaning with Applications in R"
 * [scikit-learn](http://scikit-learn.org/stable/)
+* [Guide to SuperLearner](ftp://cran.r-project.org/pub/R/web/packages/SuperLearner/vignettes/Guide-to-SuperLearner.html), Chris Kennedy, March 16, 2017
 
 ## Notes on this Guide
 
 This guide is written as an [R notebook](https://bookdown.org/yihui/rmarkdown/notebook.html) using [R-Studio](https://www.rstudio.com/). It renders output as static HTML that you should be able to view on a regular web browser.
 
 ```{r}
+#install.packages("pacman")
 library(pacman)
 p_load(infotheo)
 p_load(tidyverse)
 p_load(ggplot2)
 p_load(cowplot)
 p_load(mlbench)
+p_load(Metrics)
 
 set.seed(123)
 
@@ -147,7 +150,7 @@ set.seed(123)
 * PRML 1.6 "Information Theory" <br/>
 * ["A Mathematical Theory of Communication,"](http://math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf), C. E. SHANNON, October 1948,  The Bell System * Technical Journal, Vol. 27, pp. 379–423, 623–656, July, <br/>
 
-# Information Sources $Y$
+# Information Sources $Y$ 
 
 ## Random Variables and Distributions
 * [Random_variable](https://en.wikipedia.org/wiki/Random_variable)
@@ -300,28 +303,30 @@ accuracy(BreastCancer$Class_binary, Y_coin_twoheaded)
 
 * [Precision_and_recall](https://en.wikipedia.org/wiki/Precision_and_recall)<br/>
 ```{r}
-precision(BreastCancer$Class_binary,
+p_load(Metrics)
+Metrics::precision(BreastCancer$Class_binary,
          BreastCancer$Class_binary)
-precision(BreastCancer$Class_binary, Y_coin_fair)
-precision(BreastCancer$Class_binary, Y_coin_unfair)
-precision(BreastCancer$Class_binary, Y_coin_twoheaded)
+Metrics::precision(BreastCancer$Class_binary, Y_coin_fair)
+Metrics::precision(BreastCancer$Class_binary, Y_coin_unfair)
+Metrics::precision(BreastCancer$Class_binary, Y_coin_twoheaded)
 ```
 
 ### Recall
 
 ```{r}
-recall(BreastCancer$Class_binary,
+p_load(Metrics)
+Metrics::recall(BreastCancer$Class_binary,
          BreastCancer$Class_binary)
-recall(BreastCancer$Class_binary, Y_coin_fair)
-recall(BreastCancer$Class_binary, Y_coin_unfair)
-recall(BreastCancer$Class_binary, Y_coin_twoheaded) 
+Metrics::recall(BreastCancer$Class_binary, Y_coin_fair)
+Metrics::recall(BreastCancer$Class_binary, Y_coin_unfair)
+Metrics::recall(BreastCancer$Class_binary, Y_coin_twoheaded) 
 ```
 
 ### F1
 * [F1_score](https://en.wikipedia.org/wiki/F1_score)<br/>
 ```{r}
 #Note Metrics::f1 doesn't give the correct values
-library(MLmetrics)
+p_load(MLmetrics)
 F1_Score(BreastCancer$Class_binary,
          BreastCancer$Class_binary)
 F1_Score(BreastCancer$Class_binary, Y_coin_fair)
@@ -355,6 +360,47 @@ MLmetrics::LogLoss(BreastCancer$Class_binary, Y_coin_twoheaded)
 * [An introduction to ROC analysis](http://people.inf.elte.hu/kiss/13dwhdm/roc.pdf), Tom Fawcett, 2006, Pattern Recongnition Letters<br/>
 * [what-does-auc-stand-for-and-what-is-it](https://stats.stackexchange.com/questions/132777/what-does-auc-stand-for-and-what-is-it)<br/>
 * [roc-and-precision-recall-with-imbalanced-datasets](https://classeval.wordpress.com/simulation-analysis/roc-and-precision-recall-with-imbalanced-datasets/)
+
+[Measuring classifier performance: a coherent alternative to the area under the ROC curve](http://web.cs.iastate.edu/~cs573x/Notes/hand-article.pdf), David J. Hand, Mach Learn (2009) 77: 103–123
+
+[Generate ROC Curve Charts for Print and Interactive Use](https://cran.r-project.org/web/packages/plotROC/vignettes/examples.html), Michael C Sachs, 2018-06-23
+[Illustrated Guide to ROC and AUC](https://www.r-bloggers.com/illustrated-guide-to-roc-and-auc/), Raffael Vogler, June 23, 2015
+
+```{r}
+#Simulate a probalistic prediction
+noised_prediction <- function(prediction){ noised <-runif(N,0,0.5) ; noised[prediction==1] <-noised[prediction==1]+0.5; return(noised)   }
+AUC(noised_prediction(BreastCancer$Class_binary), BreastCancer$Class_binary)
+AUC(noised_prediction(Y_coin_fair), BreastCancer$Class_binary)
+AUC(noised_prediction(Y_coin_unfair), BreastCancer$Class_binary)
+AUC(noised_prediction(Y_coin_twoheaded), BreastCancer$Class_binary)
+```
+
+```{r}
+p_load(plotROC)
+set.seed(2529)
+D.ex <- rbinom(200, size = 1, prob = .5)
+M1 <- rnorm(200, mean = D.ex, sd = .65)
+M2 <- rnorm(200, mean = D.ex, sd = 1.5)
+
+test <- data.frame(D = D.ex, D.str = c("Healthy", "Ill")[D.ex + 1], 
+                   M1 = M1, M2 = M2, stringsAsFactors = FALSE)
+basicplot <- ggplot(test, aes(d = D, m = M1)) + geom_roc(labels = FALSE)
+basicplot
+
+
+D.ex <- rbinom(50, 1, .5)
+rocdata <- data.frame(D = c(D.ex, D.ex), 
+                   M = c(rnorm(50, mean = D.ex, sd = .4), rnorm(50, mean = D.ex, sd = 1)), 
+                   Z = c(rep("A", 50), rep("B", 50)))
+
+ggplot(rocdata, aes(m = M, d = D)) + geom_roc()
+
+devtools::install_github("sachsmc/plotROC")
+
+ggplot(rocdata, aes(m = M, d = D, color = Z)) + geom_roc()
+
+
+```
 
 ###
 
@@ -416,18 +462,22 @@ plot_grid(p1,p2,p3,p4, labels = c("A", "B", "C", "D"), ncol = 2)
 
 
 ## What makes a good receiver?
+
+### Risk Analysis
 * PRML 1.5 "Decision Theory" <br/>
 * ESL 2.4 Statistical Decision Theory
+
+### Bias-Variance Tradeoff <br/>
 * ["Understanding the Bias-Variance Tradeoff,"](http://scott.fortmann-roe.com/docs/BiasVariance.html), Scott Fortmann-Roe,  2012, <br/>
 
-## No Free Lunch
+### Overfitting
+* [Overfitting](https://en.wikipedia.org/wiki/Overfitting)<br/>
+* [Training,_test,_and_validation_sets](https://en.wikipedia.org/wiki/Training,_test,_and_validation_sets)<br/>
+
+### No Free Lunch
 
 * WMLW 2.0 "Related Work"
 * ["No Free Lunch Theorems for Optimization,"](https://ti.arc.nasa.gov/m/profile/dhw/papers/78.pdf) David H. Wolpert and William G. Macready, 1997, <br/>
-
-## Overfitting
-* [Overfitting](https://en.wikipedia.org/wiki/Overfitting)<br/>
-* [Training,_test,_and_validation_sets](https://en.wikipedia.org/wiki/Training,_test,_and_validation_sets)<br/>
 
 ## Ommitted Variable Bias
 * [Simpsons Paradox](https://en.wikipedia.org/wiki/Simpson%27s_paradox)<br/>

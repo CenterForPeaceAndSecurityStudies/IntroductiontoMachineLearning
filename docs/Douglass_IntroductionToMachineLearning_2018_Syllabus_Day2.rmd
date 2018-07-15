@@ -25,63 +25,232 @@ code.r{
 
 ```
 
+```{r, eval=F, include=F}
+#I had some trouble install caret all in one go so went dependency by dependency
+install.packages('robustbase')
+install.packages('sfsmisc')
+install.packages('geometry')
+install.packages('profileModel')
+install.packages('labelled')
+install.packages('dimRed')
+install.packages('timeDate')
+install.packages('ddalpha')
+install.packages('gower')
+install.packages('RcppRoll')
+install.packages('brglm')
+install.packages('qvcalc')
+install.packages('plotmo')
+install.packages('TeachingDemos')
+install.packages('combinat')
+install.packages('questionr')
+install.packages('ISwR')
+install.packages('corpcor')
+install.packages('ModelMetrics')
+install.packages('recipes')
+install.packages('BradleyTerry2')
+install.packages('earth')
+install.packages('fastICA')
+install.packages('gam')
+install.packages('ipred')
+install.packages('klaR')
+install.packages('ellipse')
+install.packages('mda')
+install.packages('pls')
+install.packages('pROC')
+install.packages('proxy')
+install.packages('spls')
+
+```
+
+
+```{r}
+#install.packages("pacman")
+library(pacman)
+p_load(infotheo)
+p_load(tidyverse)
+p_load(ggplot2)
+p_load(cowplot)
+p_load(mlbench)
+p_load(Metrics)
+#remove.packages("rlang")
+#install.packages("rlang", repos = "https://cloud.r-project.org")
+
+set.seed(123)
+
+```
+
+
+# Prep and Clean the Breast Cancer Dataset
+
+BreastCancer Dataset <br/>
+A data frame with 699 observations on 11 variables, one being a character variable, 9 being ordered or nominal, and 1 target class. <br/>
+
+[,1]	 Id	 Sample code number <br/>
+[,2]	 Cl.thickness	 Clump Thickness <br/>
+[,3]	 Cell.size	 Uniformity of Cell Size <br/>
+[,4]	 Cell.shape	 Uniformity of Cell Shape <br/>
+[,5]	 Marg.adhesion	 Marginal Adhesion <br/>
+[,6]	 Epith.c.size	 Single Epithelial Cell Size <br/>
+[,7]	 Bare.nuclei	 Bare Nuclei <br/>
+[,8]	 Bl.cromatin	 Bland Chromatin <br/>
+[,9]	 Normal.nucleoli	 Normal Nucleoli <br/>
+[,10]	 Mitoses	 Mitoses <br/>
+[,11]	 Class	 Class <br/>
+
+
+Cleaning ad documentation
+
+```{r}
+data(BreastCancer)
+glimpse(BreastCancer)
+summary(BreastCancer$Class)
+BreastCancer$y <- as.factor(as.numeric(BreastCancer$Class=="malignant"))
+BreastCancer$Class <- NULL
+BreastCancer$Id <- NULL
+
+summary(BreastCancer)
+```
+
+There are 16 unexplained missing values on one of the features. We're going to impute those values, being careful to not use the outcome as one of the predictors. This will allows us to make comparisons across methods that do not handle missing values well, and also will protect us on predicting onto new test data which might also have unexplained missingness.
+
+[MissForest—non-parametric missing value imputation for mixed-type data](https://academic.oup.com/bioinformatics/article/28/1/112/219101), Daniel J. Stekhoven  Peter Bühlmann, Bioinformatics, Volume 28, Issue 1, 1 January 2012, Pages 112–118,
+
+```{r}
+#There are 16 missing values in Bare.nuclei, they're continous 
+p_load("missForest")
+BreastCancer_imputed <- BreastCancer
+BreastCancer_imputed <- missForest(BreastCancer %>% select(-y), verbose = TRUE)$ximp
+BreastCancer_imputed$y <- BreastCancer$y
+
+BreastCancer_imputed[,1:5] <- lapply(BreastCancer_imputed[,1:5] , as.integer)
+
+table(BreastCancer_imputed$Class_binary)
+```
+
+Convert categorical variables to 'one-hot' dummy variables <br/>
+
+[Making dummy variables with dummy_cols()](https://cran.r-project.org/web/packages/fastDummies/vignettes/making-dummy-variables.html), Jacob Kaplan, 2018-06-21
+
+```{r}
+#install.packages('data.table')
+p_load(fastDummies)
+BreastCancer_onehot <- fastDummies::dummy_cols(BreastCancer_imputed,
+                                               select_columns=c("Bare.nuclei",
+                                                                "Bl.cromatin",
+                                                                "Normal.nucleoli",
+                                                                "Mitoses"))
+BreastCancer_onehot[,c('Bare.nuclei','Bl.cromatin','Normal.nucleoli','Mitoses')] <- NULL
+```
+
+# Hold out a Test Set
+
+The Very first thing we're going to do is pull 20% of the Breat Cancer dataset out as a test set and we're never going to touch it for any reason other than final model evaluation.
+
+Immediately split of a test set that we will not touch until the very final evaluation.
+
+```{r}
+N=nrow(BreastCancer)
+condition_train <- runif(N)<.8; table(condition_train)
+
+BreastCancer_train <- BreastCancer_imputed[condition_train,]
+BreastCancer_test <- BreastCancer_imputed[!condition_train,]
+
+BreastCancer_onehot_train <- BreastCancer_onehot[condition_train,]
+BreastCancer_onehot_test <- BreastCancer_onehot[!condition_train,]
+
+```
+
 # Supervised Learning
 * IMLR ["Chapter 5 Supervised Learning"](https://lgatto.github.io/IntroMachineLearningWithR/supervised-learning.html)
 
-# Nearest Neighbor
-* [K-nearest_neighbors_algorithm](https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm) <br/>
+```{r}
 
-# Parametric Models
+formula= y ~    Cl.thickness + 
+                           Cell.size + 
+                           Cell.shape + 
+                           Marg.adhesion + 
+                           Epith.c.size + 
+                           Bare.nuclei + 
+                           Bl.cromatin + 
+                           Normal.nucleoli + 
+                           Mitoses
+
+#One Hot formula dummies
+formula_onehot = y ~ 
+
+Cl.thickness +
+Cell.size +
+Cell.shape +
+Marg.adhesion +
+Epith.c.size +
+
+Bare.nuclei_1 + Bare.nuclei_10 + Bare.nuclei_2 + Bare.nuclei_4 + Bare.nuclei_3 + Bare.nuclei_9 + Bare.nuclei_7 + 
+Bare.nuclei_5 + Bare.nuclei_8 + Bare.nuclei_6 +  Bl.cromatin_3  + 
+
+Bl.cromatin_9 + Bl.cromatin_1+Bl.cromatin_2+Bl.cromatin_4+Bl.cromatin_5+Bl.cromatin_7  +   
+Bl.cromatin_8+Bl.cromatin_6+Bl.cromatin_10+
+  
+Normal.nucleoli_1 +  Normal.nucleoli_2 + Normal.nucleoli_7 + 
+Normal.nucleoli_4 + Normal.nucleoli_5 +  Normal.nucleoli_3 + 
+Normal.nucleoli_10 + Normal.nucleoli_6 +  Normal.nucleoli_9 + 
+Normal.nucleoli_8 +  
+  
+Mitoses_1+ Mitoses_5 + Mitoses_4 + Mitoses_2+Mitoses_3 + Mitoses_7 + Mitoses_10 + Mitoses_8 + Mitoses_6
+
+```
+
+# Linear Models
 * (ISLR) "Chapter 3 Linear Regression"
 * [Ordinary_least_squares](https://en.wikipedia.org/wiki/) <br/>
 * (ISLR) "Chapter 4.3 Logistic Regression"
 * [Logistic_regression](https://en.wikipedia.org/wiki/Logistic_regression) <br/>
 
-## Interaction Terms
-* [Interaction_(statistics)](https://en.wikipedia.org/wiki/Interaction_(statistics))<br/>
-* ["How Much Should We Trust Estimates from Multiplicative Interaction Models? Simple Tools to Improve Empirical Practice,"](http://yiqingxu.org/papers/english/2018_HMX_interaction/main.pdf), Jens Hainmueller Jonathan Mummolo Yiqing Xu,, April 20, 2018, Political Analysis<br/>
+* [Glmnet Vignette](https://cran.r-project.org/web/packages/glmnet/vignettes/glmnet_beta.pdf)
 
-## Nonlinear Models
-* (ISLR) "Chapter 7 Moving Beyond Linearity"
-[Linear_separability](https://en.wikipedia.org/wiki/Linear_separability)
+```{r}
+p_load(glmnet)
 
-## Neural Networks
-* ["Neural Networks, Manifolds, and Topology"](http://colah.github.io/posts/2014-03-NN-Manifolds-Topology/), Christopher Olah
-* (DL) Deep Learning, Ian Goodfellow and Yoshua Bengio and Aaron Courville, 2016, http://www.deeplearningbook.org/ <br/>
-* (PRML) "Chapter 5 Neural Networks"
-* [Tensorflow Playground](http://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=circle&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=0&networkShape=4,2&seed=0.47077&showTestData=false&discretize=false&percTrainData=50&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=false&cosY=false&sinY=false&collectStats=false&problem=classification&initZero=false&hideText=false)
-* [ConvNetJS Deep Learning in your browser](https://cs.stanford.edu/people/karpathy/convnetjs/)
-* [KerasJS](https://transcranial.github.io/keras-js/#/)
-* ["Understanding LSTM Networks,"](http://colah.github.io/posts/2015-08-Understanding-LSTMs/), Christopher Olah,  August 27, 2015,  <br/>
-* [The Building Blocks of Interpretability](https://distill.pub/2018/building-blocks/), Chris Olah, Arvind Satyanarayan, Ian Johnson, Shan Carter, Ludwig Schubert, Katherine Ye, Alexander Mordvintsev, 2018, Distill
-* [Feature Visualization How neural networks build up their understanding of images](https://distill.pub/2017/feature-visualization/), Chris Olah, Alexander Mordvintsev, Ludwig Schubert, Nov. 7, 2017, Distill
+glm1 <- glm(formula ,
+               data=BreastCancer_train ,
+               family=binomial(link='probit')
+            )
+
+library(broom)
+tidy(glm1 ) #There are 44 features, counting dummified categorical variables
+
+```
+
+Out of sample accuracy?
+
+```{r}
+p_load(caret)
+cctrl1 <- trainControl(method="cv", 
+                       number=10,
+                       returnResamp="all",
+                       classProbs=TRUE,
+                       summaryFunction=twoClassSummary
+                       )
+
+glm_cv <- train(x=BreastCancer_train[,-c(10)],
+                             y=as.factor(paste0('Outcome',BreastCancer_train$y)),
+                             method = "glm",
+                             trControl = cctrl1,
+                             metric = "ROC"#,
+                             #tuneGrid = expand.grid(alpha = 1,lambda = seq(0.001,0.1,by = 0.001) )
+                             )
+
+print(glm_cv$results$ROC) #Very decent area under the ROC for just a linear model
+
+```
 
 
-# Trees
-* https://en.wikipedia.org/wiki/Decision_tree <br/>
-* ["Tree-Based Models"](https://www.statmethods.net/advstats/cart.html) <br/>
-(ISLR) "8 Tree-Based Methods"
-(IntroMachineLearningWithR) "5.5 Random forest"
-* [“Induction of Decision Trees.”](https://link.springer.com/content/pdf/10.1007/BF00116251.pdf), Quinlan, Ross. 1986., Machine Learning 1(1):81–106.
 
-# Bootstrapping Observations
-
-* [Bootstrap_aggregating](https://en.wikipedia.org/wiki/Bootstrap_aggregating)
-* [Cross-validation_(statistics)](https://en.wikipedia.org/wiki/Cross-validation_(statistics))<br/>
-* ["Linear Model Selection by Cross-Validation,"](http://www.libpls.net/publication/MCCV_Shao_1993.pdf), Jun Shao, 1993<br/>
-* ["Cross-validation failure: small sample sizes lead to large error bars,"](https://hal.inria.fr/hal-01545002/), Gaël Varoquaux, 2017<br/>
-* (ESL) "7 Model Assessment and Selection"
-* (ISLR) "Chapter 5 Resampling Methods"
-
-# Feature Selection
+# Variable Selection
 * (ESL) "3 Linear Methods for Regression, 3.3 Subset Methods"
 * [Stepwise_regression](https://en.wikipedia.org/wiki/Stepwise_regression)
 
-## Model Complexity/Parismony
-* AIC (Akaike 1973)
-* [Akaike information criterion (AIC)](https://en.wikipedia.org/wiki/Akaike_information_criterion)<br/>
-* BIC (Schwarz 1978)
-* [Bayesian information criterion (BIC)](https://en.wikipedia.org/wiki/Bayesian_information_criterion)<br/>
+
+## P Values
 
 ## Feature Importance
 * [A Machine Learning Alternative to P-values](https://arxiv.org/pdf/1701.04944.pdf),Min Lu and Hemant Ishwaran, February 22, 2017<br/>
@@ -95,9 +264,19 @@ lime, Python Package, https://github.com/marcotcr/lime
 * [Extreme_bounds_analysis](https://en.wikipedia.org/wiki/Extreme_bounds_analysis)
 * ["ExtremeBounds: Extreme Bounds Analysis in R"](https://cran.r-project.org/web/packages/ExtremeBounds/vignettes/ExtremeBounds.pdf) <br/>
 
-## Bagging/Subspace Mtethods
-* [Random subspace method](https://en.wikipedia.org/wiki/Random_subspace_method)
-* [“Bagging Predictors.”](https://link.springer.com/content/pdf/10.1007/BF00058655.pdf),Breiman, Leo. 1996. , Machine Learning 24:123–140.
+## VAE
+
+## Vimp
+
+[Introduction to vimp](Brian D. Williamson), 2018-06-19
+
+```{r}
+p_load("vimp")
+p_load("SuperLearner")
+
+```
+
+
 
 # Regularization, e.g. Lasso/Ridge Regression
 * https://en.wikipedia.org/wiki/Lasso_(statistics)
@@ -106,10 +285,380 @@ lime, Python Package, https://github.com/marcotcr/lime
 * (ISLR) "6 Linear Model Selection and Regularization"
 * (ESL) "3 Linear Methods for Regression, 3.4 Shrinkage Methods"
 
-## Combining Ideas = Random Forests
+
+
+```{r}
+
+glmnet1 <- glmnet(x=BreastCancer_onehot_train %>% select(-y) %>%  as.matrix(),
+               y=as.factor(BreastCancer_onehot_train$y),
+               family="binomial"
+               )
+plot(glmnet1)
+
+glmnet1_cv <- cv.glmnet(x=BreastCancer_onehot_train %>% select(-y) %>% data.matrix(),
+                       y=as.factor(BreastCancer_onehot_train$y),
+                       family="binomial",
+                                nfolds=5)
+
+glmnet1_cv$lambda.1se #smallest model with error within 1se error of the minimum ever observed
+
+plot(glmnet1_cv)
+
+glmnet_lambda.1se_betas <- coef(glmnet1_cv,s="lambda.1se") %>% as.matrix() %>% as.data.frame()  %>% 
+                           rename(beta='1') %>% 
+                           rownames_to_column() %>% arrange(desc(beta) ) 
+
+#There are 44 features
+#14 have been set to nonzero coefficients
+#the cofficients are relatively small
+
+#Design a single model around that optimal lambda
+glmnet_lambda.1se <- glmnet(x=BreastCancer_onehot_train %>% select(-y) %>% data.matrix(),
+                       y=BreastCancer_onehot_train$y,
+                       family="binomial",
+                       lambda=glmnet1_cv$lambda.1se
+                       )
+
+
+#cross validate that model to get estimate of accuracy on the test set
+p_load(caret)
+cctrl1 <- trainControl(method="cv", number=10, returnResamp="all",classProbs=TRUE,summaryFunction=twoClassSummary)
+
+
+glmnet_lambda.1se_cv <- train(x=BreastCancer_onehot_train %>% select(-y) %>% data.matrix(),
+                             y=as.factor(paste0('Outcome',BreastCancer_train$y)),
+                             method = "glmnet",
+                             trControl = cctrl1,
+                             metric = "ROC",
+                             tuneGrid = expand.grid(alpha = 1,lambda = glmnet1_cv$lambda.1se))
+
+#Area Under the Curve Almost Perfect Now despite using only 14 of the 44 features
+print(glmnet_lambda.1se_cv$ROC) #0.9916547
+ 
+```
+
+
+## Linear Expansions and Interaction Terms
+
+We can put the same feature in a linear multiple times with polynomials to capture nonlinear relationships.
+
+```{r}
+library(dplyr)
+df <- data.frame(x=seq(0,100)) %>% 
+  mutate(y=0+x+x^2+x^3)  %>% 
+  mutate(pred_lm      = lm(y~x    )$fitted.values) %>% 
+  mutate(pred_lm_quad = lm(y~x+I(x^2))$fitted.values)
+
+library(ggplot2)
+ggplot(df, aes(x,y))  + 
+         geom_point( aes(x,y)) + 
+         geom_line(aes(x=x,y=pred_lm), col='red')  + 
+         geom_line(aes(x=x,y=pred_lm_quad), col='blue')  
+
+```
+
+## Interaction Terms
+* [Interaction_(statistics)](https://en.wikipedia.org/wiki/Interaction_(statistics))<br/>
+* ["How Much Should We Trust Estimates from Multiplicative Interaction Models? Simple Tools to Improve Empirical Practice,"](http://yiqingxu.org/papers/english/2018_HMX_interaction/main.pdf), Jens Hainmueller Jonathan Mummolo Yiqing Xu,, April 20, 2018, Political Analysis<br/>
+* ["Exploring interactions with continuous predictors in regression models"](https://cran.r-project.org/web/packages/jtools/vignettes/interactions.html), Jacob Long, 2018-05-07
+
+Nonlinear Models
+* (ISLR) "Chapter 7 Moving Beyond Linearity"
+[Linear_separability](https://en.wikipedia.org/wiki/Linear_separability)
+
+
+```{r}
+
+form <-  ~ .^2
+
+y <- BreastCancer_onehot_train$Class_binary
+
+BreastCancer_onehot_train_twoway <-  model.matrix(form, data = BreastCancer_onehot_train[,-c(6)])
+BreastCancer_onehot_test_twoway <-  model.matrix(form, data = BreastCancer_onehot_test[,-c(6)])
+
+dim(BreastCancer_onehot_train_twoway)#991 terms
+
+condition = colnames(BreastCancer_onehot_train_twoway)=='Class_binary'
+glmnet_twoway <- glmnet(x=BreastCancer_onehot_train_twoway ,
+               y=as.factor(BreastCancer_onehot_train$y),
+               family="binomial"
+               )
+plot(glmnet_twoway)
+
+
+
+glmnet_twoway_cv <- cv.glmnet(x=BreastCancer_onehot_train_twoway,
+                       y=as.factor(BreastCancer_onehot_train$y),
+                       family="binomial",
+                                nfolds=5)
+
+glmnet_twoway_cv$lambda.1se #smallest model with error within 1se error of the minimum ever observed
+
+plot(glmnet_twoway_cv)
+
+glmnet_twoway_lambda.1se_betas <- coef(glmnet1_cv,s="lambda.1se") %>% as.matrix() %>% as.data.frame()  %>% 
+                           rename(beta='1') %>% 
+                           rownames_to_column() %>% arrange(desc(beta) ) 
+
+
+
+#Design a single model around that optimal lambda
+glmnet_twoway_lambda.1se <- glmnet(x=BreastCancer_onehot_train %>% select(-y) %>% data.matrix(),
+                       y=BreastCancer_onehot_train$y,
+                       family="binomial",
+                       lambda=glmnet1_cv$lambda.1se
+                       )
+
+
+#cross validate that model to get estimate of accuracy on the test set
+p_load(caret)
+cctrl1 <- trainControl(method="cv", number=10, returnResamp="all",classProbs=TRUE,summaryFunction=twoClassSummary)
+
+glmnet_twoway_lambda.1se_cv <- train(x=BreastCancer_onehot_train_twoway,
+                             y=as.factor(paste0('Outcome',BreastCancer_train$y)),
+                             method = "glmnet",
+                             trControl = cctrl1,
+                             metric = "ROC",
+                             tuneGrid = expand.grid(alpha = 1,lambda = glmnet1_cv$lambda.1se))
+
+#Area Under the Curve Almost Perfect Now despite using only 14 of the 44 features
+print(glmnet_twoway_lambda.1se_cv$ROC) #0.9918952  marginally beterr still 
+
+
+```
+
+Interpreting the model
+There ar some measures that unambigiously look bad for cancer outcomes.
+There are certain interactions that are good news. 
+Bare.nuclei_8:Normal.nucleoli_2
+Bare.nuclei_1:Mitoses_1
+Bare.nuclei_7:Normal.nucleoli_8
+Normal.nucleoli_1:Mitoses_1
+are.nuclei_1:Normal.nucleoli_1
+
+Bare.nuclei_1 by itself looks like good news, but in combination with something else it's especially helpful.
+
+```{r}
+#There are 991 terms
+#By a mirracle, also 14 chosen
+#Some of the  cofficients are relatively small
+
+glmnet_twoway_cv_betas <- coef(glmnet_twoway_cv,s="lambda.1se") %>% 
+                            as.matrix() %>% as.data.frame()  %>% 
+                           rename(beta='1') %>% 
+                           rownames_to_column() %>% arrange(desc(beta) ) 
+glmnet_twoway_cv_betas %>% filter(beta!=0)
+
+
+```
+
+
+# Decision Trees
+* https://en.wikipedia.org/wiki/Decision_tree <br/>
+* ["Tree-Based Models"](https://www.statmethods.net/advstats/cart.html) <br/>
+(ISLR) "8 Tree-Based Methods"
+(IntroMachineLearningWithR) "5.5 Random forest"
+* [“Induction of Decision Trees.”](https://link.springer.com/content/pdf/10.1007/BF00116251.pdf), Quinlan, Ross. 1986., Machine Learning 1(1):81–106.
+
+```{r, fig.width=12, fig.height=8}
+p_load(party)
+single_decision_tree <- ctree(formula, data = BreastCancer_train)
+plot(single_decision_tree)
+
+```
+
+Out of sample
+
+Slightly worse but arguably an easier to interpret model.
+
+```{r}
+p_load(caret)
+cctrl1 <- trainControl(method="cv", number=10, returnResamp="all",classProbs=TRUE,summaryFunction=twoClassSummary)
+
+single_decision_tree_cv_model <- train(x=BreastCancer_train[,-c(10)],
+                             y=as.factor(paste0('Outcome',BreastCancer_train$y)),
+                             method = "ctree",
+                             trControl = cctrl1,
+                             metric = "ROC",
+                             tuneGrid = expand.grid(mincriterion = 0.99)
+                             )
+
+print(single_decision_tree_cv_model$results$ROC) #0.9668608
+
+```
+
+
+# Overfitting
+
+## Bootstrapping Observations
+
+* [Bootstrap_aggregating](https://en.wikipedia.org/wiki/Bootstrap_aggregating)
+* [Cross-validation_(statistics)](https://en.wikipedia.org/wiki/Cross-validation_(statistics))<br/>
+* ["Linear Model Selection by Cross-Validation,"](http://www.libpls.net/publication/MCCV_Shao_1993.pdf), Jun Shao, 1993<br/>
+* ["Cross-validation failure: small sample sizes lead to large error bars,"](https://hal.inria.fr/hal-01545002/), Gaël Varoquaux, 2017<br/>
+* (ESL) "7 Model Assessment and Selection"
+* (ISLR) "Chapter 5 Resampling Methods"
+
+## Model Complexity/Parismony
+* AIC (Akaike 1973)
+* [Akaike information criterion (AIC)](https://en.wikipedia.org/wiki/Akaike_information_criterion)<br/>
+* BIC (Schwarz 1978)
+* [Bayesian information criterion (BIC)](https://en.wikipedia.org/wiki/Bayesian_information_criterion)<br/>
+
+
+# Curse of dimensionality
+
+## Feature Bagging/Subspace Mtethods
+* [Random subspace method](https://en.wikipedia.org/wiki/Random_subspace_method)
+* [“Bagging Predictors.”](https://link.springer.com/content/pdf/10.1007/BF00058655.pdf),Breiman, Leo. 1996. , Machine Learning 24:123–140.
+
+Random Forests
 * https://en.wikipedia.org/wiki/Random_forest <br/>
 * ["RANDOM FORESTS"](https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf) Leo Breiman, January 2001
 * ["Exploratory Data Analysis using Random Forests"](http://zmjones.com/static/papers/rfss_manuscript.pdf)
+
+
+```{r}
+
+#install.packages('randomForest', dependencies=T)
+
+p_load(randomForest)
+
+forest <- randomForest(formula,
+                       data = BreastCancer_train,
+                       localImp = TRUE,
+                       na.action=na.omit)
+print(forest)
+```
+
+```{r}
+
+#cross validate that model to get estimate of accuracy on the test set
+p_load(caret)
+p_load(randomForest)
+cctrl1 <- trainControl(method="cv", number=10, returnResamp="all",classProbs=TRUE,summaryFunction=twoClassSummary)
+
+test_class_cv_model <- train(x=BreastCancer_train[,-c(10)],
+                             y=as.factor(paste0('Outcome',BreastCancer_train$y)),
+                             method = "rf",
+                             trControl = cctrl1,
+                             metric = "ROC",
+                             #tuneGrid = expand.grid(alpha = 1,lambda = glmnet1_cv$lambda.1se)
+                             )
+
+#
+print(test_class_cv_model$ROC) #0.9887126  Slightly better than the decision trees 
+
+```
+
+## Depth
+
+[Understanding random forests with randomForestExplainer](https://cran.rstudio.com/web/packages/randomForestExplainer/vignettes/randomForestExplainer.html), Aleksandra Paluszyńska
+
+
+```{r}
+#devtools::install_github("MI2DataLab/randomForestExplainer")
+p_load(randomForestExplainer)
+#install.packages('rlang')
+
+min_depth_frame <- min_depth_distribution(forest)
+save(min_depth_frame, file = "min_depth_frame.rda")
+load("min_depth_frame.rda")
+head(min_depth_frame, n = 10)
+
+# plot_min_depth_distribution(forest) # gives the same result as below but takes longer
+plot_min_depth_distribution(min_depth_frame)
+
+```
+
+Variable Importance
+Pay particular attention to "accuracy_decrease" which is the drop in the classifier's accuracy if that variable is shuffled destroying its information.
+
+```{r}
+importance_frame <- measure_importance(forest)
+importance_frame
+```
+
+```{r}
+plot_multi_way_importance(importance_frame, size_measure = "no_of_nodes")
+```
+
+```{r}
+(vars <- important_variables(importance_frame, k = 5, measures = c("mean_min_depth", "no_of_trees")))
+interactions_frame <- min_depth_interactions(forest, vars)
+head(interactions_frame[order(interactions_frame$occurrences, decreasing = TRUE), ])
+```
+
+```{r}
+plot_min_depth_interactions(interactions_frame)
+```
+
+```{r, eval=F}
+plot_predict_interaction(forest, BreastCancer_train[,-c(10)], "Cell.size", "Cl.thickness")
+```
+
+Can even generate an automated report
+```{r, eval=F}
+explain_forest(forest, interactions = TRUE, data = BreastCancer_train)
+```
+
+## Neural Networks
+* ["Neural Networks, Manifolds, and Topology"](http://colah.github.io/posts/2014-03-NN-Manifolds-Topology/), Christopher Olah
+* (DL) Deep Learning, Ian Goodfellow and Yoshua Bengio and Aaron Courville, 2016, http://www.deeplearningbook.org/ <br/>
+* (PRML) "Chapter 5 Neural Networks"
+* [Tensorflow Playground](http://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=circle&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=0&networkShape=4,2&seed=0.47077&showTestData=false&discretize=false&percTrainData=50&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=false&cosY=false&sinY=false&collectStats=false&problem=classification&initZero=false&hideText=false)
+* [ConvNetJS Deep Learning in your browser](https://cs.stanford.edu/people/karpathy/convnetjs/)
+* [KerasJS](https://transcranial.github.io/keras-js/#/)
+* ["Understanding LSTM Networks,"](http://colah.github.io/posts/2015-08-Understanding-LSTMs/), Christopher Olah,  August 27, 2015,  <br/>
+* [The Building Blocks of Interpretability](https://distill.pub/2018/building-blocks/), Chris Olah, Arvind Satyanarayan, Ian Johnson, Shan Carter, Ludwig Schubert, Katherine Ye, Alexander Mordvintsev, 2018, Distill
+* [Feature Visualization How neural networks build up their understanding of images](https://distill.pub/2017/feature-visualization/), Chris Olah, Alexander Mordvintsev, Ludwig Schubert, Nov. 7, 2017, Distill
+
+```{r, fig.width=12, fig.height=8}
+p_load("neuralnet")
+
+NN = neuralnet(formula_onehot,
+               data= BreastCancer_onehot_train %>% data.matrix(), 
+               hidden = 10 , 
+               linear.output = T )
+
+# plot neural network
+plot(NN)
+
+```
+
+
+```{r, eval=F, include=F}
+#This fails because caret doesn't handle classification with neuralnet
+
+
+#cross validate that model to get estimate of accuracy on the test set
+p_load(caret)
+cctrl1 <- trainControl(method="cv", number=10, returnResamp="all",classProbs=TRUE,summaryFunction=twoClassSummary)
+
+test_class_cv_model <- train(x=BreastCancer_onehot_train[,-c(6)] %>% data.matrix(),
+                             y=as.factor(paste0('Outcome',BreastCancer_train$y)),
+                             method = "neuralnet",
+                             trControl = cctrl1,
+                             metric = "ROC",
+                             tuneGrid =expand.grid(linear.output = T) ,
+                             preProc = c("center", "scale")
+                             #tuneGrid = expand.grid(alpha = 1,lambda = glmnet1_cv$lambda.1se)
+                             )
+
+#
+print(test_class_cv_model$ROC) #0.9887126  Slightly better than the decision trees 
+
+```
+
+
+# Final Check Against Test Data
+
+```{r}
+
+
+```
+
+
 
 
 # Unsupervised Learning
@@ -162,3 +711,6 @@ lime, Python Package, https://github.com/marcotcr/lime
 * ["ethnicolr: Predict Race and Ethnicity From Name,"](https://github.com/appeler/ethnicolr)<br/>
 * Weidmann, Nils B. and Sebastian Schutte. Using Night Lights for the Prediction of Local Wealth. Journal
 of Peace Research 54(2).
+
+# Nearest Neighbor
+* [K-nearest_neighbors_algorithm](https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm) <br/>
