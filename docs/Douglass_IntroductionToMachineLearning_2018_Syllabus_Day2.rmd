@@ -199,6 +199,21 @@ Mitoses_1+ Mitoses_5 + Mitoses_4 + Mitoses_2+Mitoses_3 + Mitoses_7 + Mitoses_10 
 
 ```
 
+Register a single back end for cross-validation
+
+```{r}
+
+p_load(caret)
+set.seed(123)
+cctrl1 <- trainControl(method="cv", 
+                       number=10,
+                       returnResamp="all",
+                       classProbs=TRUE,
+                       summaryFunction=twoClassSummary
+                       )
+
+```
+
 # Linear Models
 * (ISLR) "Chapter 3 Linear Regression"
 * [Ordinary_least_squares](https://en.wikipedia.org/wiki/) <br/>
@@ -209,7 +224,7 @@ Mitoses_1+ Mitoses_5 + Mitoses_4 + Mitoses_2+Mitoses_3 + Mitoses_7 + Mitoses_10 
 
 ```{r}
 p_load(glmnet)
-
+set.seed(123)
 glm1 <- glm(formula ,
                data=BreastCancer_train ,
                family=binomial(link='probit')
@@ -223,14 +238,7 @@ tidy(glm1 ) #There are 44 features, counting dummified categorical variables
 Out of sample accuracy?
 
 ```{r}
-p_load(caret)
-cctrl1 <- trainControl(method="cv", 
-                       number=10,
-                       returnResamp="all",
-                       classProbs=TRUE,
-                       summaryFunction=twoClassSummary
-                       )
-
+set.seed(123)
 glm_cv <- train(x=BreastCancer_train[,-c(10)],
                              y=as.factor(paste0('Outcome',BreastCancer_train$y)),
                              method = "glm",
@@ -286,7 +294,7 @@ p_load("SuperLearner")
 
 
 ```{r}
-
+set.seed(123)
 glmnet1 <- glmnet(x=BreastCancer_onehot_train %>% select(-y) %>%  as.matrix(),
                y=as.factor(BreastCancer_onehot_train$y),
                family="binomial"
@@ -319,10 +327,6 @@ glmnet_lambda.1se <- glmnet(x=BreastCancer_onehot_train %>% select(-y) %>% data.
 
 
 #cross validate that model to get estimate of accuracy on the test set
-p_load(caret)
-cctrl1 <- trainControl(method="cv", number=10, returnResamp="all",classProbs=TRUE,summaryFunction=twoClassSummary)
-
-
 glmnet_lambda.1se_cv <- train(x=BreastCancer_onehot_train %>% select(-y) %>% data.matrix(),
                              y=as.factor(paste0('Outcome',BreastCancer_train$y)),
                              method = "glmnet",
@@ -341,6 +345,7 @@ print(glmnet_lambda.1se_cv$ROC) #0.9916547
 We can put the same feature in a linear multiple times with polynomials to capture nonlinear relationships.
 
 ```{r}
+set.seed(123)
 library(dplyr)
 df <- data.frame(x=seq(0,100)) %>% 
   mutate(y=0+x+x^2+x^3)  %>% 
@@ -366,7 +371,7 @@ Nonlinear Models
 
 
 ```{r}
-
+set.seed(123)
 form <-  ~ .^2
 
 y <- BreastCancer_onehot_train$Class_binary
@@ -409,9 +414,6 @@ glmnet_twoway_lambda.1se <- glmnet(x=BreastCancer_onehot_train %>% select(-y) %>
 
 
 #cross validate that model to get estimate of accuracy on the test set
-p_load(caret)
-cctrl1 <- trainControl(method="cv", number=10, returnResamp="all",classProbs=TRUE,summaryFunction=twoClassSummary)
-
 glmnet_twoway_lambda.1se_cv <- train(x=BreastCancer_onehot_train_twoway,
                              y=as.factor(paste0('Outcome',BreastCancer_train$y)),
                              method = "glmnet",
@@ -459,6 +461,7 @@ glmnet_twoway_cv_betas %>% filter(beta!=0)
 * [“Induction of Decision Trees.”](https://link.springer.com/content/pdf/10.1007/BF00116251.pdf), Quinlan, Ross. 1986., Machine Learning 1(1):81–106.
 
 ```{r, fig.width=12, fig.height=8}
+set.seed(123)
 p_load(party)
 single_decision_tree <- ctree(formula, data = BreastCancer_train)
 plot(single_decision_tree)
@@ -470,9 +473,7 @@ Out of sample
 Slightly worse but arguably an easier to interpret model.
 
 ```{r}
-p_load(caret)
-cctrl1 <- trainControl(method="cv", number=10, returnResamp="all",classProbs=TRUE,summaryFunction=twoClassSummary)
-
+set.seed(123)
 single_decision_tree_cv_model <- train(x=BreastCancer_train[,-c(10)],
                              y=as.factor(paste0('Outcome',BreastCancer_train$y)),
                              method = "ctree",
@@ -517,7 +518,7 @@ print(single_decision_tree_cv_model$results$ROC) #0.9668608
 
 
 ```{r}
-
+set.seed(123)
 #install.packages('randomForest', dependencies=T)
 
 p_load(randomForest)
@@ -531,8 +532,7 @@ print(forest)
 
 ```{r}
 
-#cross validate that model to get estimate of accuracy on the test set
-p_load(caret)
+set.seed(123)
 p_load(randomForest)
 cctrl1 <- trainControl(method="cv", number=10, returnResamp="all",classProbs=TRUE,summaryFunction=twoClassSummary)
 
@@ -540,7 +540,7 @@ test_class_cv_model <- train(x=BreastCancer_train[,-c(10)],
                              y=as.factor(paste0('Outcome',BreastCancer_train$y)),
                              method = "rf",
                              trControl = cctrl1,
-                             metric = "ROC",
+                             metric = "ROC"
                              #tuneGrid = expand.grid(alpha = 1,lambda = glmnet1_cv$lambda.1se)
                              )
 
@@ -555,6 +555,7 @@ print(test_class_cv_model$ROC) #0.9887126  Slightly better than the decision tre
 
 
 ```{r}
+set.seed(123)
 #devtools::install_github("MI2DataLab/randomForestExplainer")
 p_load(randomForestExplainer)
 #install.packages('rlang')
@@ -603,7 +604,7 @@ explain_forest(forest, interactions = TRUE, data = BreastCancer_train)
 # Compare out of Sample Accuracy
 
 ```{r}
-
+set.seed(123)
 df_predictions <- data.frame(y_true=BreastCancer_test$y,
                              y_hat_glm=stats::predict.glm(glm1, newdata=BreastCancer_test, type = "response" ),
                              y_hat_lasso = predict(glmnet1_cv, newx=BreastCancer_onehot_test %>% 
