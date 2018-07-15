@@ -264,8 +264,6 @@ lime, Python Package, https://github.com/marcotcr/lime
 * [Extreme_bounds_analysis](https://en.wikipedia.org/wiki/Extreme_bounds_analysis)
 * ["ExtremeBounds: Extreme Bounds Analysis in R"](https://cran.r-project.org/web/packages/ExtremeBounds/vignettes/ExtremeBounds.pdf) <br/>
 
-## VAE
-
 ## Vimp
 
 [Introduction to vimp](Brian D. Williamson), 2018-06-19
@@ -512,7 +510,7 @@ print(single_decision_tree_cv_model$results$ROC) #0.9668608
 * [Random subspace method](https://en.wikipedia.org/wiki/Random_subspace_method)
 * [“Bagging Predictors.”](https://link.springer.com/content/pdf/10.1007/BF00058655.pdf),Breiman, Leo. 1996. , Machine Learning 24:123–140.
 
-Random Forests
+# Random Forests
 * https://en.wikipedia.org/wiki/Random_forest <br/>
 * ["RANDOM FORESTS"](https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf) Leo Breiman, January 2001
 * ["Exploratory Data Analysis using Random Forests"](http://zmjones.com/static/papers/rfss_manuscript.pdf)
@@ -602,7 +600,41 @@ Can even generate an automated report
 explain_forest(forest, interactions = TRUE, data = BreastCancer_train)
 ```
 
-## Neural Networks
+# Compare out of Sample Accuracy
+
+```{r}
+
+df_predictions <- data.frame(y_true=BreastCancer_test$y,
+                             y_hat_glm=stats::predict.glm(glm1, newdata=BreastCancer_test, type = "response" ),
+                             y_hat_lasso = predict(glmnet1_cv, newx=BreastCancer_onehot_test %>% 
+                                                 select(-y) %>% data.matrix(), s=c("lambda.1se") ,
+                                                 type = "response")[,1],
+                              y_hat_lasso_twoway <- predict(glmnet_twoway_cv, 
+                                                            newx=BreastCancer_onehot_test_twoway %>%
+                                                              data.matrix(),
+                                      s=c("lambda.1se") , type = "response")[,1],
+                             y_hat_single_tree = predict(single_decision_tree, newdata=BreastCancer_test,
+                                                         type = "prob") %>% sapply(rbind) %>% t() %>%
+                               data.frame() %>% pull(X2),
+                             y_hat_forest = predict(forest, newdata=BreastCancer_test, type = "prob")[,'1']#,
+                             #y_hat_nn = predict(NN, newdata=BreastCancer_test, type = "prob")
+                             )
+```
+```{r}
+p_load(MLmetrics)
+AUC(df_predictions$y_hat_glm,df_predictions$y_true)
+AUC(df_predictions$y_hat_lasso,df_predictions$y_true)
+AUC(df_predictions$y_hat_lasso_twoway,df_predictions$y_true)
+AUC(df_predictions$y_hat_single_tree,df_predictions$y_true)
+AUC(df_predictions$y_hat_forest,df_predictions$y_true)
+
+
+
+```
+
+
+
+# Neural Networks
 * ["Neural Networks, Manifolds, and Topology"](http://colah.github.io/posts/2014-03-NN-Manifolds-Topology/), Christopher Olah
 * (DL) Deep Learning, Ian Goodfellow and Yoshua Bengio and Aaron Courville, 2016, http://www.deeplearningbook.org/ <br/>
 * (PRML) "Chapter 5 Neural Networks"
@@ -616,10 +648,29 @@ explain_forest(forest, interactions = TRUE, data = BreastCancer_train)
 ```{r, fig.width=12, fig.height=8}
 p_load("neuralnet")
 
-NN = neuralnet(formula_onehot,
-               data= BreastCancer_onehot_train %>% data.matrix(), 
+formula_onehot_2 = y + y_not ~ Cl.thickness + Cell.size + Cell.shape + Marg.adhesion + Epith.c.size + 
+    Bare.nuclei_1 + Bare.nuclei_10 + Bare.nuclei_2 + Bare.nuclei_4 + 
+    Bare.nuclei_3 + Bare.nuclei_9 + Bare.nuclei_7 + Bare.nuclei_5 + 
+    Bare.nuclei_8 + Bare.nuclei_6 + Bl.cromatin_3 + Bl.cromatin_9 + 
+    Bl.cromatin_1 + Bl.cromatin_2 + Bl.cromatin_4 + Bl.cromatin_5 + 
+    Bl.cromatin_7 + Bl.cromatin_8 + Bl.cromatin_6 + Bl.cromatin_10 + 
+    Normal.nucleoli_1 + Normal.nucleoli_2 + Normal.nucleoli_7 + 
+    Normal.nucleoli_4 + Normal.nucleoli_5 + Normal.nucleoli_3 + 
+    Normal.nucleoli_10 + Normal.nucleoli_6 + Normal.nucleoli_9 + 
+    Normal.nucleoli_8 + Mitoses_1 + Mitoses_5 + Mitoses_4 + Mitoses_2 + 
+    Mitoses_3 + Mitoses_7 + Mitoses_10 + Mitoses_8 + Mitoses_6
+
+BreastCancer_onehot_train_2 = BreastCancer_onehot_train
+BreastCancer_onehot_train_2$y_not = as.numeric(!as.logical(as.numeric(BreastCancer_onehot_train_2$y)-1))
+BreastCancer_onehot_test_2 = BreastCancer_onehot_test
+BreastCancer_onehot_test_2$y_not = as.numeric(!as.logical(as.numeric(BreastCancer_onehot_test_2$y)-1))
+table(BreastCancer_onehot_test_2$y_not, BreastCancer_onehot_test_2$y)
+
+NN = neuralnet(formula_onehot_2,
+               data= BreastCancer_onehot_train_2 %>% data.matrix(), 
                hidden = 10 , 
-               linear.output = T )
+               linear.output = F
+               )
 
 # plot neural network
 plot(NN)
@@ -627,36 +678,7 @@ plot(NN)
 ```
 
 
-```{r, eval=F, include=F}
-#This fails because caret doesn't handle classification with neuralnet
 
-
-#cross validate that model to get estimate of accuracy on the test set
-p_load(caret)
-cctrl1 <- trainControl(method="cv", number=10, returnResamp="all",classProbs=TRUE,summaryFunction=twoClassSummary)
-
-test_class_cv_model <- train(x=BreastCancer_onehot_train[,-c(6)] %>% data.matrix(),
-                             y=as.factor(paste0('Outcome',BreastCancer_train$y)),
-                             method = "neuralnet",
-                             trControl = cctrl1,
-                             metric = "ROC",
-                             tuneGrid =expand.grid(linear.output = T) ,
-                             preProc = c("center", "scale")
-                             #tuneGrid = expand.grid(alpha = 1,lambda = glmnet1_cv$lambda.1se)
-                             )
-
-#
-print(test_class_cv_model$ROC) #0.9887126  Slightly better than the decision trees 
-
-```
-
-
-# Final Check Against Test Data
-
-```{r}
-
-
-```
 
 
 
@@ -700,17 +722,12 @@ print(test_class_cv_model$ROC) #0.9887126  Slightly better than the decision tre
 ## SVM
 * [Support_vector_machine](https://en.wikipedia.org/wiki/Support_vector_machine)
 
-#### How the Sausage is Made
+
+## Nearest Neighbor
+* [K-nearest_neighbors_algorithm](https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm) <br/>
+
+
+## How the Sausage is Made
 * ["Troubling  Trends  in  Machine  Learning  Scholarship"](https://www.dropbox.com/s/ao7c090p8bg1hk3/Lipton%20and%20Steinhardt%20-%20Troubling%20Trends%20in%20Machine%20Learning%20Scholarship.pdf?dl=0), Zachary  C.  Lipton∗&  Jacob  Steinhardt, July  9,  2018
 
 
-## Applications
-* ["ViEWS: a political Violence Early-Warning System,"](http://pcr.uu.se/research/views/) <br/>
-* ["Safe Disposal of Unexploded WWII Bombs,"](http://staff.math.su.se/hoehle/blog/2018/05/25/uxb.html) Michael Höhle, May 25, 2018, <br/>
-* ["Predicting Race and Ethnicity From the Sequence of Characters in a Name,"](https://arxiv.org/pdf/1805.02109.pdf),Gaurav Sood and Suriyan Laohaprapanon, May 8, 2018,  <br/>
-* ["ethnicolr: Predict Race and Ethnicity From Name,"](https://github.com/appeler/ethnicolr)<br/>
-* Weidmann, Nils B. and Sebastian Schutte. Using Night Lights for the Prediction of Local Wealth. Journal
-of Peace Research 54(2).
-
-# Nearest Neighbor
-* [K-nearest_neighbors_algorithm](https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm) <br/>

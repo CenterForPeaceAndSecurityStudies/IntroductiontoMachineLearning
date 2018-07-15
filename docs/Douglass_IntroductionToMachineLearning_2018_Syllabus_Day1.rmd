@@ -106,6 +106,15 @@ Students are not expected to know any particular language or set of software. We
 * [scikit-learn](http://scikit-learn.org/stable/)
 * [Guide to SuperLearner](ftp://cran.r-project.org/pub/R/web/packages/SuperLearner/vignettes/Guide-to-SuperLearner.html), Chris Kennedy, March 16, 2017
 
+## Applications
+* ["ViEWS: a political Violence Early-Warning System,"](http://pcr.uu.se/research/views/) <br/>
+* ["Safe Disposal of Unexploded WWII Bombs,"](http://staff.math.su.se/hoehle/blog/2018/05/25/uxb.html) Michael Höhle, May 25, 2018, <br/>
+* ["Predicting Race and Ethnicity From the Sequence of Characters in a Name,"](https://arxiv.org/pdf/1805.02109.pdf),Gaurav Sood and Suriyan Laohaprapanon, May 8, 2018,  <br/>
+* ["ethnicolr: Predict Race and Ethnicity From Name,"](https://github.com/appeler/ethnicolr)<br/>
+* Weidmann, Nils B. and Sebastian Schutte. Using Night Lights for the Prediction of Local Wealth. Journal
+of Peace Research 54(2).
+
+
 ## Notes on this Guide
 
 This guide is written as an [R notebook](https://bookdown.org/yihui/rmarkdown/notebook.html) using [R-Studio](https://www.rstudio.com/). It renders output as static HTML that you should be able to view on a regular web browser.
