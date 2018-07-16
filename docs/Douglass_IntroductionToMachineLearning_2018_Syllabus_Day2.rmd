@@ -104,12 +104,41 @@ Cleaning ad documentation
 data(BreastCancer)
 glimpse(BreastCancer)
 summary(BreastCancer$Class)
+
 BreastCancer$y <- as.factor(as.numeric(BreastCancer$Class=="malignant"))
 BreastCancer$Class <- NULL
 BreastCancer$Id <- NULL
 
+BreastCancer[,1:5] <- lapply(BreastCancer[,1:5] , as.numeric)
 summary(BreastCancer)
 ```
+
+```{r, fig.width=25, fig.height=15, cache=T, message=FALSE}
+p_load(GGally)
+ggpairs(BreastCancer, title = "Breast Cancer Dataset")
+```
+
+```{r, fig.width=15, fig.height=10, cache=T }
+p_load(corrplot)
+p_load(infotheo)
+BreastCancer_mi <- mutinformation(BreastCancer, method="emp") %>% natstobits()
+#BreastCancer_mi <- BreastCancer_mi/max(BreastCancer_mi) 
+mi_max <- max( BreastCancer_mi[lower.tri(BreastCancer_mi, diag = FALSE)])
+diag(BreastCancer_mi) <-0
+
+corrplot.mixed(BreastCancer_mi,
+               cl.lim = c(0,mi_max),
+               title = "Normalised Mutual Information Breast Cancer Dataset",
+               mar=c(0,0,1,0),
+               lower = "ellipse",
+               upper="number",
+               is.corr = FALSE,
+               order = "hclust"
+)
+
+
+```
+
 
 There are 16 unexplained missing values on one of the features. We're going to impute those values, being careful to not use the outcome as one of the predictors. This will allows us to make comparisons across methods that do not handle missing values well, and also will protect us on predicting onto new test data which might also have unexplained missingness.
 
@@ -122,9 +151,6 @@ BreastCancer_imputed <- BreastCancer
 BreastCancer_imputed <- missForest(BreastCancer %>% select(-y), verbose = TRUE)$ximp
 BreastCancer_imputed$y <- BreastCancer$y
 
-BreastCancer_imputed[,1:5] <- lapply(BreastCancer_imputed[,1:5] , as.integer)
-
-table(BreastCancer_imputed$Class_binary)
 ```
 
 Convert categorical variables to 'one-hot' dummy variables <br/>
@@ -225,8 +251,8 @@ cctrl1 <- trainControl(method="cv",
 ```{r}
 p_load(glmnet)
 set.seed(123)
-glm1 <- glm(formula ,
-               data=BreastCancer_train ,
+glm1 <- glm(formula_onehot ,
+               data=BreastCancer_onehot_train ,
                family=binomial(link='probit')
             )
 
@@ -427,16 +453,16 @@ print(glmnet_twoway_lambda.1se_cv$ROC) #0.9918952  marginally beterr still
 
 ```
 
-Interpreting the model
-There ar some measures that unambigiously look bad for cancer outcomes.
-There are certain interactions that are good news. 
-Bare.nuclei_8:Normal.nucleoli_2
-Bare.nuclei_1:Mitoses_1
-Bare.nuclei_7:Normal.nucleoli_8
-Normal.nucleoli_1:Mitoses_1
-are.nuclei_1:Normal.nucleoli_1
+Interpreting the model <br/>
+There are some measures that unambigiously look bad for cancer outcomes. <br/>
+There are certain interactions that are good news.  <br/>
+Bare.nuclei_8:Normal.nucleoli_2 <br/>
+Bare.nuclei_1:Mitoses_1 <br/>
+Bare.nuclei_7:Normal.nucleoli_8 <br/>
+Normal.nucleoli_1:Mitoses_1 <br/>
+are.nuclei_1:Normal.nucleoli_1 <br/>
 
-Bare.nuclei_1 by itself looks like good news, but in combination with something else it's especially helpful.
+Bare.nuclei_1 by itself looks like good news, but in combination with something else it's especially helpful. <br/>
 
 ```{r}
 #There are 991 terms
