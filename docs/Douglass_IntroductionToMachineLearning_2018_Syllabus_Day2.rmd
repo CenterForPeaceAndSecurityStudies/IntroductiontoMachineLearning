@@ -80,25 +80,32 @@ set.seed(123)
 ```
 
 
-# Prep and Clean the Breast Cancer Dataset
+# Wisconsin Breast Cancer Dataset
 
 BreastCancer Dataset <br/>
 A data frame with 699 observations on 11 variables, one being a character variable, 9 being ordered or nominal, and 1 target class. <br/>
 
-[,1]	 Id	 Sample code number <br/>
-[,2]	 Cl.thickness	 Clump Thickness <br/>
-[,3]	 Cell.size	 Uniformity of Cell Size <br/>
-[,4]	 Cell.shape	 Uniformity of Cell Shape <br/>
-[,5]	 Marg.adhesion	 Marginal Adhesion <br/>
-[,6]	 Epith.c.size	 Single Epithelial Cell Size <br/>
-[,7]	 Bare.nuclei	 Bare Nuclei <br/>
-[,8]	 Bl.cromatin	 Bland Chromatin <br/>
-[,9]	 Normal.nucleoli	 Normal Nucleoli <br/>
-[,10]	 Mitoses	 Mitoses <br/>
-[,11]	 Class	 Class <br/>
+1. Sample code number: id number 
+2. Clump Thickness: 1 - 10 
+3. Uniformity of Cell Size: 1 - 10 
+4. Uniformity of Cell Shape: 1 - 10 
+5. Marginal Adhesion: 1 - 10 
+6. Single Epithelial Cell Size: 1 - 10 
+7. Bare Nuclei: 1 - 10 
+8. Bland Chromatin: 1 - 10 
+9. Normal Nucleoli: 1 - 10 
+10. Mitoses: 1 - 10 
+11. Class: (benign, malignant)
 
 
-Cleaning ad documentation
+[Breast Cancer Wisconsin (Original) Data Set ](https://archive.ics.uci.edu/ml/datasets/breast+cancer+wisconsin+(original))
+
+["Multisurface method of pattern separation for medical diagnosis applied to breast cytology."](http://www.pnas.org/content/pnas/87/23/9193.full.pdf), Wolberg,W.H., Mangasarian,O.L. (1990).  In Proceedings of the National Academy of Sciences, 87, 9193-9196.
+
+Zhang,J. (1992). Selecting typical instances in instance-based learning. In Proceedings of the Ninth International Machine Learning Conference (pp. 470-479). Aberdeen, Scotland: Morgan Kaufmann.
+
+
+## Cleaning and documentation
 
 ```{r}
 data(BreastCancer)
@@ -172,7 +179,7 @@ BreastCancer_onehot[,c('Bare.nuclei','Bl.cromatin','Normal.nucleoli','Mitoses')]
 
 The Very first thing we're going to do is pull 20% of the Breat Cancer dataset out as a test set and we're never going to touch it for any reason other than final model evaluation.
 
-Immediately split of a test set that we will not touch until the very final evaluation.
+Immediately split off a test set that we will not touch until the very final evaluation.
 
 ```{r}
 N=nrow(BreastCancer)
@@ -263,7 +270,8 @@ tidy(glm1 ) #There are 44 features, counting dummified categorical variables
 
 Out of sample accuracy?
 
-```{r}
+```{r, echo=FALSE, cache=T, results=T, warning=FALSE, comment=FALSE, warning=FALSE}
+
 set.seed(123)
 glm_cv <- train(x=BreastCancer_train[,-c(10)],
                              y=as.factor(paste0('Outcome',BreastCancer_train$y)),
@@ -284,9 +292,7 @@ print(glm_cv$results$ROC) #Very decent area under the ROC for just a linear mode
 * [Stepwise_regression](https://en.wikipedia.org/wiki/Stepwise_regression)
 
 
-## P Values
-
-## Feature Importance
+## Feature Importance and P Values
 * [A Machine Learning Alternative to P-values](https://arxiv.org/pdf/1701.04944.pdf),Min Lu and Hemant Ishwaran, February 22, 2017<br/>
 * [ELI5](https://github.com/TeamHG-Memex/eli5) <br/>
 * "Why Should I Trust You?": Explaining the Predictions of Any Classifier, Marco Tulio Ribeiro, Sameer Singh, Carlos Guestrin, https://arxiv.org/abs/1602.04938
@@ -298,19 +304,11 @@ lime, Python Package, https://github.com/marcotcr/lime
 * [Extreme_bounds_analysis](https://en.wikipedia.org/wiki/Extreme_bounds_analysis)
 * ["ExtremeBounds: Extreme Bounds Analysis in R"](https://cran.r-project.org/web/packages/ExtremeBounds/vignettes/ExtremeBounds.pdf) <br/>
 
-## Vimp
-
-[Introduction to vimp](Brian D. Williamson), 2018-06-19
-
-```{r}
-p_load("vimp")
-p_load("SuperLearner")
-
-```
+[Introduction to vimp](https://cran.r-project.org/web/packages/vimp/vignettes/introduction_to_vimp.html), Brian D. Williamson, 2018-06-19
 
 
 
-# Regularization, e.g. Lasso/Ridge Regression
+## Regularization, e.g. Lasso/Ridge Regression
 * https://en.wikipedia.org/wiki/Lasso_(statistics)
 * ["Regression shrinkage and selection via the lasso"](http://statweb.stanford.edu/~tibs/lasso/lasso.pdf), Tibshirani, R., 1996,  J. Royal. Statist. Soc B., Vol. 58, No. 1, pages 267-288)
 * ["Glmnet Vignette"](https://cran.r-project.org/web/packages/glmnet/vignettes/glmnet_beta.pdf), Trevor Hastie and Junyang Qian, September 13, 2016
@@ -361,7 +359,7 @@ glmnet_lambda.1se_cv <- train(x=BreastCancer_onehot_train %>% select(-y) %>% dat
                              tuneGrid = expand.grid(alpha = 1,lambda = glmnet1_cv$lambda.1se))
 
 #Area Under the Curve Almost Perfect Now despite using only 14 of the 44 features
-print(glmnet_lambda.1se_cv$ROC) #0.9916547
+print(glmnet_lambda.1se_cv$results$ROC)  #0.99
  
 ```
 
@@ -448,7 +446,7 @@ glmnet_twoway_lambda.1se_cv <- train(x=BreastCancer_onehot_train_twoway,
                              tuneGrid = expand.grid(alpha = 1,lambda = glmnet1_cv$lambda.1se))
 
 #Area Under the Curve Almost Perfect Now despite using only 14 of the 44 features
-print(glmnet_twoway_lambda.1se_cv$ROC) #0.9918952  marginally beterr still 
+print(glmnet_twoway_lambda.1se_cv$results$ROC) #0.991
 
 
 ```
@@ -571,7 +569,8 @@ test_class_cv_model <- train(x=BreastCancer_train[,-c(10)],
                              )
 
 #
-print(test_class_cv_model$ROC) #0.9887126  Slightly better than the decision trees 
+print(test_class_cv_model$results)
+
 
 ```
 
@@ -632,7 +631,7 @@ explain_forest(forest, interactions = TRUE, data = BreastCancer_train)
 ```{r}
 set.seed(123)
 df_predictions <- data.frame(y_true=BreastCancer_test$y,
-                             y_hat_glm=stats::predict.glm(glm1, newdata=BreastCancer_test, type = "response" ),
+                             y_hat_glm=stats::predict.glm(glm1, newdata=BreastCancer_onehot_test, type = "response" ),
                              y_hat_lasso = predict(glmnet1_cv, newx=BreastCancer_onehot_test %>% 
                                                  select(-y) %>% data.matrix(), s=c("lambda.1se") ,
                                                  type = "response")[,1],
@@ -655,7 +654,8 @@ AUC(df_predictions$y_hat_lasso_twoway,df_predictions$y_true)
 AUC(df_predictions$y_hat_single_tree,df_predictions$y_true)
 AUC(df_predictions$y_hat_forest,df_predictions$y_true)
 
-
+table(df_predictions$y_hat_lasso>.5,
+      df_predictions$y_true)
 
 ```
 
