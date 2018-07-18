@@ -68,7 +68,7 @@ summary(BreastCancer)
 
 
 #
-
+  
 [Understanding Civil War Violence through Military Intelligence: Mining Civilian Targeting Records from the Vietnam War](https://arxiv.org/pdf/1506.05413.pdf), Rex W. Douglass, 2016, Chapter in C.A. Anderton and J. Brauer, eds., Economic Aspects of Genocides, Mass Atrocities, and Their Prevention. New York: Oxford University Press, 2016
 
 ["How “Free” is Free Riding in civil wars?: Violence, insurgency, and the collective action problem."](http://repositorio-digital.cide.edu/bitstream/handle/11651/1431/153367.pdf?sequence=1;How), Kalyvas, Stathis N., and Matthew Adam Kocher. World politics 59, no. 2 (2007): 177-216]
