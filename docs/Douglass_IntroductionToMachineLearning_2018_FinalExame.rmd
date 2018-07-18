@@ -1,0 +1,193 @@
+---
+title: "R Notebook"
+output: html_notebook
+editor_options: 
+  chunk_output_type: inline
+---
+
+0) (Yes/No) Can I touch the test data now?
+
+1) (T/F) Machine learning solves the fundamental problem of causal inference.
+
+2) (T/F) Machine learning makes statistics uncessary.
+
+3) (T/F) Machine learning is only necessary for 'big' data while statistics is appropriate for 'small' data
+
+4) What are the parts of the Shannon-Weaver model of communication?
+
+5) (T/F) Poor accuracy of a prediction is always due to measurement error/noise in the message.
+
+6) (T/F) Information sources can be constants, that never vary.
+
+7) (T/F) Messages can carry information even if the source itself does not vary.
+
+8) (T/F) The amount of information in a message increases in the length of the message.
+
+9) (T/F) A fair coin flip contains for information than an unfair one.
+
+10) (T/F) A prediction $\hat{Y}$ is statement about the true state of the information source $Y$
+
+11) (T/F) Predictions only come from quantitative models.
+
+11) Name 5 methods for scoring binary predictions against binary information sources.
+
+12) (T/F) All kinds of prediction errors are equally important/equally bad independent of the application.
+
+13) (T/F) Accuracy weights false positives and false negatives equally.
+
+13) (T/F) Precision penalizes false positives more.
+
+14) Why might you want to penalize false positives more?
+
+15) (T/F) Recall penalizes false negatives more.
+
+16) Why might you want to penalize false negatives more?
+
+17) F1 combines both precision and recall. How does it weight the two?
+
+18) Why doesn't combining precision and recall just turn back into accuracy?
+
+19) A prediction that scores highly one rule should score highly on others.
+
+20) Random chance predictions should score poorly on any rule.
+
+21) If a prediction scores well, the method/person making the prediction must understand the information source/transmission function.
+
+22) If a soft method provides a fractional prediction, e.g. [0.0-1.0], then it is necessarily a probability.
+
+23) Name three methods for evaluating fractional predictions.
+
+24) What is on the Y axis of an ROC plot?
+
+25) What is on the X axis of an ROC plot?
+
+26) What does an ROC curve lying on the 45 degree angle represent?
+
+27) What does an ROC curve in top upper left corner represent?
+
+28) What does an ROC curve strictly further out toward the top left than another curve represent?
+
+29) What does two ROC curves crossing each other represent?
+
+30) What is on the Y axis of a Precision-Recall Curve plot represent?
+
+31) Why might you want to use a PRC plot instead of an AUC plot?
+
+32) What is class imbalance (in a binary outcome setting), e.g. what is skew?
+
+33) How can changing class imbalance effect the score of a prediction, holding everything else the same?
+
+34) What are two scoring rules that are robust to changes in skew?
+
+35) What are three scoring rules for real valued outcomes?
+
+36) Substantively, what kinds of errors does mean squared error care about more in contrast to absolute error?
+
+37) What problem is Huber loss designed to solve?
+
+38) What is a message?
+
+39) (T/F) A message must contain as many symbols as there are states of the information source
+
+40) (T/F) A message must map to the true state of the information source
+
+41) (T/F) The longer the message, the more information contained about the informatino source
+
+42) (T/F) Two identical messages can be constructed with completely different symbols.
+
+43) What is information?
+
+44) (T/F) All messages are informative
+
+45) What are the maximum number of bits transmitted about a 0-bit source by a 0-bit message?
+
+46) What are the maximum number of bits transmitted about a 0-bit source by a 1-bit message?
+
+47) What are the maximum number of bits transmitted about a 0-bit source by an N-bit message?
+
+48) What are the maximum number of bits transmitted about a 1-bit source by an 0-bit message?
+
+49) What are the maximum number of bits transmitted about a 1-bit source by an 1-bit message?
+
+50) What are the maximum number of bits transmitted about a 1-bit source by an N-bit message?
+
+51) What are the maximum number of bits transmitted about a 2-bit source by a 0-bit message?
+
+51) What are the maximum number of bits transmitted about a 2-bit source by a 0-bit message?
+
+52) What are the maximum number of bits transmitted about a 2-bit source by a 1-bit message?
+
+53) What are the maximum number of bits transmitted about a 2-bit source by a 2-bit message?
+
+53) What are the maximum number of bits transmitted about a 2-bit source by a 2-bit message?
+
+54) What are the maximum number of bits transmitted about a 2-bit source by an N-bit message?
+
+55) (T/F) Holding bandiwdth of the channel constant, the medium through which you send the message doesn't matter.
+
+56) (T/F) A transmitter must necessarily condition on the state of the information source.
+
+57) (T/F) Even if we don't design it, we always get to observe the transmitter.
+
+58) (T/F) The transmitter necessarily encodes all of the information from the information source.
+
+59) (T/F) Some transmitters intentionally obscure the state of the information source.
+
+60) (T/F) Some transmitters are intentionally lossy, partially encoding the state of the information source.
+
+61) (T/F) A microphone, a temperature guage, and a public opinion poll are all transmitters.
+
+62) (T/F) Every transmitter necessarily has a equivalent receiver that perfectly inverts the encoding.
+
+63) (T/F) Every transmitter necessarily has one and only one receiver that prefectly inverts the encoding.
+
+64) (T/F) Receivers can be degenerate, producing predictions not mapped to true states of the information source.
+
+65) (T/F) Receivers can ignore the message entirely.
+
+66) (T/F) A receiver that successfully decodes a message must necessarily invert the operations performed by the transmitter.
+
+67) (T/F) In unsupervised learning there is no true $Y$
+
+68) (T/F) Supervised learning is when we you get to observe the true state $Y$ for some set of examples, and unsupervised learning is when you don't get to observe the true state for any set of examples.
+
+69) (T/F) The is no receiver that is equally good for every transmitter
+
+70) (T/F) If a receiver produces predictions with high accuracy, it is inverting the transmission function.
+
+71) (T/F) If a receiver produces poor predictions, that must be due do noise in the message.
+
+72) (T/F) Accuracy of predictions developed from in-sample data are a good estimate of predictions made on new unseen observations.
+
+73) (T/F) Accuracy of predictions developed from out-of-sample data are a good estimate of predictions made on new unseen observations.
+
+74) What is the cost of holding back some data as a test set?
+
+75) Before seeing any messages, can you correctly guess which receiver will be the most accurate?
+
+76) What's the difference between best case, worst case, and average accuracy of a receiver across potential transmitters?
+
+77) What does the no free lunch theorem state?
+
+78) Why is feature selection necessary?
+
+79) Why is feature engineering necessary?
+
+80) What does it mean for a model to be underdetermined?
+
+81) What is the bias-variance tradeoff?
+
+82) What is overfitting?
+
+83) What is the curse of dimensionality?
+
+96) What are your three favorite observational quantiative social science papers?
+
+97) Did they employ training/test split or cross-validation? How?
+
+98) Did they evaluate the accuracy of their models predictions? How?
+
+99) Did they they compare that accuracy to a reasonable null baseline? 
+
+100) (Yes/No) Can I touch the test data now?
+

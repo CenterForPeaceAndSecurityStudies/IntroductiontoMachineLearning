@@ -1,0 +1,78 @@
+---
+title: "Introduction to Machine Learning (Syllabus/Code for Day 2b): Solutions for Learning in Unsupervised Settings"
+output: 
+  html_notebook:
+    toc: true # table of content true
+    toc_depth: 3  # upto three depths of headings (specified by #, ## and ###)
+    number_sections: true  ## if you want number sections at each table header
+    highlight: tango  # specifies the syntax highlighting style
+    toc_float: true
+---
+
+
+```{css}
+
+pre code, pre, code {
+  white-space: pre !important;
+  overflow-x: !scroll !important;
+  word-break: keep-all !important;
+  word-wrap: initial !important;
+}
+
+code.r{
+  overflow-x: !scroll !important;
+}
+
+```
+
+
+# Wisconsin Breast Cancer Dataset
+
+BreastCancer Dataset <br/>
+A data frame with 699 observations on 11 variables, one being a character variable, 9 being ordered or nominal, and 1 target class. <br/>
+
+1. Sample code number: id number 
+2. Clump Thickness: 1 - 10 
+3. Uniformity of Cell Size: 1 - 10 
+4. Uniformity of Cell Shape: 1 - 10 
+5. Marginal Adhesion: 1 - 10 
+6. Single Epithelial Cell Size: 1 - 10 
+7. Bare Nuclei: 1 - 10 
+8. Bland Chromatin: 1 - 10 
+9. Normal Nucleoli: 1 - 10 
+10. Mitoses: 1 - 10 
+11. Class: (benign, malignant)
+
+
+[Breast Cancer Wisconsin (Original) Data Set ](https://archive.ics.uci.edu/ml/datasets/breast+cancer+wisconsin+(original))
+
+["Multisurface method of pattern separation for medical diagnosis applied to breast cytology."](http://www.pnas.org/content/pnas/87/23/9193.full.pdf), Wolberg,W.H., Mangasarian,O.L. (1990).  In Proceedings of the National Academy of Sciences, 87, 9193-9196.
+
+Zhang,J. (1992). Selecting typical instances in instance-based learning. In Proceedings of the Ninth International Machine Learning Conference (pp. 470-479). Aberdeen, Scotland: Morgan Kaufmann.
+
+
+## Cleaning and documentation
+
+```{r}
+data(BreastCancer)
+glimpse(BreastCancer)
+summary(BreastCancer$Class)
+
+BreastCancer$y <- as.factor(as.numeric(BreastCancer$Class=="malignant"))
+BreastCancer$Class <- NULL
+BreastCancer$Id <- NULL
+
+BreastCancer[,1:5] <- lapply(BreastCancer[,1:5] , as.numeric)
+summary(BreastCancer)
+```
+
+
+#
+
+[Understanding Civil War Violence through Military Intelligence: Mining Civilian Targeting Records from the Vietnam War](https://arxiv.org/pdf/1506.05413.pdf), Rex W. Douglass, 2016, Chapter in C.A. Anderton and J. Brauer, eds., Economic Aspects of Genocides, Mass Atrocities, and Their Prevention. New York: Oxford University Press, 2016
+
+["How “Free” is Free Riding in civil wars?: Violence, insurgency, and the collective action problem."](http://repositorio-digital.cide.edu/bitstream/handle/11651/1431/153367.pdf?sequence=1;How), Kalyvas, Stathis N., and Matthew Adam Kocher. World politics 59, no. 2 (2007): 177-216]
+
+
+
+
