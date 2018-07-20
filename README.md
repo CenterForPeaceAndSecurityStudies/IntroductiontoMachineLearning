@@ -10,7 +10,7 @@
 
 [Course Slides (Day 2 Part A)](https://docs.google.com/presentation/d/1HRzRTjz31vt_HwOkKE_jNUYhg1a2LrOxS6LM3RI9dE4/edit?usp=sharing)
 
-[Course Slides (Day 2 Part B)](https://docs.google.com/presentation/d/1HRzRTjz31vt_HwOkKE_jNUYhg1a2LrOxS6LM3RI9dE4/edit?usp=sharing)
+[Course Slides (Day 2 Part B)](https://docs.google.com/presentation/d/1GSKQeoYWTVlIfWQIV9pXyoZW3DVdL2ylmaUU5dN9sGA/edit?usp=sharing)
 
 
 

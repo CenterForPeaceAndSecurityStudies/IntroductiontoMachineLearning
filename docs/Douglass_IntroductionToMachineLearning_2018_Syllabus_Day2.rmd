@@ -146,6 +146,15 @@ corrplot.mixed(BreastCancer_mi,
 
 ```
 
+```{r}
+p_load(infotheo)
+BreastCancer_mi <- mutinformation(BreastCancer, method="emp") %>% natstobits()
+
+BreastCancer_mi_d <- as.dist(max(BreastCancer_mi)-BreastCancer_mi)
+hc <- hclust(BreastCancer_mi_d, method="ward.D2")
+plot(hc)
+
+```
 
 There are 16 unexplained missing values on one of the features. We're going to impute those values, being careful to not use the outcome as one of the predictors. This will allows us to make comparisons across methods that do not handle missing values well, and also will protect us on predicting onto new test data which might also have unexplained missingness.
 
@@ -242,7 +251,8 @@ cctrl1 <- trainControl(method="cv",
                        number=10,
                        returnResamp="all",
                        classProbs=TRUE,
-                       summaryFunction=twoClassSummary
+                       summaryFunction=twoClassSummary,
+                       savePredictions=TRUE
                        )
 
 ```
@@ -283,7 +293,21 @@ glm_cv <- train(x=BreastCancer_train[,-c(10)],
 
 print(glm_cv$results$ROC) #Very decent area under the ROC for just a linear model
 
+#devtools::install_github("hadley/ggplot2")
+#devtools::install_github("sachsmc/plotROC")
+p_load(plotROC)
+
+out_of_sample_predictions <- data.frame(y_hat=glm_cv$pred$Outcome1,
+                                               y=BreastCancer_train$y[glm_cv$pred$rowIndex],
+                                               model="GLM")
+
+basicplot <- ggplot(out_of_sample_predictions,
+                    aes(d = as.numeric(y), m = y_hat, color=model)) + geom_roc(n.cuts=0) + 
+                    style_roc(theme = theme_grey, xlab = "1 - Specificity") + ggtitle("AUC")
+basicplot
+
 ```
+
 
 
 
@@ -360,6 +384,16 @@ glmnet_lambda.1se_cv <- train(x=BreastCancer_onehot_train %>% select(-y) %>% dat
 
 #Area Under the Curve Almost Perfect Now despite using only 14 of the 44 features
 print(glmnet_lambda.1se_cv$results$ROC)  #0.99
+
+p_load(plotROC)
+out_of_sample_predictions2 <- data.frame(y_hat=glmnet_lambda.1se_cv$pred$Outcome1,
+                                               y=BreastCancer_train$y[glmnet_lambda.1se_cv$pred$rowIndex],
+                                               model="Lasso")
+basicplot <- ggplot(bind_rows(out_of_sample_predictions,
+                              out_of_sample_predictions2),
+                    aes(d = as.numeric(y), m = y_hat, color=model)) + geom_roc(n.cuts=0) + 
+                    style_roc(theme = theme_grey, xlab = "1 - Specificity") + ggtitle("AUC")
+basicplot
  
 ```
 
@@ -448,6 +482,16 @@ glmnet_twoway_lambda.1se_cv <- train(x=BreastCancer_onehot_train_twoway,
 #Area Under the Curve Almost Perfect Now despite using only 14 of the 44 features
 print(glmnet_twoway_lambda.1se_cv$results$ROC) #0.991
 
+p_load(plotROC)
+out_of_sample_predictions3 <- data.frame(y_hat=glmnet_twoway_lambda.1se_cv$pred$Outcome1,
+                                               y=BreastCancer_train$y[glmnet_twoway_lambda.1se_cv$pred$rowIndex],
+                                               model="Lasso Interactions")
+basicplot <- ggplot(bind_rows(out_of_sample_predictions,
+                              out_of_sample_predictions2,
+                              out_of_sample_predictions3),
+                    aes(d = as.numeric(y), m = y_hat, color=model)) + geom_roc(n.cuts=0) + 
+                    style_roc(theme = theme_grey, xlab = "1 - Specificity") + ggtitle("AUC")
+basicplot
 
 ```
 
@@ -508,6 +552,22 @@ single_decision_tree_cv_model <- train(x=BreastCancer_train[,-c(10)],
 
 print(single_decision_tree_cv_model$results$ROC) #0.9668608
 
+
+
+p_load(plotROC)
+out_of_sample_predictions4 <- data.frame(y_hat=single_decision_tree_cv_model$pred$Outcome1,
+                                               y=BreastCancer_train$y[single_decision_tree_cv_model$pred$rowIndex],
+                                               model="Tree")
+basicplot <- ggplot(bind_rows(out_of_sample_predictions,
+                              out_of_sample_predictions2,
+                              out_of_sample_predictions3,
+                              out_of_sample_predictions4),
+                    aes(d = as.numeric(y), m = y_hat, color=model)) + geom_roc(n.cuts=0) + 
+                    style_roc(theme = theme_grey, xlab = "1 - Specificity") + ggtitle("AUC")
+basicplot
+
+
+
 ```
 
 
@@ -558,9 +618,8 @@ print(forest)
 
 set.seed(123)
 p_load(randomForest)
-cctrl1 <- trainControl(method="cv", number=10, returnResamp="all",classProbs=TRUE,summaryFunction=twoClassSummary)
 
-test_class_cv_model <- train(x=BreastCancer_train[,-c(10)],
+forest_cv_model <- train(x=BreastCancer_train[,-c(10)],
                              y=as.factor(paste0('Outcome',BreastCancer_train$y)),
                              method = "rf",
                              trControl = cctrl1,
@@ -568,8 +627,22 @@ test_class_cv_model <- train(x=BreastCancer_train[,-c(10)],
                              #tuneGrid = expand.grid(alpha = 1,lambda = glmnet1_cv$lambda.1se)
                              )
 
-#
-print(test_class_cv_model$results)
+print(forest_cv_model$results)
+
+
+p_load(plotROC)
+condition <- forest_cv_model$pred$mtry==5
+out_of_sample_predictions5 <- data.frame(y_hat=forest_cv_model$pred$Outcome1[condition] ,
+                                               y=BreastCancer_train$y[forest_cv_model$pred$rowIndex[condition]] ,
+                                               model="Forest")
+basicplot <- ggplot(bind_rows(out_of_sample_predictions,
+                              out_of_sample_predictions2,
+                              out_of_sample_predictions3,
+                              out_of_sample_predictions4,
+                              out_of_sample_predictions5),
+                    aes(d = as.numeric(y), m = y_hat, color=model)) + geom_roc(n.cuts=0) + 
+                    style_roc(theme = theme_grey, xlab = "1 - Specificity") + ggtitle("AUC")
+basicplot
 
 
 ```
@@ -648,11 +721,11 @@ df_predictions <- data.frame(y_true=BreastCancer_test$y,
 ```
 ```{r}
 p_load(MLmetrics)
-AUC(df_predictions$y_hat_glm,df_predictions$y_true)
-AUC(df_predictions$y_hat_lasso,df_predictions$y_true)
-AUC(df_predictions$y_hat_lasso_twoway,df_predictions$y_true)
-AUC(df_predictions$y_hat_single_tree,df_predictions$y_true)
-AUC(df_predictions$y_hat_forest,df_predictions$y_true)
+AUC(df_predictions$y_hat_glm,df_predictions$y_true) %>% round(3)
+AUC(df_predictions$y_hat_lasso,df_predictions$y_true) %>% round(3)
+AUC(df_predictions$y_hat_lasso_twoway,df_predictions$y_true) %>% round(3)
+AUC(df_predictions$y_hat_single_tree,df_predictions$y_true) %>% round(3)
+AUC(df_predictions$y_hat_forest,df_predictions$y_true) %>% round(3)
 
 table(df_predictions$y_hat_lasso>.5,
       df_predictions$y_true)
