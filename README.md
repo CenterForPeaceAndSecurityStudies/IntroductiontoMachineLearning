@@ -13,7 +13,6 @@
 [Course Slides (Day 2 Part B)](https://docs.google.com/presentation/d/1GSKQeoYWTVlIfWQIV9pXyoZW3DVdL2ylmaUU5dN9sGA/edit?usp=sharing)
 
 
-
 Rex W. Douglass<br/>
 Director Machine Learning for Social Science Lab (MSSL)<br/>
 Center for Peace and Security Studies (cPASS)<br/>
